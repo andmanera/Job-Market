@@ -341,8 +341,7 @@ Theory part:
 
 \begin_deeper
 \begin_layout Enumerate
-Check out/ build a model of defensive patenting (I found today Karam Jo's
- 2019 JMP which seems interesting in this respect)
+Check out/ build a model of defensive patenting (Kara
 \end_layout
 
 \end_deeper
@@ -868,7 +867,7 @@ name "fig:Binscatter-of-change"
 \begin_layout Plain Layout
 
 \size small
-Note: Regression line estimated weighting by total sales in 2020.
+Note: Regression line is estimated weighting by total sales in 2020.
 \end_layout
 
 \end_inset
@@ -877,22 +876,13 @@ Note: Regression line estimated weighting by total sales in 2020.
 \end_layout
 
 \begin_layout Section
-A simple cournot model
+Theory updates: model sketch and simulations 
 \end_layout
 
 \begin_layout Standard
-Here I present a very simple two Cournot-Nash game, where firms can choose
+The model is a very simple two Cournot-Nash game, where firms can choose
  quantity as well as hiring of R&D labor.
- The market size facing the individual firm seems to be the main driver
- of the results that more concentrated sectors hire more inventors.
- I also present a two-stage game where firms conduct extra strategic R&D,
- however this is not the defensive kind discussed above, and size remains
- the predominant factor.
- 
-\end_layout
-
-\begin_layout Standard
-In what follow, I solve the problem of a single sector with 
+ In what follow, I solve the problem of a single sector with 
 \begin_inset Formula $N$
 \end_inset
 
@@ -1326,6 +1316,64 @@ name "fig:Equilibrium-Objects,-Index-1"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Next Steps
+\end_layout
+
+\begin_layout Standard
+To sum up, I think the empirics is getting stronger, and the theory a bit
+ clearer.
+ But there is a long way to go.
+\end_layout
+
+\begin_layout Standard
+I think I need plenty of advice on the theory side and on the quantification
+ of the mechanism.
+ I think the above lays out the basic mechanism that I want to highlight,
+ and I do not mind too much that the reason for misallocation is essentially
+ that firms are larger in monopoly.
+ It seems reasonable that firms would accept more incremental innovations
+ that they can spread on many products, and this insight is consistent with
+ e.g.
+ Acemoglu and Linn and a number of papers by Ufuk on incremental innovation
+ versus radical.
+\end_layout
+
+\begin_layout Standard
+However, the model is highly mechanical, in the sense that misallocation
+ arises somewhat trivially from the fact that there are decreasing returns
+ to R&D, which makes the mechanism really not that novel.
+ In addition, what this simple theory implies is that size cannot be really
+ decoupled from competition when doing some empirical analysis.
+\end_layout
+
+\begin_layout Standard
+Clearly, I need a more serious model for quantification, but I am wary of
+ spending a lot of time learning a new model that might not work, so I would
+ welcome your advice on where to direct my energies.
+\end_layout
+
+\begin_layout Standard
+On the empirical side, I think the situation is much better.
+ While the instrumental analysis has a lot of weaknesses, I think it conveys
+ the suggestion very well, reinforcing the raw correlation.
+ Perhaps I can use the Mercatus instrument on Compustat, where I could also
+ build better measures of scientist share, and move to firm-specific markups.
+ The chief weakness is that Compustat is awful to measure concentration.
+ I know that there are methods to interpolate low-frequency data using higher
+ frequency, so I could try to use Compustat concentration to predict overall
+ 4d concentration at a frequency higher than the Census 5-years, and extend
+ the analysis to include firm controls.
+ I believe this would give quite some extra precision.
+\end_layout
+
+\begin_layout Standard
+Regardless of next Compustat steps, the thing I wanted to do is quantify
+ even just the correlation that I obtain in the regressions above.
+ I am unsure how to measure the effects on TFP? I would still need a model
+ to aggregate them...
 \end_layout
 
 \end_body

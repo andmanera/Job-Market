@@ -94,29 +94,53 @@
 Memo on Inventor Allocation
 \end_layout
 
-\begin_layout Standard
-This memo consists on three parts, summarized below.
- In the email I discussed how I wanted to look at a fuller set of patents,
- and then figure out how to match it to Compustat.
- I did the former but none of the latter (perhaps it is not so necessary).
- On theory, you suggested working on a simple two-period model.
- I cannot seem to solve things analytically easily, but I can get some expressio
-ns that relate markups to research intensity, although not fully worked
- out.
- But I can get some early results in Matlab that make sense according to
- the story.
+\begin_layout Abstract
+Inventors are a scarce resource, whose skill sets can apply to R&D in disparate
+ product markets.
+ Motivated by this observation, I explore the impact of product market competiti
+on on the allocation of inventors, and its implications for growth.
+ First, I delineate the boundaries of 
+\begin_inset Quotes eld
+\end_inset
+
+inventor markets
+\begin_inset Quotes erd
+\end_inset
+
+ , employing Compustat data and inventors flows assembled from USPTO PatentsView
+ data to group NAICS sectors that employ the same inventors.
+ Second, I analyze the relation between 4-digit NAICS sectors market concentrati
+on and the share of inventors employed in R&D projects relevant to these
+ sectors.
+ Two facts emerge from my preliminary analysis.
+ First, the last thirty years saw a sizable increase in concentration of
+ scientists across both patent (CPC) classes and their 4-digit sector of
+ application.
+ Second, over the period 1997-2012, increases in sector-level concentration
+ are positively correlated with the share of inventors' market captured
+ by each sector.
+ 
+\end_layout
+
+\begin_layout Section
+Rough project scheme
 \end_layout
 
 \begin_layout Enumerate
-Data updates: 
+Data: 
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-New sources: 
+Sources: 
 \end_layout
 
 \begin_deeper
+\begin_layout Enumerate
+Compustat data matched with PatentsView through Arora et al's (2021) DISCERN
+ dataset
+\end_layout
+
 \begin_layout Enumerate
 all patents (PATSTAT), classified by Zolas et al.
  (2016) at the Census into NAICS 6d, who kindly shared non-published data
@@ -140,13 +164,18 @@ Mercatus count of market restrictions at NAICS 4d to instrument for increase
 
 \end_deeper
 \begin_layout Enumerate
-New data constructed:
+Data constructed:
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Inventor productivity along the line of the presentation, but on all patents
- assigned to companies, public or not, instead of just compustat-matched
+Grouping of sectors in inventor markets using observed inventor flows across
+ Compustat firms
+\end_layout
+
+\begin_layout Enumerate
+Inventor productivity on all patents assigned to companies, public or not,
+ as the sum of inventor's patents per capita or their average over time
 \end_layout
 
 \begin_layout Enumerate
@@ -205,13 +234,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-Concentration measured by Gini in different CPC classes and NAICS 4d as
- mapped from above
+Concentration measures of inventor productivity by Gini in different CPC
+ classes and NAICS 4d as mapped from above
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-New findings:
+Findings:
 \end_layout
 
 \begin_deeper
@@ -231,56 +260,31 @@ s.
 \end_layout
 
 \end_deeper
+\end_deeper
 \begin_layout Enumerate
-To do:
+Theory: 
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Re-compute knowledge markets on all patents, a lot more data than just Compustat.
-\end_layout
-
-\begin_layout Enumerate
-Some accounting, how? Compute predicted share increase versus actual seems
- the natural place to start.
-\end_layout
-
-\begin_layout Enumerate
-A lot of potential work with Compustat data: firm-specific markups; match
- with overall patent data and segment (4-digit) information, etc...
-\end_layout
-
-\begin_layout Enumerate
-Curious to see how markets are divided into upstream/downstream given the
- Bottlenecks paper (great presentation!)
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Enumerate
-Theory updates: 
+Basic idea: concentration creates incentives to hoard inventors:
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Done: simple two-period model based on a two- or one-stage Cournot game.
+Explored several alternatives: step-by-step, simple cournot, multi-sector
+ growth models; here the mechanism is driven by individual firm's market
+ size;
+\end_layout
+
+\begin_layout Enumerate
+Currently thinking about a mechanism based on defensive patenting, whose
+ incentive should grow with concentration; step-by-step is inadequate as
+ it has the opposite prediction (more R&D in less concentrated markets).
  
 \end_layout
 
-\begin_layout Enumerate
-Findings similar to what I presented.
-\end_layout
-
-\begin_layout Enumerate
-To do: Work on equilibrium.
-\end_layout
-
-\begin_layout Enumerate
-Issues: I had to assume that there are full technological spillovers that
- are not accounted for by firms to avoid mechanical duplication.
- However this is also part of the story.
-\end_layout
-
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Steps forward: 
@@ -288,38 +292,47 @@ Steps forward:
 
 \begin_deeper
 \begin_layout Enumerate
-Model remains an issue: prioritize clarity or quantification potential?
- 
+Empirical part:
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Things get non-analytical real fast.
+Control for the effect of sector size growth
 \end_layout
 
 \begin_layout Enumerate
-What is your take on existing literature to fit my analysis.
+Look at changes in dispersion of inventors within the sectors that become
+ more concentrated: do inventors go to leaders or followers?
+\end_layout
+
+\begin_layout Enumerate
+Explore effect on total innovation within these markets as well as individual
+ patenting productivity
+\end_layout
+
+\begin_layout Enumerate
+Link this concentration with forward citations?
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Empirical analysis: integration of new data from all patents with Compustat
- segments.
- Use higher-frequency concentration data from Compustat to interpolate the
- Census concentration? Still the size issue, model did not clarify much.
+Theory part:
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
-Establish a general flavor of the paper and potential.
+Check out/ build a model of defensive patenting (I found today Karam Jo's
+ 2019 JMP which seems interesting in this respect)
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Section
 Data updates
 \end_layout
 
 \begin_layout Subsection
-Description of new sources
+Data Sources
 \end_layout
 
 \begin_layout Standard
@@ -835,7 +848,7 @@ name "fig:Binscatter-of-change"
 \begin_layout Plain Layout
 
 \size small
-Note: Regression line is estimated weighting by total sales in 2020.
+Note: Regression line estimated weighting by total sales in 2020.
 \end_layout
 
 \end_inset
@@ -844,13 +857,22 @@ Note: Regression line is estimated weighting by total sales in 2020.
 \end_layout
 
 \begin_layout Section
-Theory updates: model sketch and simulations 
+A simple cournot model
 \end_layout
 
 \begin_layout Standard
-The model is a very simple two Cournot-Nash game, where firms can choose
+Here I present a very simple two Cournot-Nash game, where firms can choose
  quantity as well as hiring of R&D labor.
- In what follow, I solve the problem of a single sector with 
+ The market size facing the individual firm seems to be the main driver
+ of the results that more concentrated sectors hire more inventors.
+ I also present a two-stage game where firms conduct extra strategic R&D,
+ however this is not the defensive kind discussed above, and size remains
+ the predominant factor.
+ 
+\end_layout
+
+\begin_layout Standard
+In what follow, I solve the problem of a single sector with 
 \begin_inset Formula $N$
 \end_inset
 
@@ -1284,111 +1306,6 @@ name "fig:Equilibrium-Objects,-Index-1"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Multiple sectors (in progress)
-\end_layout
-
-\begin_layout Standard
-Next, I intend to endogenize the wage of production and research workers
- and put together the multiple sectors above.
- I could then match the distribution of the number of firms with the empirical
- distribution of top-4 sale shares in the data, and do some computations
- under reasonable parameters.
- Solving the model in equilibrium requires micro-founding the downward-sloping
- demand:
-\begin_inset Formula 
-\[
-Y=\left[\sum_{k=1}^{S}Q_{k}^{\frac{\varepsilon-1}{\varepsilon}}\right]^{\frac{\varepsilon}{\varepsilon-1}},
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $S$
-\end_inset
-
- is the number of sectors in the economy and each sector 
-\begin_inset Formula $k$
-\end_inset
-
- behaves as described above.
- Taking the price of the final good as numeraire, equilibrium R&D is defined
- implicitly by a system of equations, that should be combined with market
- clearing for production and R&D labor:
-\begin_inset Formula 
-\begin{align*}
-x_{k}^{\star}= & \left(\left(\frac{1}{\mu_{k}}+\frac{N_{k}-1}{N_{k}}\left[1-\frac{1+\varepsilon}{\varepsilon N_{k}}\right]\right)\left[wc_{k}\mu_{k}\right]^{1-\varepsilon}\frac{1}{N_{k}}\frac{\gamma\mathbf{Y}}{w^{RD}}\right)^{\frac{1}{1-\gamma\left(\varepsilon-1\right)}}-1,\ k=1,\dots S-1\\
-Y= & \frac{\left(\sum_{k=1}^{N_{s}}\left[\mu_{k}\tilde{c}_{k}\right]^{1-\varepsilon}\right)^{\frac{\varepsilon}{\varepsilon-1}}}{\sum_{k=1}^{N_{s}}\tilde{c}_{k}^{1-\varepsilon}\mu_{k}^{-\varepsilon}},
-\end{align*}
-
-\end_inset
-
-where I define the markup, 
-\begin_inset Formula $\mu_{k}\equiv\frac{\varepsilon N_{k}}{\varepsilon N_{k}-1}$
-\end_inset
-
-.
- Clearly, everything goes numerical quite fast.
-\end_layout
-
-\begin_layout Section
-Next Steps
-\end_layout
-
-\begin_layout Standard
-To sum up, I think the empirics is getting stronger, and the theory a bit
- clearer.
- But there is a long way to go.
-\end_layout
-
-\begin_layout Standard
-I think I need plenty of advice on the theory side and on the quantification
- of the mechanism.
- I think the above lays out the basic mechanism that I want to highlight,
- and I do not mind too much that the reason for misallocation is essentially
- that firms are larger in monopoly.
- It seems reasonable that firms would accept more incremental innovations
- that they can spread on many products, and this insight is consistent with
- e.g.
- Acemoglu and Linn and a number of papers by Ufuk on incremental innovation
- versus radical.
-\end_layout
-
-\begin_layout Standard
-However, the model is highly mechanical, in the sense that misallocation
- arises somewhat trivially from the fact that there are decreasing returns
- to R&D, which makes the mechanism really not that novel.
- In addition, what this simple theory implies is that size cannot be really
- decoupled from competition when doing some empirical analysis.
-\end_layout
-
-\begin_layout Standard
-Clearly, I need a more serious model for quantification, but I am wary of
- spending a lot of time learning a new model that might not work, so I would
- welcome your advice on where to direct my energies.
-\end_layout
-
-\begin_layout Standard
-On the empirical side, I think the situation is much better.
- While the instrumental analysis has a lot of weaknesses, I think it conveys
- the suggestion very well, reinforcing the raw correlation.
- Perhaps I can use the Mercatus instrument on Compustat, where I could also
- build better measures of scientist share, and move to firm-specific markups.
- The chief weakness is that Compustat is awful to measure concentration.
- I know that there are methods to interpolate low-frequency data using higher
- frequency, so I could try to use Compustat concentration to predict overall
- 4d concentration at a frequency higher than the Census 5-years, and extend
- the analysis to include firm controls.
- I believe this would give quite some extra precision.
-\end_layout
-
-\begin_layout Standard
-Regardless of next Compustat steps, the thing I wanted to do is quantify
- even just the correlation that I obtain in the regressions above.
- I am unsure how to measure the effects on TFP? I would still need a model
- to aggregate them...
 \end_layout
 
 \end_body
