@@ -648,10 +648,10 @@ Incumbents can in turn invest in a defensive technology that lowers the
  The incumbents' problem in normalized units as a function of the state
  capturing entrant costs is then:
 \begin_inset Formula 
-\begin{align*}
-\rho v(1) & =\max_{x_{I}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{x_{I}^{2}}{2}+x_{I}\left(v(\omega)-v(1)\right)-x_{e,1}\left(v(1)\right)\\
-\rho v(\omega) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(v(1)-v(\omega)\right)-x_{e,\omega}\left(v(\omega)\right)
-\end{align*}
+\begin{align}
+\rho v(1) & =\max_{x_{I}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{x_{I}^{2}}{2}+x_{I}\left(v(\omega)-v(1)\right)-x_{e,1}\left(v(1)\right)\nonumber \\
+\rho v(\omega) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(v(1)-v(\omega)\right)-x_{e,\omega}\left(v(\omega)\right)\label{eq: Values}
+\end{align}
 
 \end_inset
 

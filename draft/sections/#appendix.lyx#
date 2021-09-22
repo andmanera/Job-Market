@@ -867,33 +867,29 @@ Thus:
 \begin{align*}
 \text{Sh.Inc} & \propto\frac{\mu_{1}\left(x_{e,1}+x_{I}\right)}{\frac{\left(\omega x_{e,\omega}-x_{I}\right)^{2}+\omega^{2}x_{e,\omega}+\omega\left(\omega x_{e,\omega}-x_{I}\right)x_{I}}{\omega\left(x_{I}+x_{e,\omega}\right)}}\\
  & =\frac{x_{e,\omega}^{2}}{\left(\omega x_{e,\omega}-x_{I}\right)^{2}+2\omega^{2}x_{e,\omega}-\omega x_{I}^{2}}\\
- & =\frac{x_{e,\omega}^{2}}{\omega^{2}x_{e,\omega}^{2}-2\omega x_{e,\omega}x_{I}+x_{I}^{2}-\omega x_{I}^{2}}\\
- & =\frac{1}{\omega^{2}-2\omega\frac{x_{I}}{x_{e,\omega}}-\left(\omega-1\right)\left(\frac{x_{I}}{x_{e,\omega}}\right)^{2}},
+ & =\frac{x_{e,\omega}^{2}}{\omega^{2}x_{e,\omega}^{2}-2\omega x_{e,\omega}x\left(\omega x_{e,\omega}-x_{I}\right)_{I}^{2}+2\omega^{2}x_{e,\omega}-\omega x_{I}^{2}}
 \end{align*}
 
 \end_inset
 
-which is unambiguously increasing in 
-\begin_inset Formula $\frac{x_{I}}{x_{e,\omega}}$
-\end_inset
-
- since 
-\begin_inset Formula $\omega>1.$
-\end_inset
-
- Therefore, the linear model also predicts an increase in the incumbents'
- share of inventors following an increase in the markup, and the comparative
- statics are qualitatively the same as in Proposition 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "BROKEN: Ref: prop: partialEq"
-plural "false"
-caps "false"
-noprefix "false"
+Where the last line follows from:
+\begin_inset Formula 
+\[
+\mu_{1}=\frac{x_{e,\omega}}{x_{e,\omega}+x_{I}},\ \mu_{\omega}=\frac{x_{I}}{x_{e,\omega}+x_{I}}.
+\]
 
 \end_inset
 
-.
+Now the derivative of the above is positive IFF:
+\begin_inset Formula 
+\begin{align*}
+x_{e,1}\frac{\omega\left(\partial\frac{x_{I}}{\partial m}x_{e,\omega}-\partial\frac{x_{e,\omega}}{\partial m}x_{e,1}\right)\left(x_{e,1}+x_{I}\right)-\left(x_{e,\omega}^{2}+\omega x_{e,\omega}x_{I}\right)\frac{\partial x_{I}}{\partial m}}{x_{e,\omega}^{2}\left(x_{e,1}+x_{I}\right)^{2}}+\omega\frac{\left(\partial\frac{x_{I}}{\partial m}x_{e,\omega}-\partial\frac{x_{e,\omega}}{\partial m}x_{e,1}\right)}{x_{e,\omega}^{2}} & <0\\
+\omega\left(\partial\frac{x_{I}}{\partial m}x_{e,\omega}-\partial\frac{x_{e,\omega}}{\partial m}x_{e,1}\right)\left[x_{e,1}\left(x_{e,1}+x_{I}\right)+\left(x_{e,1}+x_{I}\right)^{2}\right]-x_{e,1}\left(x_{e,\omega}^{2}+\omega x_{e,\omega}x_{I}\right)\frac{\partial x_{I}}{\partial m} & <0
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

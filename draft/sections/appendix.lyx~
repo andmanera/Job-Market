@@ -120,6 +120,779 @@ Coming soon...
 \end_layout
 
 \begin_layout Section
+Extended Model
+\end_layout
+
+\begin_layout Standard
+Suppose that incumbents can invest in innovating projects, which are successful
+ with endogenous intensity, 
+\begin_inset Formula $x_{I}.$
+\end_inset
+
+ If the project is successful, the firm obtains a patent on the innovation
+ it discovered.
+ I assume that, with exogenous probability 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+ the innovation is compatible with existing firm's technology, and is adopted
+ by the incumbent.
+ This parameter can be interpreted as the probability that the realized
+ innovation is suitable to the existing technology of the firm.
+ An alternative interpretation of this parameter is related to incremental
+ innovation.
+ As 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ decreases towards 
+\begin_inset Formula $0$
+\end_inset
+
+, incumbents R&D projects contribute less and less to aggregate growth.
+ Thus, 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is positively related to how radical incumbents' projects are.
+ If adoption occurs, the incumbent's unit costs drop to 
+\begin_inset Formula $\frac{c_{t}}{\left(1+\eta_{I}\right)\phi}$
+\end_inset
+
+in instant 
+\begin_inset Formula $t$
+\end_inset
+
+, increasing the contemporaneous technology gap between incumbents an entrants.
+ As with entrants' innovation, I assume that if the incumbent manages to
+ implement the innovation, remaining entrants' unit costs at instant 
+\begin_inset Formula $t+\Delta t$
+\end_inset
+
+ fall to 
+\begin_inset Formula $\frac{c_{t}}{\left(1+\eta_{I}\right)}$
+\end_inset
+
+, so that successful innovation does not alter the long-run technology gap
+ between incumbents and entrants.
+ For simplicity, I further assume that there can only be a patent barrier
+ of size 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ Under these assumptions, the incumbents' value functions read:
+\begin_inset Formula 
+\begin{align}
+\rho v(1) & =\max_{x_{I}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{x_{I}^{2}}{2}+x_{I}\left[\text{\ensuremath{\lambda}}\frac{\eta_{I}}{\left(1+\eta_{I}\right)\phi_{i}}+v(\omega)-v(1)\right]-x_{e,1}v(1),\nonumber \\
+\rho v(\omega) & =\max_{x_{I,\omega}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{x_{I}^{2}}{2}+x_{I,\omega}\text{\ensuremath{\lambda}}\frac{\eta_{I}}{\left(1+\eta_{I}\right)\phi_{i}}+\delta\left(v(1)-v(\omega)\right)-x_{e,\omega}v(\omega),\label{eq: Values Ext}
+\end{align}
+
+\end_inset
+
+where the additional term, 
+\begin_inset Formula $\text{\ensuremath{\lambda}}\frac{\eta_{I}}{\left(1+\eta_{I}\right)\phi_{i}},$
+\end_inset
+
+captures the expected additional instantaneous profits accruing to incumbents
+ from a realized innovation.
+ Note that the LOM of the system in this case is unchanged relative to the
+ baseline case, and so are all the comparative statics, once the appropriate
+ parametric restrictions are in place.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The following Lemma summarizes the results for this version of the model.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem: values-1"
+
+\end_inset
+
+Consider a steady state of the normalized one-sector model with productive
+ incumbents' research.
+ Assume that defensive innovation is effective, 
+\begin_inset Formula $\omega>1$
+\end_inset
+
+, and that markups are sufficiently high to induce incumbents to innovate:
+\begin_inset Formula 
+\[
+\phi>\frac{1}{\alpha_{I}}\left(\text{\ensuremath{\lambda}}\frac{\eta_{I}}{\left(1+\eta_{I}\right)\phi_{i}}\right)^{2}.
+\]
+
+\end_inset
+
+Then, 
+\begin_inset Formula $\omega v(1)>v(\omega)>v(1).$
+\end_inset
+
+ Around a steady state, the normalized values, 
+\begin_inset Formula $v(1),v(\omega)$
+\end_inset
+
+, are increasing in the markup factor 
+\begin_inset Formula $m_{i}=\frac{\phi_{i}-1}{\phi_{i}}$
+\end_inset
+
+, and
+\begin_inset Formula 
+\[
+\frac{\partial v(\omega)}{\partial m_{i}}>\frac{\partial v(1)}{\partial m_{i}}>0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of the analogous of Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem: values-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+For ease of notation, Let:
+\begin_inset Formula 
+\[
+\tilde{\pi}\equiv\text{\ensuremath{\lambda}}\frac{\eta_{I}}{\left(1+\eta_{I}\right)\phi_{i}},
+\]
+
+\end_inset
+
+the additional expected instantaneous profit realized by an innovating incumbent.
+ Under the above assumptions, 
+\begin_inset Formula 
+\begin{align}
+\rho v(\omega)-\rho v(1) & =\delta\left(v(1)-v(\omega)\right)+x_{e,1}v(1)-x_{e,\omega}v(\omega)+\frac{\tilde{\pi}^{2}}{2\alpha_{I}}-\frac{\left[\tilde{\pi}+v(\omega)-v(1)\right]^{2}}{2\alpha_{I}},\nonumber \\
+\left(\rho+\delta\right)\left[v(\omega)-v(1)\right]+\bm{1}\left\{ \tilde{\pi}+v(\omega)-v(1)>0\right\} \frac{\left[\tilde{\pi}+v(\omega)-v(1)\right]^{2}}{2\alpha_{I}}-\frac{\tilde{\pi}^{2}}{2\alpha_{I}} & =x_{e,\omega}\left(\omega v(1)-v(\omega)\right).\label{eq: paradox-1}
+\end{align}
+
+\end_inset
+
+From this expression it is apparent that 
+\begin_inset Formula $v(1)<v(\omega)$
+\end_inset
+
+.
+ Suppose not.
+ Then, the RHS is strictly positive, and a necessary condition for the LHS
+ to be positive is that:
+\begin_inset Formula 
+\[
+\tilde{\pi}+v(\omega)-v(1)>\tilde{\pi},
+\]
+
+\end_inset
+
+a contradiction.
+ Now suppose 
+\begin_inset Formula $v(1)>v(\omega),$
+\end_inset
+
+Total differentiation of System 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: Values Ext"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives:
+\begin_inset Formula 
+\begin{equation}
+\underset{\equiv J}{\underbrace{\left[\begin{matrix}\rho+\frac{\tilde{\pi}}{\alpha_{I}}+\frac{v(\omega)-v(1)}{\alpha_{I}}+2\frac{v(1)}{\zeta} & -\frac{\tilde{\pi}}{\alpha_{I}}-\frac{v(\omega)-v(1)}{\alpha_{I}}\\
+-\delta+\frac{v(\omega)}{\zeta\omega} & \rho+\delta+\frac{v(1)}{\zeta\omega}
+\end{matrix}\right]}}\left[\begin{matrix}\mathrm{d}v(1)\\
+\mathrm{d}v(\omega)
+\end{matrix}\right]-\left[\begin{matrix}\frac{1}{\phi^{2}}-\frac{\tilde{\pi}}{\phi}\left[\frac{\tilde{\pi}}{\alpha_{I}}+\frac{v(\omega)-v(1)}{\alpha_{I}}\right]\\
+\frac{1}{\phi^{2}}-\frac{\tilde{\pi}}{\phi}\frac{\tilde{\pi}}{\alpha_{I}}
+\end{matrix}\right]\mathrm{d}\phi_{i}=0\label{eq: jacob-1-1}
+\end{equation}
+
+\end_inset
+
+The determinant of the Jacobian is:
+\begin_inset Formula 
+\begin{align*}
+\det J & =\left(\rho+x_{I}+2\omega x_{e,\omega}\right)\left(\rho+\delta+\frac{v(1)}{\zeta\omega}\right)+x_{I}\left(x_{e,\omega}-\delta\right)>0.
+\end{align*}
+
+\end_inset
+
+Solving 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: jacob-1-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives:
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{matrix}\frac{\mathrm{d}v(1)}{\mathrm{d}\phi_{i}}\\
+\frac{\mathrm{d}v(\omega)}{\mathrm{d}\phi_{i}}
+\end{matrix}\right]=\frac{1}{\det J}\left[\begin{matrix}\frac{\rho\zeta\omega+v(1)}{\zeta\omega}+\delta & \frac{\tilde{\pi}}{\alpha_{I}}+\frac{v(\omega)-v(1)}{\alpha_{I}}\\
+\delta-\frac{v(\omega)}{\zeta\omega} & \rho+\frac{\tilde{\pi}}{\alpha_{I}}+\frac{v(\omega)-v(1)}{\alpha_{I}}+2\frac{v(1)}{\zeta}
+\end{matrix}\right]\left[\begin{matrix}\frac{1}{\phi^{2}}-\frac{\tilde{\pi}}{\phi}\left[\frac{\tilde{\pi}}{\alpha_{I}}+\frac{v(\omega)-v(1)}{\alpha_{I}}\right]\\
+\frac{1}{\phi^{2}}-\frac{\tilde{\pi}}{\phi}\frac{\tilde{\pi}}{\alpha_{I}}
+\end{matrix}\right].\label{eq: solJ-1}
+\end{equation}
+
+\end_inset
+
+Now:
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}v(1)}{\mathrm{d}\phi_{i}}>0
+\]
+
+\end_inset
+
+IFF:
+\begin_inset Formula 
+\begin{align*}
+\left(\frac{1}{\phi^{2}}-\frac{\tilde{\pi}}{\phi}x_{I}\right)\left[\rho+\delta+x_{e,\omega}\right]+\left(\frac{1}{\phi^{2}}-\frac{\tilde{\pi}}{\phi}\left(\frac{\tilde{\pi}}{\alpha_{I}}\right)\right)x_{I} & >0\\
+\\
+\\
+\left(\frac{1}{\phi^{2}}-\frac{\tilde{\pi}}{\phi}\right)\left[\rho+\delta+x_{e,\omega}+x_{I}\right] & >0,
+\end{align*}
+
+\end_inset
+
+Now note that:
+\begin_inset Formula 
+\begin{align*}
+\left(\frac{1}{\phi^{2}}-\frac{\tilde{\pi}}{\phi}x_{I}\right)\left[\rho+\delta+x_{e,\omega}\right]+\left(\frac{1}{\phi^{2}}-\frac{\tilde{\pi}}{\phi}\left(\frac{\tilde{\pi}}{\alpha_{I}}\right)\right)x_{I} & >\\
+\left(\frac{1}{\phi^{2}}-\frac{\tilde{\pi}}{\phi}x_{I}\right)\left[\rho+\delta+x_{e,\omega}\right]+\left(\frac{1}{\phi^{2}}-\frac{\tilde{\pi}}{\phi}x_{I}\right)x_{I} & =\\
+\left(\frac{1}{\phi^{2}}-\frac{\tilde{\pi}}{\phi}x_{I}\right)\left[\rho+\delta+x_{e,\omega}+x_{I}\right]
+\end{align*}
+
+\end_inset
+
+And this term is strictly positive iff:
+\begin_inset Formula 
+\[
+x_{I}<\frac{\phi}{\tilde{\pi}}=\frac{1+\eta_{I}}{\lambda\eta_{I}}
+\]
+
+\end_inset
+
+This occurs if:
+\begin_inset Formula 
+\begin{align*}
+\\
+\frac{\tilde{\pi}}{\alpha_{I}}+ & \frac{v(\omega)-v(1)}{\alpha_{I}}<\frac{\phi}{\tilde{\pi}}\\
+v(\omega)-v(1) & <\frac{\alpha_{I}\phi}{\tilde{\pi}}-\tilde{\pi}
+\end{align*}
+
+\end_inset
+
+First, this is clearly satisfied if 
+\begin_inset Formula $x_{I}=0$
+\end_inset
+
+.
+ Otherwise, it must be 
+\begin_inset Formula $\alpha_{I}\phi>\tilde{\pi}^{2},$
+\end_inset
+
+ surely satisfied as long as the markup term is sufficiently high.
+ 
+\end_layout
+
+\begin_layout Proof
+Subtracting line by line the equations in System 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: Values Ext"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives:
+\begin_inset Formula 
+\begin{align*}
+\frac{\mathrm{d}v(\omega)}{\mathrm{d}\phi_{i}}-\frac{\mathrm{d}v(1)}{\mathrm{d}\phi_{i}} & >\frac{1}{\phi^{2}}\frac{1}{\det J}\left[-\frac{v(\omega)}{\zeta\omega}-\frac{\rho\zeta\omega+v(1)}{\zeta\omega}+\rho+2\frac{v(1)}{\zeta}\right]\\
+ & =\frac{1}{\phi^{2}}\frac{1}{\det J}\left[-\frac{v(\omega)}{\zeta\omega}-\frac{v(1)}{\zeta\omega}+2\frac{v(1)}{\zeta}\right]\\
+ & =\frac{1}{\phi^{2}}\frac{1}{\det J}\left[\frac{2\omega v(1)-\left(v(\omega)+v(1)\right)}{\zeta\omega}\right]>0.
+\end{align*}
+
+\end_inset
+
+First note that this condition is trivially satisfied if 
+\begin_inset Formula $v(1)>v(\omega)$
+\end_inset
+
+, since 
+\begin_inset Formula $\omega>1$
+\end_inset
+
+.
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: paradox-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows that, if 
+\begin_inset Formula $v(\omega)>v(1)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\omega v(1)>v(\omega)>v(1).
+\]
+
+\end_inset
+
+Indeed, if 
+\begin_inset Formula $v(\omega)>v(1)$
+\end_inset
+
+, the left hand side of the Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: paradox-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ expression is strictly positive, requiring 
+\begin_inset Formula $\omega v(1)>v(\omega)$
+\end_inset
+
+ to avoid contradiction.
+ Suppose that 
+\begin_inset Formula $\omega v(1)<v(\omega).$
+\end_inset
+
+ This would imply that 
+\begin_inset Formula $v(1)>v(\omega)>\omega v(1),$
+\end_inset
+
+which cannot be since 
+\begin_inset Formula $\omega>1.$
+\end_inset
+
+ It follows that: 
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}v(\omega)}{\mathrm{d}m_{i}}>\frac{\mathrm{d}v(1)}{\mathrm{d}m_{i}}>0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Linear Costs
+\end_layout
+
+\begin_layout Standard
+Suppose that now the incumbents' research technology has:
+\begin_inset Formula 
+\begin{align}
+\rho v(1) & =\max_{x_{I}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}x_{I}\bar{X}+x_{I}\left[v(\omega)-v(1)\right]-x_{e,1}v(1),\nonumber \\
+\rho v(\omega) & =\max_{x_{I,\omega}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(v(1)-v(\omega)\right)-x_{e,\omega}v(\omega),\label{eq: Values Ext-1}
+\end{align}
+
+\end_inset
+
+with 
+\begin_inset Formula $\bar{X}=x_{I}+x_{e,1}.$
+\end_inset
+
+ This gives: 
+\begin_inset Formula 
+\begin{align*}
+\bar{X=\frac{\left[v(\omega)-v(1)\right]}{\alpha}=x_{e,1}+x_{I}} & \Rightarrow x_{I}=\frac{v(\omega)-v(1)}{\alpha}-\frac{v(1)}{\zeta}\\
+ & \Rightarrow x_{I}=\frac{\zeta v(\omega)-\left(\alpha+\zeta\right)v(1)}{\alpha\zeta}
+\end{align*}
+
+\end_inset
+
+Now note that with these costs, in equilibrium:
+\begin_inset Formula 
+\begin{equation}
+\rho v(1)=m-\frac{v(1)^{2}}{\zeta}\label{eq: value1}
+\end{equation}
+
+\end_inset
+
+Yielding:
+\begin_inset Formula 
+\[
+v(1)=\frac{-\rho\zeta+\sqrt{\left(\rho\zeta\right)^{2}+4\zeta m}}{2}
+\]
+
+\end_inset
+
+The second equation gives:
+\begin_inset Formula 
+\[
+v(\omega)=\frac{m+\delta v(1)}{\rho+\delta+\frac{v(1)}{\zeta\omega}}
+\]
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $\delta=0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+v(\omega)=\frac{m\zeta\omega}{\rho\zeta\omega+v(1)}
+\]
+
+\end_inset
+
+And:
+\begin_inset Formula 
+\[
+\zeta v(\omega)-\left(1+\zeta\right)v(1)>0
+\]
+
+\end_inset
+
+IFF:
+\begin_inset Formula 
+\begin{align*}
+\frac{m}{\rho+\frac{v(1)}{\zeta\omega}} & >\frac{1+\zeta}{\zeta}v(1)\\
+m & >\rho\frac{1+\zeta}{\zeta}v(1)+\frac{1+\zeta}{\zeta\omega}\frac{v(1)^{2}}{\zeta}
+\end{align*}
+
+\end_inset
+
+By 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: value1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\left(1-\frac{1+\zeta}{\zeta\omega}\right)m & >\left(\rho\frac{\omega-1}{\omega}\right)\frac{1+\zeta}{\zeta}v(1)\\
+\left(\frac{\zeta\left(\omega-1\right)-1}{\zeta\omega}\right)m & >\left(\rho\frac{\omega-1}{\omega}\right)\frac{1+\zeta}{\zeta}\sqrt{\zeta}\sqrt{m}\\
+\left(\zeta\left(\omega-1\right)-1\right)m & >\left(\rho\sqrt{\zeta}\left(\omega-1\right)\right)\left(1+\zeta\right)\sqrt{m}
+\end{align*}
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $\zeta\left(\omega-1\right)>1$
+\end_inset
+
+.
+ Then with:
+\begin_inset Formula 
+\[
+\sqrt{m}>\frac{\rho\sqrt{\zeta}\left(\omega-1\right)\left(1+\zeta\right)}{\zeta\left(\omega-1\right)-1}\iff m>\left(\frac{\rho\sqrt{\zeta}\left(\omega-1\right)\left(1+\zeta\right)}{\zeta\left(\omega-1\right)-1}\right)^{2},
+\]
+
+\end_inset
+
+Incumbents' research is positive.
+\end_layout
+
+\begin_layout Standard
+Even simpler.
+ Suppose that both entrants and incumbents face the same crowding externalities.
+ Then, we get:
+\begin_inset Formula 
+\begin{equation}
+\frac{v(\omega)-v(1)}{\alpha}=\bar{X}=\frac{v(1)}{\zeta}\label{eq: NA}
+\end{equation}
+
+\end_inset
+
+Then:
+\begin_inset Formula 
+\[
+v(1)=\frac{\zeta}{\alpha+\zeta}v(\omega)
+\]
+
+\end_inset
+
+From 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: Values Ext"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\rho\left(v(\omega)-v(1)\right) & =x_{e,1}v(1)-\frac{x_{e,1}}{\omega}v(\omega)\\
+\rho\omega\left(v(\omega)-v(1)\right) & =x_{e,1}\left(\omega v(1)-v(\omega)\right)
+\end{align*}
+
+\end_inset
+
+Since from above 
+\begin_inset Formula $v(1)<v(\omega),$
+\end_inset
+
+ we need to assume 
+\begin_inset Formula 
+\[
+\frac{\zeta\omega}{\alpha+\zeta}-1>0
+\]
+
+\end_inset
+
+to avoid contradiction, that is:
+\begin_inset Formula 
+\[
+\zeta\left(\omega-1\right)>\alpha
+\]
+
+\end_inset
+
+Under this assumption:
+\begin_inset Formula 
+\begin{align*}
+\rho\omega\left(\frac{\alpha+\zeta}{\zeta}v(1)-v(1)\right) & =x_{e,1}\left(\omega v(1)-\frac{\alpha+\zeta}{\zeta}v(1)\right)\\
+\frac{\rho\omega\alpha}{\zeta\left(\omega-1\right)-\alpha} & =x_{e,1}
+\end{align*}
+
+\end_inset
+
+From:
+\begin_inset Formula 
+\begin{align*}
+x_{I} & =\frac{v(1)}{\zeta}-x_{e,1}\\
+x_{I} & =\frac{v(1)}{\zeta}-\frac{\rho\omega\alpha}{\zeta\left(\omega-1\right)-\alpha}\\
+x_{I} & =\frac{-\rho\zeta+\sqrt{\left(\rho\zeta\right)^{2}+4\zeta m}}{2\zeta}-\frac{\rho\omega\alpha}{\zeta\left(\omega-1\right)-\alpha}\\
+ & >\frac{\sqrt{m}}{\sqrt{\zeta}}-\frac{\rho\omega\alpha}{\zeta\left(\omega-1\right)-\alpha}\\
+ & >\frac{\left(\zeta\left(\omega-1\right)-\alpha\right)\sqrt{m}-\sqrt{z}\rho\omega\alpha}{\sqrt{\zeta}}>0\\
+ & \iff m>\zeta\left(\frac{\rho\omega\alpha}{\zeta\left(\omega-1\right)-\alpha}\right)^{2}
+\end{align*}
+
+\end_inset
+
+Is there a contradiction with 
+\begin_inset Formula $m<1?$
+\end_inset
+
+ To avoid that we need:
+\begin_inset Formula 
+\[
+\zeta\left(\omega-1\right)>\left(\sqrt{\zeta}\rho\omega+1\right)\alpha
+\]
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $\zeta<1,$
+\end_inset
+
+then:
+\begin_inset Formula 
+\[
+\zeta\left(\omega\left(1-\rho\alpha\right)-1\right)>\alpha,
+\]
+
+\end_inset
+
+which is feasible.
+ Note that throughout there are no real restrictions on 
+\begin_inset Formula $\omega.$
+\end_inset
+
+ Thus, in the linear model, entrants do not increase their investments with
+ markups, while incumbents do, which directly leads to the main result in
+ the paper.
+ In any event, it is true that starting from an equilibrium where incumbents
+ do invest in research, their investment increases in the markup, while
+ the ones from entrants in unprotected sectors does not.
+ This is because increased investment by incumbents increases aggregate
+ costs enough to make additional investment unattractive to entrants.
+\end_layout
+
+\begin_layout Standard
+Note that there is only entrants' research in protected sectors.
+ Given the crowding externalities specified above, we have:
+\begin_inset Formula 
+\[
+x_{e,\omega}=\frac{v(1)}{\zeta\omega}.
+\]
+
+\end_inset
+
+With 
+\begin_inset Formula $\omega>1:$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial x_{I}}{\partial m}>\frac{\partial x_{e,\omega}}{\partial m}.
+\]
+
+\end_inset
+
+Note that growth in this context is given by:
+\begin_inset Formula 
+\[
+\eta\left(\mu_{e,1}x_{e,1}+\mu_{e,\omega}x_{e,\omega}\right)
+\]
+
+\end_inset
+
+and inventors' productivity is:
+\begin_inset Formula 
+\[
+\frac{\eta\left(\mu_{e,1}x_{e,1}+\mu_{e,\omega}x_{e,\omega}\right)}{\zeta\left(\mu_{e,1}x_{e,1}+\omega\mu_{e,\omega}x_{e,\omega}\right)+\mu_{1}\alpha_{I}x_{I}}
+\]
+
+\end_inset
+
+The incumbents' share is proportional to:
+\begin_inset Formula 
+\[
+\text{Sh.Inc}\propto\frac{\mu_{1}x_{I}}{\mu_{e,1}x_{e,1}+\omega\mu_{e,\omega}x_{e,\omega}}
+\]
+
+\end_inset
+
+Below we found:
+\begin_inset Formula 
+\begin{align*}
+\mu_{e,\omega} & =1+\frac{x_{I}x_{e,1}\mu_{1}-\left(x_{e,1}+x_{I}\right)x_{e,\omega}\mu_{1}}{x_{e,\omega}\left(x_{e,1}+x_{I}\right)},\\
+\mu_{e,1} & =\frac{x_{e,1}\mu_{1}}{x_{e,1}+x_{I}}
+\end{align*}
+
+\end_inset
+
+Note that:
+\begin_inset Formula 
+\[
+x_{I}=\omega x_{e,\omega}-x_{e,1}
+\]
+
+\end_inset
+
+Thus:
+\begin_inset Formula 
+\begin{align*}
+\mu_{e,\omega} & =1+\frac{x_{e,1}\mu_{1}\left(x_{I}-x_{e,\omega}\right)-\left(x_{I}\right)x_{e,\omega}\mu_{1}}{x_{e,\omega}\left(x_{e,1}+x_{I}\right)},\\
+\mu_{e,\omega} & =1+\frac{\left(\omega x_{e,\omega}-x_{I}\right)\left(x_{I}-x_{e,\omega}\right)-x_{I}x_{e,\omega}}{x_{e,\omega}\left(\omega x_{e,\omega}\right)}\mu_{1},\\
+ & =1+\frac{\omega x_{e,\omega}-\omega x_{e,\omega}^{2}-x_{I}^{2}}{x_{e,\omega}\left(\omega x_{e,\omega}\right)}\mu_{1}\\
+ & =1+\frac{1-x_{e,\omega}-\frac{x_{I}^{2}}{\omega x_{e,\omega}}}{x_{I}+x_{e,\omega}}\\
+ & =\frac{1+x_{I}\left(1-\frac{x_{I}}{\omega x_{e,\omega}}\right)}{x_{I}+x_{e,\omega}}\\
+ & =\frac{1+x_{e,1}\frac{x_{I}}{\omega x_{e,\omega}}}{x_{I}+x_{e,\omega}}
+\end{align*}
+
+\end_inset
+
+And:
+\begin_inset Formula 
+\begin{align*}
+\mu_{e,1} & =\frac{x_{e,1}\mu_{1}}{x_{e,1}+x_{I}}\\
+\mu_{e,1} & =\frac{\omega x_{e,\omega}-x_{I}}{\omega\left(x_{I}+x_{e,\omega}\right)}
+\end{align*}
+
+\end_inset
+
+Thus:
+\begin_inset Formula 
+\begin{align*}
+\mu_{e,1}x_{e,1}+\omega\mu_{e,\omega}x_{e,\omega} & =\\
+\frac{\omega x_{e,\omega}-x_{I}}{\omega\left(x_{I}+x_{e,\omega}\right)}x_{e,1}+\omega\frac{1+x_{e,1}\frac{x_{I}}{\omega x_{e,\omega}}}{x_{I}+x_{e,\omega}}x_{e,\omega} & =\\
+\frac{\left(\omega x_{e,\omega}-x_{I}\right)^{2}+\omega^{2}x_{e,\omega}+\omega\left(\omega x_{e,\omega}-x_{I}\right)x_{I}}{\omega\left(x_{I}+x_{e,\omega}\right)}
+\end{align*}
+
+\end_inset
+
+Thus:
+\begin_inset Formula 
+\begin{align*}
+\text{Sh.Inc} & \propto\frac{\mu_{1}\left(x_{e,1}+x_{I}\right)}{\frac{\left(\omega x_{e,\omega}-x_{I}\right)^{2}+\omega^{2}x_{e,\omega}+\omega\left(\omega x_{e,\omega}-x_{I}\right)x_{I}}{\omega\left(x_{I}+x_{e,\omega}\right)}}\\
+ & =\frac{x_{e,\omega}^{2}}{\left(\omega x_{e,\omega}-x_{I}\right)^{2}+2\omega^{2}x_{e,\omega}-\omega x_{I}^{2}}\\
+ & =\frac{x_{e,\omega}^{2}}{\omega^{2}x_{e,\omega}^{2}-2\omega x_{e,\omega}x_{I}+x_{I}^{2}-\omega x_{I}^{2}}
+\end{align*}
+
+\end_inset
+
+Where the last line follows from:
+\begin_inset Formula 
+\[
+\mu_{1}=\frac{x_{e,\omega}}{x_{e,\omega}+x_{I}},\ \mu_{\omega}=\frac{x_{I}}{x_{e,\omega}+x_{I}}.
+\]
+
+\end_inset
+
+Now the derivative of the above is positive IFF:
+\begin_inset Formula 
+\begin{align*}
+x_{e,1}\frac{\omega\left(\partial\frac{x_{I}}{\partial m}x_{e,\omega}-\partial\frac{x_{e,\omega}}{\partial m}x_{e,1}\right)\left(x_{e,1}+x_{I}\right)-\left(x_{e,\omega}^{2}+\omega x_{e,\omega}x_{I}\right)\frac{\partial x_{I}}{\partial m}}{x_{e,\omega}^{2}\left(x_{e,1}+x_{I}\right)^{2}}+\omega\frac{\left(\partial\frac{x_{I}}{\partial m}x_{e,\omega}-\partial\frac{x_{e,\omega}}{\partial m}x_{e,1}\right)}{x_{e,\omega}^{2}} & <0\\
+\omega\left(\partial\frac{x_{I}}{\partial m}x_{e,\omega}-\partial\frac{x_{e,\omega}}{\partial m}x_{e,1}\right)\left[x_{e,1}\left(x_{e,1}+x_{I}\right)+\left(x_{e,1}+x_{I}\right)^{2}\right]-x_{e,1}\left(x_{e,\omega}^{2}+\omega x_{e,\omega}x_{I}\right)\frac{\partial x_{I}}{\partial m} & <0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Omitted Proofs and Derivations
 \begin_inset CommandInset label
 LatexCommand label
@@ -252,15 +1025,6 @@ The determinant of the Jacobian is:
 
 \end_inset
 
-Note first that the determinant of the Jacobian, 
-\begin_inset Formula $J$
-\end_inset
-
-, is strictly positive, setting 
-\begin_inset Formula $\delta=0$
-\end_inset
-
-.
  Solving 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -1065,7 +1829,7 @@ status open
 
 
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/tab/Dk4_sh_inv_hhi_noctrl_N_inv.tex"
 
 \end_inset
