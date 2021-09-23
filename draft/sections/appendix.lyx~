@@ -184,8 +184,8 @@ in instant
  Under these assumptions, the incumbents' value functions read:
 \begin_inset Formula 
 \begin{align}
-\rho v(1) & =\max_{x_{I}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{x_{I}^{2}}{2}+x_{I}\left[\text{\ensuremath{\lambda}}\frac{\eta_{I}}{\left(1+\eta_{I}\right)\phi_{i}}+v(\omega)-v(1)\right]-x_{e,1}v(1),\nonumber \\
-\rho v(\omega) & =\max_{x_{I,\omega}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{x_{I}^{2}}{2}+x_{I,\omega}\text{\ensuremath{\lambda}}\frac{\eta_{I}}{\left(1+\eta_{I}\right)\phi_{i}}+\delta\left(v(1)-v(\omega)\right)-x_{e,\omega}v(\omega),\label{eq: Values Ext}
+\rho v(1) & =\max_{x_{I}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{x_{I}^{2}}{2}+x_{I}\left[\text{\ensuremath{\lambda}}\frac{\eta_{I}}{\left(1+\eta_{I}\right)\phi_{i}}+\left(1-\lambda\right)\left(v(\omega)-v(1)\right)\right]-x_{e,1}v(1),\nonumber \\
+\rho v(\omega) & =\max_{x_{I,\omega}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{x_{I,\omega}^{2}}{2}+x_{I,\omega}\text{\ensuremath{\lambda}}\frac{\eta_{I}}{\left(1+\eta_{I}\right)\phi_{i}}+\delta\left(v(1)-v(\omega)\right)-x_{e,\omega}v(\omega),\label{eq: Values Ext}
 \end{align}
 
 \end_inset
@@ -199,6 +199,51 @@ captures the expected additional instantaneous profits accruing to incumbents
  Note that the LOM of the system in this case is unchanged relative to the
  baseline case, and so are all the comparative statics, once the appropriate
  parametric restrictions are in place.
+\begin_inset Note Note
+status open
+
+\begin_layout Paragraph
+Computations for numerical solution
+\end_layout
+
+\begin_layout Plain Layout
+Consider first the second equation.
+ That gives:
+\begin_inset Formula 
+\begin{align*}
+\left(\rho+\delta\right)v(\omega) & =\frac{\tilde{\pi}^{2}}{2\alpha_{I}}+\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(v(1)\right)-\frac{v(1)}{\zeta\omega}\left(v(\omega)\right)\\
+\left(\rho+\delta+\frac{v(1)}{\zeta\omega}\right)v(\omega) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(v(1)\right)\\
+v(\omega) & =\left(\rho+\delta+\frac{v(1)}{\zeta\omega}\right)^{-1}\left[\frac{\tilde{\pi}^{2}}{2\alpha_{I}}+\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta v(1)\right]
+\end{align*}
+
+\end_inset
+
+Then:
+\begin_inset Formula 
+\[
+\rho v(1)=\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\frac{^{2}}{2\alpha_{I}}+\frac{\left(\tilde{\pi}+\left(1-\lambda\right)\left(v(\omega)-v(1)\right)\right)^{2}}{2\alpha_{I}}-\frac{\left(v(1)\right)^{2}}{\zeta}
+\]
+
+\end_inset
+
+Assume that 
+\begin_inset Formula $\delta=0$
+\end_inset
+
+ (infinite patent protection),
+\begin_inset Formula 
+\[
+v(\omega)=\frac{\zeta\omega}{\rho\zeta\omega+v(1)}\left(\frac{\tilde{\pi}^{2}}{2\alpha_{I}}+\frac{\phi_{i}-1}{\phi_{i}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Note Note
 status collapsed
 
@@ -867,29 +912,33 @@ Thus:
 \begin{align*}
 \text{Sh.Inc} & \propto\frac{\mu_{1}\left(x_{e,1}+x_{I}\right)}{\frac{\left(\omega x_{e,\omega}-x_{I}\right)^{2}+\omega^{2}x_{e,\omega}+\omega\left(\omega x_{e,\omega}-x_{I}\right)x_{I}}{\omega\left(x_{I}+x_{e,\omega}\right)}}\\
  & =\frac{x_{e,\omega}^{2}}{\left(\omega x_{e,\omega}-x_{I}\right)^{2}+2\omega^{2}x_{e,\omega}-\omega x_{I}^{2}}\\
- & =\frac{x_{e,\omega}^{2}}{\omega^{2}x_{e,\omega}^{2}-2\omega x_{e,\omega}x_{I}+x_{I}^{2}-\omega x_{I}^{2}}
+ & =\frac{x_{e,\omega}^{2}}{\omega^{2}x_{e,\omega}^{2}-2\omega x_{e,\omega}x_{I}+x_{I}^{2}-\omega x_{I}^{2}}\\
+ & =\frac{1}{\omega^{2}-2\omega\frac{x_{I}}{x_{e,\omega}}-\left(\omega-1\right)\left(\frac{x_{I}}{x_{e,\omega}}\right)^{2}},
 \end{align*}
 
 \end_inset
 
-Where the last line follows from:
-\begin_inset Formula 
-\[
-\mu_{1}=\frac{x_{e,\omega}}{x_{e,\omega}+x_{I}},\ \mu_{\omega}=\frac{x_{I}}{x_{e,\omega}+x_{I}}.
-\]
+which is unambiguously increasing in 
+\begin_inset Formula $\frac{x_{I}}{x_{e,\omega}}$
+\end_inset
+
+ since 
+\begin_inset Formula $\omega>1.$
+\end_inset
+
+ Therefore, the linear model also predicts an increase in the incumbents'
+ share of inventors following an increase in the markup, and the comparative
+ statics are qualitatively the same as in Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "BROKEN: Ref: prop: partialEq"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-Now the derivative of the above is positive IFF:
-\begin_inset Formula 
-\begin{align*}
-x_{e,1}\frac{\omega\left(\partial\frac{x_{I}}{\partial m}x_{e,\omega}-\partial\frac{x_{e,\omega}}{\partial m}x_{e,1}\right)\left(x_{e,1}+x_{I}\right)-\left(x_{e,\omega}^{2}+\omega x_{e,\omega}x_{I}\right)\frac{\partial x_{I}}{\partial m}}{x_{e,\omega}^{2}\left(x_{e,1}+x_{I}\right)^{2}}+\omega\frac{\left(\partial\frac{x_{I}}{\partial m}x_{e,\omega}-\partial\frac{x_{e,\omega}}{\partial m}x_{e,1}\right)}{x_{e,\omega}^{2}} & <0\\
-\omega\left(\partial\frac{x_{I}}{\partial m}x_{e,\omega}-\partial\frac{x_{e,\omega}}{\partial m}x_{e,1}\right)\left[x_{e,1}\left(x_{e,1}+x_{I}\right)+\left(x_{e,1}+x_{I}\right)^{2}\right]-x_{e,1}\left(x_{e,\omega}^{2}+\omega x_{e,\omega}x_{I}\right)\frac{\partial x_{I}}{\partial m} & <0
-\end{align*}
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Section

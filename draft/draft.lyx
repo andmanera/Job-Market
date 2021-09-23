@@ -805,163 +805,6 @@ Note:
 \end_inset
 
 Which can be solved numerically.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Now let us focus on incumbents' investment, which is proportional to 
-\begin_inset Formula $v(\omega)-v(1)$
-\end_inset
-
-.
- Then, we obtain:
-\begin_inset Formula 
-\[
-\frac{\partial}{\partial\omega}\frac{\left(v(\omega)-v(1)\right)}{\alpha_{I}}=\frac{\frac{\zeta\omega}{\rho\zeta\omega+v(1)}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-v(1)}{\alpha_{I}}=\frac{\zeta\left(\rho\zeta\omega+v(1)\right)-\zeta^{2}\rho\omega}{\alpha_{I}\left[\rho\zeta\omega+v(1)\right]^{2}}>0
-\]
-
-\end_inset
-
-The same sign holds for 
-\begin_inset Formula $\zeta$
-\end_inset
-
-, the entry cost, although in that case 
-\begin_inset Formula $v(1)$
-\end_inset
-
- increases as well.
- Investment increases in the markups, as expected.
- As for entrants, investment increases like 
-\begin_inset Formula $v(1).$
-\end_inset
-
- Note:
-\begin_inset Formula 
-\[
-\rho v(\omega)=\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(v(1)-v(\omega)\right)-\frac{v(1)}{\zeta\omega}\left(v(\omega)\right)
-\]
-
-\end_inset
-
-therefore
-\begin_inset Formula 
-\begin{align*}
-\rho\left(v(\omega)-v(1)\right) & =\delta\left(v(1)-v(\omega)\right)-\frac{v(1)}{\zeta\omega}\left(v(\omega)\right)-\frac{\left(v(\omega)-v(1)\right)^{2}}{2\alpha_{I}}+\frac{v(1)}{\zeta}v(1)\\
-\left(\rho+\delta+\frac{\left(v(\omega)-v(1)\right)}{2\alpha_{I}}\right)\left(v(\omega)-v(1)\right) & =\frac{v(1)}{\zeta}\left(v(1)-\frac{v(\omega)}{\omega}\right)
-\end{align*}
-
-\end_inset
-
-This can be used to show that, if there is defensive investment, we have
- 
-\begin_inset Formula $\omega v(1)>v(\omega)$
-\end_inset
-
-.
- Note: to have positive research we must have:
-\begin_inset Formula 
-\[
-v(\omega)-v(1)>0
-\]
-
-\end_inset
-
-for 
-\begin_inset Formula $x_{I}=0$
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
-\rho v(1) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-x_{e,1}\left(v(1)\right)\\
-\rho v(\omega) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(v(1)-v(\omega)\right)-x_{e,\omega}\left(v(\omega)\right)
-\end{align*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
-\rho v(\omega)-\rho v(1) & =x_{e,1}v(1)-x_{e,\omega}v(\omega)\\
- & =\frac{v(1)}{\zeta}v(1)-\frac{v(1)}{\zeta\omega}v(\omega)
-\end{align*}
-
-\end_inset
-
-Thus, again, 
-\begin_inset Formula $v(\omega)-v(1)>0$
-\end_inset
-
- IFF 
-\begin_inset Formula $\omega v(1)-v(\omega)>0$
-\end_inset
-
-.
- Is this always true? Suppose not, then the firm's investment has to be
- 
-\begin_inset Formula $0$
-\end_inset
-
-.
- In this case, the values to the firm are simply:
-\begin_inset Formula 
-\[
-v(1)=\frac{m_{i}}{\rho+x_{e,1}},\ v(\omega)=\frac{m_{i}}{\rho+x_{e,\omega}},
-\]
-
-\end_inset
-
-By the entrant's optimal solution we have that 
-\begin_inset Formula $x_{e,\omega}=\frac{x_{e,1}}{\omega}$
-\end_inset
-
-, and:
-\begin_inset Formula 
-\[
-\omega v(1)=\frac{m_{i}}{\frac{\rho}{\omega}+x_{e,\omega}}>\frac{m_{i}}{\rho+x_{e,\omega}}=\nu(\omega),
-\]
-
-\end_inset
-
-a contradiction.
- Given a optimal research effort 
-\begin_inset Formula $x$
-\end_inset
-
-, the firm's lifetime values are:
-\begin_inset Formula 
-\begin{align*}
-\left(\rho+x^{\star}+x_{e,1}\right)v(1) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{x^{\star,2}}{2}+x^{\star}\left(v(\omega)\right)\\
-\left(\rho+\delta+x_{e,\omega}\right)v(\omega) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(v(1)\right)
-\end{align*}
-
-\end_inset
-
-Thus we have that
-\begin_inset Formula 
-\[
-v(1)=\frac{\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{x^{\star}}{2}+x^{\star}\left(v(\omega)\right)}{\left(\rho+x^{\star}+x_{e,1}\right)}
-\]
-
-\end_inset
-
-In particular, in an equilibrium with positive research it holds:
-\begin_inset Formula 
-\begin{align*}
-v(1) & >\frac{\left(\frac{\phi_{i}-1}{\phi_{i}}\right)}{\left(\rho+x_{e,1}\right)}\\
-v(1) & >\frac{\left(\frac{\phi_{i}-1}{\phi_{i}}\right)}{\left(\rho+\frac{v(1)}{\zeta}\right)}\\
-\rho v(1)+\zeta v(1)^{2} & >\zeta\left(\frac{\phi_{i}-1}{\phi_{i}}\right)
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -1809,6 +1652,793 @@ status open
 FloatBarrier
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Quantification
+\end_layout
+
+\begin_layout Standard
+In this section, I calibrate the model and conduct four exercises.
+ First, I assess whether a realistic calibration targeting the average growth
+ rate and entry and innovation statistics can replicate the results I found
+ in the empirical part.
+ Second, I assess the import of defensive innovation in producing the results,
+ and compute the counterfactual fall of inventor productivity under alternative
+ scenarios, as well as in the absence of misallocation.
+ Third, I explore the effects of a continued trend in concentration on future
+ growth and inventor productivity.
+ Fourth, I compute the output tax and sector-specific entry subsidies needed
+ to restore efficiency in inventor allocation in the model and contrast
+ it with alternative policies, like a blanket entry or overall R&D subsidy
+ in the two sectors.
+\end_layout
+
+\begin_layout Subsubsection
+Calibration
+\end_layout
+
+\begin_layout Standard
+For numerical feasibility, I calibrate the model 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parameter Values and Sources
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parameters Calibrated Externally
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Source/Target
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Discount rate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rho$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.04
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Annual real interest rate of 
+\begin_inset Formula $4\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Innovation Step
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.024,.06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Argente et al.
+ (2020) R&D Sales Elasticity in Bloom, Schankerman, and Van Reenen (2005)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Curvature of Innovation Function
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{.35}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Midpoint of estimates in Kortum (1993) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Intensity of Patent Expiration
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Uruguay Round Agreements Act (1994)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parameters Calibrated Matching a Moment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameters
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Empirical Equivalent
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Source/Target
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Average Sectors' Lerner
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Should Average 1.21 from Barkai (2020), 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha_{I}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Incumbent Costs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R&D Share over GDP pre-'81, R&D intensity
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\zeta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Entrants' Costs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Firm entry rate 13.55%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Shares of Sectors' Value Added
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Data on shares
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Share of Implemented Innovations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ratio of forward cites for inc.
+ versus entrants, internal patent share of 21.5%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.0315
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Blocking Value of Patents
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reduction in creative destruction for patenting firms, Argente et al.
+ (2020)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Relevant sources for 
+\begin_inset Formula $\phi$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Barkai (2020) if we target average markups
+\end_layout
+
+\begin_layout Itemize
+Aghion et al.
+ (2019, Falling growth) gives 13% higher incumbent efficiency in process,
+ if we want to talk of intangibles.
+ READ THIS PAPER WELL 
+\end_layout
+
+\begin_layout Standard
+Relevant sources for 
+\begin_inset Formula $\eta$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Aghion et al.
+ say required inno step is 
+\begin_inset Formula $.24$
+\end_inset
+
+ to have markups they want.
+ This could actually inform 
+\begin_inset Formula $\eta_{I}$
+\end_inset
+
+ if I make it a separate parameter 
+\end_layout
+
+\begin_layout Itemize
+Akcigit and Ates (2019, p.22) calibrate this to .044
+\end_layout
+
+\begin_layout Standard
+Source for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Akcigit and Ates' drastic innovation prob.? (4.23%) But this is more related
+ to new entrants in their model.
+ Perhaps this should inform 
+\begin_inset Formula $\zeta$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Itemize
+Akcigit and Kerr, p.
+ 1412, use the fraction of internal versus external patents 
+\emph on
+in the economy
+\emph default
+.
+ So this would be something like a ratio of incumbents versus entrants'
+ research intensity (not inventors) 
+\end_layout
+
+\begin_layout Standard
+Sources for 
+\begin_inset Formula $\zeta$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Main objective should be matching firm entry (13.55%).
+ See Akcigit and Ates 
+\end_layout
+
+\begin_layout Standard
+Source for 
+\begin_inset Formula $\alpha$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Akcigit and Ates say this governs the share of R&D over total GDP (so this
+ would be the total expenditure on inventors).
+ This is 2.4% In their calibration 
+\begin_inset Formula $\alpha=7$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sources for 
+\begin_inset Formula $\omega$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Argente et al estimate a flow rate of creative destruction of 
+\begin_inset Formula $x_{e,1}=.0098$
+\end_inset
+
+ if no patents are introduced, 
+\begin_inset Formula $x_{e,\omega}=.0095,$
+\end_inset
+
+ which would imply 
+\begin_inset Formula $\omega=1.0315$
+\end_inset
+
+ (see page 42 in Argente et al.)
+\end_layout
+
+\begin_layout Itemize
+Argente et al.
+ (2020), Akcigit et al.
+ (2018) for 
+\begin_inset Formula $\omega,\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Akcigit and Kerr for 
+\begin_inset Formula $\lambda,\zeta$
 \end_inset
 
 
