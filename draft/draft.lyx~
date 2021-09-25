@@ -1662,19 +1662,29 @@ Quantification
 \end_layout
 
 \begin_layout Standard
-In this section, I calibrate the model and conduct four exercises.
+In this section, I calibrate the model and conduct two exercises.
  First, I assess whether a realistic calibration targeting the average growth
  rate and entry and innovation statistics can replicate the results I found
  in the empirical part.
- Second, I assess the import of defensive innovation in producing the results,
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Second, I assess the import of defensive innovation in producing the results,
  and compute the counterfactual fall of inventor productivity under alternative
  scenarios, as well as in the absence of misallocation.
  Third, I explore the effects of a continued trend in concentration on future
  growth and inventor productivity.
- Fourth, I compute the output tax and sector-specific entry subsidies needed
- to restore efficiency in inventor allocation in the model and contrast
- it with alternative policies, like a blanket entry or overall R&D subsidy
- in the two sectors.
+\end_layout
+
+\end_inset
+
+ Second, I compute the output tax and sector-specific entry subsidies needed
+ to restore efficiency in inventor allocation in the model when the planner
+ cannot eliminate defensive innovation.
+ I contrast thus policy it with commonly-employed alternatives, like a blanket
+ entry or R&D subsidy in both sectors.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1688,7 +1698,7 @@ For numerical feasibility, I calibrate the model
 \begin_layout Standard
 \begin_inset Float table
 wide false
-sideways false
+sideways true
 status open
 
 \begin_layout Plain Layout
@@ -2036,7 +2046,7 @@ Source/Target
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.13-1.21
 \end_layout
 
 \end_inset
@@ -2045,7 +2055,7 @@ Source/Target
 \begin_inset Text
 
 \begin_layout Plain Layout
-Average Sectors' Lerner
+Average Sectors' Markup, Technology Gap
 \end_layout
 
 \end_inset
@@ -2054,7 +2064,9 @@ Average Sectors' Lerner
 \begin_inset Text
 
 \begin_layout Plain Layout
-Should Average 1.21 from Barkai (2020), 
+Should Average 1.21 from Barkai (2020), 1.13 if using incumbent efficiency
+ for Aghion et al.
+ (2019)
 \end_layout
 
 \end_inset
@@ -2095,7 +2107,7 @@ Incumbent Costs
 \begin_inset Text
 
 \begin_layout Plain Layout
-R&D Share over GDP pre-'81, R&D intensity
+Share of Inventors of top 10% firm distribution, 1997: 30.3%
 \end_layout
 
 \end_inset
@@ -2136,7 +2148,7 @@ Entrants' Costs
 \begin_inset Text
 
 \begin_layout Plain Layout
-Firm entry rate 13.55%
+Business R&D Share over GDP, 1997: 
 \end_layout
 
 \end_inset
@@ -2159,7 +2171,7 @@ Firm entry rate 13.55%
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+.5
 \end_layout
 
 \end_inset
@@ -2177,7 +2189,11 @@ Shares of Sectors' Value Added
 \begin_inset Text
 
 \begin_layout Plain Layout
-Data on shares
+Share of sales of sectors that saw an increase in HHI over total 
+\begin_inset Formula $\approx.5$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2200,7 +2216,7 @@ Data on shares
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+.785
 \end_layout
 
 \end_inset
@@ -2255,7 +2271,7 @@ Ratio of forward cites for inc.
 \uwave off
 \noun off
 \color none
-1.0315
+1.0315-1.24
 \end_layout
 
 \end_inset
@@ -2273,8 +2289,9 @@ Blocking Value of Patents
 \begin_inset Text
 
 \begin_layout Plain Layout
-Reduction in creative destruction for patenting firms, Argente et al.
- (2020)
+Reduction in creative destruction for patenting firms from Argente et al.
+ (2020); El.
+ of Entry to patents from Hall and Helmers
 \end_layout
 
 \end_inset
@@ -2289,10 +2306,6 @@ Reduction in creative destruction for patenting firms, Argente et al.
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2318,6 +2331,10 @@ Aghion et al.
  (2019, Falling growth) gives 13% higher incumbent efficiency in process,
  if we want to talk of intangibles.
  READ THIS PAPER WELL 
+\end_layout
+
+\begin_layout Standard
+Average increase in markup ratio is 6%.
 \end_layout
 
 \begin_layout Standard
@@ -2446,6 +2463,32 @@ Akcigit and Kerr for
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Planner Problem
+\end_layout
+
+\begin_layout Standard
+I assume that the planner cannot observe nor alter the nature of innovation.
+ In particular, the planner cannot distinguish productive from unproductive
+ projects, and cannot forbid depositing patents that have no productive
+ value.
+ The planner has two main instruments, corporate taxes and R&D subsidies,
+ and needs to maintain a balanced budget.
+ I first compute the optimal combination of sector-specific corporate and
+ entrant and incumbent R&D subsidies that maximizes inventor productivity
+ (and therefore growth) in the model economy.
+ I then analyze the solution when corporate taxes and R&D subsidies cannot
+ vary across sectors, but subsidies are allowed to depend on whether the
+ firm is an incumbent or a new entrant (entry subsidies).
+ Finally, I contrast this solution with expenditure-equivalent universal
+ entry and R&D subsidies.
+\end_layout
+
+\begin_layout Paragraph
+Sector- and position-specific subsidies and taxes.
+ 
 \end_layout
 
 \begin_layout Standard
