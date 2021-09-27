@@ -9,6 +9,14 @@
 \usepackage[bottom]{footmisc}
 \usepackage{pifont}
 \usepackage{placeins}
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -41,7 +49,7 @@ graphicboxes
 \paperfontsize 12
 \spacing onehalf
 \use_hyperref true
-\pdf_author "Andrea Manera, Michele Fornino"
+\pdf_author "Andrea Manera"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
@@ -1731,14 +1739,14 @@ Parameters Calibrated Externally
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<lyxtabular version="3" rows="8" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="decimal" decimal_point="." valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1751,12 +1759,12 @@ Parameter Name
 \begin_inset Text
 
 \begin_layout Plain Layout
-Parameter
+Symbol
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1765,7 +1773,7 @@ Value
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1776,7 +1784,7 @@ Source/Target
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1797,7 +1805,7 @@ Discount rate
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1806,7 +1814,7 @@ Discount rate
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1821,20 +1829,20 @@ Annual real interest rate of
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Innovation Step
+Shares of Sectors' Value Added
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\eta$
+\begin_inset Formula $\beta$
 \end_inset
 
 
@@ -1842,28 +1850,73 @@ Innovation Step
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-.024,.06
+.5
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Argente et al.
- (2020) R&D Sales Elasticity in Bloom, Schankerman, and Van Reenen (2005)
+Share of sales of sectors that saw an increase in HHI over total 
+\begin_inset Formula $\approx.5$
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Average Sectors' Markup, Technology Gap
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="decimal" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Incumbent efficiency from Aghion et al.
+ (2019)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1872,7 +1925,7 @@ Curvature of Innovation Function
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1884,11 +1937,11 @@ Curvature of Innovation Function
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{.35}$
+\begin_inset Formula $1/.6$
 \end_inset
 
 
@@ -1896,18 +1949,18 @@ Curvature of Innovation Function
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Midpoint of estimates in Kortum (1993) 
+Lower bound of estimates in Kortum (1993) 
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1916,7 +1969,7 @@ Intensity of Patent Expiration
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1928,7 +1981,7 @@ Intensity of Patent Expiration
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1937,11 +1990,94 @@ Intensity of Patent Expiration
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 Uruguay Round Agreements Act (1994)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Share of Implemented Innovations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="decimal" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.785
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Internal patent share of 21.5% (Akcigit and Kerr, 2018)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Blocking Value of Patents
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="decimal" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.469
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El.
+ of Entry to patents from Hall and Helmers (2015)
 \end_layout
 
 \end_inset
@@ -1954,10 +2090,10 @@ Uruguay Round Agreements Act (1994)
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
 
-\end_layout
 
+\begin_inset Newline newline
 \end_inset
 
 
@@ -1974,7 +2110,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Parameters Calibrated Matching a Moment
+Parameters Calibrated Internally
 \end_layout
 
 \end_inset
@@ -1985,23 +2121,32 @@ Parameters Calibrated Matching a Moment
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
+<lyxtabular version="3" rows="4" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Parameters
+Parameter Name
 \end_layout
 
 \end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Symbol
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2010,69 +2155,26 @@ Value
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Empirical Equivalent
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Source/Target
+Target
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\phi$
-\end_inset
-
-
+Incumbent Costs
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.13-1.21
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Average Sectors' Markup, Technology Gap
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Should Average 1.21 from Barkai (2020), 1.13 if using incumbent efficiency
- for Aghion et al.
- (2019)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -2085,20 +2187,11 @@ Should Average 1.21 from Barkai (2020), 1.13 if using incumbent efficiency
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Incumbent Costs
+6.67
 \end_layout
 
 \end_inset
@@ -2114,7 +2207,16 @@ Share of Inventors of top 10% firm distribution, 1997: 30.3%
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Entrants' Costs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2126,40 +2228,40 @@ Share of Inventors of top 10% firm distribution, 1997: 30.3%
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3.38
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Entrants' Costs
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Business R&D Share over GDP, 1997: 
+Business R&D Share over GDP, 1997: 1.81%
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\beta$
+Innovation Step
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta$
 \end_inset
 
 
@@ -2167,131 +2269,20 @@ Business R&D Share over GDP, 1997:
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-.5
+0.0024
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Shares of Sectors' Value Added
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Share of sales of sectors that saw an increase in HHI over total 
-\begin_inset Formula $\approx.5$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\lambda$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-.785
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Share of Implemented Innovations
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ratio of forward cites for inc.
- versus entrants, internal patent share of 21.5%
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\omega$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-1.0315-1.24
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Blocking Value of Patents
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Reduction in creative destruction for patenting firms from Argente et al.
- (2020); El.
- of Entry to patents from Hall and Helmers
+Average Annual GDP Growth, 1997-2012: 2.45%
 \end_layout
 
 \end_inset
@@ -2315,6 +2306,10 @@ Reduction in creative destruction for patenting firms from Argente et al.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Relevant sources for 
 \begin_inset Formula $\phi$
 \end_inset
@@ -2333,11 +2328,11 @@ Aghion et al.
  READ THIS PAPER WELL 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Average increase in markup ratio is 6%.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Relevant sources for 
 \begin_inset Formula $\eta$
 \end_inset
@@ -2363,7 +2358,7 @@ Aghion et al.
 Akcigit and Ates (2019, p.22) calibrate this to .044
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Source for 
 \begin_inset Formula $\lambda$
 \end_inset
@@ -2392,7 +2387,7 @@ in the economy
  research intensity (not inventors) 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Sources for 
 \begin_inset Formula $\zeta$
 \end_inset
@@ -2405,7 +2400,7 @@ Main objective should be matching firm entry (13.55%).
  See Akcigit and Ates 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Source for 
 \begin_inset Formula $\alpha$
 \end_inset
@@ -2423,7 +2418,7 @@ Akcigit and Ates say this governs the share of R&D over total GDP (so this
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Sources for 
 \begin_inset Formula $\omega$
 \end_inset
@@ -2465,6 +2460,11 @@ Akcigit and Kerr for
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Planner Problem
 \end_layout
@@ -2486,8 +2486,77 @@ I assume that the planner cannot observe nor alter the nature of innovation.
  entry and R&D subsidies.
 \end_layout
 
-\begin_layout Paragraph
-Sector- and position-specific subsidies and taxes
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways true
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparison of R&D Policies in the Two-Sector Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.7
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "tab/matlab/PolicyTable.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+\size small
+Note: .
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

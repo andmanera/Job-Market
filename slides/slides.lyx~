@@ -1,0 +1,3794 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+%\usetheme{metropolis}
+%\usetheme{Darmstadt}
+\usetheme{Singapore}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage[bottom]{footmisc}
+\usepackage{pifont}
+\usepackage{placeins}
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
+
+%\usepackage{animate}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+graphicboxes
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "IBM Plex Serif"
+\font_sans "default" "IBM Plex Sans"
+\font_typewriter "default" "Hack"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex-natbib
+\cite_engine_type authoryear
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+Competing for Inventors: Market Concentration and the Misallocation of Innovativ
+e Talent
+\end_layout
+
+\begin_layout Author
+Andrea Manera
+\end_layout
+
+\begin_layout Date
+October 5, 2021
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Research Questions and Main Idea
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+I ask three main questions:
+\end_layout
+
+\begin_layout Enumerate
+What are the boundaries of labor markets for 
+\emph on
+inventors?
+\end_layout
+
+\begin_layout Enumerate
+Does 
+\emph on
+competition for scarce inventors
+\emph default
+ between 
+\emph on
+different
+\emph default
+ product markets affect R&D allocation and productivity?
+\end_layout
+
+\begin_layout Enumerate
+If so, which policies can restore efficiency?
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Across
+\emph default
+ product markets, more market power gives: 
+\end_layout
+
+\begin_layout Itemize
+Higher 
+\emph on
+private 
+\emph default
+returns to R&D, demand for inventors
+\end_layout
+
+\begin_layout Itemize
+Lower 
+\emph on
+social 
+\emph default
+returns to R&D, less growth per inventor
+\end_layout
+
+\begin_layout Itemize
+Uneven growth in concentration leads to 
+\emph on
+misallocation
+\emph default
+ 
+\emph on
+across sectors
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\emph on
+Complementary explanation 
+\emph default
+for observed decline in R&D productivity
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Paper in a Slide
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Build data on inventors' flows (USPTO) across product markets (NAICS 3-4
+ digits)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Competition for inventors extends beyond product markets 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Long regressions (EC and regulations data, 1997-2012)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+Across product markets:
+\emph default
+ 
+\begin_inset Formula $\uparrow$
+\end_inset
+
+ market concentration 
+\begin_inset Formula $\uparrow$
+\end_inset
+
+ inventors 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Within product markets 
+\emph default
+that gained inventors
+\emph on
+: 
+\emph default
+
+\begin_inset Formula $\uparrow$
+\end_inset
+
+ top 10% share
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+of inventors
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula $\uparrow$
+\end_inset
+
+ incremental/defensive innovation
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(
+\begin_inset Formula $\uparrow$
+\end_inset
+
+ self-citations, 
+\begin_inset Formula $\downarrow$
+\end_inset
+
+ forward citations)
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula $\downarrow$
+\end_inset
+
+ growth/inventor
+\end_layout
+
+\begin_layout Itemize
+Misallocation explains up to .45pp lower annual growth
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Schumpeterian model with defensive patenting:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Uneven markup increases lead to misallocation
+\end_layout
+
+\begin_layout Itemize
+Policy: entrant subsidies in 
+\emph on
+less competitive sectors
+\end_layout
+
+\begin_layout Itemize
+Cost-neutral gives .155pp higher annual growth 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivating Example: The Allocation of AI Talent
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphs/AIData.pdf
+	lyxscale 30
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size tiny
+Source: Global AI Talent Report (TalentSeer, 2020), BEA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+AI is a GPT, but top Tech attracts a disproportionate share of specialists
+ (and offer higher wages)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Anecdotal widespread shortage in other sectors and smaller companies 
+\begin_inset Quotes eld
+\end_inset
+
+outcompeted
+\begin_inset Quotes erd
+\end_inset
+
+ by big tech 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{appendix: MotivationHeadlines}{
+\backslash
+beamergotobutton{Headlines}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "button: BackToMotivation"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Are Ideas Harder to Find?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphs/Bloom_et_al.png
+	lyxscale 20
+	width 100text%
+	BoundingBox 3cm 0bp 1746bp 950bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size tiny
+Source: Bloom et al.
+ (2021)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Increased Concentration (3d NAICS)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+TODO: use Census
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphs/concentration_ts.eps
+	lyxscale 50
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size tiny
+Source: Compustat
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Related Literature
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+Trends in innovation and R&D.
+\begin_inset Newline newline
+\end_inset
+
+
+\size footnotesize
+\emph default
+Akcigit and Kerr (2018), Akcigit and Ates (2020), 
+\series bold
+Bloom et al.
+ 
+\series default
+(2020, 2021), Goldschlag et al.
+ (2016) 
+\size default
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Increasing Concentration Facts and Measurement
+\begin_inset Newline newline
+\end_inset
+
+
+\size footnotesize
+\emph default
+Barkai (2020), De Loecker et al.
+ (2020), 
+\series bold
+Gutiérrez and Philippon
+\series default
+ (2017, 2018), Grullon et al.
+ (2019), Keil (2017)
+\size default
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Competition and Innovation
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+\size footnotesize
+\emph default
+Aghion et al.
+
+\series default
+ (2005, 2009, 2019), 
+\series bold
+Argente et al.
+ (2020)
+\series default
+, Gutiérrez and Philippon (2017), Autor et al.
+ (2021)
+\size default
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Models of innovation and growth 
+\begin_inset Newline newline
+\end_inset
+
+
+\size footnotesize
+\emph default
+ Aghion and Howitt (1992), Aghion et al.
+ (2001), Acemoglu and Akcigit (2012), 
+\series bold
+Abrams et al.
+ (2018)
+\series default
+,
+\series bold
+ Jo (2019)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+How is This Paper Different?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+\emph on
+Empirical Literature:
+\end_layout
+
+\begin_layout Itemize
+Focus on R&D 
+\emph on
+output 
+\emph default
+(patents and citations)
+\end_layout
+
+\begin_layout Itemize
+Allocation of R&D expenditure 
+\emph on
+within 
+\emph default
+markets
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+This paper:
+\end_layout
+
+\begin_layout Itemize
+Focus on R&D 
+\emph on
+input
+\emph default
+ (inventors)
+\end_layout
+
+\begin_layout Itemize
+Allocation of 
+\emph on
+relevant
+\emph default
+ inventors 
+\emph on
+across 
+\emph default
+markets
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\emph on
+Theory Literature:
+\end_layout
+
+\begin_layout Itemize
+R&D activity is (usually) non-rival
+\end_layout
+
+\begin_layout Itemize
+Competition and innovation 
+\emph on
+within
+\emph default
+ product markets
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+This paper:
+\end_layout
+
+\begin_layout Itemize
+R&D is 
+\emph on
+rival
+\emph default
+ (scarce inventors and defensive innovation)
+\end_layout
+
+\begin_layout Itemize
+Competition and innovation 
+\emph on
+across
+\emph default
+ different product markets
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Plan of the Talk
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Data construction
+\end_layout
+
+\begin_layout Enumerate
+Regression analysis
+\end_layout
+
+\begin_layout Enumerate
+Model
+\end_layout
+
+\begin_layout Enumerate
+Calibration and Policy
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Data Construction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Empirics Objectives
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Understand boundaries of markets for inventors
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Identify 
+\begin_inset Quotes eld
+\end_inset
+
+knowledge markets
+\begin_inset Quotes erd
+\end_inset
+
+ as sets of product markets that hire the same type of inventors 
+\end_layout
+
+\begin_layout Itemize
+Use patent data to build a network of flows of inventors across sectors
+\end_layout
+
+\begin_layout Itemize
+Identify connected sectors maximizing network's modularity 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Look 
+\emph on
+within knowledge markets 
+\emph default
+to see how product markets' share of inventors relate to concentration
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Data Sources
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+USPTO (patent-year) and Goldschlag et al.
+ (2016): 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+patent citation and disambiguated inventor id's, 1975-present;
+\end_layout
+
+\begin_layout Itemize
+patent classification by NAICS of application (1978-2016)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Economic Census and Keil (2017) (5-year-NAICS)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Concentration measure: HHI and HHI lower bound
+\end_layout
+
+\begin_layout Itemize
+Output per worker growth
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+NBER-CES:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Constructed Lerner Index 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Mercatus RegData 4.0 (2021):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sector-specific regulation counts
+\end_layout
+
+\begin_layout Itemize
+Extended using text similarity across NAICS for missing sectors
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Dataset Structure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Patent ID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inventor ID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goldschlag et al.
+ (2016) NAICS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Year
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1112
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1112
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00002
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1981
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Dataset Structure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.9
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Patent ID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inventor ID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goldschlag et al.
+ (2016) NAICS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Year
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1112
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1112
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00002
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1981
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}$
+\backslash
+Downarrow 
+\backslash
+qquad 
+\backslash
+Downarrow 
+\backslash
+qquad 
+\backslash
+Downarrow $
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.9
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inventor ID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NAICS 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NAICS 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Year
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total Flow
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1112
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1112
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1112
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1981
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Knowledge Markets
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+Knowledge Market: 
+\emph default
+set of NAICS (product markets) that employ the same type of inventors
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+To capture similar 
+\emph on
+required knowledge 
+\emph default
+to innovate 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Patent classifications are broader product markets, sometimes meaningless.
+ Just patent similarity might end up overlapping mostly with products, just
+ because same products -> same words (we DO NOT want that)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+From data, undirected network:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+NAICS (4-digit) as nodes
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Minimal share of inventor
+\emph default
+ 
+\emph on
+flows
+\emph default
+ as edge weights, 
+\begin_inset Formula $W$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Effective inventors
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+Effective inventors: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Productivity-adjusted
+\begin_inset Quotes erd
+\end_inset
+
+ inventor.
+ Fixed effect 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ in regression:
+\begin_inset Formula 
+\[
+\text{\#Patents}_{cfit}=\alpha_{i}+\alpha_{cft}+\varepsilon_{cfit}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha_{cft}$
+\end_inset
+
+: CPC class 1-digit, 
+\begin_inset Formula $c$
+\end_inset
+
+, by firm (assignee), 
+\begin_inset Formula $f$
+\end_inset
+
+, by year, 
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Raw number of inventors for robustness
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+For now, take 
+\begin_inset Formula $t$
+\end_inset
+
+ to be entire period 1980-2015
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Effective Inventor Flows
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Strength of connection between two sectors 
+\end_layout
+
+\begin_layout Itemize
+Build directed flows for each inventor 
+\begin_inset Formula $i$
+\end_inset
+
+ (avoid double counting):
+\begin_inset Formula 
+\begin{align*}
+\tilde{\text{flow}}_{1\rightarrow2,i,t} & \equiv\frac{\sum\text{\ensuremath{\bm{1}\left\{ i\text{ moves }1\rightarrow2\text{ in }t\right\} }}}{\sum_{j,k}\text{\ensuremath{\bm{1}\left\{ i\text{ moves }j\rightarrow k\text{ in }t\right\} }}}\times\alpha_{i}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+sum_{j,k}
+\backslash
+tilde{
+\backslash
+text{flow}}_{j
+\backslash
+rightarrow k,i,t}&=
+\backslash
+alpha_{i}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Compute total outflows and inflows for each NAICS 4-digit sector:
+\begin_inset Formula 
+\[
+\tilde{\text{inflow}}_{\text{NAICS}}=\sum_{n}\sum_{t}\sum_{i}\tilde{\text{flow}}_{n\rightarrow\text{NAICS},i,t},
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+qquad
+\backslash
+tilde{
+\backslash
+text{outflow}}_{
+\backslash
+text{NAICS}}=
+\backslash
+sum_{n}
+\backslash
+sum_{t}
+\backslash
+sum_{i}
+\backslash
+tilde{
+\backslash
+text{flow}}_{
+\backslash
+text{NAICS}
+\backslash
+rightarrow n,i,t},
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+For now, take 
+\begin_inset Formula $t$
+\end_inset
+
+ to be entire period 1980-2015
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Network Weights
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Compute share of inflows and outflows, e.g.:
+\begin_inset Formula 
+\[
+\text{share in}_{\text{1\ensuremath{\leftarrow}2}}=\frac{\sum_{t}\sum_{i}\tilde{\text{flow}}_{\text{ 2}\rightarrow\text{1},i,t}}{\tilde{\text{inflow}}_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Define weight:
+\begin_inset Formula 
+\[
+W_{12}=W_{21}=\min\left\{ \frac{\text{share in}_{\text{1\ensuremath{\leftarrow}2}}+\text{share out}_{\text{1\ensuremath{\rightarrow}2}}}{2},\frac{\text{share in}_{\text{2\ensuremath{\leftarrow}1}}+\text{share out}_{\text{2\ensuremath{\rightarrow}1}}}{2}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Can use average, but risk of overstating flows from small sectors to large
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Detecting Knowledge Markets
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Run a weighted community detection algorithm:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Maximizes modularity of the network
+\end_layout
+
+\begin_layout Itemize
+Finds 
+\begin_inset Formula $N$
+\end_inset
+
+ 
+\emph on
+non-overlapping 
+\emph default
+communities to maximize:
+\begin_inset Formula 
+\[
+Q=\sum_{c=1}^{N}\left[W_{cc}-\left(\sum_{j}W_{cj}\right)^{2}\right],
+\]
+
+\end_inset
+
+where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $W_{cj}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ is the weight edges that have one end in community 
+\begin_inset Formula $c$
+\end_inset
+
+ and the other in community 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+How much more the community is connected internally than externally
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Result: 10 non-singleton sets of NAICS 4-digit that share inventors
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Visualization at 3-digit NAICS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphs/Community_3d.png
+	lyxscale 40
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Features of Flows and Knowledge Markets
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Many connections across product markets even at 3 digits!
+\end_layout
+
+\begin_layout Itemize
+Same inventors are employed by firms in 
+\emph on
+highly different
+\emph default
+ product markets
+\end_layout
+
+\begin_layout Itemize
+Broad communities
+\end_layout
+
+\begin_layout Itemize
+Reasonable?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Green Cluster collects 
+\begin_inset Quotes eld
+\end_inset
+
+Food and Agriculture
+\begin_inset Quotes erd
+\end_inset
+
+:
+\size footnotesize
+ Crop Production, Food Manufacturing and Services, Beverage and Tobacco;
+\end_layout
+
+\begin_layout Itemize
+Orange Cluster is mostly 
+\begin_inset Quotes eld
+\end_inset
+
+Mining
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Heavy Industry
+\begin_inset Quotes erd
+\end_inset
+
+: 
+\size footnotesize
+e.g.
+ Petroleum and Coal Products, Chemical, Machinery Manufacturing;
+\end_layout
+
+\begin_layout Itemize
+Yellow Cluster collects 
+\begin_inset Quotes eld
+\end_inset
+
+Communications
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Electronics
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Publishing
+\begin_inset Quotes erd
+\end_inset
+
+:
+\size footnotesize
+e.g.
+ Computer and Electronic Products, Telecommunications, Data Processing;
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Isolated: e.g.
+ Utilities, Real Estate;
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+Similarly reasonable results for NAICS 4d
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+NOTE: in the future, we might re-introduce patent similarity to further
+ correct/differentiate these networks
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Additional Data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sector's share of effective inventors in knowledge market, 
+\begin_inset Formula $k$
+\end_inset
+
+, employed by sector 
+\begin_inset Formula $p$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\text{Share}_{p,t}^{k}\equiv\frac{\sum_{p_{i}(t)=p}\alpha_{i}}{\sum_{k_{i}(t)=k}\alpha_{i}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Baseline concentration measure is lower bound of HHI from Keil (2017): 
+\begin_inset Formula 
+\[
+\text{\underbar{\text{HHI}}}_{p,t}=4\left[\frac{\text{Top-4 Share}_{p,t}}{4}\right]^{2}+4\left[\frac{\text{Top-8 Share}_{p,t}-\text{Top-4 Share}_{p,t}}{4}\right]^{2}+12\left[\frac{\text{Top-20 Share}_{p,t}-\text{Top-8 Share}_{p,t}}{12}\right]^{2}+30\left[\frac{\text{Top-50 Share}_{p,t}-\text{Top-20 Share}_{p,t}}{30}\right]^{2},
+\]
+
+\end_inset
+
+where top shares come from the Economic Census (corr.
+ with actual HHI .93 when available)
+\end_layout
+
+\begin_layout Itemize
+Regulation measure from Mercatus RegData 4.0: counts of regulation affecting
+ NAICS 4d using text analysis
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Extended to all sectors with 
+\begin_inset Formula $\underbar{\text{HHI}}$
+\end_inset
+
+ using cos-similarity 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{appendix: MercatusExtension}{
+\backslash
+beamergotobutton{Details}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "button: BackToAdditionalData"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Regression Analysis
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Specification
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+At the NAICS 4-digit sector, 
+\begin_inset Formula $p$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\Delta\text{Outcome}{}_{p}=f_{k}\mathbf{1}\left\{ p\in k\right\} +\beta\Delta\text{Indep.Var.}_{p}+\gamma'\Delta\text{Controls}_{p}+\varepsilon_{p},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta$
+\end_inset
+
+ denotes the long-difference operator:
+\begin_inset Formula 
+\[
+\Delta\text{Outcome}{}_{p}=\text{Outcome}{}_{p,2012}-\text{Outcome}{}_{p,1997}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{k}\mathbf{1}\left\{ p\in k\right\} $
+\end_inset
+
+, indicator that sector 
+\begin_inset Formula $p$
+\end_inset
+
+ belongs to knowledge market 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Main Specification:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta\text{Outcome}{}_{p}$
+\end_inset
+
+: 
+\begin_inset Formula $\Delta\text{Share}_{p}^{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta\text{Indep.Var.}_{p}$
+\end_inset
+
+: 
+\begin_inset Formula $\Delta\text{\underbar{\text{HHI}}}_{p},\Delta\text{HHI}_{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta\text{Controls}_{p}:$
+\end_inset
+
+ Change in log-real sales; controls for sector size
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\beta>0$
+\end_inset
+
+: Sectors where concentration increased attracted more inventors over 1997-2012
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Main Specification Results 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{appendix: OutliersMain}{
+\backslash
+beamergotobutton{Robustness to Outliers}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{appendix: NInv}{
+\backslash
+beamergotobutton{Raw Inventors}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "button: BackToMainSpec"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.925
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "tab/Dk4_sh_inv_hhi_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\size small
+
+\begin_inset Formula $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Graphically
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphs/raw_Dk4_hhi0.eps
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Robustness to Individual Firm Size
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{appendix: OutliersSize}{
+\backslash
+beamergotobutton{Robustness to Outliers}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "button: BackToMainSpec-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.85
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "tab/Dk4_sh_inv_hhi_pc_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\size small
+
+\begin_inset Formula $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+IV Regression: Reduced Form and First Stage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.9
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "tab/IV_first_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\size small
+
+\begin_inset Formula $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+IV Regression: 2SLS Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.9
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "tab/IV_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\size small
+
+\begin_inset Formula $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What Happens 
+\size largest
+\emph on
+\color blue
+within Knowledge Markets?
+\emph default
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+An increase in inventor shares:
+\end_layout
+
+\begin_layout Itemize
+Significantly increases
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Top 10% firms' inventor shares (link to Table), Top 10%/Bottom 50% ratio
+\end_layout
+
+\begin_layout Itemize
+Self-citations (link to Table)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Significantly decreases
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Inventors' productivity 
+\end_layout
+
+\begin_layout Itemize
+Patents' forward citations (link to Table)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fall in Inventors' Productivity 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.58
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "tab/Lprod_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+\size small
+\begin_inset Formula $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sizable Growth Loss from Misallocation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Back-of-the-envelope:
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Theoretical Framework
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Model Objectives
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Explain intuition on decrease in competition driving lower growth through
+ misallocation
+\end_layout
+
+\begin_layout Itemize
+Build a model that generates a positive relation between concentration and
+ inventor demand
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Schumpeterian model 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Entrants give creative-destruction growth
+\end_layout
+
+\begin_layout Itemize
+Incumbents can engage in defensive innovation
+\end_layout
+
+\begin_layout Itemize
+Two sectors, one knowledge market
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Calibration matching R&D statistics to evaluate policy:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Optimal to subsidize entrants in concentrated sectors
+\end_layout
+
+\begin_layout Itemize
+Cost-neutral policy gives up to .155pp higher annual growth
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Discussion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Technical: duplication to be addressed properly (graph above only if agents
+ are unaware of externalities)
+\end_layout
+
+\begin_layout Itemize
+Effects are small even with drastic reductions in competition:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Extreme reductions in competition lower growth by 15%
+\end_layout
+
+\begin_layout Itemize
+When using realistic parameters, maximum of 3% reduction in growth 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Might be magnified by human capital and specific inventor types
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What Next?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Include human capital and specific inventor types
+\end_layout
+
+\begin_layout Itemize
+Empirically: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Look at new inventors in each year as a function of concentration
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Quantitative exploration in more sophisticated model
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Appendix
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sector-Specific Parameter Values 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{button: BackToMotivation}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "appendix: MotivationHeadlines"
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphs/Bloomberg.png
+	lyxscale 30
+	width 80text%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename graphs/NYT.png
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sector-Specific Parameter Values 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{button: BackToAdditionalData}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "appendix: MercatusExtension"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For all pairs NAICS 4-d sectors:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Build cosine similarity between descriptions
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+For each NAICS 4-d without missing data:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Rank 5 most similar sectors with regulation data
+\end_layout
+
+\begin_layout Itemize
+Attribute regulations of top 5 most similar sectors, weighted by cos.similarity
+\end_layout
+
+\begin_layout Itemize
+If highest cos-similarity is smaller than .2, use only most similar sector.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Main Specification: Robustness to Outliers 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{button: BackToMainSpec}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "appendix: OutliersMain"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.45
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "tab/Dk4_sh_inv_hhi_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Robustness to Individual Firm Size 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{button: BackToMainSpec-2}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "appendix: OutliersSize"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.425
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "tab/Dk4_sh_inv_hhi_pc_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

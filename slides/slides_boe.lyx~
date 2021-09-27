@@ -1,0 +1,4359 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+%\usetheme{metropolis}
+\usetheme{Darmstadt}
+\setbeamertemplate{navigation symbols}{}
+
+
+\usepackage{animate}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "IBM Plex Serif"
+\font_sans "default" "IBM Plex Sans"
+\font_typewriter "default" "Hack"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex-natbib
+\cite_engine_type authoryear
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+Automation and the Future of Work:
+\begin_inset Newline newline
+\end_inset
+
+Assessing the Role of Labor Flexibility
+\end_layout
+
+\begin_layout Subtitle
+
+\emph on
+(joint with Andrea Manera)
+\end_layout
+
+\begin_layout Institute
+Bank of England
+\begin_inset Newline newline
+\end_inset
+
+Job Market Seminar
+\end_layout
+
+\begin_layout Author
+Michele Fornino
+\end_layout
+
+\begin_layout Date
+January 27, 2021
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Research Questions and Main Idea
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+We ask the following questions:
+\end_layout
+
+\begin_layout Enumerate
+Will labor survive in production jobs at risk of automation?
+\end_layout
+
+\begin_layout Enumerate
+If so, what will those jobs look like?
+\end_layout
+
+\begin_layout Enumerate
+How do automation and labor market institutions interact?
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Our idea:
+\end_layout
+
+\begin_layout Itemize
+Labor flexibility, 
+\series bold
+in hiring and firing
+\series default
+, as a comparative advantage
+\end_layout
+
+\begin_layout Itemize
+Demand for flexibility if investment is costly and environment is unpredictable
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Motivation
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tesla's Model 3 
+\begin_inset Quotes eld
+\end_inset
+
+Production Hell
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/Elon_Musk.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tesla's Model 3: Expectations 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/expectations.png
+	scale 23
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tesla's Model 3: Reality
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/Reality.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Improvements in Robotic Technology (ARK, 2019)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/robotprice.png
+	scale 17
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Cost Breakdown for Robot Installation (BCG, 2019)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/adjcostsdata.png
+	scale 24
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Labor Market Rigidities and Robot Penetration (Acemoglu Restrepo, 2019)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphs/MogluRegression.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Literature
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Relevant Literature
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\emph on
+Automation
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Labor or Capital Augmenting: Sachs and Kotlikoff (2012), Sachs et alii (2015),
+ Nordhaus (2015), Berg et alii (2018), Bessen (2019)
+\end_layout
+
+\begin_layout Itemize
+Task-Based Framework: Zeira (1998), Acemoglu and Autor (2011), 
+\series bold
+Acemoglu and Restrepo (2018a,b,c,d)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\emph on
+Investment
+\emph default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size small
+Jorgenson (1963), Abel (1983), Pindyck (1988, 1991), Caballero (1991), Dixit
+ and Pindyck (1994), 
+\series bold
+Abel and Eberly (1996, 1997)
+\series default
+, Stokey (2009)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\emph on
+Related Empirical Evidence
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Employment 
+\begin_inset Formula $\downarrow$
+\end_inset
+
+ at Commuting Zone / Sector level:
+\begin_inset Newline newline
+\end_inset
+
+Acemoglu et alii (2018, 2020), Dauth et alii (2019)
+\end_layout
+
+\begin_layout Itemize
+Employment 
+\begin_inset Formula $\uparrow$
+\end_inset
+
+ at adopting firms' level:
+\begin_inset Newline newline
+\end_inset
+
+Acemoglu et alii (2020), Bonfiglioli et alii (2020), Koch et alii (2019),
+ Aghion et alii (2019) Eggleston et alii (2021)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+How Do We Differ?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Literature:
+\end_layout
+
+\begin_layout Itemize
+Robots are adjusted flexibly; there is a rental market for robots
+\end_layout
+
+\begin_layout Itemize
+Environment is deterministic
+\end_layout
+
+\begin_layout Itemize
+Infinite substitution and cheap robots 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ full automation
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+This paper:
+\end_layout
+
+\begin_layout Itemize
+adjustment costs; robots are owned by firms
+\end_layout
+
+\begin_layout Itemize
+idiosyncratic revenue volatility
+\end_layout
+
+\begin_layout Itemize
+Infinite substitution and cheap robots 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ labor still employed
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Theoretical Analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\align center
+
+\size huge
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+Theoretical Analysis
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The Firm Problem
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Technology and Human-Robot Substitution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Firms maximize profits, invest in robots 
+\begin_inset Formula $R$
+\end_inset
+
+ and hire labor 
+\begin_inset Formula $L$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Production function:
+\begin_inset Formula 
+\[
+Q\left(L,R,u,z\right)=z\left(\Gamma L+\left(1-\Gamma\right)uR\right)^{\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notation:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R$
+\end_inset
+
+ robot stock in place
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L$
+\end_inset
+
+ labor
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $u$
+\end_inset
+
+ utilization rate of machines
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta$
+\end_inset
+
+ decreasing returns to scale
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $z$
+\end_inset
+
+ revenue-shifting shock
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ relative MRTS, i.e., 
+\begin_inset Formula $MRTS_{LR}=\Gamma/\left(1-\Gamma\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Static Profit Maximization
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+In the 
+\begin_inset Quotes eld
+\end_inset
+
+short run
+\begin_inset Quotes erd
+\end_inset
+
+, robot stock is given.
+ Choose:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L$
+\end_inset
+
+, labor to deploy in production
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $u$
+\end_inset
+
+, utilization rate of robots
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solve:
+\begin_inset Formula 
+\[
+\max_{L\geq0,0\leq u\leq1}\ pz\left(\Gamma L+\left(1-\Gamma\right)uR\right)^{\theta}-wL-muR
+\]
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Flow labor savings
+\emph default
+ must be strictly positive:
+\begin_inset Formula 
+\[
+\Omega\equiv\frac{1-\Gamma}{\Gamma}w-m>0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Static Policy Functions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Solution:
+\begin_inset Formula 
+\[
+L^{\star}\left(R,z\right)=\begin{cases}
+\frac{1-\Gamma}{\Gamma}\left(\bar{R}\left(z\right)-R\right) & R\leq\bar{R}\left(z\right)\\
+0 & R>\bar{R}\left(z\right)
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+u^{\star}\left(R,z\right)=\begin{cases}
+1 & R\leq\hat{R}\left(z\right)\\
+\frac{\hat{R}\left(z\right)}{R} & R>\hat{R}\left(z\right)
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cutoffs:
+\size footnotesize
+
+\begin_inset Formula 
+\[
+\underset{\text{Full Automation Cutoff}}{\underbrace{\bar{R}\left(z\right)=\frac{1}{1-\Gamma}\left(\frac{pz\theta\Gamma}{w}\right)^{\frac{1}{1-\theta}}}}\qquad\qquad\underset{\text{Optimal Scale for Flow Costs \ensuremath{m}}}{\underbrace{\hat{R}\left(z\right)=\frac{1}{1-\Gamma}\left(\frac{pz\theta\left(1-\Gamma\right)}{m}\right)^{\frac{1}{1-\theta}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The Operating Profit Function 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{operating-profit-plot}{
+\backslash
+beamergotobutton{Plot}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Operating Profit Function, 
+\begin_inset Formula $\Pi\left(R,z\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{operating-profit-formula}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{cases}
+\underset{\text{Maximum profits using only labor}}{\underbrace{\left(1-\theta\right)pz\left(1-\Gamma\right)^{\theta}\bar{R}\left(z\right)^{\theta}}}+\underset{\text{Linear labor savings}}{\underbrace{\Omega R}} & R\leq\bar{R}\left(z\right)\\
+\\
+\underset{\text{Not profitable to hire labor, but still undersized}}{\underbrace{pz\left(1-\Gamma\right)^{\theta}R^{\theta}-mR}} & \bar{R}\left(z\right)<R<\hat{R}\left(z\right)\\
+\\
+\underset{\text{Maximum profits achieved when \ensuremath{R} can be rented}}{\underbrace{pz\left(1-\Gamma\right)^{\theta}\hat{R}\left(z\right)^{\theta}-m\hat{R}\left(z\right)}} & \hat{R}\left(z\right)<R
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Dynamic Profit Maximization
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Firms solve:
+\size small
+
+\begin_inset Formula 
+\begin{alignat*}{1}
+V\left(R_{0},z_{0}\right)\equiv\max_{I_{t}}\quad & \mathbb{E}_{0}\left[\int_{0}^{\infty}\exp\left\{ -\rho t\right\} \left(\Pi\left(R_{t},z_{t}\right)-p_{R}I_{t}-\frac{\psi_{R}}{2}I_{t}^{2}\right)\mathrm{d}t\right]\\
+\text{s.t.}\quad & \mathrm{d}R_{t}=\left(I_{t}-\delta R_{t}\right)\mathrm{d}t,\\
+ & \mathrm{d}z=\mu\left(z_{t}\right)\mathrm{d}t+\sigma\left(z_{t}\right)\mathrm{d}W,\\
+ & R_{0},z_{0}\text{ given.}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+HJB Equation:
+\size small
+
+\begin_inset Formula 
+\begin{alignat*}{1}
+\rho V\left(R,z\right)=\max_{I\in\mathbb{R}}\quad & \Pi\left(R,z\right)-p_{R}I-\frac{\psi_{R}}{2}I^{2}+\left(I-\delta R\right)V_{R}\left(R,z\right)+\\
+ & +\mu\left(z_{t}\right)V_{z}\left(R,z\right)+\frac{\sigma^{2}\left(z_{t}\right)}{2}V_{zz}\left(R,z\right)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+No-Full-Automation in the Long Run
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Investment Policy Function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+FOC for investment
+\begin_inset Formula 
+\[
+I^{\star}\left(R,z\right)=\frac{1}{\psi_{R}}\left(V_{R}\left(R,z\right)-p_{R}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+Under mild regularity conditions, the investment policy function is:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+decreasing in 
+\begin_inset Formula $R$
+\end_inset
+
+ for all 
+\begin_inset Formula $z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+increasing in 
+\begin_inset Formula $z$
+\end_inset
+
+ for all 
+\begin_inset Formula $R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+increasing in 
+\begin_inset Formula $w$
+\end_inset
+
+ for all 
+\begin_inset Formula $R,z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+bounded from above by:
+\begin_inset Formula 
+\[
+\frac{1}{\psi_{R}}\left(\frac{\Omega}{\rho+\delta}-p_{R}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Upper Bound on Investment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Simple Observation (Envelope Theorem)
+\begin_inset Formula 
+\begin{alignat*}{1}
+V_{R}\left(R_{0},z_{0}\right) & =\mathbb{E}_{0}\left[\int_{0}^{\infty}\exp\left\{ -\left(\rho+\delta\right)t\right\} \Pi_{R}\left(R_{t},z_{t}\right)\mathrm{d}t\mid\left(R_{0},z_{0}\right)\right]\\
+ & \leq\int_{0}^{\infty}\exp\left\{ -\left(\rho+\delta\right)t\right\} \Omega\mathrm{d}t\\
+ & =\frac{\Omega}{\rho+\delta}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Interpretation:
+\end_layout
+
+\begin_layout Itemize
+marginal returns bounded by labor substitution margin
+\end_layout
+
+\begin_layout Itemize
+willingness to pay to install and/or maintain robots is limited
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Robots must be cheap enough:
+\begin_inset Formula 
+\[
+p_{R}<\frac{\Omega}{\rho+\delta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Desired Robot Stock and 
+\begin_inset Formula $R_{\max}^{\star}$
+\end_inset
+
+ Upper Bound
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Define 
+\begin_inset Formula $R^{\star}\left(z\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\forall z$
+\end_inset
+
+, as the implicit solution of:
+\begin_inset Formula 
+\[
+I^{\star}\left(R^{\star}\left(z\right),z\right)=\delta R^{\star}\left(z\right)
+\]
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+Note:
+\begin_inset Formula 
+\[
+R^{\star}\left(z\right)\leq\frac{1}{\delta}\times\underset{\text{upper bound of invest.}}{\underbrace{\frac{1}{\psi_{R}}\left(\frac{\Omega}{\rho+\delta}-p_{R}\right)}}\equiv R_{\max}^{\star}
+\]
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+Interpretation: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R^{\star}\left(z\right)$
+\end_inset
+
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+desired robot stock
+\begin_inset Quotes erd
+\end_inset
+
+ if 
+\begin_inset Formula $z_{t}=z$
+\end_inset
+
+ forever
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{\max}^{\star}$
+\end_inset
+
+ bounds firm-level robot stock regardless of 
+\begin_inset Formula $z$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Stationary Distribution and Bounds to Full Automation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<1>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_1.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<2>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_2.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<3>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_3.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<4>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_4.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<5>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_5.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<6>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_6.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<7>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_6-1.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<8>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_6-2.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<9>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_6-3.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<10>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_6-4.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<11>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_6-5.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<12>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_6-6.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<13>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_6-7.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<14>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_6-8.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<15>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_6-9.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<16>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_6-10.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<17>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_6-11.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+includegraphics<17>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_7.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<18>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_8.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<19>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_9.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<20>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_10.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<21>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_11.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<22>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_12.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<23>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_13.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<24>[scale=.38,trim={100 0 0 23},clip]{graphs/dyn/zR_14.png}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Main Result (No Full Automation)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Proposition*
+For any purchase price of robots 
+\begin_inset Formula $p_{R}$
+\end_inset
+
+, as long as 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+, there exists a finite value of the adjustment cost parameter 
+\begin_inset Formula $\psi_{R}$
+\end_inset
+
+ such that the stationary distribution 
+\begin_inset Formula $G\left(R,z\right)$
+\end_inset
+
+ does not feature full automation.
+\end_layout
+
+\begin_layout Standard
+Intuition:
+\end_layout
+
+\begin_layout Itemize
+Ergodic set for 
+\begin_inset Formula $R$
+\end_inset
+
+ is bounded from above: if 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+, we show that the stationary distribution has support within:
+\begin_inset Formula 
+\[
+\left[R^{\star}\left(z_{\min}\right),R_{\max}^{\star}\right]\times\mathcal{Z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+All firms with shocks better than 
+\begin_inset Formula $\check{z}\equiv\bar{R}^{-1}\left(R_{\max}^{\star}\right)$
+\end_inset
+
+ hire labor.
+\end_layout
+
+\begin_layout Itemize
+Can always find 
+\begin_inset Formula $\psi_{R}$
+\end_inset
+
+ high enough so that 
+\begin_inset Formula $1-F\left(\check{z}\right)>0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Aggregate and Firm-Level Labor Demand
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Aggregate Labor Demand Comparative Statics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/4_cs_labor_demand.png
+	display false
+	scale 40
+	BoundingBox 120bp 20bp 920bp 850bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Firm-Level Dynamics 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{policy-functions}{
+\backslash
+beamergotobutton{Policy Functions}} 
+\backslash
+label{firm-time-series}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<1>[scale=.42,trim={105 45 75 30},clip]{graphs/dyn/paths_0.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<2>[scale=.42,trim={105 45 75 30},clip]{graphs/dyn/paths_1.png}%
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<3>[scale=.42,trim={105 45 75 30},clip]{graphs/dyn/paths_2.png}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics<4>[scale=.42,trim={105 45 75 30},clip]{graphs/dyn/paths_3.png}%
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary of Predictions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Aggregate Labor Demand:
+\end_layout
+
+\begin_layout Itemize
+decreases with a 
+\emph on
+fall
+\emph default
+ in the price of robots
+\end_layout
+
+\begin_layout Itemize
+decreases if adjustment costs are 
+\emph on
+lower
+\end_layout
+
+\begin_layout Itemize
+increases the larger is the variance of the shock
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Firm Level:
+\end_layout
+
+\begin_layout Itemize
+Demand for labor can increase while firm is investing in robots
+\end_layout
+
+\begin_layout Itemize
+More productive firms install more robots 
+\emph on
+in the steady state
+\end_layout
+
+\begin_layout Itemize
+Labor is hired in 
+\begin_inset Quotes eld
+\end_inset
+
+bursts
+\begin_inset Quotes erd
+\end_inset
+
+ to cope with positive shocks
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fits qualitatively with empirical literature
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Quantitative Analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\align center
+
+\size huge
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+Quantitative Analysis
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Multi-Sector Equilibrium
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Objectives
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Define a quantitative GE model and calibrate parameters by matching robot
+ penetration data:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+13 macro-sectors defined by the International Federation of Robotics (IFR)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\approx$
+\end_inset
+
+SIC 2-digits (Automotive, Textiles, Electronics etc)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Price of robot relative to one production line employee wage (from BCG and
+ OES)
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Assess quantitatively the importance of advances in robotic technology:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Price 
+\begin_inset Formula $p_{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Relative productivity 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Versatility and ease of (re-)deployment 
+\begin_inset Formula $\psi_{R}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline of the Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/economy.png
+	scale 65
+	BoundingBox 180bp 150bp 820bp 435bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Intermediate Goods
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Output of each sector (e.g., automotive) is aggregate from continuum of firms
+ described above:
+\begin_inset Formula 
+\[
+x_{s}\equiv\int Q\left(L_{s}^{\star}(R,z),R,u_{s}^{\star}(R,z),z\right)\textrm{d}G_{s}(R,z)\qquad\forall s
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Firms 
+\series bold
+within each sector
+\series default
+ face the same:
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+\begin_inset Formula $p_{s}$
+\end_inset
+
+ price for their good 
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+\begin_inset Formula $\theta_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+\begin_inset Formula $\sigma_{z,s}$
+\end_inset
+
+,
+\begin_inset Formula $\theta_{z,s}$
+\end_inset
+
+ parameters of CIR stochastic process
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+\begin_inset Formula $\Gamma_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Firms 
+\series bold
+across all sectors
+\series default
+ face the same:
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+equilibrium wage 
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+adjustment cost 
+\begin_inset Formula $\psi_{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+maintenance cost 
+\begin_inset Formula $m=0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Final Good
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Representative firm produces with Cobb-Douglas aggregate of the 13 intermediate
+ goods (Oberfield and Raval, 2014)
+\begin_inset Formula 
+\[
+Y=A_{F}\prod_{s=1}^{13}x_{s}^{\xi_{s}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sum_{s=1}^{13}\text{\ensuremath{\xi_{s}}}=1$
+\end_inset
+
+ 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ shares of manufacturing value added of each sector
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{F}$
+\end_inset
+
+ aggregate TFP
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Household
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Hand-to-mouth representative households with GHH preferences over consumption
+ and labor.
+\end_layout
+
+\begin_layout Itemize
+Labor Supply:
+\begin_inset Formula 
+\[
+\ell^{\star}=\left(\frac{w}{\chi}\right)^{\varphi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Demand for Final Good:
+\begin_inset Formula 
+\[
+c^{\star}=w\ell^{\star}+\Psi+\Pi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note: interest rate 
+\begin_inset Formula $r$
+\end_inset
+
+ is 
+\series bold
+exogenously fixed
+\series default
+ (at 
+\begin_inset Formula $r=\rho=4\%$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Equilibrium
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Prices
+\series bold
+ 
+\begin_inset Formula $\left(w,\left(p_{s}\right)_{s=1}^{13}\right)$
+\end_inset
+
+ 
+\series default
+clear all markets:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Labor Market
+\series default
+:
+\begin_inset Formula 
+\[
+\ell^{\star}=\sum_{s=1}^{13}\int_{0}^{\infty}L_{s}^{d}\left(R,z\right)dG_{s}\left(R,z\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Intermediate Goods
+\series default
+:
+\begin_inset Formula 
+\[
+x_{s}=\xi_{s}\frac{Y/A^{F}}{p_{s}}\qquad\forall s=1,\dots,13
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Final Good: 
+\series default
+excluded by Walras Law, numeraire
+\end_layout
+
+\begin_layout Standard
+Note: robot sector is excluded and 
+\begin_inset Formula $p_{R}/w$
+\end_inset
+
+ is 
+\series bold
+exogenous
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Calibration
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Do the Parameter Values Make Sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Calibration: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{Calibration-Strategy}{
+\backslash
+beamergotobutton{Details}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "calib-slides"
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Untargeted Moments:
+\end_layout
+
+\begin_layout Enumerate
+Magnitude of adjustment cost parameter:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For automotive sector, ratio of adj costs to purchase price in steady state
+ is:
+\begin_inset Formula 
+\[
+\frac{\Psi\left(\delta R_{\max,\text{auto}}^{\star}\right)}{p_{R}\delta R_{\max,\text{auto}}^{\star}}=\frac{\psi_{R}\delta}{2p_{R}}\times\left(\frac{R}{L}\right)_{2014,\text{auto}}\times\frac{L_{\text{auto}}}{1000}\approx3.2917
+\]
+
+\end_inset
+
+while from 2014 data on arc-welding mechanical arms we get 
+\begin_inset Formula $\approx3.03$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Semi-Elasticity of labor with respect to robot penetration:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ranges between 0.01% and 0.1%, depending on parameter
+\end_layout
+
+\begin_layout Itemize
+ballpark of 0.2% from Acemoglu and Restrepo (2019)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Comparative Statics
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Comparative Statics in the Multi-Sector Equilibrium
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Use calibrated model to perform 4 exercises
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p_{R}/w\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+25% fall in MRTS between labor and robots 
+\emph on
+in all sectors
+\end_layout
+
+\begin_layout Itemize
+25% fall in MRTS between labor and robots 
+\emph on
+only in Automotive
+\end_layout
+
+\begin_layout Itemize
+25% fall in robot adjustment costs
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Compute GE prices and quantities, look at sectoral labor change
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sectoral Labor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/GEbars.eps
+	scale 32
+	BoundingBox 68bp 0bp 1000bp 520bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Aggregate Labor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/GEcontinuousCS_AggregateLabor.eps
+	scale 35
+	BoundingBox 105bp 0bp 1020bp 530bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Aggregate Labor Share
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/GEcontinuousCS_LaborShare.eps
+	scale 35
+	BoundingBox 105bp 0bp 1020bp 530bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Comparative Statics Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Findings
+\series default
+:
+\end_layout
+
+\begin_layout Enumerate
+Negligible effect of 
+\begin_inset Formula $p_{R}$
+\end_inset
+
+, both overall and compared to changes in 
+\begin_inset Formula $\Gamma_{s}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+low penetration in the data suggests high 
+\begin_inset Formula $\Gamma_{s}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{R}$
+\end_inset
+
+, dampening price effects
+\end_layout
+
+\begin_layout Itemize
+lower 
+\begin_inset Formula $\Gamma_{s}$
+\end_inset
+
+ and/or 
+\begin_inset Formula $\psi_{R}$
+\end_inset
+
+ 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ more penetration 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $p_{R}$
+\end_inset
+
+ has a larger impact
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Biggest threat from increased robot productivity and/or higher versatility
+\end_layout
+
+\begin_layout Enumerate
+In GE, wage cuts and reallocation safeguard labor, but labor share falls
+ as much as in PE
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Extensions
+\end_layout
+
+\begin_layout Subsection
+Rigid Labor
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Beyond Perfectly Flexible Labor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Adjusting labor is not frictionless.
+ Introduce:
+\end_layout
+
+\begin_layout Itemize
+reduced form labor adjustment costs
+\end_layout
+
+\begin_layout Itemize
+partial equilibrium, i.e., fix wage 
+\begin_inset Formula $w$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Firms choose utilization rates 
+\begin_inset Formula $u_{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{R}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\Pi\left(R,L,z\right)=\max_{0\leq u_{L},u_{R}\leq1}\ pz\left(\Gamma u_{L}L+\left(1-\Gamma\right)u_{R}R\right)^{\theta}-mu_{R}R-wL
+\]
+
+\end_inset
+
+Dynamic problem:
+\size small
+
+\begin_inset Formula 
+\begin{alignat*}{1}
+\rho V\left(R,L,z\right)=\max_{I_{R},I_{L}}\  & \Pi\left(R,L,z\right)-p_{R}I_{R}-\frac{\psi_{R}}{2}I_{R}^{2}+\left(I_{R}-\delta R\right)V_{R}\left(R,L,z\right)+\\
+ & -\frac{\psi_{L}}{2}I_{L}^{2}+\left(I_{L}-sL\right)V_{L}\left(R,L,z\right)+\text{Ito Terms}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Effect of Labor Market Rigidities
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/rigidlaborRelativeRigidity.eps
+	scale 33
+	BoundingBox 75bp 0bp 1015bp 500bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sudden Technology Shock - Transition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/transitionsSudden.eps
+	scale 36
+	BoundingBox 100bp 25bp 975bp 470bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Gradual Technology Shock - Transition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/transitionsGradual.eps
+	scale 36
+	BoundingBox 100bp 25bp 975bp 470bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+In steady state, labor rigidities unambiguously lead to more automation
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, transitions are less straightforward:
+\end_layout
+
+\begin_layout Itemize
+Sudden and large shocks 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ labor market rigidities smooth out the transition
+\end_layout
+
+\begin_layout Itemize
+Anticipated and gradual shocks 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ labor market rigidities induce firms to 
+\emph on
+anticipate
+\emph default
+ labor substitution, but automation occurs at a slower pace
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Linear or Fixed Adjustment Costs
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Robustness to Adjustment Cost Specification
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Example with linear adjustment costs à la Bertola Bentolila (1990):
+\size footnotesize
+
+\begin_inset Formula 
+\begin{alignat*}{1}
+\rho V\left(R,z\right)=\max_{I\in\mathbb{R}}\quad & \Pi(R,z)-\mathbf{1}\left\lbrace I>0\right\rbrace (\psi_{+}+p_{R})I-\mathbf{1}\left\lbrace I<0\right\rbrace (-\psi_{-}+p_{R})I+\\
+\quad & +(I-\delta R)V_{R}(R,z)+\text{Ito Terms}
+\end{alignat*}
+
+\end_inset
+
+
+\size default
+
+\begin_inset VSpace medskip
+\end_inset
+
+Region of inaction is given by 
+\begin_inset Formula $R\in\left[R_{\text{inv}}^{\star}(z),R_{\text{disinv}}^{\star}(z)\right]$
+\end_inset
+
+ where:
+\begin_inset Formula 
+\[
+V_{R}\left(R_{\text{inv}}^{\star}(z),z\right)=p_{R}+\psi_{+}\qquad V_{R}\left(R_{\text{disinv}}^{\star}(z),z\right)=p_{R}-\psi_{-}
+\]
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+Intuition:
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $\psi_{+}$
+\end_inset
+
+ is high enough, then partial automation occurs eventually analogously to
+ convex cost case.
+\end_layout
+
+\begin_layout Itemize
+Result is even stronger because here firms generally adjust 
+\emph on
+only with labor
+\end_layout
+
+\begin_layout Itemize
+Fixed adjustment costs are similar
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The Stationary Distribution and the Inaction Region
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/robustness_fix_z.eps
+	scale 50
+	BoundingBox 0bp 0bp 668bp 380bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Conclusions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Theoretical Analysis:
+\end_layout
+
+\begin_layout Itemize
+With idiosyncratic shocks and adjustment costs, labor still used even if
+ it is more costly than robots
+\end_layout
+
+\begin_layout Itemize
+Labor is hired in bursts to cope with shocks
+\end_layout
+
+\begin_layout Itemize
+Qualitatively match recent findings from empirical literature
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quantitative Analysis:
+\end_layout
+
+\begin_layout Itemize
+Reductions in price of robots have a small employment impact
+\end_layout
+
+\begin_layout Itemize
+Major threat arises from innovations that make robots more productive, or
+ reduce adjustment costs/specificity
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Extension with Rigid Labor:
+\end_layout
+
+\begin_layout Itemize
+Labor rigidity leads to lower employment in steady state
+\end_layout
+
+\begin_layout Itemize
+Ambiguous role for labor flexibility along the transition to lower robot
+ prices
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+
+\size huge
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+THANK YOU!
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Model Appendix
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Operating Profit and Marginal Operating Profit 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{operating-profit-formula}{
+\backslash
+beamergotobutton{Plot}} 
+\backslash
+label{operating-profit-plot}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename graphs/operatingProfitFunction.eps
+	scale 39
+	BoundingBox 60bp 0bp 780bp 550bp
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Policy Functions 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{firm-time-series}{
+\backslash
+beamergotobutton{Back}} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{policy-functions}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graphs/policyFunctions.eps
+	display false
+	scale 35
+	BoundingBox 105bp 0bp 960bp 590bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Calibration Appendix
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Calibration Strategy 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{calib-slides}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Parameters obtained from data directly: 
+\begin_inset CommandInset label
+LatexCommand label
+name "Calibration-Strategy"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\frac{p_{R}}{w}\right)_{2010},\left(\frac{p_{R}}{w}\right)_{2014},\delta,\rho
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parameters calibrated by directly matching a moment:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\xi_{s}$
+\end_inset
+
+: share of manufacturing value added from BEA
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{s}$
+\end_inset
+
+: average production line employees' share of manufacturing value added
+ before 1980
+\end_layout
+
+\begin_layout Standard
+Other parameters:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma_{z,s},\theta_{z,s}$
+\end_inset
+
+: fit CIR process by ML on TFP residual from Compustat Data 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{appendix: CIR}{
+\backslash
+beamergotobutton{Details}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\psi_{R}/w$
+\end_inset
+
+: match increase in aggregate robot adoption between 2010 and 2014, assuming
+ limit case 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{appendix: psi}{
+\backslash
+beamergotobutton{Details}}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Gamma_{s}$
+\end_inset
+
+: given 
+\begin_inset Formula $\psi_{R}/w$
+\end_inset
+
+, match penetrations in 2014 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{appendix: gamma}{
+\backslash
+beamergotobutton{Details}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parameter values: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{appendix: parameters across sectors}{
+\backslash
+beamergotobutton{Constant-Across-Sectors Parameters}}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{appendix: parameters sector specific}{
+\backslash
+beamergotobutton{Sector-Specific Parameters}}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "Do-the-Parameter"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Calibration of Cox-Ingersoll-Ross Process 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{Calibration-Strategy}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "appendix: CIR"
+
+\end_inset
+
+We fit the following process:
+\begin_inset Formula 
+\[
+\textrm{d}z_{t}=-\theta_{z,s}\left(z_{t}-\underset{=1}{\underbrace{z^{d}}}\right)\textrm{d}t+\sigma_{z,s}\sqrt{z_{t}}\textrm{d}W_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Step 1: use Computstat Data (1950-2019) and build 
+\begin_inset Formula $K_{ist}$
+\end_inset
+
+ using perpetual inventory method with linear interpolation of investment
+\end_layout
+
+\begin_layout Itemize
+Step 2: estimate TFP as residual from the following regression:
+\begin_inset Formula 
+\[
+\log\left(\text{sales}_{ist}\right)=\gamma_{i}+f_{st}+\alpha_{s}\log\left(\text{emp}_{ist}\right)+\beta_{s}\log\left(K_{is,t-1}\right)+\varepsilon_{ist}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Step 3: fit a firm specific Linear Trend on the estimated series to focus
+ on idiosyncratic component of TFP
+\end_layout
+
+\begin_layout Itemize
+Step 4: estimate parameters of CIR process by Maximum Likelihood, using
+ a procedure adapted from Wei et alii (2016)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Multi-Sector Equilibrium: Limit Case 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{Calibration-Strategy}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "appendix: psi"
+
+\end_inset
+
+Most (if not all) firms today are 
+\emph on
+not 
+\emph default
+fully automated.
+ Model is analytically tractable if 
+\begin_inset Formula $F_{s}\left(\check{z}_{s}\right)\approx0$
+\end_inset
+
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Can show almost all firms 
+\emph on
+within each sector
+\emph default
+ choose the same sector-specific stock:
+\begin_inset Formula 
+\[
+R\approx R_{\max,s}^{\star}=\frac{1}{\psi_{R}\delta}\left[\frac{\Omega_{s}}{\rho+\delta}-p_{R}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+Consider the general equilibrium model with 
+\begin_inset Formula $F_{s}\left(\check{z}_{s}\right)\rightarrow0$
+\end_inset
+
+, 
+\begin_inset Formula $θ_{s}=θ$
+\end_inset
+
+ for all 
+\begin_inset Formula $s$
+\end_inset
+
+, and elasticity of substitution across industries 
+\begin_inset Formula $σ=1$
+\end_inset
+
+.
+ In the neighborhood of an equilibrium supported by prices 
+\begin_inset Formula $(w,\mathbf{p})$
+\end_inset
+
+, aggregate equilibrium labor is increasing in 
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $p_{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{R}$
+\end_inset
+
+, and aggregate robot penetration is decreasing in 
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $p_{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{R}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Calibration of 
+\begin_inset Formula $\psi_{R}/w$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{Calibration-Strategy}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+We show that in the limit case discussed above,
+\begin_inset Formula 
+\[
+\tilde{\Gamma_{s}}\left(\frac{\psi_{R}}{w}\right)=\left[1+\frac{m}{w}+\left(\rho+\delta\right)\left(\delta\frac{\psi_{R}}{w}\left(\frac{R}{L}\right)_{s,2014}\xi_{s}+\left(\frac{p_{R}}{w}\right)_{2014}\right)\right]^{-1}
+\]
+
+\end_inset
+
+So, assuming at the true 
+\begin_inset Formula $\Gamma_{s}$
+\end_inset
+
+ the equilibrium is such that the limit case is approximately verified,
+ then:
+\end_layout
+
+\begin_layout Itemize
+Step 1: Guess initial value for 
+\begin_inset Formula $\frac{\psi_{R}}{w}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Step 2: Find equilibrium prices and wage in 2010 and 2014 setting 
+\begin_inset Formula $\Gamma_{s}=\tilde{\Gamma}_{s}$
+\end_inset
+
+ and fixing the relative robot prices at their respective levels
+\end_layout
+
+\begin_layout Itemize
+Step 3: Compute aggregate robot penetration in 2010 and 2014 and the deviation
+ from the percentage change in the data
+\end_layout
+
+\begin_layout Itemize
+Step 4: Update guess and go back to Step 2 until convergence
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Calibration of 
+\begin_inset Formula $\Gamma_{s}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{Calibration-Strategy}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "appendix: gamma"
+
+\end_inset
+
+The calibration of the sector-specific 
+\begin_inset Formula $\Gamma_{s}$
+\end_inset
+
+ follows that of 
+\begin_inset Formula $\psi_{R}/w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Step 1: Guess initial value of 
+\begin_inset Formula $\Gamma_{s}$
+\end_inset
+
+ using 
+\begin_inset Formula $\tilde{\Gamma}_{s}$
+\end_inset
+
+ evaluated at the calibrated 
+\begin_inset Formula $\psi_{R}/w$
+\end_inset
+
+ as starting point
+\end_layout
+
+\begin_layout Itemize
+Step 2: Find equilibrium prices and wage that clear the markets in 
+\begin_inset Formula $2014$
+\end_inset
+
+ given 
+\begin_inset Formula $\Gamma_{s}$
+\end_inset
+
+ and the relative robot price 
+\begin_inset Formula $p_{R}/w$
+\end_inset
+
+ in 2014.
+\end_layout
+
+\begin_layout Itemize
+Step 3: Compute deviation of sector specific 
+\begin_inset Formula $\left(R/L\right)_{s}$
+\end_inset
+
+ from their targets 
+\end_layout
+
+\begin_layout Itemize
+Step 4: Update guesses 
+\begin_inset Formula $\Gamma_{s}$
+\end_inset
+
+ and go back to Step 2 until convergence
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Constant-Across-Sectors Parameter Values 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{Do-the-Parameter}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "appendix: parameters across sectors"
+
+\end_inset
+
+The following parameters are common across all sectors:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size small
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lll}  			
+\end_layout
+
+\begin_layout Plain Layout
+
+Parameter & Value & Source/Target 
+\backslash
+
+\backslash
+  			
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline  			
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left(
+\backslash
+frac{p_R}{w}
+\backslash
+right)_{2010}$ &  $1.4348$ & Korus(2019) and OES 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left(
+\backslash
+frac{p_R}{w}
+\backslash
+right)_{2014}$ &  $1.0209$ & Korus(2019) and OES 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left(
+\backslash
+frac{m}{w}
+\backslash
+right)$ &  $0$ & Energy costs captured by $
+\backslash
+psi_R$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+delta$ & $
+\backslash
+log(1 + 1/12)$ & IFR (2017) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+rho$ &  $
+\backslash
+log(1 + 0.04)$ & $4
+\backslash
+%$ annual interest rate
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+psi_R$ &  $1278.96 $ & 2010-14 change in aggr $R/L$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline  	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sector-Specific Parameter Values 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{Do-the-Parameter}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "appendix: parameters sector specific"
+
+\end_inset
+
+The following parameters and targets are sector-specific:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{llllllll} 	
+\end_layout
+
+\begin_layout Plain Layout
+
+Sector & R/L 2010 & R/L 2014 & $
+\backslash
+xi$ & $
+\backslash
+theta$ & $
+\backslash
+Gamma$  & $
+\backslash
+sigma_z$ & $
+\backslash
+theta_z$ 
+\backslash
+
+\backslash
+ 	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Automotive & 88 & 117 & 0.065 & 0.35 & 0.52 & 0.13 & 0.77 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Electronics & 10 & 13 & 0.15 & 0.28 & 0.77 & 0.19 & 0.72 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Food & 4.9 & 6.2 & 0.12 & 0.21 & 0.85 & 0.13 & 0.47 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Furniture & 0.022 & 0.14 & 0.028 & 0.41 & 0.89 & 0.13 & 0.63 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Miscellaneous & 2.4 & 14 & 0.04 & 0.32 & 0.85 & 0.18 & 0.84 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Basic Metals & 5.4 & 7.2 & 0.031 & 0.38 & 0.87 & 0.12 & 0.67 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Machinery & 1.8 & 2.4 & 0.078 & 0.33 & 0.88 & 0.14 & 0.71 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Metal Products & 6.2 & 8.3 & 0.07 & 0.35 & 0.84 & 0.12 & 0.91 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Minerals & 0.28 & 0.68 & 0.024 & 0.33 & 0.89 & 0.13 & 0.7 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Paper & 0.0085 & 0.11 & 0.047 & 0.28 & 0.89 & 0.1 & 0.62 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Petrochemicals & 8 & 9.9 & 0.27 & 0.18 & 0.78 & 0.61 & 0.89 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Textiles & 0.0081 & 0.045 & 0.014 & 0.43 & 0.89 & 0.098 & 0.54 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+Shipbuilding & 0.15 & 0.54 & 0.068 & 0.32 & 0.89 & 0.13 & 0.77 
+\backslash
+
+\backslash
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

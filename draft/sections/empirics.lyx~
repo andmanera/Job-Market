@@ -9,6 +9,13 @@
 \usepackage[bottom]{footmisc}
 \usepackage{pifont}
 \usepackage{placeins}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -2155,7 +2162,7 @@ noprefix "false"
  The magnitude of estimated coefficients can be grasped considering the
  scale of the variables and their changes over the sample period.
  In particular, the median change in the share of effective inventors over
- the period was .014%, while the measure of effective inventors has a median
+ the period was .014pp, while the measure of effective inventors has a median
  of 2018.
 \begin_inset Foot
 status collapsed
@@ -2170,13 +2177,13 @@ Recall that effective inventors in each year are measured as the sum of
 
  Using the coefficient in Column (5) to predict the median annual change
  in labor productivity growth implied by rising inventor concentration amounts
- to a fall of .15% (
-\begin_inset Formula $-.005\times.014\%\times2018$
+ to a fall of .15pp (
+\begin_inset Formula $-.005\times.014pp\times2018$
 \end_inset
 
 ).
  This number increases to .
- 28% when using the statistics relative to sectors with positive growth
+ 28pp when using the statistics relative to sectors with positive growth
  in labor productivity only, which accounted for the bulk of the increase
  in inventor shares.
  An alternative back-of-the-envelope computation, using the change in product
@@ -2193,16 +2200,104 @@ noprefix "false"
 \end_inset
 
 (a), and given a median change in the HHI of 0.002 yields an increase in
- the share of effective inventors in concentrating sectors of 0.045%, which
+ the share of effective inventors in concentrating sectors of 0.045pp, which
  implies a fall in average labor productivity implied by misallocation of
- .45%.
+ .45pp.
  While these numbers might appear sizable considering the entirety of the
  economy, it is worth noting that the sample I have data for includes mainly
  manufacturing and retail sectors, which experienced a sizable reduction
- of about 2% in average annual productivity growth from 1997-2012, driven
+ of about 2pp in average annual productivity growth from 1997-2012, driven
  by a steep decline in output per worker growth in manufacturing.
  Therefore, the mechanism I propose would explain from 7.5% to 22.5% of the
- observed decrease in output per worker growth.
+ observed decrease in output per worker growth in these sectors.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table}[ht] 
+\backslash
+caption{
+\backslash
+label{table:main results}} 
+\backslash
+resizebox{
+\backslash
+linewidth}{!}{ 
+\backslash
+begin{tabular}{lC{2.3cm}C{2.3cm}C{2.3cm}C{2.3cm}} & Current System, Sector 1
+ & Current System, Sector 2 & Flat Entrant Subsidies, Sector 1 & Flat Entrant
+ Subsidies, Sector 2 
+\backslash
+
+\backslash
+  
+\backslash
+hline  $L^{RD}_I$ & $8.66$ & $22.20$ & $6.26$ & $16.41$ 
+\backslash
+
+\backslash
+  $L^{RD}_e$ & $27.36$ & $41.78$ & $30.61$ & $46.72$ 
+\backslash
+
+\backslash
+  $L^{RD}_TOT$ & $36.02$ & $63.98$ & $36.87$ & $63.13$ 
+\backslash
+
+\backslash
+  $g$ & $1.60
+\backslash
+%$ & $2.45
+\backslash
+%$ & $1.79
+\backslash
+%$ & $2.73
+\backslash
+%$ 
+\backslash
+
+\backslash
+  Subsidy/GDP & $0.20
+\backslash
+%$ & $0.36
+\backslash
+%$ & $0.22
+\backslash
+%$ & $0.34
+\backslash
+%$ 
+\backslash
+
+\backslash
+  Revenue/GDP & $1.02
+\backslash
+%$ & $2.32
+\backslash
+%$ & $1.02
+\backslash
+%$ & $2.32
+\backslash
+%$ 
+\backslash
+
+\backslash
+ 
+\backslash
+bottomrule   
+\backslash
+end{tabular}} 
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
