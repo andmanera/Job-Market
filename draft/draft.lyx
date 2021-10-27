@@ -211,6 +211,19 @@ status open
 
 
 \backslash
+vspace{-0.5em}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
 today
 \end_layout
 
@@ -288,18 +301,10 @@ Inventors are a scarce resource, whose skill sets can apply to R&D in disparate
  Motivated by this fact and by the fall in R&D productivity that characterized
  recent decades, I explore the impact of product market competition on the
  misallocation of inventors and growth.
- First, I delineate the boundaries of 
-\begin_inset Quotes eld
-\end_inset
-
-knowledge markets
-\begin_inset Quotes erd
-\end_inset
-
-, employing USPTO patents data to group NAICS sectors that employ inventors
- with similar skills.
- Second, I analyze the relation between 4-digit NAICS sectors market concentrati
-on and the share of inventors employed in R&D projects relevant to these
+ First, I delineate the boundaries of “knowledge markets”, employing USPTO
+ patent data to group NAICS sectors that employ inventors with similar skills.
+ Second, I analyze the relation between 4-digit NAICS sectors’ market concentrat
+ion and the share of inventors employed in R&D projects relevant to these
  sectors.
  Four findings emerge from the analysis.
  First, the last thirty years saw a sizable increase in the concentration
@@ -319,16 +324,17 @@ on, and negatively with forward citations.
  overall decrease in output per worker growth over the period 1997-2012
  (a fall of 0.78% in absolute value).
  I interpret my findings through a Schumpeterian model of creative destruction,
- where incumbents can conduct defensive patenting aimed at increasing barriers
- to entry for potential competitors.
- When different product markets compete for the same inventors, unbalanced
- increases in markups raise R&D effort in concentrating sectors.
- As a result, the distribution of researchers shifts in favor of incumbents
- carrying out defensive innovation, which hampers creative destruction,
- and lowers aggregate R&D productivity and growth.
- A calibrated version of my model reveals that allocating R&D subsidies
- to entrants in less competitive sectors is the most effective policy to
- maximize growth.
+ where incumbents can conduct defensive patenting.
+ In the model, unbalanced increases in markups shift inventors towards less
+ competitive sectors, and towards monopolistic firms carrying out R&D projects
+ with the aim to erect barriers to entry.
+ This shift reduces equilibrium inventors’ productivity and growth.
+ I calibrate a two-sector version of this model to match moments of the
+ inventor distribution and R&D spending in the US and study the optimal
+ allocation of R&D subsidies for a planner wishing to maximize growth.
+ I show that subsidies to entrants in highly concentrated sectors constitute
+ the most effective policy, raising output by 0.5% in absolute value in the
+ calibrated model (17% of the baseline in percentage terms).
 \end_layout
 
 \begin_layout Standard
@@ -458,7 +464,7 @@ defensive innovation
  aim of preventing further entry and sheltering existing dominant positions.
  Quantitatively, my findings imply that inventor misallocation implies a
  fall of up to 0.78pp in output-per-worker growth in the sectors I study
- (28.6% of the overall observed reduction over the period 1997-2012).
+ (27.3% of the overall observed reduction over the period 1997-2012).
  
 \end_layout
 
