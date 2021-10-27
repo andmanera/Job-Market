@@ -1,55 +1,3 @@
-%% LyX 2.3.5.2 created this file.  For more info, see http://www.lyx.org/.
-%% Do not edit unless you really know what you are doing.
-\documentclass[12pt,english]{article}
-\usepackage{fourier}
-\usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
-\usepackage[letterpaper]{geometry}
-\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
-\usepackage{color}
-\usepackage{babel}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{rotfloat}
-\usepackage{setspace}
-\usepackage[authoryear,round]{natbib}
-\usepackage{microtype}
-\onehalfspacing
-\usepackage[unicode=true,
- bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
- breaklinks=true,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=true]
- {hyperref}
-\hypersetup{
- pdfauthor={Andrea Manera, Michele Fornino},
- allcolors = blue}
-
-\makeatletter
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
-%% Because html converters don't know tabularnewline
-\providecommand{\tabularnewline}{\\}
-%% A simple dot to overcome graphicx limitations
-\newcommand{\lyxdot}{.}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
-\usepackage[bottom]{footmisc}
-\usepackage{pifont}
-\usepackage{placeins}
-\usepackage{tabularx}
-\usepackage{booktabs}
-
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
-\renewcommand{\baselinestretch}{1.3} 
-
-\@ifundefined{showcaptionsetup}{}{%
- \PassOptionsToPackage{caption=false}{subfig}}
-\usepackage{subfig}
-\makeatother
-
-\begin{document}
 
 \section{Data description\label{sec:Data-description}}
 
@@ -198,7 +146,7 @@ but not from vegetable farming.
 \caption{Graphical Illustration of Knowledge Markets}
 \label{fig: KmarketGraph}
 \begin{centering}
-\includegraphics[width=0.9\textwidth]{\string"/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/graphs/Kmarkets/Kmarkets.006\string".png}\\
+\includegraphics[width=0.9\textwidth]{\string"/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/graphs/Kmarkets/Kmarkets.006\string".eps}\\
 \par\end{centering}
 {\footnotesize{}Note: This Figure provides a graphical illustration
 of the definition of knowledge markets as sets of product markets
@@ -398,20 +346,17 @@ services. The remaining three markets include insurance and finance
 (red cluster), computer, electronics, and machinery manufacturing
 and professional services (violet), and wholesalers (gray).
 
-As noted above, these markets are identifies using my measure of effective
-inventors, but I assess the robustness of this procedure to using
-raw counts of inventor transitions. When applying the procedure to
-4-digit NAICS sectors, I find that over 97\% of the pairs of NAICS
-sectors are classified in the same manner using the two measures.
-That is, 97\% of sector pairs belong to the same knowledge market
-according to both measures, and they do not belong to the same market
-if they do not according to either measure.
+Knowledge markets are identified using my measure of effective inventors,
+but the algorithm produces nearly identical results when using raw
+inventor counts; over 97\% of 4-digit NAICS pairs of sectors are classified
+in the same manner using the two measures. That is, 97\% of sector
+pairs belong to the same knowledge market according to both measures.
 
-\begin{figure}[t]
+\begin{figure}[th]
 \caption{Knowledge Markets Obtained from NAICS 3-digit Sectors}
 \label{fig: KmarketGraph-1}
 \begin{centering}
-\includegraphics[width=0.9\textwidth]{\string"/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/graphs/NewCommunity_3d\string".png}\\
+\includegraphics[width=0.8\textwidth]{\string"/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/graphs/NewCommunity_3d\string".eps}\\
 \par\end{centering}
 {\footnotesize{}Note: This Figure displays the network of inventor
 flows between NAICS 3-digit sectors and the knowledge markets resulting
@@ -670,7 +615,7 @@ in volatility stems from the regression method implied to obtain effective
 inventors, which accounts for several features through time, firm,
 and technology class fixed effects.
 
-\begin{figure}[th]
+\begin{figure}[t]
 \begin{centering}
 \caption{Herfindal-Hirschman Index of Effective Inventors across NAICS 4-digit
 Industries, 1976-2016 \label{fig:Effective-inventor-HHI}}
@@ -827,7 +772,7 @@ knowledge markets.
 in HHI Measures, Long-Differences, 1997-2012\label{tab: RegShInvNoctrl}}
 
 \begin{centering}
-\scalebox{.9}{\input{../tab/Dk4_sh_inv_hhi_noctrl_inv_fe1.tex}}\\
+\scalebox{.9}{\input{tab/Dk4_sh_inv_hhi_noctrl_inv_fe1.tex}}\\
 \par\end{centering}
 \raggedright{}{\small{}Note: Regressions weighted by sales in 2012;
 Robust standard errors in parentheses; Symbols denote significance
@@ -850,11 +795,11 @@ in HHI Lower Bound, Long-Differences, 1997-2012\label{tab: RegShInvHHI}}
 \begin{centering}
 \subfloat[Controlling for Change in Log Real Sales]{\begin{centering}
 \par\end{centering}
-\centering{}\scalebox{.9}{\input{../tab/Dk4_sh_inv_hhi_inv_fe1.tex}}}
+\centering{}\scalebox{.9}{\input{tab/Dk4_sh_inv_hhi_inv_fe1.tex}}}
 \par\end{centering}
 
 \begin{centering}
-\subfloat[Controlling for Change in Log Real Sales per Company]{\centering{}\scalebox{.9}{ \input{../tab/Dk4_sh_inv_hhi_pc_inv_fe1.tex}}}\\
+\subfloat[Controlling for Change in Log Real Sales per Company]{\centering{}\scalebox{.9}{ \input{tab/Dk4_sh_inv_hhi_pc_inv_fe1.tex}}}\\
 \par\end{centering}
 \raggedright{}{\small{}Note: Regressions weighted by sales in 2012;
 Robust standard errors in parentheses; Symbols denote significance
@@ -873,9 +818,9 @@ described in the main text.}{\small\par}
 \caption{Residualized Scatter Plots Corresponding to Selected Columns in Table
 \ref{tab: RegShInvHHI}, Panel (a)\label{fig: scattersDksh}}
 
-\subfloat[Raw Scatter Plot, Specification in Column (2)]{\centering{}\includegraphics[width=0.9\textwidth]{\string"/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/graphs/raw_Dk4_hhi_inv_fe10\string".pdf}}
+\subfloat[Raw Scatter Plot, Specification in Column (2)]{\centering{}\includegraphics[width=0.9\textwidth]{\string"/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/graphs/raw_Dk4_hhi_inv_fe10\string".eps}}
 
-\subfloat[Binned Scatter Plot, Specification in Column (6)]{\centering{}\includegraphics[width=0.9\textwidth]{\string"/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/graphs/bin_Dk4_hhi_inv_fe12\string".pdf}}\\
+\subfloat[Binned Scatter Plot, Specification in Column (6)]{\centering{}\includegraphics[width=0.9\textwidth]{\string"/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/graphs/bin_Dk4_hhi_inv_fe12\string".eps}}\\
 
 \raggedright{}{\small{}Note: This figure presents residualized scatter
 plots of the change in the share of effective inventors of sector
@@ -963,9 +908,9 @@ in HHI Lower Bound, 2SLS Long-Difference, 1997-2012\label{tab: RegIV}}
 
 \begin{centering}
 \subfloat[2SLS Results]{
-\centering{}\scalebox{.9}{\input{../tab/IV_inv_fe1.tex}}}\\
+\centering{}\scalebox{.9}{\input{tab/IV_inv_fe1.tex}}}\\
 \subfloat[First Stage and Reduced Form]{
-\centering{}\scalebox{1}{\input{../tab/IV_first_inv_fe1.tex}}}\\
+\centering{}\scalebox{1}{\input{tab/IV_first_inv_fe1.tex}}}\\
 \par\end{centering}
 \raggedright{}{\small{}Note: Regressions weighted by sales in 2012;
 Robust standard errors in parentheses; Symbols denote significance
@@ -1081,7 +1026,7 @@ this alternative explanation.
 in 4-digit Knowledge Market Share, Long-Difference, 1997-2012\label{tab: RegStats}}
 
 \begin{centering}
-\scalebox{1}{\input{../tab/stats_inv_fe1.tex}}\\
+\scalebox{1}{\input{tab/stats_inv_fe1.tex}}\\
 \par\end{centering}
 \raggedright{}{\small{}Note: Regressions weighted by sales in 2012;
 Robust standard errors in parentheses; Symbols denote significance
@@ -1102,12 +1047,12 @@ Market Share, Long-Differences, 1997-2012\label{tab: RegFwdCite}}
 \begin{centering}
 \subfloat[Full sample]{\begin{centering}
 \par\end{centering}
-\centering{}\scalebox{.9}{\input{../tab/fwd_cite_all_inv_fe1.tex}}}
+\centering{}\scalebox{.9}{\input{tab/fwd_cite_all_inv_fe1.tex}}}
 \par\end{centering}
 
 \begin{centering}
 \subfloat[Full sample, restricting to the middle range of the change in inventor
-shares ($-2\%$ to $+2\%$)]{\centering{}\scalebox{.9}{ \input{../tab/fwd_cite_mid_inv_fe1.tex}}}\\
+shares ($-2\%$ to $+2\%$)]{\centering{}\scalebox{.9}{ \input{tab/fwd_cite_mid_inv_fe1.tex}}}\\
 \par\end{centering}
 \raggedright{}{\small{}Note: Unweighted regressions; Robust standard
 errors in parentheses; Symbols denote significance levels $\left(+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001\right)$;
@@ -1131,7 +1076,7 @@ increase in the inventor share above 2\%.}{\small\par}
 Market Share, Long-Differences, 1997-2012\label{tab: RegSelfCite}}
 
 \begin{centering}
-\scalebox{.9}{\input{../tab/self_cite_all_inv_fe1.tex}}
+\scalebox{.9}{\input{tab/self_cite_all_inv_fe1.tex}}
 \par\end{centering}
 \begin{centering}
 \par\end{centering}
@@ -1217,7 +1162,7 @@ Share and HHI, Long-Difference, 1997-2012\label{tab: RegProd}}
 
 \begin{centering}
 \subfloat[Change in Inventors' Share as Independent Variable]{
-\centering{}\scalebox{.95}{\input{../tab/Lprod_inv_fe1.tex}}}\\
+\centering{}\scalebox{.95}{\input{tab/Lprod_inv_fe1.tex}}}\\
 \subfloat[Change in HHI as Independent Variable]{
 \centering{}\scalebox{.95}{\input{\string"/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/tab/Lprod_hhi_inv_fe1.tex\string"}}}\\
 \par\end{centering}
@@ -1234,4 +1179,3 @@ the share of inventors accruing to a sector, while the bottom panel
 uses the change in the lower bound of the HHI index.}{\small\par}
 \end{table}
 \FloatBarrier
-\end{document}

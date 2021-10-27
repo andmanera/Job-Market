@@ -287,7 +287,7 @@ Inventors are a scarce resource, whose skill sets can apply to R&D in disparate
  product markets.
  Motivated by this fact and by the fall in R&D productivity that characterized
  recent decades, I explore the impact of product market competition on the
- misallocation of inventors, and its implications for growth.
+ misallocation of inventors and growth.
  First, I delineate the boundaries of 
 \begin_inset Quotes eld
 \end_inset
@@ -296,15 +296,14 @@ knowledge markets
 \begin_inset Quotes erd
 \end_inset
 
-, employing USPTO patents data to group NAICS sectors that employ the same
- inventors.
+, employing USPTO patents data to group NAICS sectors that employ inventors
+ with similar skills.
  Second, I analyze the relation between 4-digit NAICS sectors market concentrati
 on and the share of inventors employed in R&D projects relevant to these
  sectors.
  Four findings emerge from the analysis.
- First, the last thirty years saw a sizable increase in concentration of
- inventors across both patent (CPC) classes and their 4-digit sector of
- application.
+ First, the last thirty years saw a sizable increase in the concentration
+ of inventors across NAICS sectors of application.
  Second, over the period 1997-2012, increases in sector-level concentration
  are positively correlated with the share of inventor markets captured by
  each sector.
@@ -313,19 +312,20 @@ on and the share of inventors employed in R&D projects relevant to these
  Third, higher shares of relevant inventors are positively correlated with
  rising concentration of inventors at the top of the innovating firms distributi
 on, and negatively with forward citations.
- Fourth, sectors with increased inventor concentration have seen a decrease
- in the productivity of inventors, as measured by the growth in output per
- worker.
+ Fourth, concentrating sectors have seen a decrease in R&D productivity,
+ as measured by growth in output per worker per inventor.
  A back-of-the-envelope computation suggest that the increased concentration
  of inventors in less competitive sectors can account for about 27% of the
  overall decrease in output per worker growth over the period 1997-2012
  (a fall of 0.78% in absolute value).
- To rationalize my findings, I develop a Schumpeterian model of creative
- destruction, where incumbents can conduct defensive patenting aimed at
- increasing barriers to entry.
- When different product markets compete for the same inventors, higher markups
- increase R&D effort in concentrating sectors, and cause its allocation
- to defensive projects carried out by incumbents.
+ I interpret my findings through a Schumpeterian model of creative destruction,
+ where incumbents can conduct defensive patenting aimed at increasing barriers
+ to entry for potential competitiors.
+ When different product markets compete for the same inventors, unbalanced
+ increases in markups raise R&D effort in concentrating sectors.
+ As a result, the distribution of researchers shifts in favor of incumbents
+ carrying out defensive innovation, which hampers creative destruction,
+ and lowers aggregate R&D productivity and growth.
  A calibrated version of my model reveals that allocating R&D subsidies
  to entrants in less competitive sectors is the most effective policy to
  maximize growth.

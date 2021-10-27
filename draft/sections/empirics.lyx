@@ -1990,12 +1990,6 @@ Effective Inventors
 
 \begin_layout Plain Layout
 \align center
-\begin_inset Branch Tikz
-inverted 0
-status open
-
-\begin_layout Standard
-\align center
 \begin_inset Flex Scalebox
 status open
 
@@ -2014,11 +2008,6 @@ status open
 LatexCommand input
 preview true
 filename "/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/graphs/FigureHHI.tex"
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -2053,12 +2042,6 @@ Inventor Count
 
 \begin_layout Plain Layout
 \align center
-\begin_inset Branch Tikz
-inverted 0
-status open
-
-\begin_layout Standard
-\align center
 \begin_inset Flex Scalebox
 status open
 
@@ -2077,11 +2060,6 @@ status open
 LatexCommand input
 preview true
 filename "/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/graphs/FigureHHI_N_inv.tex"
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
