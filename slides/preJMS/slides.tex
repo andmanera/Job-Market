@@ -1,0 +1,1443 @@
+%% LyX 2.3.5.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english,aspectratio = 169,  serif, mathserif, professionalfont]{beamer}
+\PassOptionsToPackage{natbib=true}{biblatex}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{booktabs}
+\usepackage{bm}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+% this default might be overridden by plain title style
+\newcommand\makebeamertitle{\frame{\maketitle}}%
+% (ERT) argument for the TOC
+\AtBeginDocument{%
+  \let\origtableofcontents=\tableofcontents
+  \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+  \def\gobbletableofcontents#1{\origtableofcontents}
+}
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+\theoremstyle{plain}
+\newtheorem{prop}[thm]{\protect\propositionname}
+\theoremstyle{definition}
+\newtheorem*{defn*}{\protect\definitionname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%\usetheme{metropolis}
+%\usetheme{Darmstadt}
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage[bottom]{footmisc}
+\usepackage{placeins}
+%\usepackage[adobe-utopia]{mathdesign}
+\usepackage{pifont}
+%\usepackage{kerkis}
+%\usepackage{pxfonts}
+\usepackage[default]{lato}
+%\usepackage{mathpazo}
+\usepackage{eulervm}
+
+
+
+\usepackage{dcolumn}
+\usepackage{bbm}
+\newcolumntype{d}[0]{D{.}{.}{5}}
+
+\usepackage{changepage}
+
+\addtobeamertemplate{frametitle}{}{\vspace{-0.2 cm}}
+
+\setbeamertemplate{frametitle} 
+{ 
+	\begin{centering} 
+		\LARGE
+		\insertframetitle
+		\par 
+	\end{centering} 
+} 
+
+\setbeamerfont{title}{size = \LARGE}
+
+
+
+
+
+%COLORS
+\definecolor{chamois}{RGB}{254,254,245}
+\definecolor{oldchamois}{RGB}{255,255,240}
+\definecolor{darkbrown}{RGB}{124,79,0}
+\definecolor{UniBlue}{RGB}{65,55,203}
+\definecolor{bordeaux}{RGB}{201,18,18}
+\definecolor{redd}{RGB}{245,29,29}
+
+
+\definecolor{hellgelb}{rgb}{1,1,0.8}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+\definecolor{textcolour}{rgb}{0.37,0.34,0.27}
+
+\definecolor{ITgreen}{rgb}{0,204/256,0}
+
+\iffalse
+%LIN AT THE TOP
+\usepackage{tikz}
+\newcommand{\topline}{%
+	\tikz[remember picture,overlay] {%
+		\draw[bordeaux,thick] ([yshift=-1.4cm]current page.north west)-- ([yshift=-1.4cm,xshift=\paperwidth]current page.north west);}}
+
+\addtobeamertemplate{frametitle}{
+}{\topline%
+}
+\fi
+
+%ITEMIZE SEP
+\setlength{\itemsep}{10mm}
+%BACKGROUND AND ITEMIZE
+%\setbeamercolor{background canvas}{bg=chamois}
+\setbeamercolor{itemize item}{fg=bordeaux}
+%\setbeamertemplate{itemize item}{\maltese}
+\setbeamercolor{itemize subitem}{fg=bordeaux}
+\setbeamertemplate{itemize subitem}{$\diamondsuit$}
+
+%ELEMENT COLORS
+\setbeamercolor{title}{fg=UniBlue}
+\setbeamercolor{frametitle}{fg=UniBlue}
+\setbeamercolor{structure}{fg=textcolour}
+
+%COLORS FIRST PAGE
+\setbeamercolor{author}{fg=darkbrown}
+\setbeamercolor{date}{fg=darkbrown!60}
+\setbeamercolor{institute}{fg=darkbrown}
+
+%BLOCK SPECS
+\setbeamercolor{block title}{bg=UniBlue!30,fg=white}
+\setbeamercolor{block body}{bg=UniBlue!10,fg=black}
+%\addtobeamertemplate{block begin}{%
+%	\centering
+%	\setlength{\textwidth}{1\textwidth}%
+%}{}
+
+%\setbeamercolor{block title alerted}{bg=yellow!60,fg=red}
+%\setbeamercolor{block body alerted}{bg=hellgelb!80,fg=UniBlue}
+
+
+\setbeamercolor{alert}{fg=redd}
+\renewcommand<>{\alert}[1]{%
+	{\usebeamercolor[fg]{alert}\only#2{}#1}%
+}
+
+\newcommand{\blue}{\color{blue}}
+
+
+
+
+
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+
+
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
+\usepackage{lscape}
+
+%%% TIKZ %%%%
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{snakes}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{matrix,shapes,arrows,fit,tikzmark}
+\usepackage{pgfplots}
+
+
+
+\usepackage{dcolumn}
+\usepackage{bbm}
+\newcolumntype{d}[0]{D{.}{.}{5}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
+
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+
+%\usepackage{animate}
+
+\makeatother
+
+\usepackage{babel}
+\usepackage[style=authoryear,backend=bibtex]{biblatex}
+\providecommand{\definitionname}{Definition}
+\providecommand{\propositionname}{Proposition}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+\title{\thispagestyle{empty}Competing for Inventors: Market Concentration
+and the Misallocation of Innovative Talent}
+\author{Andrea Manera}
+\date{October 5, 2021}
+
+\makebeamertitle
+%
+\tikzset{            every picture/.style={remember picture,baseline},         every node/.style={anchor=base,align=center,outer sep=1.5pt},         every path/.style={thick}} 
+\newcommand\marktopleft[1]{% 
+   \tikz[overlay,remember picture]          \node (marker-#1-a) at (-.3em,.3em) {};% 
+}
+\newcommand\markbottomright[2]{%   
+ \tikz[overlay,remember picture]          \node (marker-#1-b) at (0em,0em) {};%  
+}
+\tikzstyle{every picture}+=[remember picture] 
+\tikzstyle{mybox} =[draw=black, very thick, rectangle, inner sep=10pt, inner ysep=20pt] 
+\tikzstyle{fancytitle} =[draw=black,fill=red, text=white] 
+\pgfplotsset{compat=1.9}
+\pgfplotsset{every axis/.append style={            label style={font=\Large},                     tick label style={font=\Large}                       }}
+%%%% END TIKZ STUFF
+
+\section{Introduction}
+\begin{frame}{Motivation}
+
+\noindent \begin{columns}[T]
+\begin{column}{.5\textwidth} 
+\onslide<1-4>\begin{itemize}   
+\item<1-> TFP growth has slowed down\\
+\vspace{-.8em}
+{\tiny{Fernald et al. (2014), Gordon (2016), Akcigit and Ates (2021)}}
+\item<2-> R\&D productivity has fallen \\
+\vspace{-.8em}
+{\tiny{Bloom et al. (2020), Acemoglu et al. (2018, 2021)}}
+\item<3-> Inventors have skills broader than product markets, high mobility\\
+\vspace{-.8em}
+{\tiny{Akcigit et al. (2016), Azoulay et al. (2017), Moretti et al. (2017)}}
+\end{itemize} 
+\end{column}% 
+\hspace{-.2em}
+\begin{column}{.5\textwidth}
+\onslide<1-4>\only<1>{\resizebox{\textwidth}{!}{ 
+\includegraphics{graphs/Akcigit_and_Ates_TFP_slowed.png}
+}\\\vspace{-.8em}
+{\centering\tiny{Source: Akcigit and Ates (2021)}}
+}   
+\onslide<1-4>\only<2-4>{\resizebox{\textwidth}{!}{ 
+\includegraphics{graphs/Bloom_et_al.png}
+}\\\vspace{-.8em}
+{\centering\tiny{Source: Bloom et al. (2020)}}
+}   
+\end{column}% 
+\end{columns}
+\begin{center}
+\bigskip{}
+\textcolor{red}{\Large{}\onslide<4>{Are inventors and their skills  misallocated?}}{\Large\par}
+\par\end{center}
+
+\end{frame}
+
+\begin{frame}{This Paper}
+\begin{itemize}
+\item \onslide<1->Inventors have become increasingly misallocated in the
+last 20 years
+\begin{itemize}
+\item \onslide<2->employed by incumbents in less competitive sectors
+\item \onslide<3->deployed to non-productive, defensive, R\&D projects
+(``patent walls'')
+\end{itemize}
+\item \onslide<4->Mechanism:
+\begin{itemize}
+\item \onslide<5->Dominant firms engage in both productive and defensive
+R\&D activities{\tiny{}}\\
+{\tiny{}Hall and Helmers (2015), Abrams et al. (2018), Akcigit and
+Kerr (2018), Jo (2019), Argente et al. (2021) }{\tiny\par}
+\item \onslide<6->Defensive R\&D more attractive when profits to protect
+are bigger\\
+{\tiny{}Arrow's (1962) replacement effect}{\tiny\par}
+\item \onslide<7->Concentration and profits have increased significantly
+in the US\\
+{\tiny{}Autor et al. (2020), Gutierrez and Philippon (2017, 2018),
+Grullon et al. (2019), Barkai (2020), De Loecker et al. (2020)}{\tiny\par}
+\item \onslide<8->Concentrating sectors attracted more inventors, pushing
+growth below potential
+\end{itemize}
+\item \onslide<9->Misallocation can explain 7.5-22.5\% of fall in annual
+growth (-.15pp to -.45pp)
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Roadmap}
+
+\begin{itemize}
+\item \onslide<1->Data construction
+\begin{itemize}
+\item \onslide<2->{Group sectors that compete for similar inventors}%\vspace{-2em}
+\end{itemize}
+\item \onslide<4-> Empirical analysis
+\begin{itemize}
+\item \onslide<5->{Sectors with growing concentration increased their share or inventors} 
+\item \onslide<6->{Fall in inventors' productivity in concentrating sectors}%\vspace{-2em}
+\end{itemize}
+\item \onslide<7-> Model
+\begin{itemize}
+\item \onslide<8->{Schumpeterian model with defensive innovation} %\vspace{-.8em}
+\end{itemize}
+\item \onslide<9->{Calibration and Policy}
+\begin{itemize}
+\item \onslide<10->{Subsidize entrants in concentrated sectors}
+\item \onslide<11->{Cost-neutral policy raises annual growth by .28pp}
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+
+\section{Data Construction}
+
+\begin{frame}{}
+
+\vspace{2em}
+\begin{center}
+{\color{UniBlue} \Huge Data Construction}
+\end{center}
+\end{frame}
+%
+\begin{frame}{Empirical Analysis Objectives}
+\begin{itemize}
+\item Identify ``knowledge markets'': labor markets for inventors with
+same skills
+\begin{itemize}
+\item Build a network of flows of inventors across sectors
+\item Identify sets of product markets that hire the same type of inventors
+\end{itemize}
+\end{itemize}
+\vspace{2em}
+\begin{itemize}
+\item \emph{Within knowledge markets: }
+\begin{itemize}
+\item Analyze how concentration and product markets' share of inventors
+are related
+\item Evaluate effects of increased concentration on R\&D productivity
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Data Sources}
+\begin{itemize}
+\item USPTO (patent-year) and Goldschlag et al. (2016): 
+\begin{itemize}
+\item patent citation and disambiguated inventor id's, 1975-present;
+\item Cooperative Patent Classification (CPC) 
+\item patent classification by NAICS of application (1978-2016)
+\end{itemize}
+\end{itemize}
+\vspace{1em}
+\begin{itemize}
+\item Economic Census and Keil (2017) (5-year-NAICS)
+\begin{itemize}
+\item NAICS 4-digit concentration measure: HHI and HHI lower bound
+\item Output per worker growth
+\end{itemize}
+\end{itemize}
+\vspace{1em}
+\begin{itemize}
+\item NBER-CES:
+\begin{itemize}
+\item Constructed Lerner Index 
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{``Knowledge Markets''}
+\begin{itemize}
+\item \emph{Ideally}: 
+\begin{itemize}
+\item set of product markets with same \emph{required knowledge }innovate
+\end{itemize}
+\end{itemize}
+\vspace{2em}
+\begin{itemize}
+\item \emph{In practice:} 
+\begin{itemize}
+\item NAICS 4-digit sectors connected by flows of inventors 
+\item Identify flows from patents with disambiguated inventors
+\item Group NAICS that have strongest connections
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Building a Knowledge Market}
+\begin{center}
+\begin{figure}
+\includegraphics[width=1\textwidth]{graphs/Kmarkets/Kmarkets\lyxdot 001}
+\end{figure}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{Building a Knowledge Market}
+\begin{center}
+\begin{figure}
+\includegraphics[width=1\textwidth]{graphs/Kmarkets/Kmarkets\lyxdot 002}
+\end{figure}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{Building a Knowledge Market}
+\begin{center}
+\begin{figure}
+\includegraphics[width=1\textwidth]{graphs/Kmarkets/Kmarkets\lyxdot 003}
+\end{figure}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{Building a Knowledge Market}
+\begin{center}
+\begin{figure}
+\includegraphics[width=1\textwidth]{graphs/Kmarkets/Kmarkets\lyxdot 004}
+\end{figure}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{Building a Knowledge Market}
+\begin{center}
+\begin{figure}
+\includegraphics[width=1\textwidth]{graphs/Kmarkets/Kmarkets\lyxdot 005}
+\end{figure}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{Building a Knowledge Market}
+\begin{center}
+\begin{figure}
+\includegraphics[width=1\textwidth]{graphs/Kmarkets/Kmarkets\lyxdot 006}
+\end{figure}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{Constructing Inventor Flows}
+ 
+
+\begin{table}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Patent ID & Inventor ID & Goldschlag et al. (2016) NAICS & Year\tabularnewline
+\hline 
+\marktopleft{a1}US00001 & 00001-1 & 1111 & 1980\tabularnewline
+US00001 & 00001-1 & 1112 & 1980\markbottomright{a1}{red}\tabularnewline
+US00001 & 00001-2 & 1111 & 1980\tabularnewline
+US00001 & 00001-2 & 1112 & 1980\tabularnewline
+US00002 & 00001-1 & 3111 & 1981\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+\uncover<2->{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-a1-a.north west) (marker-a1-b.south east)] {};}
+\end{frame}
+%
+\begin{frame}{Constructing Inventor Flows}
+
+\begin{table}
+\scalebox{.9}{%
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Patent ID & Inventor ID & Goldschlag et al. (2016) NAICS & Year\tabularnewline
+\hline 
+US00001 & 00001-1 & 1111 & 1980\tabularnewline
+US00001 & 00001-1 & 1112 & 1980\tabularnewline
+US00001 & 00001-2 & 1111 & 1980\tabularnewline
+US00001 & 00001-2 & 1112 & 1980\tabularnewline
+US00002 & 00001-1 & 3111 & 1981\tabularnewline
+\hline 
+\end{tabular}}
+\end{table}
+
+\begin{center}$\Downarrow \qquad \Downarrow \qquad \Downarrow $\end{center}
+
+\begin{table}
+\scalebox{.9}{%
+\begin{tabular}{|c|c|c|c|}
+\hline 
+NAICS 1 & NAICS 2 & Year & Total Flows\tabularnewline
+\hline 
+1111 & 1112 & 1980 & 2\tabularnewline
+\hline 
+1112 & 3111 & 1981 & 1\tabularnewline
+\hline 
+\end{tabular}}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{Weighting Flows: ``Effective Inventors''}
+
+\only<1>{
+\begin{itemize}
+\item Flows shall adjust for productivity of inventors who move
+\end{itemize}
+}\only<2->{
+\begin{itemize}
+\item \emph{Effective inventors:} 
+\only<2->{\begin{itemize}
+\item "Productivity-adjusted" inventor. Fixed effect  in regression:
+\[\#Patents_{cfit}=\alpha_{i}+\alpha_{cft}+\varepsilon_{cfit}\]
+\only<3->{\item $\alpha_{cft}$: CPC class 1-digit, $c$, by firm (assignee), $f$, by year, $t$, fixed effect}
+\only<4>{\item Results robust to using raw number of inventors}
+\end{itemize}}
+\end{itemize}
+}
+\begin{itemize}
+\item \emph{\onslide<6-> Effective inventor flow from sector 1 to 2:}
+\begin{align*}
+flow_{1\rightarrow2,t} & =\sum_{i}\#\left\{ \text{\ensuremath{i's\ transitions\ 1\rightarrow2\text{ \ensuremath{in} }t}}\right\} \cdot\alpha_{i}
+\end{align*}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Detecting Knowledge Markets}
+\begin{itemize}
+\item Total undirected flows:
+\[
+flow_{12}=\sum_{t}\left(flow_{1\rightarrow2,t}+flow_{2\rightarrow1,t}\right)
+\]
+used as network weights \hyperlink{appendix: Weights}{\beamergotobutton{Normalization}}\label{button: BackToFlows}
+\item Maximize modularity of flow network over:
+\begin{itemize}
+\item Number of \emph{non-overlapping} communities $N$
+\item Assignment of nodes to the $N$ communities
+\end{itemize}
+\item Density of links \emph{within }communities versus \emph{between} \hyperlink{appendix: Louvain}{\beamergotobutton{Formula and Algorithm}}\label{button: BackToComm}
+\item Result: 10 non-singleton sets of NAICS 4-digit that share inventors
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Visualization at 3-digit NAICS}
+\begin{center}
+\begin{figure}
+\includegraphics[height=0.9\paperheight]{graphs/Community_3d}
+\end{figure}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{Features of Flows and Knowledge Markets}
+
+\begin{columns}[T]
+\begin{column}{.5\textwidth} 
+\onslide<1-4>\vspace{2em}\begin{itemize}   
+\item<1-> Iventor flows between many different product markets!
+\item<2-> Orange: "Mining, Heavy Industry" \\
+\vspace{-.8em}
+{\tiny{Petroleum and Coal Products, Chemical, Machinery Manufacturing}}
+\item<3-> Green: "Food and Agriculture" \\
+\vspace{-.8em}
+{\tiny{Crop Production, Food Manufacturing, Beverage and Tobacco}}
+\item<4-> Yellow: "Communications, Electronics" \\
+\vspace{-.8em}
+{\tiny{Computer Products, Telecommunications, Data Processing}}
+\end{itemize} 
+\end{column}% 
+\hspace{-1em}
+\begin{column}{.6\textwidth}
+\vspace{-1.3em}
+\resizebox{\textwidth}{!}{ 
+\includegraphics{graphs/Community_3d.png}
+}
+\end{column}% 
+\end{columns}
+\end{frame}
+%
+
+\section{Empirical Analysis}
+\begin{frame}{}
+
+\vspace{2em}
+\begin{center}
+{\color{UniBlue} \Huge Empirical Analysis}
+\end{center}
+\end{frame}
+%
+
+\begin{frame}{Variable Definition}
+
+\begin{itemize}
+\item Market concentration: $HHI$
+\begin{itemize}
+\item Economic Census does not compute $HHI$ for all sectors
+\item But always reports top 4, 8, 20, 50 firms' share
+\item Use $\underline{HHI}$: lower bound of HHI computed from top shares
+(Keil, 2017) \label{button: BackToVariables}\hyperlink{appendix: HHILB}{\beamergotobutton{Expression}}
+\end{itemize}
+\item Sector $p$'s share of effective inventors in knowledge market, $k$:
+\[
+Inventor\ Share_{p,t}\equiv\frac{\sum_{p(i,t)=p}\alpha_{i}}{\sum_{k(i,t)=k}\alpha_{i}},
+\]
+
+\begin{itemize}
+\item $\alpha_{i}$ are ``effective inventors'', or raw number of inventors
+\vspace{5pt}
+\item Averaged for 5 years \emph{starting }in census years {\tiny{}(same
+results with symmetric window)}{\tiny\par}
+\end{itemize}
+\item Size of sectors or firms: real sales, real sales per company (Economic
+Census)
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Specification}
+\begin{itemize}
+\item Long-difference 2012-1997 at NAICS 4-digit sector, $p$:
+\[
+\Delta Share{}_{p,\ 2012-1997}=f_{k}\mathbf{1}\left\{ p\in k\right\} \ +\ \beta\Delta HHI_{p,\ 2012-1997}\ +\ \gamma\Delta Size_{p,\ 2012-1997}\ +\ \varepsilon_{p},
+\]
+\item $f_{k}\mathbf{1}\left\{ p\in k\right\} $: sector $p$ belongs to
+knowledge market $k$
+\item $\Delta\text{HHI}_{p}:$ change in concentration
+\item $\Delta Size_{p,\ 2012-1997}:$ log-real sales of sector, per firm
+\item Weighted by sales, robust standard errors
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Main Specification Results \hyperlink{appendix: NoControls}{\beamergotobutton{No Controls}}\hyperlink{appendix: HHICensus}{\beamergotobutton{Census HHI}}\hyperlink{appendix: OutliersMain}{\beamergotobutton{Trim Outliers}}\hyperlink{appendix: NInv}{\beamergotobutton{Raw Inventors}}}
+\label{button: BackToMainSpec}
+
+\begin{table}
+\begin{centering}
+\input{tab/Dk4_sh_inv_hhi_inv_fe1SH.tex}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{Causality}
+
+Threats to causal interpretation:
+\begin{itemize}
+\item Inventors move towards expanding sectors/firms 
+\begin{itemize}
+\item Control for change in sales
+\item Control for change in sales per company
+\end{itemize}
+\item Reverse causality: increase in inventors drives higher concentration 
+\begin{itemize}
+\item Inventors' share computed on 5 years \emph{starting }in Economic Census
+year
+\item IV analysis using Mercatus regulation data \hyperlink{appendix: IV}{\beamergotobutton{Details}}\label{button: BackToCausality}
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+
+\begin{frame}{Robustness to Individual Firm Size \hyperlink{appendix: OutliersSize}{\beamergotobutton{Robustness to Outliers}}\label{button: BackToMainSpec-2}}
+
+\begin{table}
+\begin{centering}
+\input{tab/Dk4_sh_inv_hhi_pc_inv_fe1SH.tex}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{What Happens\emph{ }within Product Markets?\textcolor{blue}{\LARGE{} }}
+
+\label{button: BackToWithinKMKT}An increase in inventor shares:
+\begin{itemize}
+\item Significantly increases
+\begin{itemize}
+\item Top 10\% firms' inventor shares, Top 10\%/Bottom 50\% ratio \hyperlink{appendix: WithinDist}{\beamergotobutton{Table}}
+\item Self-citations \hyperlink{appendix: SelfCite}{\beamergotobutton{Table}}
+\end{itemize}
+\item Significantly decreases
+\begin{itemize}
+\item Inventors' productivity (next slide)
+\item Patents' forward citations \hyperlink{appendix: FWDCite}{\beamergotobutton{Table}}
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Fall in Inventors' Productivity \hyperlink{appendix: InvProdFull}{\beamergotobutton{Robustness to Outliers}}}
+
+\label{button: BackToInvProd}
+\begin{figure}
+\begin{centering}
+\input{tab/Lprod_inv_fe1SH.tex}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{figure}
+
+\end{frame}
+%
+\begin{frame}{Back-of-the-envelope Loss from Misallocation}
+
+Implied loss from misallocation for the median sector with $\Delta$
+Inventor Share $>0$:
+
+{\large{}\begin{equation*}
+\onslide<1->{\Delta g=\only<1>{\frac{\Delta\left(\frac{g}{Inventor}\right)}{\Delta\underline{HHI}}}%
+\only<2-5>{\underset{\text{-.29}}{\underbrace{\frac{\Delta\left(\frac{g}{Inventor}\right)}{\Delta\underline{HHI}}}}}%
+\only<6->{\underset{\in[-.54,-.05]}{\underbrace{\frac{\Delta\left(\frac{g}{Inventor}\right)}{\Delta\underline{HHI}}}}}%
+\only<1-2>{\times\Delta\underline{HHI}}
+\only<3->{\times\underset{.0019}{\underbrace{\Delta\underline{HHI}}}}
+\only<1-3>{\times Inventors}
+\only<4->{\times\underset{1421}{\underbrace{Inventors}}} 
+\onslide<5->{\only<5>{=-0.78pp}\only<6->{\in [-1.45pp, -.13pp]}}
+}
+\end{equation*}
+\onslide<7->{
+\begin{itemize}
+\item Compares to a median of $-2.73pp$
+\onslide<8->{\item Misallocation would explain $28.6\%$ of this fall (4.8\% to 53\%)}
+\onslide<9->{\item 23\% fall in output per worker growth for these sectors relative to 1997}
+\onslide<10->{\item Similar results regressing of inventors' productivity on $\Delta$ Inventor Share} 
+\end{itemize}
+}}
+\end{frame}
+%
+\begin{frame}{Recap of Key Results}
+\begin{itemize}
+\item Within knowledge markets:
+\begin{itemize}
+\item Sector that become more concentrated attract more inventors
+\end{itemize}
+\item Within product markets, increasing concentration:
+\begin{itemize}
+\item Lowers inventors' productivity (growth per inventor)
+\item Increases share of inventors at top firms
+\item Lowers forward citations
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+
+\section{Theoretical Framework}
+\begin{frame}{}
+
+\vspace{2em}
+\begin{center}
+{\color{UniBlue} \Huge Model} 
+\end{center}
+\end{frame}
+%
+\begin{frame}{Model Objectives}
+\begin{itemize}
+\item Explain mechanism behind empirical facts
+\item Schumpeterian model \emph{with defensive innovation} 
+\begin{itemize}
+\item Entrants give creative-destruction growth
+\item Incumbents can engage in defensive innovation raising entrants' costs
+\end{itemize}
+\item Calibrate two sectors, one knowledge market model to evaluate policy:
+\begin{itemize}
+\item Optimal to subsidize entrants in concentrated sectors
+\item Cost-neutral policy gives up to .155pp higher annual growth
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Single-Sector: Market Structure \hyperlink{appendix: ConcLerner}{\beamergotobutton{Concentration v. Markup}}}
+
+\label{button: BackToSS} Consumption good is C-D of intermediates:
+\[
+Y_{t}=\int_{0}^{1}y_{t}(i)\mathrm{d}i
+\]
+
+Intermediate, $i$, produced with linear technology by either:
+\begin{itemize}
+\item Incumbent: unit cost $\frac{c_{t}(i)}{\phi},$ $\phi>1$; or
+\item Entrants: unit cost $c_{t}(i)$
+\end{itemize}
+Bertrand competition, incumbent sets $p_{t}(i)=c_{t}(i)$, realizes
+monopoly profits:
+\[
+\Pi_{t}=\left(\frac{\phi-1}{\phi}\right)c_{t}(i)y_{t}(i)=\left(\frac{\phi-1}{\phi}\right)Y_{t}.
+\]
+
+\end{frame}
+%
+\begin{frame}{Innovation}
+
+Entrants and incumbents can invest in R\&D to obtain an innovation
+reducing costs to:
+\[
+c_{t+\Delta t}=\frac{c_{t}}{\left(1+\eta\right)\phi},
+\]
+If innovation is \emph{implemented, }cost of all other firms drops
+to:
+\[
+c_{t+\Delta t}=\frac{c_{t}}{\left(1+\eta\right)}
+\]
+Normalized incumbents' profits are constant:
+\[
+\pi_{t}\equiv\frac{\Pi_{t}}{Y_{t}}=\left(\frac{\phi-1}{\phi}\right)
+\]
+
+\end{frame}
+%
+\begin{frame}{Incumbents' R\&D}
+\begin{itemize}
+\item Incumbents' R\&D gives:
+\begin{itemize}
+\item a\emph{ patent wall} of size $\omega>1$ w.p. 1, which raises entrants'
+costs,
+\item an innovation w.p. $\lambda\in[0,1]$.
+\end{itemize}
+\item State of each market is the size of patent wall $\Omega\in\left\{ 1,\omega\right\} $
+\item Incumbents choose an innovation intensity $x_{I}$ with costs:
+\[
+C\left(x_{I};w^{RD}\right)=\alpha_{I}\frac{x_{I}^{\gamma}}{\gamma}w^{RD},\ \gamma>1
+\]
+\item $\alpha_{I}\frac{x_{I}^{\gamma}}{\gamma}$ total incumbents' inventors
+\item Fix $w^{RD}=1$ for now
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Incumbents' Values}
+
+\begin{itemize}
+\item Incumbents' normalized values $v=\frac{V\left(\Omega\right)}{Y}$
+with constant output growth:
+\begin{align*}
+\rho v(1) & =\max_{x_{I}}\left(\frac{\phi-1}{\phi}\right)-\alpha_{I}\frac{x_{I}^{\gamma}}{\gamma}+x_{I}\left(v(\omega)-v(1)\right)-x_{e,1}\left(v(1)\right)\\
+\rho v(\omega) & =\left(\frac{\phi-1}{\phi}\right)+\delta\left(v(1)-v(\omega)\right)-x_{e,\omega}\left(v(\omega)\right)
+\end{align*}
+\item $x_{e,1},x_{e,\omega}$: total research intensity of entrants 
+\item $\delta$: depreciation of patent wall (patent protection)
+\item Gain from innovation depends on the difference between $x_{e,\omega}$
+and $x_{e,1}$
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Entrants}
+\begin{itemize}
+\item Successful entrants destroy any existing patent wall and get ``unprotected
+value'' $v(1)$
+\item Entrants are atomistic, mass determined in equilibrium
+\item Crowding externalities in entrants' research (Abrams et al., 2018)
+\item Linear cost $\zeta$$\times\Omega$:
+\[
+\max_{x_{e,\Omega,i}}x_{e,\Omega,i}v(1)-\zeta\Omega x_{e,\Omega,i}x_{e,\Omega}.
+\]
+\item Finite demand IFF:
+\[
+x_{e,\Omega}=\frac{v(1)}{\zeta\Omega}
+\]
+\item Total entrants' inventors sector with wall $\Omega$ given by $v(1)=\zeta\Omega x_{e,\Omega}$
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Growth and Inventors' Productivity \hyperlink{appendix: CGDef}{\beamergotobutton{Equilibrium Definition}}}
+
+\label{button: BackToGrowth}Stationary distribution with constant
+growth: \hyperlink{appendix: StatDist}{\beamergotobutton{Derivation}}
+\[
+\bm{\mu}=\left[\begin{matrix}\mu_{1} & \mu_{\omega} & \mu_{e,1} & \mu_{e,\omega}\end{matrix}\right]
+\]
+Growth is given by:
+\[
+g=\eta\left(x_{e,\omega}\mu_{e,\omega}+x_{e,1}\mu_{e,1}+\lambda x_{I}\mu_{1}\right)
+\]
+Inventors' productivity (growth per inventor):
+\[
+\frac{g}{L^{RD}}=\eta\frac{x_{e,\omega}\mu_{e,\omega}+x_{e,1}\mu_{e,1}+\lambda x_{I}\mu_{1}}{\zeta\left(\omega x_{e,\omega}\mu_{e,\omega}+x_{e,1}\mu_{e,1}\right)+\alpha_{I}\frac{x_{I}^{2}}{2}\mu_{1}}.
+\]
+
+\end{frame}
+%
+%
+\begin{frame}{One-Sector Equilibrium Proposition }
+
+\begin{prop}
+\label{prop: partialEq-2}Consider the above model with a perfectly
+elastic production and R\&D labor supply. Assume $\delta,\lambda=0,$
+and 
+\[
+\sqrt{\frac{\phi-1}{\phi}}\left(\frac{\alpha_{I}-\zeta\omega\left(\omega-1\right)}{\alpha_{I}\zeta\omega}\right)>\rho.
+\]
+ An increase in the markup factor $m\equiv\frac{\phi-1}{\phi}$, increases
+incumbents' and entrants' R\&D, growth, and the incumbents' share
+of total R\&D labor, and decreases inventor productivity, $g/L^{RD}.$
+\end{prop}
+
+\begin{itemize}
+\item Sufficient conditions, holds for wider range of parameters in simulations
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Single Sector Comparative Statics: Markup Increase}
+
+\begin{columns}[T]
+\begin{column}{.5\textwidth} 
+\makebox[\linewidth][c]{ 
+   \resizebox{\linewidth}{!}{
+		\input{graphs/FigOneSecLeft.tex}
+		}
+	} 
+\end{column}% 
+\hspace{-.4em}
+\begin{column}{.525\textwidth}
+\only<2->{   
+\makebox[\linewidth][c]{ 
+   \resizebox{\linewidth}{!}{
+		\input{graphs/FigOneSecRight.tex}
+		}
+	}
+}
+\end{column}% 
+\end{columns}
+
+\end{frame}
+%
+\begin{frame}{Two-Sectors, Inventor Market Equilibrium}
+\begin{itemize}
+\item Two Cobb-Douglas sectors as above:
+\[
+Y=\left[\int_{0}^{1}y_{1,t}(i)\mathrm{d}i\right]^{\beta_{1}}\left[\int_{0}^{1}y_{2,t}(i)\mathrm{d}i\right]^{1-\beta_{1}}
+\]
+\item Researchers now earn $w^{RD},$ separate market from production
+\item Inventors' market clearing:
+\begin{align*}
+L^{RD,s}\left(w^{RD}\right) & =\sum_{i=1,2}\left\lbrace \mu_{1,i}\left(w^{RD}\right)\alpha_{I}\frac{x_{I,i}^{2}\left(w^{RD}\right)}{2}+\right.\\
+ & \left.+\mu_{\omega,i}\left(w^{RD}\right)\zeta_{i}\omega_{i}x_{e,\omega,i}\left(w^{RD}\right)+\mu_{1,e,i}\left(w^{RD}\right)\zeta_{i}x_{e,1,i}\left(w^{RD}\right)\right\rbrace 
+\end{align*}
+\item Normalize $L^{RD,s}=100.$ 
+\end{itemize}
+\end{frame}
+%
+
+\section{Calibration and Policy }
+\begin{frame}{Calibration}
+ 
+
+\begin{tabular}{L{3cm}C{2cm}C{1cm}L{1cm}C{3cm}}
+\toprule  
+Parameter Name & Symbol & \multicolumn{2}{c}{Value} & Source/Target \\ \midrule \midrule  
+Discount rate & $\rho$ & .&04 & Annual real interest rate of $4\%$\\
+Shares of Sectors' Value Added & $\beta$ & .&5 & Share of sales of sectors that saw an increase in HHI over total $\approx.5$\\
+Average Sectors' Markup, Technology Gap & $\phi$ & 1&13 & Incumbent efficiency from Aghion et al. (2019)\\
+Curvature of Innovation Function & $\gamma$ & \multicolumn{2}{c}{$1/.6$} & Lower bound of estimates in Kortum (1993)\\ 
+Intensity of Patent Expiration & $\delta$ & .&05 & Uruguay Round Agreements Act (1994)\\
+Share of Implemented Innovations & $\lambda$ & .&785 & Internal patent share of 21.5\% (Akcigit and Kerr, 2018)\\
+Blocking Value of Patents & $\omega$ & 1.&469 & El. of Entry to patents from Hall and Helmers (2015)\\ \bottomrule 
+\end{tabular} 
+\begin{itemize}
+\item Objective: study policy, provide \emph{lower bound of growth effects}
+\item Match only R\&D statistics and Lerner Index gaps
+\item Produces about $20\%$ of lower bound growth loss from empirics
+\item Internal calibration for $\alpha_{I},\text{\ensuremath{\zeta},\ensuremath{\eta}},$
+target incumbents' R\&D share, Business R\&D Share, avg. GDP growth
+1997-2012\hyperlink{appendix: FullIntCal}{\beamergotobutton{Values}}
+\item External calibration for the rest\hyperlink{appendix: FullExtCal}{\beamergotobutton{All Parameters}}\label{button: BackToCal}
+\begin{itemize}
+\item $\beta=.5$: sectors that saw an increase in Lerner Index ($\approx50\%$)
+\item $\phi=1.13$ (Aghion et al., 2019)
+\item $\omega=1.469$ (el. of entry to patents Hall and Helmers (2015))
+\item $\lambda=.785$ ($21\%$ internal patents, Akcigit and Kerr (2018))
+\item $\tau,s$: corp. tax $23\%$ and R\&D subsidy $19\%$ (Akcigit et
+al.)
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{CS: Increase in Sector 2 Markup \hyperlink{appendix: GraphSectors}{\beamergotobutton{Sector Aggregates}}\label{button: BackToCS2-1}}
+
+\makebox[\textwidth][c]{ 
+   \resizebox{.8\textwidth}{!}{  
+		\input{graphs/FigTwoSecLarge.tex} 
+		}
+	}
+\begin{center}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{CS: Increase in Sector 2 Markup \hyperlink{appendix: GraphSectors}{\beamergotobutton{Sector Aggregates}}\label{button: BackToCS2}}
+
+\begin{columns}[T]
+\begin{column}{.5\textwidth} 
+\makebox[\linewidth][c]{ 
+   \resizebox{\linewidth}{!}{
+		\input{graphs/FigTwoSecRight.tex}  
+		}
+	} 
+\end{column}% 
+\hspace{-.4em} 
+\begin{column}{.5\textwidth}
+\makebox[\linewidth][c]{ 
+   \resizebox{\linewidth}{!}{
+		\input{graphs/FigTwoSecLeft.tex}
+		}
+	}
+\end{column}% 
+\end{columns}
+\begin{center}
+\par\end{center}
+
+\end{frame}
+%
+
+\begin{frame}{Growth-Maximizing Policy}
+\begin{itemize}
+\item Planner wishes to maximize constant growth rate
+\item Instruments:
+\begin{itemize}
+\item corporate tax, fixed and flat $\tau=23\%$
+\item sector- and position-specific R\&D subsidies, $s_{I,i},s_{e,1,i},s_{e,\omega,i}$
+\item balanced budget 
+\end{itemize}
+\item Four scenarios versus ``current'' system (everything flat):
+\begin{itemize}
+\item Unconstrained specific subsidies
+\item Cost-Neutral sector- and position-specific subsidies
+\item Cost-Neutral sector-specific subsidies
+\item Cost-Neutral position-specific subsidies
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Policy Results}
+
+\begin{table}[t]
+\centering{}\scalebox{.375}{\input{tab/matlab/PolicyTable.tex}}
+\end{table}
+
+\begin{itemize}
+\item Growth without policy: 2.42\%
+\item Optimal: 3.145\%
+\item Best Cost-neutral: 2.73\%
+\item Flat entry subsidies: 2.7\%
+\item Flat sector subsidies: 2.445\% 
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Conclusion}
+\begin{itemize}
+\item Competition for inventors extends far beyond product markets
+\item Concentrating sectors attract inventors away from competitive 
+\item Misallocation explains up to .45pp lower annual growth
+\item Policy: entrant subsidies in \emph{less competitive sectors}
+\item Cost-neutral entry subsidies give .28pp higher annual growth 
+\end{itemize}
+\end{frame}
+%
+
+\appendix
+
+\section{Appendix}
+
+\begin{frame}{Headlines \hyperlink{button: BackToMotivation}{\beamergotobutton{Back}}}
+
+\label{appendix: MotivationHeadlines}
+\begin{figure}
+
+\begin{centering}
+\includegraphics[width=0.8\textwidth]{graphs/Bloomberg}\\
+\includegraphics[width=0.8\textwidth]{graphs/NYT}
+\par\end{centering}
+\end{figure}
+
+\end{frame}
+%
+\begin{frame}{Total Inventor Flows \hyperlink{button: BackToFlows}{\beamergotobutton{Back}}}
+
+\label{appendix: Weights}
+\begin{itemize}
+\item Strength of connection between two sectors 
+\item Build directed flows for each inventor $i$ (avoid double counting):
+\begin{align*}
+flow_{1\rightarrow2,i,t} & \equiv\frac{\sum\text{\ensuremath{\bm{1}\left\{ i\text{ moves }1\rightarrow2\text{ in }t\right\} }}}{\sum_{j,k}\text{\ensuremath{\bm{1}\left\{ i\text{ moves }j\rightarrow k\text{ in }t\right\} }}}\times\alpha_{i}
+\end{align*}
+\item Compute total outflows and inflows for each NAICS 4-digit sector:
+\[
+inflow_{\text{NAICS}}=\sum_{n}\sum_{t}\sum_{i}flow_{n\rightarrow\text{NAICS},i,t},
+\]
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Network Weights \hyperlink{button: BackToComm}{\beamergotobutton{Back}}}
+\begin{itemize}
+\item Compute share of inflows and outflows, e.g.:
+\[
+share_{\text{1\ensuremath{\leftarrow}2}}=\frac{\sum_{t}\sum_{i}flow_{\text{ 2}\rightarrow\text{1},i,t}}{inflow_{1}}
+\]
+\item Define weight:
+\begin{align*}
+W_{12}=W_{21}=\min & \left\lbrace \frac{share_{\text{1\ensuremath{\leftarrow}2}}+share_{\text{1\ensuremath{\rightarrow}2}}}{2},\right.\\
+ & \left.\frac{share_{\text{2\ensuremath{\leftarrow}1}}+share_{\text{2\ensuremath{\rightarrow}1}}}{2}\right\rbrace 
+\end{align*}
+\item Average tends to overstate flows from small sectors to large
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Problem: Maximize Modularity \hyperlink{button: BackToComm}{\beamergotobutton{Back}} }
+
+\begin{itemize}
+\item \label{appendix: Louvain}Assigns sectors $i$ to $N$ \emph{non-overlapping
+}communities $c_{i}$ to maximize modularity
+\[
+\max_{N}\max_{\left(c_{1},\dots,c_{N}\right)}Q\equiv\frac{1}{2\bm{W}}\sum_{ij}\left[W_{ij}-\frac{\bm{W}_{i}\bm{W}_{j}}{2\bm{W}}\right]\bm{1}\left\{ c_{i}=c_{j}\right\} ,
+\]
+
+\begin{itemize}
+\item $W_{ij}$, weight of edge connecting node $i$ to $j$
+\item $\bm{W_{i}}=\sum_{i}W_{ik},$ sum of weights for edges with one end
+in node $i$, $\bm{W}$ sum of all weights in the graph
+\item $\frac{\bm{W}_{i}\bm{W}_{j}}{2\bm{W}}$ is the expected number of
+weighted edges between nodes $i$ and $j$
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Louvain Algorithm \hyperlink{button: BackToComm}{\beamergotobutton{Back}}}
+
+\begin{itemize}
+\item Louvain method (Blodel et al., 2008). Assign each node to its own
+community. Then, repeat iteratively:
+\begin{enumerate}
+\item Compute local deviations in modularity from reassigning the node to
+neighboring communities
+\item Move node in highest modularity direction
+\item Redefine a network with new communities as nodes
+\end{enumerate}
+\end{itemize}
+\end{frame}
+%
+
+\section{Empirics Appendix}
+\begin{frame}{HHI Lower Bound \hyperlink{button: BackToVariables}{\beamergotobutton{Back}}}
+
+\label{appendix: HHILB}
+\begin{itemize}
+\item Keil, 2017:
+\begin{align*}
+\text{\ensuremath{\underbar{HHI}}}_{p,t} & =4\left[\frac{\text{Top-4 Share}_{p,t}}{4}\right]^{2}+4\left[\frac{\text{Top-8 Share}_{p,t}-\text{Top-4 Share}_{p,t}}{4}\right]^{2}\\
+ & =12\left[\frac{\text{Top-20 Share}_{p,t}-\text{Top-8 Share}_{p,t}}{12}\right]^{2}+30\left[\frac{\text{Top-50 Share}_{p,t}-\text{Top-20 Share}_{p,t}}{30}\right]^{2}
+\end{align*}
+\item Coincides with actual if:
+\begin{itemize}
+\item Sector has 50 or less firms
+\item Shares are distributed equally between firms in brackets 0-4, 5-8,
+9-20, 21-50
+\end{itemize}
+\item Correlation with actual HHI is .93
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{IV Analysis: Regulation measure \hyperlink{button: BackToCausality}{\beamergotobutton{Back}}}
+
+\begin{itemize}
+\item \label{appendix: IV}Regulation measure from Mercatus RegData 4.0
+\item Counts of regulation affecting NAICS 4d using text analysis
+\item Extended to all sectors with $\underbar{HHI}$ using cosine-similarity
+between sector descriptions 
+\item For all pairs NAICS 4-d sectors:
+\begin{itemize}
+\item Build cosine similarity between descriptions
+\end{itemize}
+\item For each NAICS 4-d without missing data:
+\begin{itemize}
+\item Rank 5 most similar sectors with regulation data
+\item Attribute regulations of top 5 most similar sectors, weighted by cos.
+similarity
+\item If highest cos-similarity is smaller than .2, use only most similar
+sector.
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+%
+\begin{frame}{IV Regression: Reduced Form and First Stage}
+\begin{center}
+\begin{table}
+\begin{centering}
+\input{tab/IV_first_inv_fe1.tex}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{IV Regression: 2SLS Results}
+\begin{center}
+\begin{table}
+\begin{centering}
+\scalebox{.7}{\input{tab/IV_inv_fe1.tex}}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{No Controls \hyperlink{button: BackToMainSpec}{\beamergotobutton{Back}}}
+\label{appendix: NoControls}
+
+\begin{table}
+\begin{centering}
+\input{tab/Dk4_sh_inv_hhi_noctrl_inv_fe1SH.tex}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{Main Specification: Actual HHI \hyperlink{button: BackToMainSpec}{\beamergotobutton{Back}}}
+\label{appendix: HHICensus}
+
+\vspace{-2em}
+\begin{table}
+\begin{centering}
+\scalebox{.65}{\input{tab/Dk4_sh_inv_hhi_noctrl_inv_fe1.tex}}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{Main Specification: Robustness to Outliers \hyperlink{button: BackToMainSpec}{\beamergotobutton{Back}}}
+\label{appendix: OutliersMain}
+
+\begin{table}
+\begin{centering}
+\scalebox{.7}{\input{tab/Dk4_sh_inv_hhi_inv_fe1.tex}}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{Robustness to Individual Firm Size \hyperlink{button: BackToMainSpec-2}{\beamergotobutton{Back}}}
+
+\label{appendix: OutliersSize}
+
+\begin{table}
+\begin{centering}
+\scalebox{.65}{\input{tab/Dk4_sh_inv_hhi_pc_inv_fe1.tex}}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{Robustness to Raw Inventors \hyperlink{button: BackToMainSpec}{\beamergotobutton{Back}}}
+
+\label{appendix: NInv}\vspace{-2em}
+
+\begin{table}
+\begin{centering}
+\scalebox{.65}{\input{tab/Dk4_sh_inv_hhi_N_inv.tex}}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{Within-Sector Distribution \hyperlink{button: BackToWithinKMKT}{\beamergotobutton{Back}}}
+
+\label{appendix: WithinDist}
+
+\begin{table}
+\begin{centering}
+\scalebox{.9}{\input{tab/stats_inv_fe1.tex}}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{Self-Citations \hyperlink{button: BackToWithinKMKT}{\beamergotobutton{Back}}}
+
+\label{appendix: SelfCite}
+
+\begin{table}
+\begin{centering}
+\scalebox{.75}{\input{tab/self_cite_mid_inv_fe1.tex}}\\
+\par\end{centering}
+\centering{}{\tiny{}Results for $\Delta Share_{p}\in[-2,2]$. Robust
+standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{Forward Citations \hyperlink{button: BackToWithinKMKT}{\beamergotobutton{Back}}}
+
+\label{appendix: FWDCite}
+
+\begin{table}
+\begin{centering}
+\scalebox{.75}{\input{tab/fwd_cite_mid_inv_fe1.tex}}\\
+\par\end{centering}
+\centering{}{\tiny{}Results for $\Delta Share_{p}\in[-2,2]$. Robust
+standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{Robustness for Inventor Productivity \hyperlink{button: BackToInvProd}{\beamergotobutton{Back}}}
+
+\label{appendix: InvProdFull}
+
+\begin{table}[h]
+\begin{centering}
+\scalebox{.45}{\input{tab/Lprod_inv_fe1.tex}}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{Lerner Index v. Concentration in Sample \hyperlink{button: BackToSS}{\beamergotobutton{Back}}}
+
+\label{appendix: ConcLerner}
+
+\begin{table}
+\begin{centering}
+\scalebox{.5}{\input{tab/lerner_hhf.tex}}\\
+\par\end{centering}
+\centering{}{\tiny{}Robust standard errors in parentheses, $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$}{\tiny\par}
+\end{table}
+
+\end{frame}
+%
+
+\begin{frame}{Constant-Growth Equilibrium \hyperlink{button: BackToGrowth}{\beamergotobutton{Back}}}
+
+\label{appendix: CGDef}\label{prop: partialEq-1}
+\begin{defn*}
+A constant-growth equilibrium is a set of prices $p(i)$, investment
+intensities $x_{I},x_{e,\omega},x_{e,1}$, and normalized values $v(\omega),v(1)$,
+such that, given a wage for production and R\&D workers, incumbent
+and entrants optimally choose research intensities, the stationary
+distribution satisfies:
+\begin{align*}
+0 & =-\left(x_{I}+x_{e,1}\right)\mu_{1}+\delta\mu_{\omega}+x_{e,\omega}\mu_{e,\omega}+x_{e,1}\mu_{e,1},\\
+0 & =-\left(x_{e,\omega}+\delta\right)\mu_{\omega}+x_{I}\mu_{1},\\
+0 & =-\left(x_{e,1}+x_{I}\right)\mu_{e,1}+x_{e,1}\mu_{1}+\delta\mu_{e,\omega},\\
+0 & =-\left(x_{e,\omega}+\delta\right)\mu_{e,\omega}+x_{e,\omega}\mu_{\omega}+x_{I}\mu_{e,1}.
+\end{align*}
+and output grows at a constant rate, $g$.
+\end{defn*}
+\end{frame}
+%
+\begin{frame}{Stationary Distribution \hyperlink{button: BackToGrowth}{\beamergotobutton{Back}}}
+
+\label{appendix: StatDist}
+
+LOM:
+\begin{align*}
+\dot{\mu}_{1} & =-\left(x_{I}+x_{e,1}\right)\mu_{1}+\delta\mu_{\omega}+x_{e,\omega}\mu_{e,\omega}+x_{e,1}\mu_{e,1},\\
+\dot{\mu}_{\omega} & =-\left(x_{e,\omega}+\delta\right)\mu_{\omega}+x_{I}\mu_{1},\\
+\dot{\mu}_{e,1} & =-\left(x_{e,1}+x_{I}\right)\mu_{e,1}+x_{e,1}\mu_{1}+\delta\mu_{e,\omega},\\
+\dot{\mu}_{e,\omega} & =-\left(x_{e,\omega}+\delta\right)\mu_{e,\omega}+x_{e,\omega}\mu_{\omega}+x_{I}\mu_{e,1}.
+\end{align*}
+\begin{align*}
+\mu_{\omega} & =\frac{x_{I}}{x_{I}+x_{e,\omega}+\delta},\quad & \mu_{1}=\frac{x_{e,\omega}+\delta}{x_{I}+x_{e,\omega}+\delta},\\
+\mu_{e,\omega} & =\frac{\omega x_{I}\mu_{1}+\left(\omega x_{e,\omega}+x_{I}\right)\mu_{\omega}}{\omega\left(x_{e,\omega}+\delta\right)+x_{I}},\quad & \mu_{e,1}=\frac{\omega\left(x_{e,\omega}+\delta\right)\mu_{1}+\delta\mu_{\omega}}{\omega\left(x_{e,\omega}+\delta\right)+x_{I}}.
+\end{align*}
+
+\end{frame}
+%
+\begin{frame}{One-Sector Equilibrium Proposition \hyperlink{button: BackToCS1}{\beamergotobutton{Back}}}
+
+\label{appendix: PropositionOneSec}
+\begin{prop}
+\label{prop: partialEq}Consider the above model with a perfectly
+elastic production and R\&D labor supply. Assume $\delta,\lambda=0,$
+and 
+\[
+\sqrt{\frac{\phi-1}{\phi}}\left(\frac{\alpha_{I}-\zeta\omega\left(\omega-1\right)}{\alpha_{I}\zeta\omega}\right)>\rho.
+\]
+ An increase in the markup factor $m\equiv\frac{\phi-1}{\phi}$, increases
+incumbents' and entrants' R\&D, growth, and the incumbents' share
+of total R\&D labor, and decreases inventor productivity, $g/L^{RD}.$
+\end{prop}
+
+\begin{itemize}
+\item Parametric sufficient condition, prop. holds for much wider range
+of parameters 
+\item $\delta,\lambda=0$ solely for analytical convenience
+\end{itemize}
+\end{frame}
+%
+
+\begin{frame}{Internal Calibration Parameters and Sources \hyperlink{button: BackToCal}{\beamergotobutton{Back}}}
+
+\label{appendix: FullIntCal}
+
+\begin{table}
+\centering{}\scalebox{.6}{%
+\begin{tabular}{lccc}
+\toprule 
+Parameter Name & Symbol & Value & Target\tabularnewline
+\midrule
+\midrule 
+Incumbent Costs & $\alpha_{I}$ & 6.67 & Share of Inventors of top 10\% firm distribution, 1997: 30.3\%\tabularnewline
+Entrants' Costs & $\zeta$ & 3.38 & Business R\&D Share over GDP, 1997: 1.81\%\tabularnewline
+Innovation Step & $\eta$ & 0.0024 & Average Annual GDP Growth, 1997-2012: 2.45\%\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{External Calibration Parameters and Sources \hyperlink{button: BackToCal}{\beamergotobutton{Back}}}
+
+\label{appendix: FullExtCal}
+
+\begin{table}
+\centering{}\scalebox{.5}{%
+\begin{tabular}{lccc}
+\toprule 
+Parameter Name & Symbol & Value & Source/Target\tabularnewline
+\midrule
+\midrule 
+Discount rate & $\rho$ & .04 & Annual real interest rate of $4\%$\tabularnewline
+Shares of Sectors' Value Added & $\beta$ & .5 & Share of sales of sectors that saw an increase in HHI over total $\approx.5$\tabularnewline
+Average Sectors' Markup, Technology Gap & $\phi$ & 1.13 & Incumbent efficiency from Aghion et al. (2019)\tabularnewline
+Curvature of Innovation Function & $\gamma$ & $1/.6$ & Lower bound of estimates in Kortum (1993)\tabularnewline
+Intensity of Patent Expiration & $\delta$ & .05 & Uruguay Round Agreements Act (1994)\tabularnewline
+Share of Implemented Innovations & $\lambda$ & .785 & Internal patent share of 21.5\% (Akcigit and Kerr, 2018)\tabularnewline
+Blocking Value of Patents & $\omega$ & 1.469 & El. of Entry to patents from Hall and Helmers (2015)\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\end{frame}
+%
+\begin{frame}{Two-Sector CS: Sector Aggregates \hyperlink{button: BackToCS2}{\beamergotobutton{Back}}}
+
+\label{appendix: GraphSectors}
+\begin{center}
+\begin{figure}
+\centering{}\includegraphics[width=0.65\textheight]{graphs/GE_sectors}
+\end{figure}
+\par\end{center}
+
+\end{frame}
+%
+
+\end{document}

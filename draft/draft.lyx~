@@ -17,6 +17,33 @@
 \newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
 \renewcommand{\baselinestretch}{1.3} 
+
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+
+%%% TIKZ %%%%
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{snakes}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{matrix,shapes,arrows,fit,tikzmark}
+\usepackage{pgfplots}
+
+\tikzset{            every picture/.style={remember picture,baseline},         every node/.style={anchor=base,align=center,outer sep=1.5pt},         every path/.style={thick}} 
+\newcommand\marktopleft[1]{% 
+   \tikz[overlay,remember picture]          \node (marker-#1-a) at (-.3em,.3em) {};% 
+}
+\newcommand\markbottomright[2]{%   
+ \tikz[overlay,remember picture]          \node (marker-#1-b) at (0em,0em) {};%  
+}
+\tikzstyle{every picture}+=[remember picture] 
+\tikzstyle{mybox} =[draw=black, very thick, rectangle, inner sep=10pt, inner ysep=20pt] 
+\tikzstyle{fancytitle} =[draw=black,fill=red, text=white] 
+\pgfplotsset{compat=1.9}
+\pgfplotsset{every axis/.append style={            label style={font=\Large},                     tick label style={font=\Large}                       }}
+%%%% END TIKZ STUFF
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -49,7 +76,7 @@ graphicboxes
 \paperfontsize 12
 \spacing onehalf
 \use_hyperref true
-\pdf_author "Andrea Manera, Michele Fornino"
+\pdf_author "Andrea Manera"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
@@ -93,6 +120,11 @@ graphicboxes
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch Model
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -128,23 +160,16 @@ e Talent
 status open
 
 \begin_layout Plain Layout
-I thank...
-\begin_inset Newline newline
-\end_inset
-
-.
-\begin_inset Newline newline
-\end_inset
-
-.
-\begin_inset Newline newline
-\end_inset
-
-.
-\begin_inset Newline newline
-\end_inset
-
-
+I am grateful to my advisors Daron Acemoglu, Martin Beraja, and John Van
+ Reenen for invaluable advice and support.
+ I am also grateful to Michele Fornino for lending indispensable computing
+ power and for his collaboration in a previous version of this project,
+ and Nicholas Zolas, who kindly shared with me the ALP classifications of
+ patents into NAICS sectors of application.
+ I also thank David Autor, Pierre Azoulay, Ricardo Caballero, Arnaud Costinot,
+ Joel Flynn, Germán Gutiérrez, Clémence Idoux, Martina Uccioli, Iván Werning,
+ Christian Wolf, and participants in the MIT Macro Lunch, Applied Macro
+ Lunch, and Macro Seminar for useful comments and suggestions.
 \end_layout
 
 \end_inset
@@ -250,16 +275,16 @@ on and the share of inventors employed in R&D projects relevant to these
  each sector.
  An IV analysis based on the increase in sector-specific regulations suggests
  a causal interpretation of this result.
- Third, sectors with increased inventor concentration have seen a decrease
+ Third, higher shares of relevant inventors are positively correlated with
+ rising concentration of inventors at the top of the innovating firms distributi
+on, and negatively with forward citations.
+ Fourth, sectors with increased inventor concentration have seen a decrease
  in the productivity of inventors, as measured by the growth in output per
  worker.
- Fourth, higher shares of relevant inventors are positively correlated with
- self-citations and with rising concentration of inventors at the top of
- the innovating firms distribution, and negatively with forward citations.
  A back-of-the-envelope computation suggest that the increased concentration
- of inventors in less competitive sectors can for up to 22.5% of the overall
- decrease in output per worker growth over the period 1997-2012, which correspon
-ds to a fall of .45% in absolute value.
+ of inventors in less competitive sectors can account for about 29% of the
+ overall decrease in output per worker growth over the period 1997-2012,
+ which corresponds to a fall of 0.78% in absolute value.
  To rationalize my findings, I propose a Schumpeterian model of creative
  destruction, where incumbents can conduct defensive patenting, to rationalize
  my findings.
@@ -282,30 +307,18 @@ ds to a fall of .45% in absolute value.
 \noindent
 
 \series bold
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\noindent
-
-\series bold
 JEL Codes
 \series default
 : X##, Y##, Z##.
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \noindent
 
 \series bold
 Keywords
 \series default
-: word1, word2, word3.
-\end_layout
-
-\end_inset
-
-
+: Market Concentration, Defensive Innovation, R&D Productivity.
 \end_layout
 
 \begin_layout Standard
@@ -320,9 +333,44 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-There is a long-standing debate in the press and policy circles over the
- allocation of talent in the economy, and whether skilled work is employed
- where it is most beneficial to economic growth and society overall.
+Research and Development activities are key to innovation and growth.
+ Yet, as documented by a growing literature, R&D productivity and growth
+ have been falling over the last few decades 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "bloomAreIdeasGetting2020,fernaldFutureUSEconomic2014,gordonRiseFallAmerican2016"
+literal "false"
+
+\end_inset
+
+.
+ A prominent explanation of these trends is that 
+\begin_inset Quotes eld
+\end_inset
+
+ideas are getting harder to find
+\begin_inset Quotes erd
+\end_inset
+
+ due to increased technological complexity.
+ A less explored alternative sees instead growing inefficiency in the allocation
+ of R&D inputs as the root cause of this phenomenon 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "acemogluInnovationReallocationGrowth2018a,acemogluBottlenecksSectoralImbalances2021"
+literal "false"
+
+\end_inset
+
+, a concern that is echoed in the policy circles as well as the press 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "metzTechGiantsAre2017,bassBigTechSwallows2020"
+literal "false"
+
+\end_inset
+
+.
  Central in the current policy debate is the concern that dominant big-tech
  firms are inefficiently appropriating a large share of highly-educated,
  highly-skilled workers, subtracting this crucial resource from more competitive
@@ -350,106 +398,416 @@ This paper studies the broader effect of increasing concentration on the
  allocation of inventors across sectors, and shows that such concerns are
  justified.
  Using USPTO patent data and concentration measures from the Economic Census
- over the period 1997-2017, I demonstrate that sectors where concentration
+ over the period 1997-2012, I demonstrate that sectors where concentration
  has increased have indeed attracted an increasing share of inventors.
  This relation has a causal interpretation, according to an IV specification
  where I use the increase in the number of regulations from Mercatus RegData
  as an instrument for increased concentration.
  I establish three additional facts that suggest that inventors are misallocated.
  First, researchers accrued mostly to incumbent firms in concentrated sectors.
- Second, the productivity of R&D in these sectors has fallen.
- Third, the patents deposited in these sectors have seen more self-citations
- and less forward citations, suggesting that additional inventors have been
- allocated to incremental project that did not pave the way for further
- developments.
- Quantitatively, my findings imply that inventor misallocation led to a
- fall of up to .45pp in output-per-worker growth in the sectors I study (20%
- of the overall observed reduction).
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-XXXXXXXXXThis project originates from four simple observations.
- First, inventors with specific competencies are a scarce—and fundamental—resour
-ce for R&D.
- Second, due to this scarcity, firms compete for inventors.
- Third, inventors’ technological competencies allow them to produce applications
- that span multiple economic sectors.
- As a result, firms competing for a same set of inventors can belong to
- radically different product markets.
- Fourth, market concentration increases the value of R&D, especially of
- a defensive type.
- Thus, inventors mostly accrue to less competitive sectors, and, within
- these sectors, to incumbent firms conducting defensive R&D to shelter their
- dominant position.
-\end_layout
-
+ Second, the quality of patents in concentrating sectors has fallen, as
+ measured by patent forward citations.
+ Third, inventors' productivity, that I measure as growth in output per
+ worker per inventor, has fallen in these sectors.
+ Taken together, these findings suggest that additional inventors have accrued
+ to incumbents who employed them on projects intended to pre-empt further
+ entry, with a low growth footprint.
+ I refer to this type of R&D as 
+\begin_inset Quotes eld
 \end_inset
 
+defensive innovation
+\begin_inset Quotes erd
+\end_inset
 
-\end_layout
-
-\begin_layout Standard
-Based on these four observations, the main hypothesis of this paper is that
- differences in concentration across product markets that employ the same
- types of inventors generate a inefficiency, which pushes economic growth
- below its potential.
- Indeed, inventors are misallocated towards less competitive markets where
- defensive projects—which hamper entry and Schumpeterian growth—are more
- prevalent, and away from more competitive sectors where growth is more
- sustained.
+.
+ Quantitatively, my findings imply that inventor misallocation implies a
+ fall of up to .78pp in output-per-worker growth in the sectors I study (28.6%
+ of the overall observed reduction over the period 1997-2012).
  
 \end_layout
 
 \begin_layout Standard
-I offer three main contributions.
- First, I construct a dataset of “inventor markets”, defined as collections
- of product markets that share similar inventors.
+Methodologically, my analysis relies on a novel dataset of 
+\begin_inset Quotes eld
+\end_inset
+
+knowledge markets,
+\begin_inset Quotes erd
+\end_inset
+
+ defined as collections of product markets that share similar inventors.
  These inventor markets originate from the network generated by transitions
  of individual inventors across product categories, identified using USPTO
  patent data, where patents are classified according to their main NAICS
  sector of applications.
- 
+ This classification is crucial to avoid pooling inventors and sectors that
+ do not share the same technical expertise.
+ If this were the case, the response of inventor mobility to changes in
+ sectoral characteristics would be biased toward zero, as many sectors identifie
+d as potential outlets for each inventor would in facts not be such.
 \end_layout
 
 \begin_layout Standard
-Second, I provide empirical evidence in favor of the misallocation channel
- described above, using USPTO patent data, Economic Census concentration
- measures, and Mercatus regulation data over the 1997-2017 horizon.
- I show that, within inventor markets, sectors where competition has fallen
- increased their share of researchers.
- In addition, inventors have accrued to incumbent firms in less competitive
- sectors, where show that growth in output per worker has fallen, self-citations
- have increased, and forward citations decreased.
- These results suggests that researchers have been increasingly allocated
- to defensive projects.
- Quantitatively, my findings imply that increased market concentration over
- the last 20 years can explain up to 20% of the overall fall in inventor
- productivity, which many studies identified as a culprit for stagnant overall
- productivity growth.
- 
-\end_layout
-
-\begin_layout Standard
-Third, in order to interpret these results, I build a Schumpeterian model
- where, in addition to productive R&D conducted by new entrants, incumbents
- can engage in defensive projects to reduce entry and strengthen their dominant
+In order to interpret these results, I build a Schumpeterian model where,
+ in addition to productive R&D conducted by new entrants, incumbents can
+ engage in defensive projects to pre-empt entry and strengthen their dominant
  position.
  A two-sector general equilibrium model shows that unbalanced changes in
  concentration across sectors generate a fall in inventor productivity and
- growth
+ growth.
+ Indeed, inventors are misallocated towards less competitive markets where
+ defensive projects—which hamper entry and Schumpeterian growth—are more
+ prevalent, and away from more competitive sectors where growth is more
+ sustained.
+ The theoretical analysis shows that pre-emptive innovation is a crucial
+ mechanism to generate the increased concentration of inventors among incumbents
+ that I find in the data, as well as the fall in R&D productivity, which
+ are both absent in a framework abstracting from these features.
+ 
 \end_layout
 
 \begin_layout Standard
-CONJECTURE: Under the lenses of my model, a planner wishing to maximize
- long-run growth and taking the market structure as given, should provide
- a sector-specific R&D subsidy to entrants in order to reduce the impact
- of defensive patent walls and to conform the sectoral R&D allocation to
- maximize aggregate GDP growth.
+I calibrate my two-sector to match moments of the R&D spending distribution
+ in 1997, which produces productivity effects that are close to the lower
+ bound implied by my estimates.
+ I use this calibrated model to study the allocation of cost-neutral R&D
+ subsidies that maximizes growth in this context.
+ I find that subsidizing entrants' R&D in the more concentrated sector constitut
+es the most effective policy, and leads to a rise in annual GDP growth of
+ about 0.5pp (17% in relative terms).
+ Similar results obtain if entry is uniformly subsidized across the two
+ sectors.
+ This finding resonates with the fact that defensive innovation constitutes
+ the main friction hampering efficiency in the model.
+ Since this friction acts through an increase in entry barriers, the most
+ effective way to counter it consists in alleviating entry costs.
+\end_layout
+
+\begin_layout Standard
+The rest of the paper proceeds as follows.
+ In the next section, I place my contribution and describe the novelty of
+ my approach relative to the extant literature.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Data-description"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ describes my data sources, focusing in particular on the construction of
+ knowledge markets.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Results"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ reports the results of my empirical analysis.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Model"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ details my theoretical framework, and conducts the policy analysis.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Conclusion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ concludes and provides directions for future work.
+\end_layout
+
+\begin_layout Subsection
+Related Literature
+\end_layout
+
+\begin_layout Standard
+My work connects to several strand in the empirical and theoretical literature
+ analyzing the effect of product market competition on innovation.
+ As detailed below, I contribute to this literature through four substantial
+ deviations.
+ First, I analyze the effect of competition on the allocation of R&D 
+\emph on
+across sectors,
+\emph default
+ while previous work has focused on either a within-sector or economy-wide
+ perspective.
+ Second, I explicitly analyze the allocation of R&D inputs across sectors,
+ and I do so identifying the boundaries of markets for inventors rather
+ than relying on R&D spending or similar measures of innovative effort as
+ in previous work.
+ Third, I connect changes in the competitive structure to the documented
+ trends on falling R&D productivity.
+ Fourth, I study theoretically the impact of pre-emptive innovation in a
+ multi-sector model on R&D productivity, and the growth-maximizing policy
+ in this context.
+ Both the focus on R&D productivity and the policy analysis are novel to
+ the theoretical literature analyzing defensive innovation.
+\end_layout
+
+\begin_layout Standard
+First an foremost, my paper relates to the vast literature estimating the
+ empirical effect of competition on innovation.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "aghionCompetitionInnovationInvertedU2005a"
+literal "false"
+
+\end_inset
+
+ famously documented an inverted-U relationship between competition and
+ innovation, whereby this relation is increasing at low levels of competition,
+ and decreases at high levels.
+ Accordingly, papers in this literature have highlighted contrasting effects
+ of competition on overall R&D activity, focusing mostly on episodes of
+ trade liberalization 
+\begin_inset CommandInset citation
+LatexCommand citep
+after " for an extensive review"
+before "see"
+key "shuImpactTradeLiberalization2019"
+literal "false"
+
+\end_inset
+
+.
+ Most papers in this trend identify these effects at the firm-level, which
+ restricts their scope to the effect of competition within product markets.
+ My paper instead adopts a cross-sector view, analyzing the effect of increased
+ concentration in some sectors on the 
+\emph on
+share of available
+\emph default
+ 
+\emph on
+R&D resources
+\emph default
+ they appropriate.
+ In order to do so, I build a novel dataset of 
+\begin_inset Quotes eld
+\end_inset
+
+knowledge markets
+\begin_inset Quotes erd
+\end_inset
+
+, sets of product markets that share the same inventors.
+ While several papers investigate the mobility of inventors 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "see,  e.g., "
+key "azoulayMobilityEliteLife2017,morettiEffectStateTaxes2017"
+literal "false"
+
+\end_inset
+
+, my paper is to the best of my knowledge the first to analyze the effects
+ of market structure on inventors' transitions across sectors.
+\end_layout
+
+\begin_layout Standard
+Due to my focus on competition and innovation, my paper naturally connects
+ to the literatures that document increased concentration 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "autorFallLaborShareForthcoming,gutierrezDecliningCompetitionInvestment2017,grullonAreUSIndustries2019a"
+literal "false"
+
+\end_inset
+
+, profits and markups 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "barkaiDecliningLaborCapital2020,deloeckerRiseMarketPower2020,eggertssonKaldorPikettyFacts2018"
+literal "false"
+
+\end_inset
+
+, as well as the growing literature documenting a fall in innovation and
+ R&D productivity 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "akcigitWhatHappenedBusiness2019a,akcigitSlowingBusinessDynamism2020,akcigitTenFactsDeclining2021,bloomAreIdeasGetting2020"
+literal "false"
+
+\end_inset
+
+, and its connection to the allocation of R&D within and across sectors
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "acemogluInnovationReallocationGrowth2018a,acemogluBottlenecksSectoralImbalances2021,akcigitGrowthHeterogeneousInnovations2018"
+literal "false"
+
+\end_inset
+
+.
+ My contribution bridges these literatures, explicitly linking changes in
+ the competitive structure to the allocation of R&D resources across more
+ and less concentrated sectors, as well as their deployment to productive
+ or defensive projects.
+\end_layout
+
+\begin_layout Standard
+Several papers document the role of pre-emptive innovation in ordinary firm
+ operations 
+\begin_inset CommandInset citation
+LatexCommand citep
+after " for a review of the evidence"
+before "see"
+key "guellecPreemptivePatentingSecuring2012"
+literal "false"
+
+\end_inset
+
+, and the high valuation of the resulting patents 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "abramsPatentValueCitations2013,czarnitzkiHowValuableAre2020,grimpePreemptingTechnologyCompetition2008"
+literal "false"
+
+\end_inset
+
+.
+ Most recently, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "argentePatentsProductsProduct2020a"
+literal "false"
+
+\end_inset
+
+ show that, within product markets, large firms tend to account for the
+ bulk of patenting activity, but are responsible for a smaller share of
+ implemented innovations relative to non-patenting firms.
+ The authors interpret this finding as evidence of defensive innovation,
+ which provides high value to patents of entrenched firms who can thus shelter
+ their dominant position from competitors.
+ My paper builds on this literature showing that increased concentration
+ raises the incentives for defensive innovation, as demonstrated by a fall
+ in forward citations in concentrating sectors.
+ This result connects to the findings and the model 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abramsPatentValueCitations2013"
+literal "false"
+
+\end_inset
+
+, who study the cross-sectional relation between patent value and forward
+ citations theoretically, showing that high-value patents also tend to receive
+ less citations, and rationalize this result through pre-emptive innovation.
+ 
+\end_layout
+
+\begin_layout Standard
+On a theoretical standpoint, I embed defensive patenting as modeled in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "abramsPatentValueCitations2013"
+literal "false"
+
+\end_inset
+
+ into a Schumpeterian growth model, building on the extensive literature
+ inaugurated by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "aghionModelGrowthCreative1992"
+literal "false"
+
+\end_inset
+
+.
+ In particular, my solution relies on several results derived by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "acemogluIntellectualPropertyRights2012"
+literal "false"
+
+\end_inset
+
+.
+ To the best of my knowledge, my paper is the first to analyze the impact
+ of defensive innovation in the context of general-equilibrium growth model.
+ The closest precedent to this analysis is 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "joDefensiveInnovationFirm2019"
+literal "false"
+
+\end_inset
+
+, who builds on 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "akcigitGrowthHeterogeneousInnovations2018"
+literal "false"
+
+\end_inset
+
+, and defines their incremental innovation, that is innovation conducted
+ on existing product lines available to incumbents, as 
+\begin_inset Quotes eld
+\end_inset
+
+defensive
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Therefore, in his framework, defensive innovation corresponds to incremental
+ innovation aimed at 
+\begin_inset Quotes eld
+\end_inset
+
+escaping competition
+\begin_inset Quotes erd
+\end_inset
+
+ from entrants by increasing the technological distance of incumbents from
+ entrants, in the tradition of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "aghionCompetitionImitationGrowth2001"
+literal "false"
+
+\end_inset
+
+.
+ By contrast, in my framework defensive innovation is specifically aimed
+ at protecting dominant positions and reduce entry as in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abramsPatentValueCitations2013"
+literal "false"
+
+\end_inset
+
+, who however do not consider the effects of defensive innovation on R&D
+ productivity and overall innovation.
+ My final contribution consists in analyzing the growth-maximizing allocation
+ of R&D subsidies, which has not been previously studied in a framework
+ featuring defensive innovation.
  
 \end_layout
 
@@ -474,2060 +832,16 @@ filename "sections/empirics.lyx"
 
 \end_layout
 
-\begin_layout Section
-Model
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Model"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-This section presents a Schumpeterian model featuring growth through creative
- destruction by entrants, as well as the possibility for incumbent monopolist
- of researching a defensive technology that increases research costs for
- entrants.
- In what follows, I first present a single-sector model to clarify the mechanism
- at play within each sector in the economy, and show that increases in the
- markup, capturing concentration in reduced form, lead to a larger amount
- of resources devoted to defensive innovation.
- Then, I move to consider a two-sector model, where each sector is identical
- to the single-sector model.
- I show that increasing markups in one of the two sectors of the economy
- lead to a misallocation of R&D resources towards defensive innovation in
- the less competitive sector.
- In order to illustrate the properties of the demand for inventors, I first
- analyze a single-sector partial-equilibrium version of the model, where
- labor supply of inventors and production is perfectly elastic at a fixed
- wage.
- I then consider a two-sector model where wages are determined in equilibrium,
- and the supply of inventors is assumed to be fixed in each instant.
- Proofs are reported in Appendix 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "app: Omitted-Proofs"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-In the empirical analysis above I used the HHI as a measure of concentration
- and market power.
- Appendix 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "app:Using-the-Lerner"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- shows that the Lerner Index from NBER-CES, a standard measure of markups,
- is strongly correlated with the HHI in my sample, justifying the reduced-form
- mapping that adopt in what follows.
-\end_layout
-
-\begin_layout Subsection
-Environment: a Single-sector Model
-\end_layout
-
-\begin_layout Standard
-The consumption good in the economy in each instant is a Cobb-Douglas aggregate
- of a measure-one continuum of products:
-\begin_inset Formula 
-\[
-Y_{t}=\int_{0}^{1}y_{t}(i)\mathrm{d}i
-\]
-
-\end_inset
-
-The consumption good in the economy is taken as the numeraire.
- The market for each product 
-\begin_inset Formula $y_{t}(i)$
-\end_inset
-
- consists of a monopolist and a fringe of competitors.
- In what follows, I focus on a single market, dropping the argument 
-\begin_inset Formula $i$
-\end_inset
-
-.
- Competitors can produce using a linear technology with labor requirement
- 
-\begin_inset Formula $c_{t}$
-\end_inset
-
-, while the incumbent has labor requirement 
-\begin_inset Formula $\frac{c_{t}}{\phi}$
-\end_inset
-
-, with 
-\begin_inset Formula $\phi>1$
-\end_inset
-
-.
- In this section, the labor supply is assumed perfectly elastic at 
-\begin_inset Formula $w=1$
-\end_inset
-
-.
- Given these assumption, the monopolist sets the limit price 
-\begin_inset Formula $p_{t}=c_{t}$
-\end_inset
-
- realizing profits:
-\begin_inset Formula 
-\[
-\Pi_{t}=\left(c_{t}-\frac{c_{t}}{\phi}\right)y_{t}=\left(\frac{\phi-1}{\phi}\right)c_{t}y_{t},
-\]
-
-\end_inset
-
-By the Cobb-Douglas assumption on the final good, the demand for each product
- is:
-\begin_inset Formula 
-\[
-y_{t}=\frac{Y_{t}}{p_{t}}=\frac{Y_{t}}{c_{t}}
-\]
-
-\end_inset
-
-Giving the normalized profit:
-\begin_inset Formula 
-\[
-\frac{\Pi_{t}}{Y_{t}}\equiv\pi_{i}=\left(\frac{\phi_{i}-1}{\phi_{i}}\right).
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Innovation
-\end_layout
-
-\begin_layout Standard
-Suppose that competitors can realize an innovation reducing unit costs to
- 
-\begin_inset Formula $\frac{c_{t}}{\left(1+\eta\right)\phi}$
-\end_inset
-
- investing in inventors at unit cost 
-\begin_inset Formula $\zeta$
-\end_inset
-
-.
- When one of the competitors succeed in replacing the incumbent monopolist,
- the other competitors can immediately realize a cost reduction to 
-\begin_inset Formula $\frac{c_{t}}{1+\eta}$
-\end_inset
-
-, so that the gap between monopolist and followers is fixed at 
-\begin_inset Formula $\phi$
-\end_inset
-
- regardless of followers' innovations.
-\end_layout
-
-\begin_layout Standard
-Incumbents can in turn invest in a defensive technology that lowers the
- productivity of followers' inventors, by a factor 
-\begin_inset Formula $\omega>1$
-\end_inset
-
-.
- I assume that this investment is completely unproductive, capturing a defensive
- patent that is unused by the incumbent.
- This defensive investment can be done only once, and is lost at rate 
-\begin_inset Formula $\delta$
-\end_inset
-
- (the degree of patent protection).
- The incumbents' problem in normalized units as a function of the state
- capturing entrant costs is then:
-\begin_inset Formula 
-\begin{align}
-\rho v(1) & =\max_{x_{I}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{x_{I}^{2}}{2}+x_{I}\left(v(\omega)-v(1)\right)-x_{e,1}\left(v(1)\right)\nonumber \\
-\rho v(\omega) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(v(1)-v(\omega)\right)-x_{e,\omega}\left(v(\omega)\right)\label{eq: Values}
-\end{align}
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Equations for generic 
-\begin_inset Formula $\gamma$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{align*}
-\rho V^{I}(1) & =\max_{x_{I}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{x_{I}^{\gamma}}{\gamma}+x_{I}\left(V(\omega)-V(1)\right)-x_{e,1}\left(V^{I}(1)\right)\\
-\rho V^{I}(\omega) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(V(1)-V(\omega)\right)-x_{e,\omega}\left(V^{I}(\omega)\right)
-\end{align*}
-
-\end_inset
-
-The optimal RD effort by the incumbent solves:
-\begin_inset Formula 
-\[
-\alpha_{I}x_{I}^{\gamma-1}=\left(V(\omega)-V(1)\right)
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-x_{I}=\left(\frac{V(\omega)-V(1)}{\alpha_{I}}\right)^{\frac{1}{\gamma-1}}
-\]
-
-\end_inset
-
-The value function is then:
-\begin_inset Formula 
-\begin{align*}
-\rho V^{I}(1) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\alpha_{I}\frac{\left(\frac{V(\omega)-V(1)}{\alpha_{I}}\right)^{\frac{\gamma}{\gamma-1}}}{\gamma}+\left(\frac{V(\omega)-V(1)}{\alpha_{I}}\right)^{\frac{1}{\gamma-1}}\left(V(\omega)-V(1)\right)-x_{e,1}\left(V^{I}(1)\right)\\
- & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\frac{1}{\alpha_{I}^{\frac{1}{\gamma-1}}}\frac{\left(V(\omega)-V(1)\right)^{\frac{\gamma}{\gamma-1}}}{\gamma}+\frac{1}{\alpha_{I}^{\frac{1}{\gamma-1}}}\left(V(\omega)-V(1)\right)^{\frac{\gamma}{\gamma-1}}-x_{e,1}\left(V^{I}(1)\right)\\
- & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\frac{\gamma-1}{\gamma}\frac{\left(V(\omega)-V(1)\right)^{\frac{\gamma}{\gamma-1}}}{\alpha_{I}^{\frac{1}{\gamma-1}}}-x_{e,1}\left(V^{I}(1)\right)
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-When successful, entrants obtains the unprotected monopoly position, that
- is, they destroy any existing patent barrier and obtain 
-\begin_inset Formula $v(1)$
-\end_inset
-
-.
- I assume that the research costs of each atomistic entrant are linear in
- the individual research effort, as well in the innovation intensity of
- other entrants, capturing crowding externalities:
-\begin_inset Formula 
-\[
-C\left(x_{e,\omega,i}\right)=\zeta\omega x_{e,\omega,i}x_{e,\omega}.
-\]
-
-\end_inset
-
-The maximization problem of an entrant in each state 
-\begin_inset Formula $\omega$
-\end_inset
-
- is then:
-\begin_inset Formula 
-\[
-\max_{x_{e,\omega,i}}x_{e,\omega,i}v(1)-\zeta\omega x_{e,\omega,i}x_{e,\omega}.
-\]
-
-\end_inset
-
-The total research effort by entrants in the sector is then:
-\begin_inset Formula 
-\[
-x_{e,\omega}=\frac{v(1)}{\omega\zeta},
-\]
-
-\end_inset
-
-With quadratic costs, the optimal investment for the incumbent is:
-\begin_inset Formula 
-\[
-x_{I}=\bm{1}\left\{ v(\omega)-v(1)>0\right\} \frac{v(\omega)-v(1)}{\alpha_{I}}.
-\]
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Consider first the second equation.
- That gives:
-\begin_inset Formula 
-\begin{align*}
-\left(\rho+\delta\right)v(\omega) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(v(1)\right)-\frac{v(1)}{\zeta\omega}\left(v(\omega)\right)\\
-\left(\rho+\delta+\frac{v(1)}{\zeta\omega}\right)v(\omega) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(v(1)\right)\\
-v(\omega) & =\left(\rho+\delta+\frac{v(1)}{\zeta\omega}\right)^{-1}\left[\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\delta\left(v(1)\right)\right]
-\end{align*}
-
-\end_inset
-
-Then:
-\begin_inset Formula 
-\[
-\rho v(1)=\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\frac{\left(v(\omega)-v(1)\right)^{2}}{2\alpha_{I}}-\frac{\left(v(1)\right)^{2}}{\zeta}
-\]
-
-\end_inset
-
-Assume that 
-\begin_inset Formula $\delta=0$
-\end_inset
-
- (infinite patent protection),
-\begin_inset Formula 
-\[
-v(\omega)=\frac{\zeta\omega}{\rho\zeta\omega+v(1)}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)
-\]
-
-\end_inset
-
-Replacing:
-\begin_inset Formula 
-\[
-\rho v(1)=\left(\frac{\phi_{i}-1}{\phi_{i}}\right)+\frac{\left(\frac{\zeta\omega}{\rho\zeta\omega+v(1)}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-v(1)\right)^{2}}{2\alpha_{I}}-\frac{\left(v(1)\right)^{2}}{\zeta},
-\]
-
-\end_inset
-
-Note:
-\begin_inset Formula 
-\begin{align*}
-\frac{\zeta\omega}{\rho\zeta\omega+v(1)}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-v(1) & =\frac{\zeta\omega}{\rho\zeta\omega+v(1)}\left[\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\left(\frac{\rho\zeta\omega+v(1)}{\zeta\omega}\right)v(1)\right]\\
- & =\frac{\zeta\omega}{\rho\zeta\omega+v(1)}\left[\left(\frac{\phi_{i}-1}{\phi_{i}}\right)-\frac{\left(v(1)\right)^{2}}{\zeta\omega}-\rho v(1)\right]
-\end{align*}
-
-\end_inset
-
-Which can be solved numerically.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Lemma
-\begin_inset CommandInset label
-LatexCommand label
-name "lem: values"
-
-\end_inset
-
-Consider a steady state of the normalized one-sector model, and assume that
- defensive innovation is effective, 
-\begin_inset Formula $\omega>1$
-\end_inset
-
-.
- Then, 
-\begin_inset Formula $\omega v(1)>v(\omega)>v(1).$
-\end_inset
-
- Around a steady state, the normalized values, 
-\begin_inset Formula $v(1),v(\omega)$
-\end_inset
-
-, are increasing in the markup factor 
-\begin_inset Formula $m_{i}=\frac{\phi_{i}-1}{\phi_{i}}$
-\end_inset
-
-, and
-\begin_inset Formula 
-\[
-\frac{\partial v(\omega)}{\partial m_{i}}>\frac{\partial v(1)}{\partial m_{i}}>0.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Stationary distribution
-\end_layout
-
-\begin_layout Standard
-The law of motion of the distribution across states satisfies:
-\begin_inset Formula 
-\begin{align}
-\dot{\mu}_{1} & =-\left(x_{I}+x_{e,1}\right)\mu_{1}+\delta\mu_{\omega}+x_{e,\omega}\mu_{e,\omega}+x_{e,1}\mu_{e,1},\label{eq: dist1}\\
-\dot{\mu}_{\omega} & =-\left(x_{e,\omega}+\delta\right)\mu_{\omega}+x_{I}\mu_{1},\label{eq: dist2}\\
-\dot{\mu}_{e,1} & =-\left(x_{e,1}+x_{I}\right)\mu_{e,1}+x_{e,1}\mu_{1}+\delta\mu_{e,\omega},\label{eq: dist3}\\
-\dot{\mu}_{e,\omega} & =-\left(x_{e,\omega}+\delta\right)\mu_{e,\omega}+x_{e,\omega}\mu_{\omega}+x_{I}\mu_{e,1},\label{eq: dist4}
-\end{align}
-
-\end_inset
-
-where 
-\begin_inset Formula $\mu_{e,1},\mu_{e,\omega}$
-\end_inset
-
- are the mass of entrants targeting products without a patent barrier, and
- with a patent barrier, respectively.
- Outflows from incumbent state 
-\begin_inset Formula $1$
-\end_inset
-
- are given by the sum of successful incumbent defensive research, and eliminatio
-n of incumbents by entrants.
- Inflows are given by expiration of patent protection moving incumbents
- in state 
-\begin_inset Formula $\omega$
-\end_inset
-
- to state 
-\begin_inset Formula $1$
-\end_inset
-
-, and successful entry.
- The incumbent state 
-\begin_inset Formula $\omega$
-\end_inset
-
- loses mass from successful entrants and patent depreciation, and gains
- mass from successful defensive RD.
- The last two equations close the system by acknowledging that entrants
- lose mass from successful entry, and gain mass from displaced incumbents.
- The stationary distribution satisfies: 
-\begin_inset Formula 
-\begin{align*}
-\mu_{\omega} & =\frac{x_{I}}{x_{I}+x_{e,\omega}+\delta},\\
-\mu_{1} & =\frac{x_{e,\omega}+\delta}{x_{I}+x_{e,\omega}+\delta},\\
-\mu_{e,\omega} & =\frac{\omega x_{I}\mu_{1}+\left(\omega x_{e,\omega}+x_{I}\right)\mu_{\omega}}{\omega\left(x_{e,\omega}+\delta\right)+x_{I}},\\
-\mu_{e,1} & =\frac{\omega\left(x_{e,\omega}+\delta\right)\mu_{1}+\delta\mu_{\omega}}{\omega\left(x_{e,\omega}+\delta\right)+x_{I}}.
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Total R&D
-\end_layout
-
-\begin_layout Standard
-Total R&D intensity is given by:
-\begin_inset Formula 
-\[
-\mu_{e,\omega}x_{e,\omega}+\mu_{e,1}x_{e,1}+\mu_{1}x_{I}
-\]
-
-\end_inset
-
-By the optimal solution for entrants:
-\begin_inset Formula 
-\[
-x_{e,1}=\omega x_{e,\omega},
-\]
-
-\end_inset
-
-so total R&D effort is:
-\begin_inset Formula 
-\begin{align*}
-RD & =x_{e,\omega}\left(\mu_{e,\omega}+\omega\mu_{e,1}\right)+\mu_{1}x_{I}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Growth and R&D productivity
-\end_layout
-
-\begin_layout Standard
-Note that productivity growth is accomplished solely through creative destructio
-n by entrants.
- By Cobb-Douglas on the final good:
-\begin_inset Formula 
-\begin{align*}
-\log Y_{t} & =\int_{0}^{1}\log y_{t}\mathrm{d}i\\
-g=\log\left(Y_{t+\Delta t}\right)-\log\left(Y_{t}\right) & =\eta\left[x_{e,\omega}\mu_{e,\omega}+x_{e,1}\mu_{e,1}\right].
-\end{align*}
-
-\end_inset
-
-with inventors' productivity given by:
-\begin_inset Formula 
-\[
-\frac{g}{L^{RD}}=\eta\frac{x_{e,\omega}\left(\mu_{e,\omega}+\omega\mu_{e,1}\right)}{\zeta\omega x_{e,\omega}\left(\mu_{e,\omega}+\mu_{e,1}\right)+\alpha_{I}\frac{x_{I}^{2}}{2}\mu_{1}}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Comparative statics in partial equilibrium
-\end_layout
-
-\begin_layout Standard
-The following proposition summarizes the comparative statics in partial
- equilibrium.
- 
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-The proof assumes 
-\begin_inset Formula $\delta=0$
-\end_inset
-
- for analytical simplicity, but this assumption does not seem necessary.
- All the following figures were obtained from a calibration with 
-\begin_inset Formula $\delta>0$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proposition
-\begin_inset CommandInset label
-LatexCommand label
-name "prop: partialEq"
-
-\end_inset
-
-Consider the above model with a perfectly elastic production and R&D labor
- supply.
- Assume 
-\begin_inset Formula $\delta=0,$
-\end_inset
-
- and 
-\begin_inset Formula 
-\[
-\sqrt{\frac{\phi-1}{\phi}}\left(\frac{\alpha_{I}-\zeta\omega\left(\omega-1\right)}{\alpha_{I}\zeta\omega}\right)>\rho.
-\]
-
-\end_inset
-
- An increase in the markup factor 
-\begin_inset Formula $m\equiv\frac{\phi-1}{\phi}$
-\end_inset
-
-, increases incumbents' and entrants' R&D, growth, and the incumbents' share
- of total R&D labor, and decreases inventor productivity, 
-\begin_inset Formula $g/L^{RD}.$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:OneSecCS"
-
-\end_inset
-
- displays the comparative statics for various aggregates of interest in
- an illustrative calibration for the single-sector model, where the supply
- of inventors is assumed to be perfectly elastic.
- In this setting, an increase in the markup factor 
-\begin_inset Formula $\frac{\left(\phi-1\right)}{\phi}$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Enumerate
-Increases profits;
-\end_layout
-
-\begin_layout Enumerate
-Increases both entrants' and incumbents' RD;
-\end_layout
-
-\begin_layout Enumerate
-Increases the incumbents' RD share;
-\end_layout
-
-\begin_layout Enumerate
-Increases sectoral growth;
-\end_layout
-
-\begin_layout Enumerate
-Reduces sectoral RD productivity.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Consider the ratio:
-\begin_inset Formula 
-\begin{align*}
-\frac{\alpha_{I}\frac{x_{I}^{2}}{2}\mu_{1}}{\zeta\omega x_{e,\omega}\left(\mu_{e,\omega}+\mu_{e,1}\right)+\alpha_{I}\frac{x_{I}^{2}}{2}\mu_{1}} & =\\
-\frac{\alpha_{I}\frac{x_{I}^{2}}{2}\mu_{1}}{\zeta\omega x_{e,\omega}\left(1+\frac{\left(\omega-1\right)x_{1}-\omega x_{e,\omega}}{\left(x_{I}+\omega x_{e,\omega}\right)}\mu_{1}\right)+\alpha_{I}\frac{x_{I}^{2}}{2}\mu_{1}} & =\\
-\frac{\alpha_{I}\frac{x_{I}^{2}}{2}}{\zeta\omega x_{e,\omega}\left(\frac{\left(x_{I}+x_{e,\omega}\right)}{x_{e,\omega}}+\frac{\left(\omega-1\right)x_{1}-\omega x_{e,\omega}}{\left(x_{I}+\omega x_{e,\omega}\right)}\right)+\alpha_{I}\frac{x_{I}^{2}}{2}} & =\\
-\frac{x_{I}}{\frac{2\zeta\omega}{\alpha_{I}}\frac{x_{e,\omega}}{x_{I}}\left(\frac{\left(1+\frac{x_{e,\omega}}{x_{I}}\right)}{\frac{x_{e,\omega}}{x_{I}}}+\frac{\left(\omega-1\right)-\omega\frac{x_{e,\omega}}{x_{I}}}{\left(1+\omega\frac{x_{e,\omega}}{x_{I}}\right)}\right)+x_{I}} & =\\
-\frac{x_{I}}{\frac{2\zeta\omega}{\alpha_{I}}z\left(\frac{1+z}{z}+\frac{\left(\omega-1\right)-\omega z}{1+\omega z}\right)+x_{I}} & =
-\end{align*}
-
-\end_inset
-
-Now the question is: how does the denominator change with 
-\begin_inset Formula $z$
-\end_inset
-
-?
-\begin_inset Formula 
-\begin{align*}
-\partial\frac{z\left(\frac{1+z}{z}+\frac{\left(\omega-1\right)-\omega z}{1+\omega z}\right)}{\partial z}m & =\left(\frac{1+z}{z}+\frac{\left(\omega-1\right)-\omega z}{1+\omega z}\right)+z\left(-\frac{1}{z^{2}}+\frac{-\omega\left(1+\omega z\right)+\omega^{2}z-\omega\left(\omega-1\right)}{\left(1+\omega z\right)^{2}}\right)\\
- & =\left(1+\frac{\left(\omega-1\right)-\omega z}{1+\omega z}\right)+\omega z\left(\frac{-\omega}{\left(1+\omega z\right)^{2}}\right)\\
- & =\left(\frac{\omega}{1+\omega z}\right)+\left(\frac{-\omega^{2}z}{\left(1+\omega z\right)^{2}}\right)\\
- & =\frac{\omega}{\left(1+\omega z\right)^{2}}>0
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Clearly, increase in growth is a byproduct of the perfectly elastic supply
- of inventors, who get drawn into R&D by increased profits.
- It is apparent that the increased in growth is driven by the increase in
- entrants' R&D activity, while the decrease in inventor productivity is
- driven by the increase in the inventors' share hired by monopolists engaged
- in defensive innovation.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement th
-wide false
-sideways false
+\begin_inset Branch Model
+inverted 0
 status open
 
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Comparative Statics for Changes in the Markup in the Single-Sector Model
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:OneSecCS"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename graphs/Single_sector.eps
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-
-\end_layout
-
-\begin_layout Plain Layout
-\align left
-
-\size small
-Note: This figure reports the comparative statics for normalized profits,
- inventors, growth and inventor productivity in the single-sector model.
- All variables are expressed in units relative to 
-\begin_inset Formula $\frac{\phi-1}{\phi}=.01.$
-\end_inset
-
- The calibration is chosen to highlight the properties of the model.
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-FloatBarrier
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Two sectors
-\end_layout
-
 \begin_layout Standard
-Now consider the presence of two sectors.
- Keep the workers' wage as given, but now assume that inventors' wages,
- 
-\begin_inset Formula $w$
-\end_inset
-
- are determined in equilibrium.
- First assume that the final good is also a Cobb-Douglas with share 
-\begin_inset Formula $\beta_{i}$
-\end_inset
-
- of two sectors as described above.
- Equilibrium in the inventor market is given by:
-\begin_inset Formula 
-\[
-X^{s}(w)=\sum_{i=\left\{ 1,2\right\} }\left(RD_{i}(w)\right),
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $X^{s}$
-\end_inset
-
- is the inventors' supply schedule.
- 
-\end_layout
-
-\begin_layout Subsubsection
-Complete solution
-\end_layout
-
-\begin_layout Standard
-Differently for before, each sector has a price index.
- By the above assumptions, the final good is produced according to:
-\begin_inset Formula 
-\begin{equation}
-Y=\prod Y_{i}^{\beta_{i}}.\label{eq: FinalY}
-\end{equation}
-
-\end_inset
-
-With the final good as numeraire, the sector's demand schedule is:
-\begin_inset Formula 
-\begin{equation}
-Y_{i}=\beta_{i}\frac{Y}{P_{i}}.\label{eq: SectorY}
-\end{equation}
-
-\end_inset
-
-From CD on intermediate goods we also have:
-\begin_inset Formula 
-\[
-P_{i}Y_{i}=p_{is}y_{is},\quad\forall s.
-\]
-
-\end_inset
-
-In each sector, the price is set at the competitive fringe's marginal cost
- 
-\begin_inset Formula $wc_{i},$
-\end_inset
-
- and is identical across subsectors .
- Thus
-\begin_inset Formula 
-\begin{equation}
-P_{i}=p_{is}=wc_{i},\ Y_{i}=\beta_{i}\frac{Y}{wc_{i}}\label{eq: EqPY}
-\end{equation}
-
-\end_inset
-
-Equilibrium profits are given by:
-\begin_inset Formula 
-\[
-\Pi_{i}=\left(c_{i}w-\frac{c_{i}w}{\phi_{i}}\right)Y_{i}=\left(\frac{\phi_{i}-1}{\phi_{i}}\right)\beta_{i}Y
-\]
-
-\end_inset
-
-The monopolist demands production labor:
-\begin_inset Formula 
-\begin{equation}
-\ell_{is}=\frac{c_{i}y_{is}}{\phi_{i}},\Rightarrow L_{i}=\int\ell_{is}\mathrm{d}s=Y\frac{\beta_{i}}{\phi_{i}w}\label{eq: SectorL}
-\end{equation}
-
-\end_inset
-
-Assuming a rigid production labor supply:
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Consider a labor supply with elasticity 
-\begin_inset Formula $\varphi$
-\end_inset
-
-.
- This gives:
-\begin_inset Formula 
-\[
-\chi w^{\varphi}=\frac{Y}{w}\left(\sum\frac{\beta_{i}}{\phi_{i}c_{i}}\right)\Rightarrow w=\left[\frac{Y}{\chi}\left(\sum\frac{\beta_{i}}{\phi_{i}c_{i}}\right)\right]^{\frac{1}{1+\varphi}}
-\]
-
-\end_inset
-
-Equilibrium labor is then:
-\begin_inset Formula 
-\[
-L^{\star}=\chi\left[\frac{Y}{\chi}\left(\sum\frac{\beta_{i}}{\phi_{i}c_{i}}\right)\right]^{\frac{\varphi}{1+\varphi}},\frac{Y}{w}=Y^{\frac{\varphi}{1+\varphi}}\left[\frac{1}{\chi}\left(\sum\frac{\beta_{i}}{\phi_{i}c_{i}}\right)\right]^{-\frac{1}{1+\varphi}}=L^{\star}\left(\sum\frac{\beta_{i}}{\phi_{i}c_{i}}\right)^{-1}
-\]
-
-\end_inset
-
-Which results in the same allocations and outputs as below, with 
-\begin_inset Formula $L^{\star}$
-\end_inset
-
- in place of the fixed 
-\begin_inset Formula $L$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-L^{s}(w)=L=\frac{Y}{w}\left(\sum\frac{\beta_{i}}{\phi_{i}}\right).\label{eq: prodLClearing}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Which gives:
-\begin_inset Formula 
-\begin{equation}
-L_{i}=L\frac{\frac{\beta_{i}}{\phi_{i}}}{\sum\frac{\beta_{i}}{\phi_{i}}},Y_{i}=L\frac{\frac{\beta_{i}}{c_{i}}}{\sum\frac{\beta_{i}}{\phi_{i}}}\label{eq: EqSectorLY}
-\end{equation}
-
-\end_inset
-
-Which gives:
-\begin_inset Formula 
-\begin{equation}
-Y=L\prod_{i}\left(\frac{\frac{\beta_{i}}{c_{i}}}{\sum\frac{\beta_{i}}{\phi_{i}}}\right)^{\beta_{i}}\label{eq: EqFinalY}
-\end{equation}
-
-\end_inset
-
-Thus, growth is:
-\begin_inset Formula 
-\begin{equation}
--\sum\beta_{i}\Delta\log c_{i}\label{eq: EqGrowth}
-\end{equation}
-
-\end_inset
-
-Normalized values in each sector are the same as before, with the only differenc
-e that they receive a wage 
-\begin_inset Formula $w^{R},$
-\end_inset
-
- and the above 
-\begin_inset Formula $\alpha_{I},\zeta$
-\end_inset
-
- are replaced by 
-\begin_inset Formula $\zeta w^{R},\alpha_{I}w^{R}.$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Research Equilibrium in the two-sector model
-\end_layout
-
-\begin_layout Standard
-By the above solutions, the monopolist's values read:
-\begin_inset Formula 
-\begin{align*}
-\rho V_{i}^{I}(1) & =\max_{x_{I}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)\beta_{i}Y-\alpha_{I}W^{RD}\frac{x_{I}^{2}}{2}+x_{I}\left(V^{I}(\omega)-V^{I}(1)\right)-x_{e,1}\left(V^{I}(1)\right)\\
-\rho V_{i}^{I}(\omega_{i}) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)\beta_{i}Y+\delta\left(V(1)-V(\omega)\right)-x_{e,\omega}\left(V^{I}(\omega)\right)
-\end{align*}
-
-\end_inset
-
-And normalized values, 
-\begin_inset Formula $v\equiv V/Y:$
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align}
-\rho v_{i}^{I}(1) & =\max_{x_{I}}\left(\frac{\phi_{i}-1}{\phi_{i}}\right)\beta_{i}-\alpha_{I}w^{RD}\frac{x_{I}^{2}}{2}+x_{I}\left(v^{I}(\omega)-v^{I}(1)\right)-x_{e,1}\left(v^{I}(1)\right)\label{eq: normV1}\\
-\rho v_{i}^{I}(\omega_{i}) & =\left(\frac{\phi_{i}-1}{\phi_{i}}\right)\beta_{i}+\delta\left(v(1)-v(\omega)\right)-x_{e,\omega}\left(v^{I}(\omega)\right),\label{eq: normV2}
-\end{align}
-
-\end_inset
-
-where 
-\begin_inset Formula $w^{RD}$
-\end_inset
-
- is the normalized researchers' wage.
-\end_layout
-
-\begin_layout Standard
-Given a normalized wage, each sector demands:
-\begin_inset Formula 
-\begin{equation}
-x_{e,\omega,i}\left(w^{RD}\right)=\frac{v_{i}^{I}(1)}{w^{RD}\omega\zeta_{i}},\label{eq: eRD}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-x_{I,i}\left(w^{RD}\right)=\frac{\left(v_{i}(\omega_{i})-v_{i}(1)\right)}{w^{RD}\alpha_{I,i}},\label{eq: IRD}
-\end{equation}
-
-\end_inset
-
-The stationary distribution within each sector is given by:
-\begin_inset Formula 
-\begin{align}
-\mu_{\omega,i}\left(w^{RD}\right) & =\frac{x_{I,i}\left(w^{RD}\right)}{x_{e,\omega,i}\left(w^{RD}\right)+\delta_{i}+x_{I,i}\left(w^{RD}\right)},\label{eq: StatDist1}\\
-\mu_{1,i}\left(w^{RD}\right) & =\frac{x_{e,\omega,i}\left(w^{RD}\right)+\delta_{i}}{x_{e,\omega,i}\left(w^{RD}\right)+\delta_{i}+x_{I,i}\left(w^{RD}\right)},\label{eq: StatDist2}\\
-\mu_{e,1,i}\left(w^{RD}\right) & =\frac{\omega_{i}\left(x_{e,\omega,i}\left(w^{RD}\right)+\delta\right)\mu_{1,i}+\delta_{i}\mu_{\omega,i}}{\left(x_{I,i}+\omega_{i}\left(x_{e,\omega,i}\left(w^{RD}\right)+\delta_{i}\right)\right)},\label{eq: statDist3}\\
-\mu_{e,\omega,i}\left(w^{RD}\right) & =\frac{\omega_{i}\mu_{1,i}x_{I,i}\left(w^{RD}\right)-\omega_{i}\delta_{i}\mu_{\omega,i}}{\left(x_{I,i}+\omega_{i}\left(x_{e,\omega,i}\left(w^{RD}\right)+\delta_{i}\right)\right)}+\mu_{\omega,i}.\label{eq: statDist4}
-\end{align}
-
-\end_inset
-
-Sector RD labor demand is given by:
-\begin_inset Formula 
-\[
-L_{i}^{RD,d}\left(w^{RD}\right)=\mu_{e,\omega,i}\left(w^{RD}\right)\left(\zeta_{i}\omega_{i}x_{e,\omega,i}\left(w^{RD}\right)\right)+\mu_{1,e,i}\left(w^{RD}\right)\zeta_{i}x_{e,1,i}\left(w^{RD}\right)+\mu_{1,i}\left(w^{RD}\right)\alpha_{I}\frac{x_{I,i}^{2}\left(w^{RD}\right)}{2}.
-\]
-
-\end_inset
-
-Market clearing for inventors then reads:
-\begin_inset Formula 
-\begin{equation}
-L^{RD,s}\left(w^{RD}\right)=\sum_{i}\left\{ \mu_{\omega,i}\left(w^{RD}\right)\left(\zeta_{i}\omega_{i}x_{e,\omega,i}\left(w^{RD}\right)\right)+\mu_{1,e,i}\left(w^{RD}\right)\zeta_{i}x_{e,1,i}\left(w^{RD}\right)+\mu_{1,i}\left(w^{RD}\right)\alpha_{I}\frac{x_{I,i}^{2}\left(w^{RD}\right)}{2}\right\} .\label{eq:Inventor Clearing}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Comparative Statics in General Equilibrium
-\end_layout
-
-\begin_layout Standard
-Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:TwoSecSectors"
-
-\end_inset
-
- displays the comparative statics for various aggregates of interest in
- an illustrative calibration for the two-sector model, where the supply
- of inventors is set to 
-\begin_inset Formula $L_{RD}=1,$
-\end_inset
-
- and 
-\begin_inset Formula $\beta_{1}=\beta_{2}=.5$
-\end_inset
-
-.
- In this setting, an increase in the markup of sector 2 relative to sector
- 1:
-\end_layout
-
-\begin_layout Enumerate
-Increases profits in sector 2;
-\end_layout
-
-\begin_layout Enumerate
-Increases both entrants' and incumbents' RD in sector 2;
-\end_layout
-
-\begin_layout Enumerate
-Increases the incumbents' R&D share in sector 2;
-\end_layout
-
-\begin_layout Enumerate
-Increases sector 2's growth;
-\end_layout
-
-\begin_layout Enumerate
-Reduces sector 2's R&D productivity.
-\end_layout
-
-\begin_layout Standard
-Sector 1 faces specular changes for 2.-4.
- Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:TwoSecAgg"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- shows the aggregate effects of the sectoral shifts presented in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:TwoSecSectors"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- In particular, increased markups in sector 2 bid up aggregate inventors'
- wages, which is accompanied by a reallocation of researchers away from
- sector 1 and towards sector 2.
- At the same time, the inventors accrue more than proportionally to incumbents
- in sector 2, increasing defensive research.
- As a result of higher defensive research, productivity falls in sector
- 2.
- The increased productivity is sector 1 is not enough to compensate this
- effect on aggregate output.
- Lower aggregate growth and productivity are also a consequence of misallocation
- across sectors, since in this example, where 
-\begin_inset Formula $\beta_{1}=\beta_{2}=.5$
-\end_inset
-
-, aggregate growth is maximized when sectoral growth is the same for both
- sectors.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement th
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Comparative Statics in Sector 2's Markup Relative to Sector 1 in the Two-Sector
- Model, Sector-level Aggregates 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:TwoSecSectors"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename graphs/GE_sectors.eps
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align left
-
-\size small
-Note: This figure reports the comparative statics for normalized profits,
- inventors, growth and inventor productivity in the two-sector model.
- In all figures, the x-axis reports the markup of sector 2 relative to sector
- 1.
- The calibration is chosen to highlight the properties of the model.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-placement th
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Comparative Statics in Sector 2's Markup Relative to Sector 1 in the Two-Sector
- Model, Economy Aggregates 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:TwoSecAgg"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename graphs/GE_aggregates.eps
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align left
-
-\size small
-Note: This figure reports the comparative statics for normalized profits,
- inventors, growth and inventor productivity in the two-sector model.
- In all figures, the x-axis reports the markup of sector 2 relative to sector
- 1.
- The calibration is chosen to highlight the properties of the model.
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-FloatBarrier
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Quantification
-\end_layout
-
-\begin_layout Standard
-In this section, I calibrate the model and conduct two exercises.
- First, I assess whether a realistic calibration targeting the average growth
- rate and entry and innovation statistics can replicate the results I found
- in the empirical part.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Second, I assess the import of defensive innovation in producing the results,
- and compute the counterfactual fall of inventor productivity under alternative
- scenarios, as well as in the absence of misallocation.
- Third, I explore the effects of a continued trend in concentration on future
- growth and inventor productivity.
-\end_layout
-
-\end_inset
-
- Second, I compute the output tax and sector-specific entry subsidies needed
- to restore efficiency in inventor allocation in the model when the planner
- cannot eliminate defensive innovation.
- I contrast thus policy it with commonly-employed alternatives, like a blanket
- entry or R&D subsidy in both sectors.
-\end_layout
-
-\begin_layout Subsubsection
-Calibration
-\end_layout
-
-\begin_layout Standard
-For numerical feasibility, I calibrate the model 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways true
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Parameter Values and Sources
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Parameters Calibrated Externally
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="4">
-<features booktabs="true" tabularvalignment="middle">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="decimal" decimal_point="." valignment="top" width="0pt">
-<column alignment="left" valignment="top" width="0pt">
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Parameter Name
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Symbol
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="decimal" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Value
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Source/Target
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Discount rate
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\rho$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="decimal" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-.04
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Annual real interest rate of 
-\begin_inset Formula $4\%$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Shares of Sectors' Value Added
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\beta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="decimal" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-.5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Share of sales of sectors that saw an increase in HHI over total 
-\begin_inset Formula $\approx.5$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Average Sectors' Markup, Technology Gap
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\phi$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="decimal" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.13
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Incumbent efficiency from Aghion et al.
- (2019)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Curvature of Innovation Function
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\gamma$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="decimal" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $1/.6$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Lower bound of estimates in Kortum (1993) 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Intensity of Patent Expiration
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\delta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="decimal" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-.05
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Uruguay Round Agreements Act (1994)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Share of Implemented Innovations
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\lambda$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="decimal" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-.785
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Internal patent share of 21.5% (Akcigit and Kerr, 2018)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Blocking Value of Patents
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\omega$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="decimal" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.469
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El.
- of Entry to patents from Hall and Helmers (2015)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Parameters Calibrated Internally
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
-<features booktabs="true" tabularvalignment="middle">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Parameter Name
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Symbol
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Value
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Target
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Incumbent Costs
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\alpha_{I}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-6.67
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Share of Inventors of top 10% firm distribution, 1997: 30.3%
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Entrants' Costs
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\zeta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3.38
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Business R&D Share over GDP, 1997: 1.81%
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Innovation Step
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\eta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.0024
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Average Annual GDP Growth, 1997-2012: 2.45%
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Relevant sources for 
-\begin_inset Formula $\phi$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Itemize
-Barkai (2020) if we target average markups
-\end_layout
-
-\begin_layout Itemize
-Aghion et al.
- (2019, Falling growth) gives 13% higher incumbent efficiency in process,
- if we want to talk of intangibles.
- READ THIS PAPER WELL 
-\end_layout
-
-\begin_layout Plain Layout
-Average increase in markup ratio is 6%.
-\end_layout
-
-\begin_layout Plain Layout
-Relevant sources for 
-\begin_inset Formula $\eta$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Itemize
-Aghion et al.
- say required inno step is 
-\begin_inset Formula $.24$
-\end_inset
-
- to have markups they want.
- This could actually inform 
-\begin_inset Formula $\eta_{I}$
-\end_inset
-
- if I make it a separate parameter 
-\end_layout
-
-\begin_layout Itemize
-Akcigit and Ates (2019, p.22) calibrate this to .044
-\end_layout
-
-\begin_layout Plain Layout
-Source for 
-\begin_inset Formula $\lambda$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Itemize
-Akcigit and Ates' drastic innovation prob.? (4.23%) But this is more related
- to new entrants in their model.
- Perhaps this should inform 
-\begin_inset Formula $\zeta$
-\end_inset
-
-?
-\end_layout
-
-\begin_layout Itemize
-Akcigit and Kerr, p.
- 1412, use the fraction of internal versus external patents 
-\emph on
-in the economy
-\emph default
-.
- So this would be something like a ratio of incumbents versus entrants'
- research intensity (not inventors) 
-\end_layout
-
-\begin_layout Plain Layout
-Sources for 
-\begin_inset Formula $\zeta$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Itemize
-Main objective should be matching firm entry (13.55%).
- See Akcigit and Ates 
-\end_layout
-
-\begin_layout Plain Layout
-Source for 
-\begin_inset Formula $\alpha$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Itemize
-Akcigit and Ates say this governs the share of R&D over total GDP (so this
- would be the total expenditure on inventors).
- This is 2.4% In their calibration 
-\begin_inset Formula $\alpha=7$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Sources for 
-\begin_inset Formula $\omega$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Itemize
-Argente et al estimate a flow rate of creative destruction of 
-\begin_inset Formula $x_{e,1}=.0098$
-\end_inset
-
- if no patents are introduced, 
-\begin_inset Formula $x_{e,\omega}=.0095,$
-\end_inset
-
- which would imply 
-\begin_inset Formula $\omega=1.0315$
-\end_inset
-
- (see page 42 in Argente et al.)
-\end_layout
-
-\begin_layout Itemize
-Argente et al.
- (2020), Akcigit et al.
- (2018) for 
-\begin_inset Formula $\omega,\lambda$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Akcigit and Kerr for 
-\begin_inset Formula $\lambda,\zeta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Planner Problem
-\end_layout
-
-\begin_layout Standard
-I assume that the planner cannot observe nor alter the nature of innovation.
- In particular, the planner cannot distinguish productive from unproductive
- projects, and cannot forbid depositing patents that have no productive
- value.
- The planner has two main instruments, corporate taxes and R&D subsidies,
- and needs to maintain a balanced budget.
- I first compute the optimal combination of sector-specific corporate and
- entrant and incumbent R&D subsidies that maximizes inventor productivity
- (and therefore growth) in the model economy.
- I then analyze the solution when corporate taxes and R&D subsidies cannot
- vary across sectors, but subsidies are allowed to depend on whether the
- firm is an incumbent or a new entrant (entry subsidies).
- Finally, I contrast this solution with expenditure-equivalent universal
- entry and R&D subsidies.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways true
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Comparison of R&D Policies in the Two-Sector Model
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Flex Scalebox
-status open
-
-\begin_layout Plain Layout
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-.7
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "tab/matlab/PolicyTable.tex"
+filename "sections/model.lyx"
 
 \end_inset
 
@@ -2537,26 +851,69 @@ filename "tab/matlab/PolicyTable.tex"
 \end_inset
 
 
-\begin_inset Newline newline
+\end_layout
+
+\begin_layout Section
+Conclusion and Future Work
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Conclusion"
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
-\align left
-
-\size small
-Note: .
+\begin_layout Standard
+In this paper, I have proposed and documented a novel explanation for the
+ observed decline in growth and R&D productivity over the last few decades.
+ 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
+\begin_layout Standard
+My empirical results showed that increasing misallocation of inventors across
+ different product markets can account for up to 
+\begin_inset Formula $27\%$
 \end_inset
 
+ of the observed decline in output per worker growth in the sectors I analyze.
+ This misallocation resulted from uneven increases in concentration across
+ product markets, which were accompanied by an increase in the share of
+ inventors accruing to less competitive sectors.
+ I interpret my findings as resulting from an increase in defensive innovation
+ in concentrated sectors, defined as R&D activities conducted with the primary
+ aim of blocking further entry, which manifest in the data as a fall in
+ patents' forward citations and an increased share of inventors employed
+ by the largest incumbents in these sectors.
+\end_layout
 
+\begin_layout Standard
+The theoretical analysis examined the effects of defensive innovation in
+ a Schumpeterian model of creative destruction, where incumbents can conduct
+ defensive innovation to raise new entrants' costs.
+ In the model, pre-emptive innovation is crucial to generate misallocation
+ across sectors, which would not occur in the absence of this mechanism.
+ Having established the importance of this channel, I employed a calibrated
+ two-sector version of the model to study the growth-maximizing allocation
+ of R&D subsidies across sectors, as well as between incumbents and entrants.
+ My analysis suggests that R&D subsidies provided to entrants constitute
+ the most effective policy, directly tackling the friction generated by
+ defensive innovation, and can increase growth by up to 17% of my baseline
+ (0.5pp in absolute terms).
+\end_layout
+
+\begin_layout Standard
+Two main directions for future research stand out.
+ First, it would be important to investigate the validity of my findings
+ to an international context.
+ Indeed, many findings in the literature of competition and innovation depend
+ strongly on the country and the period analyzed.
+ Second, my paper highlights the role of pre-emptive innovation as a major
+ driver of the fall in R&D productivity.
+ However, this topic is still relatively under-explored, and a thorough
+ investigation of the evolution, causes and consequences of this phenomenon
+ seems highly relevant in view of my results.
+ 
 \end_layout
 
 \begin_layout Standard

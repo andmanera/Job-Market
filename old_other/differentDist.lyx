@@ -1,0 +1,439 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%2multibyte Version: 5.50.0.2953 CodePage: 1251
+% \usepackage{setspace}
+% \onehalfspacing
+%\pagenumbering{gobble}
+%\renewcommand{\labelenumii}{\arabic{enumii}. }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{Codepage=1251}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Tuesday, October 20, 2009 09:15:38}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\pl}{\partial}
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\cov}{cov}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\labelenumi}{(\alph{enumi}) }
+\renewcommand{\labelenumii}{(\roman{enumii}) }
+\renewcommand{\labelenumiii}{\Roman{enumiii}) }
+%\input{tcilatex}
+\end_preamble
+\use_default_options false
+\begin_modules
+graphicboxes
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch answers
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+So the idea is:
+\begin_inset Formula 
+\[
+x_{e,\omega}\mu_{e,\omega}=\frac{v(1)}{\zeta\omega w^{RD}},\quad x_{e,1}\mu_{e,1}=\frac{v(1)}{\zeta w^{RD}},
+\]
+
+\end_inset
+
+so now we have:
+\begin_inset Formula 
+\[
+x_{e,1}\mu_{e,1}=\omega x_{e,\omega}\mu_{e,\omega}.
+\]
+
+\end_inset
+
+Incumbents are targeted randomly, so the replacement probability is now:
+\begin_inset Formula 
+\[
+\frac{x_{e,1}\mu_{e,1}}{\mu_{1}}
+\]
+
+\end_inset
+
+ and analogously for 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ This implies the following LOM for the distribution:
+\begin_inset Formula 
+\begin{align}
+\dot{\mu}_{1} & =-\left(x_{I}+x_{e,1}\right)\mu_{1}+\delta\mu_{\omega}+x_{e,\omega}\mu_{e,\omega}+x_{e,1}\mu_{e,1},\label{eq: dist1-2-1}\\
+\dot{\mu}_{\omega} & =-\left(x_{e,\omega}+\delta\right)\mu_{\omega}+x_{I}\mu_{1},\label{eq: dist2-2-1}\\
+\dot{\mu}_{e,1} & =-\left(x_{e,1}+x_{I}\right)\mu_{e,1}+x_{e,1}\mu_{1}+\delta\mu_{e,\omega},\label{eq: dist3-3-1}\\
+\dot{\mu}_{e,\omega} & =-\left(x_{e,\omega}+\delta\right)\mu_{e,\omega}+x_{e,\omega}\mu_{\omega}+x_{I}\mu_{e,1},\label{eq: dist4-3-1}
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\dot{\mu}_{1} & =-\left(x_{I}+\frac{x_{e,1}\mu_{e,1}}{\mu_{1}}\right)\mu_{1}+\delta\mu_{\omega}+x_{e,\omega}\mu_{e,\omega}+x_{e,1}\frac{\mu_{e,1}}{\mu_{1}}\mu_{1},\label{eq: dist1-2-1-1}\\
+\dot{\mu}_{\omega} & =-\left(x_{e,\omega}\frac{\mu_{e,\omega}}{\mu_{\omega}}+\delta\right)\mu_{\omega}+x_{I}\mu_{1},\label{eq: dist2-2-1-1}\\
+\dot{\mu}_{e,1} & =-\left(x_{e,1}+x_{I}\right)\mu_{e,1}+x_{e,1}\mu_{e,1}+\delta\mu_{e,\omega},\label{eq: dist3-3-1-1}\\
+\dot{\mu}_{e,\omega} & =-\left(x_{e,\omega}+\delta\right)\mu_{e,\omega}+x_{e,\omega}\mu_{e,\omega}+x_{I}\mu_{e,1},\label{eq: dist4-3-1-1}
+\end{align}
+
+\end_inset
+
+So from the last two equations we get:
+\begin_inset Formula 
+\[
+\delta\mu_{e,\omega}=x_{I}\mu_{e,1}
+\]
+
+\end_inset
+
+This means that if 
+\begin_inset Formula $\delta=0$
+\end_inset
+
+ there is no mass in 
+\begin_inset Formula $\mu_{e,1}$
+\end_inset
+
+? Yes, because at some point all the entrants in 1 get pushed into the barrier
+ state.
+ The second equation gives:
+\begin_inset Formula 
+\[
+x_{I}\mu_{1}-\delta\mu_{\omega}=x_{e,\omega}\mu_{e,\omega}
+\]
+
+\end_inset
+
+Now using 
+\begin_inset Formula $\mu_{1}=1-\mu_{\omega}:$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{I}-\left(x_{I}+\delta\right)\mu_{\omega}=x_{e,\omega}\mu_{e,\omega}
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+\mu_{\omega} & =\frac{x_{I}-x_{e,\omega}\mu_{e,\omega}}{x_{I}+\delta}\\
+\mu_{1} & =\frac{x_{e,\omega}\mu_{e,\omega}+\delta}{x_{I}+\delta}
+\end{align*}
+
+\end_inset
+
+Now do we need to choose the mass of entrants? I guess so.
+ In this case we have:
+\begin_inset Formula 
+\[
+\mu_{e,\omega}+\mu_{e,1}=M_{e}
+\]
+
+\end_inset
+
+Thus, by:
+\begin_inset Formula 
+\[
+\delta\mu_{e,\omega}=x_{I}\mu_{e,1}
+\]
+
+\end_inset
+
+We obtain:
+\begin_inset Formula 
+\[
+\frac{x_{I}+\delta}{x_{I}}\mu_{e,\omega}=M_{e}
+\]
+
+\end_inset
+
+That is:
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+This also implies:
+\begin_inset Formula 
+\[
+\frac{x_{e,1}\mu_{e,1}}{\mu_{1}}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mu_{e,\omega}=\frac{x_{I}}{x_{I}+\delta}M_{e},\quad\mu_{e,1}=\frac{\delta}{x_{I}+\delta}M_{e}
+\]
+
+\end_inset
+
+Recall that:
+\begin_inset Formula 
+\[
+\omega x_{e,\omega}\mu_{e,\omega}=x_{e,1}\mu_{e,1}
+\]
+
+\end_inset
+
+Thus:
+\begin_inset Formula 
+\[
+\frac{x_{e,\omega}}{x_{e,1}}=\frac{\delta}{\omega x_{I}}
+\]
+
+\end_inset
+
+Look:
+\begin_inset Formula 
+\[
+x_{e,\omega}\mu_{e,\omega}=\frac{v(1)}{\zeta\omega w^{RD}}=\frac{\delta}{\omega x_{I}}x_{e,1}\mu_{e,\omega}
+\]
+
+\end_inset
+
+Which implies that:
+\begin_inset Formula 
+\[
+x_{e,1}=\frac{v(1)}{\zeta\omega w^{RD}}\left(\frac{\delta}{x_{I}+\delta}\frac{M_{e}}{\omega}\right)^{-1}=\frac{x_{I}+\delta}{\delta M_{e}}\frac{v(1)}{\zeta w^{RD}}
+\]
+
+\end_inset
+
+and growth would be:
+\begin_inset Formula 
+\[
+\frac{v(1)}{\zeta w^{RD}}+\frac{v(1)}{\zeta\omega w^{RD}}+\lambda x_{I}\mu_{1}
+\]
+
+\end_inset
+
+and labor demand is:
+\begin_inset Formula 
+\[
+2\frac{v(1)}{w^{RD}}+\frac{\alpha_{I}}{\gamma}x_{I}^{\gamma}\mu_{1}
+\]
+
+\end_inset
+
+Therefore:
+\begin_inset Formula 
+\begin{align*}
+\partial\left[\frac{v(1)}{w^{RD}}\right] & =-\frac{\alpha_{I}}{2\gamma}\partial\left(x_{I}^{\gamma}\mu_{1}\right)\\
+ & =-\frac{\alpha_{I}}{2\gamma}\partial\left(x_{I}^{\gamma-1}x_{I}\mu_{1}\right)\\
+ & =-\frac{\alpha_{I}}{2\gamma}\left(\left(\gamma-1\right)x_{I}^{\gamma-2}\partial x_{I}x_{I}\mu_{1}+x_{I}^{\gamma-1}\partial x_{I}\mu_{1}\right)
+\end{align*}
+
+\end_inset
+
+Thus the change in growth reads:
+\begin_inset Formula 
+\[
+\left(\lambda-\frac{\alpha_{I}}{2\gamma}x_{I}^{\gamma-1}\right)\partial\left(x_{I}\mu_{1}\right)-\frac{\alpha_{I}\left(\gamma-1\right)}{2\gamma}x_{I}^{\gamma-1}\mu_{1}\partial x_{I}
+\]
+
+\end_inset
+
+First, does 
+\begin_inset Formula $x_{I}\mu_{1}$
+\end_inset
+
+ increase:
+\begin_inset Formula 
+\[
+\frac{x_{I}}{x_{I}+\delta}\left(x_{e,\omega}\mu_{e,\omega}+\delta\right)
+\]
+
+\end_inset
+
+Note:
+\begin_inset Formula 
+\[
+x'_{I}x_{I}+x'_{I}\delta-x_{I}x'>0,
+\]
+
+\end_inset
+
+so the first term increases.
+ The second term also does, since 
+\begin_inset Formula $v(1)$
+\end_inset
+
+ does increase.
+ I also have to prove that 
+\begin_inset Formula $x'_{I}$
+\end_inset
+
+ is positive.
+ Assuming that is true, I just need:
+\begin_inset Formula 
+\[
+\lambda-\frac{\alpha_{I}}{2\gamma}x_{I}^{\gamma-1}<0,
+\]
+
+\end_inset
+
+that is:
+\begin_inset Formula 
+\[
+x_{I}^{\gamma-1}>2\frac{\lambda\gamma}{\alpha_{I}}
+\]
+
+\end_inset
+
+Now note that:
+\begin_inset Formula 
+\[
+x_{I}^{\gamma-1}=\frac{v(\omega)-v(1)}{\alpha_{I}w^{RD}}>2\frac{\lambda\gamma}{\alpha_{I}},
+\]
+
+\end_inset
+
+or:
+\begin_inset Formula 
+\[
+\frac{v(\omega)-v(1)}{w^{RD}}>2\lambda\gamma
+\]
+
+\end_inset
+
+Let us compute 
+\begin_inset Formula $v(\omega)-v(1)$
+\end_inset
+
+ in this situation.
+ Now values have changed:
+\begin_inset Formula 
+\begin{align}
+\rho v(1)-m_{i}-\bm{1}\left\{ v(\omega)-v(1)>0\right\} \left(\frac{\gamma-1}{\gamma}\left(\frac{v(\omega)-v(1)}{\alpha_{I}w^{RD}}\right)^{\frac{1}{\gamma-1}}\right)\left(v(\omega)-v(1)\right)+\frac{v(1)}{\zeta w^{RD}\mu_{1}}v(1) & =0\label{eq: sys1}\\
+\rho v(\omega)-m_{i}-\delta\left(v(1)-v(\omega)\right)+\frac{v(1)}{\zeta w^{RD}\omega\mu_{\omega}}v(\omega) & =0.\label{eq: sys2}
+\end{align}
+
+\end_inset
+
+Now the passages done in the past reveal:
+\begin_inset Formula 
+\[
+\left(\rho+\delta+\bm{1}\left\{ v(\omega)-v(1)>0\right\} \left(\frac{\gamma-1}{\gamma}\left(\frac{v(\omega)-v(1)}{\alpha_{I}w^{RD}}\right)^{\frac{1}{\gamma-1}}\right)\right)\left(v(\omega)-v(1)\right)=\frac{v(1)}{\zeta w^{RD}}\left(\frac{v(1)}{\mu_{1}}-\frac{v(\omega)}{\mu_{\omega}\omega}\right)
+\]
+
+\end_inset
+
+And as before we have:
+\begin_inset Formula 
+\[
+\frac{\mu_{\omega}\omega}{\mu_{1}}v(1)>v(\omega)
+\]
+
+\end_inset
+
+Now:
+\begin_inset Formula 
+\[
+\frac{\mu_{\omega}\omega}{\mu_{1}}=\omega\frac{x_{I}-x_{e,\omega}\mu_{e,\omega}}{x_{e,\omega}\mu_{e,\omega}+\delta}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document
