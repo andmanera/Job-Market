@@ -1335,13 +1335,13 @@ and the share of R&D labor employed by incumbents increases with markup:
 
 \end_inset
 
-Moreover, if 
-\begin_inset Formula $\lambda=0,$
+Moreover, if (i) 
+\begin_inset Formula $\lambda=0$
 \end_inset
 
- inventor supply is not fully inelastic, and the model parameters are such
- that equilibrium incumbents' research effort is more elastic than entrants',
- 
+; (ii) inventor supply is not fully inelastic; and (iii) the model parameters
+ are such that equilibrium incumbents' research effort is more elastic than
+ entrants', 
 \begin_inset Formula 
 \[
 \frac{\partial x_{I}^{\star}}{\partial\phi}\frac{\phi}{x_{I}^{\star}}>\frac{\partial x_{e,\omega}^{\star}}{\partial\phi}\frac{\phi}{x_{e,\omega}^{\star}},
