@@ -1245,20 +1245,17 @@ Three features are worth emphasizing.
 \end_layout
 
 \begin_layout Standard
-As noted above, these markets are identifies using my measure of effective
- inventors, but I assess the robustness of this procedure to using raw counts
- of inventor transitions.
- When applying the procedure to 4-digit NAICS sectors, I find that over
- 97% of the pairs of NAICS sectors are classified in the same manner using
- the two measures.
+Knowledge markets are identified using my measure of effective inventors,
+ but the algorithm produces nearly identical results when using raw inventor
+ counts; over 97% of 4-digit NAICS pairs of sectors are classified in the
+ same manner using the two measures.
  That is, 97% of sector pairs belong to the same knowledge market according
- to both measures, and they do not belong to the same market if they do
- not according to either measure.
+ to both measures.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
-placement t
+placement th
 wide false
 sideways false
 status open
@@ -1287,7 +1284,7 @@ name "fig: KmarketGraph-1"
 \begin_inset Graphics
 	filename /Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/graphs/NewCommunity_3d.png
 	lyxscale 10
-	width 90text%
+	width 80text%
 
 \end_inset
 
@@ -1946,7 +1943,7 @@ As for the other results presented below, the effective inventor measure
 
 \begin_layout Standard
 \begin_inset Float figure
-placement th
+placement t
 wide false
 sideways false
 status open
@@ -2036,16 +2033,6 @@ filename "/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/
 \end_inset
 
 
-\begin_inset Phantom HPhantom
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Float figure
 wide false
 sideways false
@@ -2106,10 +2093,6 @@ filename "/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/
 
 \end_layout
 
-\end_inset
-
-
-\begin_inset Newline newline
 \end_inset
 
 

@@ -160,10 +160,10 @@ e Talent
 status open
 
 \begin_layout Plain Layout
-I am grateful to my advisors Daron Acemoglu, Martin Beraja, and John Van
- Reenen for invaluable advice and support.
+I am extremely grateful to my advisors Daron Acemoglu, Martin Beraja, and
+ John Van Reenen for invaluable advice and support.
  I am also grateful to Michele Fornino for lending indispensable computing
- power and for his collaboration in a previous version of this project,
+ power and for his collaboration on a previous version of this project,
  and Nicholas Zolas, who kindly shared with me the ALP classifications of
  patents into NAICS sectors of application.
  I also thank David Autor, Pierre Azoulay, Ricardo Caballero, Arnaud Costinot,
@@ -217,17 +217,40 @@ today
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-2.5em}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \align center
 
 \series bold
-PRELIMINARY AND INCOMPLETE
-\begin_inset Newline newline
+\begin_inset CommandInset href
+LatexCommand href
+name "LINK TO LATEST VERSION"
+target "https://github.com/andmanera/competing-for-inventors/blob/main/draft/draft.pdf"
+literal "false"
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
 \begin_inset ERT
 status open
 
@@ -241,7 +264,18 @@ thispagestyle{empty}
 \end_inset
 
 
-\begin_inset VSpace smallskip
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-3em}
+\end_layout
+
 \end_inset
 
 
@@ -251,8 +285,9 @@ thispagestyle{empty}
 \paragraph_spacing single
 Inventors are a scarce resource, whose skill sets can apply to R&D in disparate
  product markets.
- Motivated by this observation, I explore the impact of product market competiti
-on on the misallocation of inventors, and its implications for growth.
+ Motivated by this fact and by the fall in R&D productivity that characterized
+ recent decades, I explore the impact of product market competition on the
+ misallocation of inventors, and its implications for growth.
  First, I delineate the boundaries of 
 \begin_inset Quotes eld
 \end_inset
@@ -282,18 +317,18 @@ on, and negatively with forward citations.
  in the productivity of inventors, as measured by the growth in output per
  worker.
  A back-of-the-envelope computation suggest that the increased concentration
- of inventors in less competitive sectors can account for about 29% of the
- overall decrease in output per worker growth over the period 1997-2012,
- which corresponds to a fall of 0.78% in absolute value.
- To rationalize my findings, I propose a Schumpeterian model of creative
- destruction, where incumbents can conduct defensive patenting, to rationalize
- my findings.
- In the model, higher markups increase R&D effort, as well as causing its
- allocation to defensive projects by incumbents.
- When different product markets compete for the same inventors, a largest
- share of researchers end up employed in defensive projects in less competitive
- sectors, lowering growth and R&D productivity.
- 
+ of inventors in less competitive sectors can account for about 27% of the
+ overall decrease in output per worker growth over the period 1997-2012
+ (a fall of 0.78% in absolute value).
+ To rationalize my findings, I develop a Schumpeterian model of creative
+ destruction, where incumbents can conduct defensive patenting aimed at
+ increasing barriers to entry.
+ When different product markets compete for the same inventors, higher markups
+ increase R&D effort in concentrating sectors, and cause its allocation
+ to defensive projects carried out by incumbents.
+ A calibrated version of my model reveals that allocating R&D subsidies
+ to entrants in less competitive sectors is the most effective policy to
+ maximize growth.
 \end_layout
 
 \begin_layout Standard
@@ -309,7 +344,7 @@ on, and negatively with forward citations.
 \series bold
 JEL Codes
 \series default
-: X##, Y##, Z##.
+: O30, O31, O32, O40.
 \end_layout
 
 \begin_layout Standard
@@ -388,8 +423,8 @@ literal "false"
  estimates that up to 20% of total AI experts are employed by just five
  companies: Google, Microsoft, Apple, Amazon and IBM.
  At the same time, smaller firms in other economic sectors appear unable
- to attract this talent, raising concerns over the potential misallocation
- of innovators equipped with the latest technological skills.
+ to attract this scarce talent, raising concerns over the potential misallocatio
+n of innovators.
  
 \end_layout
 
@@ -403,16 +438,15 @@ This paper studies the broader effect of increasing concentration on the
  This relation has a causal interpretation, according to an IV specification
  where I use the increase in the number of regulations from Mercatus RegData
  as an instrument for increased concentration.
- I establish three additional facts that suggest that inventors are misallocated.
+ I establish three additional facts that suggest that this allocation is
+ inefficient.
  First, researchers accrued mostly to incumbent firms in concentrated sectors.
  Second, the quality of patents in concentrating sectors has fallen, as
  measured by patent forward citations.
  Third, inventors' productivity, that I measure as growth in output per
  worker per inventor, has fallen in these sectors.
- Taken together, these findings suggest that additional inventors have accrued
- to incumbents who employed them on projects intended to pre-empt further
- entry, with a low growth footprint.
- I refer to this type of R&D as 
+ These findings suggest that additional inventors have accrued to incumbents
+ who employed them on 
 \begin_inset Quotes eld
 \end_inset
 
@@ -420,10 +454,11 @@ defensive innovation
 \begin_inset Quotes erd
 \end_inset
 
-.
+, that is, projects with a low growth footprint conducted with the primary
+ aim of preventing further entry and sheltering existing dominant positions.
  Quantitatively, my findings imply that inventor misallocation implies a
- fall of up to .78pp in output-per-worker growth in the sectors I study (28.6%
- of the overall observed reduction over the period 1997-2012).
+ fall of up to 0.78pp in output-per-worker growth in the sectors I study
+ (28.6% of the overall observed reduction over the period 1997-2012).
  
 \end_layout
 
@@ -436,7 +471,7 @@ knowledge markets,
 \begin_inset Quotes erd
 \end_inset
 
- defined as collections of product markets that share similar inventors.
+ defined as sets of product markets that share similar inventors.
  These inventor markets originate from the network generated by transitions
  of individual inventors across product categories, identified using USPTO
  patent data, where patents are classified according to their main NAICS
@@ -451,8 +486,8 @@ d as potential outlets for each inventor would in facts not be such.
 \begin_layout Standard
 In order to interpret these results, I build a Schumpeterian model where,
  in addition to productive R&D conducted by new entrants, incumbents can
- engage in defensive projects to pre-empt entry and strengthen their dominant
- position.
+ engage in defensive projects to increase entry cost faced by potential
+ competitors.
  A two-sector general equilibrium model shows that unbalanced changes in
  concentration across sectors generate a fall in inventor productivity and
  growth.
@@ -460,22 +495,23 @@ In order to interpret these results, I build a Schumpeterian model where,
  defensive projects—which hamper entry and Schumpeterian growth—are more
  prevalent, and away from more competitive sectors where growth is more
  sustained.
- The theoretical analysis shows that pre-emptive innovation is a crucial
- mechanism to generate the increased concentration of inventors among incumbents
- that I find in the data, as well as the fall in R&D productivity, which
- are both absent in a framework abstracting from these features.
+ The theoretical analysis shows that defensive innovation is a crucial mechanism
+ to generate the increased concentration of inventors among incumbents that
+ I find in the data, as well as the fall in R&D productivity, which are
+ both absent in a framework abstracting from these features.
  
 \end_layout
 
 \begin_layout Standard
-I calibrate my two-sector to match moments of the R&D spending distribution
- in 1997, which produces productivity effects that are close to the lower
- bound implied by my estimates.
- I use this calibrated model to study the allocation of cost-neutral R&D
- subsidies that maximizes growth in this context.
- I find that subsidizing entrants' R&D in the more concentrated sector constitut
-es the most effective policy, and leads to a rise in annual GDP growth of
- about 0.5pp (17% in relative terms).
+I calibrate a two-sector version of my model to match moments of the R&D
+ spending distribution in 1997 and growth over the period 1997-2012.
+ This calibration implies productivity losses from misallocation that are
+ close to the lower bound implied by my estimates.
+ In the context of this model, I study the allocation of cost-neutral R&D
+ subsidies that maximizes growth.
+ Subsidizing entrants' R&D in more concentrated sectors constitutes the
+ most effective policy, leading to a rise in annual GDP growth of about
+ 0.5pp (17% relative to my benchmark).
  Similar results obtain if entry is uniformly subsidized across the two
  sectors.
  This finding resonates with the fact that defensive innovation constitutes
@@ -486,8 +522,8 @@ es the most effective policy, and leads to a rise in annual GDP growth of
 
 \begin_layout Standard
 The rest of the paper proceeds as follows.
- In the next section, I place my contribution and describe the novelty of
- my approach relative to the extant literature.
+ In the following section, I survey the related literature place my study
+ in its context.
  Section 
 \begin_inset CommandInset ref
 LatexCommand ref
