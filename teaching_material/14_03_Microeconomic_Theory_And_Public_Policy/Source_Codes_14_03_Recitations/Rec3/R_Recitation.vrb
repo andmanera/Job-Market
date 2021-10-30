@@ -1,0 +1,16 @@
+\frametitle{Step 3: Replicating Table 4 in CK (1994)}
+\begin{itemize}
+\item Note that CK do not get 2.75 as coefficient in Table 4, column 1, but 2.33. This is because they select the sample to include only observations with wages in both years
+\item To carry out the sample selection, we need to drop observations that are \verb|NA|. This is achieved as follows:
+\begin{lstlisting}[language=R]
+dataAllWages = data[complete.cases(
+data.frame(data$wage_st,data$wage_st2, data$FTE, data$FTE2)),]
+\end{lstlisting}
+\item \verb|complete.cases| identifies the rows of the dataset in parentheses that contain \textit{no missing values}. This produces logical indexes that are then used to select the rows of \verb|data| (convince yourself this works).
+\begin{lstlisting}[language=R]
+modelDiff = lm(formula = dFTE ~ state, data = dataAllWages)
+coeftest(modelDiff)
+\end{lstlisting}
+produces a coefficient of $2.28$, very close to the $2.33$ obtained by CK, and the same standard error. The difference is explained by the sample: if we follow their indications we get a sample of $359$ observations, not $357$ as they say...
+\item Many times economic papers do not exactly replicate!
+\end{itemize}

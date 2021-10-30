@@ -1,0 +1,1740 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+%\usetheme{metropolis}
+%\usetheme{Darmstadt}
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage[bottom]{footmisc}
+\usepackage{placeins}
+%\usepackage[adobe-utopia]{mathdesign}
+\usepackage{pifont}
+%\usepackage{kerkis}
+%\usepackage{pxfonts}
+\usepackage[default]{lato}
+%\usepackage{mathpazo}
+\usepackage{eulervm}
+\usepackage{animate}
+
+
+\usepackage{dcolumn}
+\usepackage{bbm}
+\newcolumntype{d}[0]{D{.}{.}{5}}
+
+\usepackage{changepage}
+
+\addtobeamertemplate{frametitle}{}{\vspace{-0.2 cm}}
+
+\setbeamertemplate{frametitle} 
+{ 
+	\begin{centering} 
+		\LARGE
+		\insertframetitle
+		\par 
+	\end{centering} 
+} 
+
+\setbeamerfont{title}{size = \LARGE}
+
+
+
+
+
+%COLORS
+\definecolor{chamois}{RGB}{254,254,245}
+\definecolor{oldchamois}{RGB}{255,255,240}
+\definecolor{darkbrown}{RGB}{124,79,0}
+\definecolor{UniBlue}{RGB}{65,55,203}
+\definecolor{bordeaux}{RGB}{201,18,18}
+\definecolor{redd}{RGB}{245,29,29}
+
+
+\definecolor{hellgelb}{rgb}{1,1,0.8}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+\definecolor{textcolour}{rgb}{0.37,0.34,0.27}
+
+\definecolor{ITgreen}{rgb}{0,204/256,0}
+
+\iffalse
+%LIN AT THE TOP
+\usepackage{tikz}
+\newcommand{\topline}{%
+	\tikz[remember picture,overlay] {%
+		\draw[bordeaux,thick] ([yshift=-1.4cm]current page.north west)-- ([yshift=-1.4cm,xshift=\paperwidth]current page.north west);}}
+
+\addtobeamertemplate{frametitle}{
+}{\topline%
+}
+\fi
+
+%ITEMIZE SEP
+\setlength{\itemsep}{10mm}
+%BACKGROUND AND ITEMIZE
+%\setbeamercolor{background canvas}{bg=chamois}
+\setbeamercolor{itemize item}{fg=bordeaux}
+%\setbeamertemplate{itemize item}{\maltese}
+\setbeamercolor{itemize subitem}{fg=bordeaux}
+\setbeamertemplate{itemize subitem}{$\diamondsuit$}
+
+%ELEMENT COLORS
+\setbeamercolor{title}{fg=UniBlue}
+\setbeamercolor{frametitle}{fg=UniBlue}
+\setbeamercolor{structure}{fg=textcolour}
+
+%COLORS FIRST PAGE
+\setbeamercolor{author}{fg=darkbrown}
+\setbeamercolor{date}{fg=darkbrown!60}
+\setbeamercolor{institute}{fg=darkbrown}
+
+%BLOCK SPECS
+\setbeamercolor{block title}{bg=UniBlue!30,fg=white}
+\setbeamercolor{block body}{bg=UniBlue!10,fg=black}
+%\addtobeamertemplate{block begin}{%
+%	\centering
+%	\setlength{\textwidth}{1\textwidth}%
+%}{}
+
+%\setbeamercolor{block title alerted}{bg=yellow!60,fg=red}
+%\setbeamercolor{block body alerted}{bg=hellgelb!80,fg=UniBlue}
+
+
+\setbeamercolor{alert}{fg=redd}
+\renewcommand<>{\alert}[1]{%
+	{\usebeamercolor[fg]{alert}\only#2{}#1}%
+}
+
+\newcommand{\blue}{\color{blue}}
+
+
+
+
+
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+
+
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
+\usepackage{lscape}
+
+%%% TIKZ %%%%
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{snakes}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{matrix,shapes,arrows,fit,tikzmark}
+\usepackage{pgfplots}
+
+\setbeamertemplate{footnote}{%
+\insertfootnotemark\footnotesize\insertfootnotetext\par%
+}
+
+
+
+\usepackage{dcolumn}
+\usepackage{bbm}
+\newcolumntype{d}[0]{D{.}{.}{1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
+
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+\usepackage{}
+\end_preamble
+\options aspectratio=169
+\use_default_options false
+\begin_modules
+fixltx2e
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding T1
+\font_roman "lmodern" "default"
+\font_sans "default" "default"
+\font_typewriter "lmodern" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 0
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+14.661 Recitation 4: LCLS under Uncertainty
+\end_layout
+
+\begin_layout Author
+Andrea Manera
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnote[frame]{I thank Clémence Idoux for sharing her material with me.
+ All remaining errors are my own.}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+Fall 2021
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Road map
+\end_layout
+
+\begin_layout Itemize
+Theory of LCLS under uncertainty
+\end_layout
+
+\begin_layout Itemize
+Altonji (1986)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LCLS under uncertainty - Set up
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Additively separable utility function: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{s=t}^{T}\frac{1}{1+\rho}^{s-t}U(c_{s},h_{s})
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Intertemporal budget constraint: 
+\begin_inset Formula 
+\begin{eqnarray*}
+A_{t+1}=(1+r_{t})A_{t}+w_{t}h_{t}-c_{t}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+Uncertainty: add expectation operator in front of what seen in class: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\max_{\left\lbrace h_{t},c_{t}\right\rbrace _{s=t}^{T}}E_{t}\left[\sum_{s=t}^{T}\left(\frac{1}{1+\rho}\right)^{s-t}U(c_{s},h_{s})\right]\\
+\textrm{s.t }A_{t+1}=(1+r_{t})A_{t}+w_{t}h_{t}-c_{t}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solving the problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+From 14.451, with concave utility and exponential discounting, we can:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Use a variational approach, find the asset path that satisfies Euler equation
+ and transversality
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Set up the problem recursively, and walk down Bellman's road
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+They give the same solution in this context, as the conditions for the 
+\begin_inset Quotes eld
+\end_inset
+
+sufficiency theorem
+\begin_inset Quotes erd
+\end_inset
+
+ hold (see Alp's 14.661 notes and Daron's book 
+\begin_inset Quotes eld
+\end_inset
+
+Introduction to Modern Economic Growth
+\begin_inset Quotes erd
+\end_inset
+
+):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Strict concavity of objective function in the control and state variable;
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Differentiability (we assume it);
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The state variable has a lower bound and objective increases in the state.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Bellman equation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+By the above conditions, let's solve the problem 
+\begin_inset Formula 
+\begin{align*}
+V_{t}(A_{t}|\mathcal{I}_{t})= & \max_{h_{t},c_{t}}U(c_{t},h_{t})+\frac{1}{1+\rho}E_{t}V_{t+1}(A_{t+1}|\mathcal{I}_{t+1})\\
+\text{s.t.} & \ A_{t+1}=(1+r_{t})A_{t}+w_{t}h_{t}-c_{t}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{t}(A_{t}|\mathcal{I}_{t})$
+\end_inset
+
+ is the optimum value function given available information in 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{I}_{t}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+State variable is accumulated assets at time 
+\begin_inset Formula $t,\ A_{t},$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The constraint is the law of motion of the agent's assets
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+FOCs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Replacing 
+\begin_inset Formula $A_{t+1}=(1+r_{t})A_{t}+w_{t}h_{t}-c_{t}$
+\end_inset
+
+ in the Bellman equation, we can get the following f.o.c.'s 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+c_{t}:\quad U_{c}(c_{t},h_{t})-\frac{1}{1+\rho}E_{t}[V_{t+1}'(A_{t+1})] & = & 0\\
+h_{t}:\quad U_{h}(c_{t},h_{t})+\frac{1}{1+\rho}w_{t}E_{t}[V_{t+1}'(A_{t+1})] & = & 0
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+To solve the problem, we also add the 
+\emph on
+envelope condition
+\emph default
+: 
+\begin_inset Formula 
+\begin{eqnarray}
+A_{t}:\quad V_{t}'(A_{t})=\frac{1}{1+\rho}(1+r_{t})E_{t}[V_{t+1}'(A_{t+1})]\label{ET}
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+This relates the MU of wealth today to the expected MU of wealth tomorrow
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+MU of wealth
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+Define the MU of wealth at time 
+\begin_inset Formula $t$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\lambda_{t}\equiv V_{t}'(A_{t}|\mathcal{I}_{t})
+\end{eqnarray*}
+
+\end_inset
+
+Then 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "ET"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\lambda_{t}=\frac{1+r_{t}}{1+\rho}E_{t}[\lambda_{t+1}]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Euler equations
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+Plugging in we get two Euler equations: 
+\begin_inset Formula 
+\begin{align}
+U_{c}(c_{t},h_{t}) & =\frac{1}{1+r_{t}}\lambda_{t}=E_{t}\left[\frac{1+r_{t+1}}{1+\rho}U_{c}(c_{t+1},h_{t+1})\right]\label{MUC}\\
+U_{h}(c_{t},h_{t}) & =-\frac{w_{t}}{1+r_{t}}\lambda_{t}=E_{t}\left[\frac{1+r_{t+1}}{1+\rho}\frac{w_{t}}{w_{t+1}}U_{h}(c_{t+1},h_{t+1})\right]\label{MUL}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+As in class with one difference.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+ is no longer time invariant : 
+\begin_inset Formula 
+\[
+\lambda_{t}=\frac{1+r_{t}}{1+\rho}E_{t}\left[\lambda_{t+1}\right]=E_{t}\left[\Pi_{s=t}^{T-1}\frac{1+r_{s}}{1+\rho}\lambda_{T}\right]
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+summarizes the expected path of the MU of wealth in all future periods given
+ current information
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Deriving the HeckMaC LS Equation
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+Assuming a HeckMaC separable utility function:
+\begin_inset Formula 
+\[
+U\left(c_{t},h_{t}\right)=c_{t}^{\delta_{1}}-\gamma_{2}h_{t}^{\delta_{2}}
+\]
+
+\end_inset
+
+ and taking logarithms of the FOC, we can define the ISE
+\end_layout
+
+\begin_layout Frame
+\begin_inset Formula 
+\begin{equation}
+\ln h_{t}=\Big[\frac{\ln\lambda_{t}-\ln\gamma_{2}-\ln\delta_{2}}{\delta_{2}-1}\Big]+\frac{t}{\delta_{2}-1}\ln\Big(\frac{1+\rho}{1+r_{t}}\Big)+\underbrace{\frac{1}{\delta_{2}-1}}_{\equiv\delta\text{ (ISE)}}\ln w_{t}\label{key}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+How do we take first differences to eliminate 
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+By definition:
+\begin_inset Formula 
+\[
+\lambda_{t+1}=E_{t}[\lambda_{t+1}]+\epsilon_{t+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Assuming rational expectation, 
+\begin_inset Formula $\epsilon_{t+1}$
+\end_inset
+
+ is orthogonal to information available at 
+\begin_inset Formula $t$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+HeckMaC Estimation with Uncertainty
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1+\rho}{1+r_{t}}\lambda_{t} & = & E_{t}[\lambda_{t+1}]\\
+ & = & \lambda_{t+1}-\epsilon_{t+1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\ln\lambda_{t}$
+\end_inset
+
+ obtained taking logs and using Taylor expansion around 
+\begin_inset Formula $\epsilon_{t+1}=0$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+\ln\lambda_{t}+\ln\Big(\frac{1+r_{t}}{1+\rho}\Big) & =\ln\left(\lambda_{t+1}-\epsilon_{t+1}\right)-\ln\lambda_{t+1}+\ln\lambda_{t+1}\\
+ & \approx\ln\lambda_{t+1}+\underset{\equiv u_{t}}{\underbrace{\frac{1}{\lambda_{t+1}}\left(-\epsilon_{t+1}\right)}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Consistency of ISE estimates I
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+Taking first differences we get rid of 
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Formula 
+\begin{equation}
+\Delta\ln h_{it}=\gamma+\mu_{i}+\delta\Delta\ln w_{it}+\delta\Delta u_{it}+e_{it}\label{key}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+BUT we still have the term 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ after differencing
+\end_layout
+
+\begin_layout Frame
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+To get a consistent estimator of the ISE 
+\begin_inset Formula $\delta=\frac{1}{\delta_{2}-1}$
+\end_inset
+
+ , need 
+\begin_inset Formula $cov(u_{it},\ln{w_{it}})=0$
+\end_inset
+
+ for all individuals.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Altonji (1986): reasonable if individuals know wages one period in advance
+ and have rational expectation 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\epsilon_{t+1}$
+\end_inset
+
+ is orthogonal to information in period 
+\begin_inset Formula $t$
+\end_inset
+
+, so uncorrelated with time-
+\begin_inset Formula $t$
+\end_inset
+
+ variables like 
+\begin_inset Formula $\ln{w_{it}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Consistency of ISE estimates II
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Formula 
+\begin{eqnarray*}
+cov(u_{it},\ln{w_{t}}) & = & E_{t}(u_{it}\ln{w_{t}})-E_{t}(u_{it})E_{t}(\ln{w_{it}})\\
+ & = & E_{t}\Big(\frac{(1+r_{t})\epsilon_{it+1}}{(1+\rho)\lambda_{t}}\ln{w_{it}}\Big)\\
+ & = & \frac{1+r_{t}}{(1+\rho)\lambda_{t}}E_{t}(\epsilon_{it+1}\ln{w_{it}})\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+First line uses definition of covariance, 
+\end_layout
+
+\begin_layout Itemize
+Second line uses definition of 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ and the fact that 
+\begin_inset Formula $E_{t}(u_{it})=\frac{1+r_{t}}{(1+\rho)\lambda_{t}}E_{t}(\epsilon_{it+1})$
+\end_inset
+
+ , 
+\end_layout
+
+\begin_layout Itemize
+Third line uses the fact that 
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{t}$
+\end_inset
+
+ is a constant in period 
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Last line from RE: orthogonality of error terms
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Altonji (1986) - Introduction
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Aim of the paper: 
+\series default
+Estimate the ISE given by the HeckMcCurdy regression
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\ln h_{t}=\Big[\frac{\ln\lambda_{t}-\ln\gamma_{2}-\ln\delta_{2}}{\delta_{2}-1}\Big]+\frac{t}{\delta_{2}-1}\ln\Big(\frac{1+\rho}{1+r_{t}}\Big)+\underbrace{\frac{1}{\delta_{2}-1}}_{\equiv\delta\text{ (ISE)}}\ln w_{t}\label{key}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Data:
+\series default
+ PSID with its March supplement
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Main identification challenge:
+\series default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Labor supply depends both on current wages 
+\begin_inset Formula $w_{it}$
+\end_inset
+
+ and on the all past and future wages through the marginal utility of wealth
+ 
+\begin_inset Formula $\lambda_{it}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Can control for it through labor supply in previous periods (i.e using Fixed
+ Effects) 
+\end_layout
+
+\begin_layout Itemize
+But this exacerbates measurement error in wages 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Altonji (1986) - Empirical strategy
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\series bold
+Approach 1 to control for 
+\begin_inset Formula $\lambda_{it}$
+\end_inset
+
+: Use of past labor as proxy for 
+\begin_inset Formula $\ln\lambda_{it}$
+\end_inset
+
+
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+similar to MaCurdy but does not assume perfect foresight (i.e.
+ use LCLS with uncertainty) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Instead, assume rational expectation and knowledge of 
+\begin_inset Formula $w_{it}$
+\end_inset
+
+ one period in advance which we showed leads to the same estimation equation
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Use a second measure for wage (the direct answer to the march survey question
+ about hourly wage) as an instrument for wage to solve the measurement error
+ problem 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Altonji (1986) - Empirical strategy
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\series bold
+Approach 2 to control for 
+\begin_inset Formula $\lambda_{it}$
+\end_inset
+
+: Use of consumption as a proxy for 
+\begin_inset Formula $\ln\lambda_{it}$
+\end_inset
+
+
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+FOC for consumption 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "MUC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives 
+\begin_inset Formula $\ln\lambda_{it}$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $c_{it}$
+\end_inset
+
+.
+ Use consumption to hold constant marginal utility of wealth 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Note that it works because separability of the utility function implies
+ that consumption depends on current wages 
+\begin_inset Formula $w_{it}$
+\end_inset
+
+ only through 
+\begin_inset Formula $\ln\lambda_{it}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+in practice, instruments both wage and consumption with the additional measure
+ of wage and the permanent component of wage 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Altonji (1986) - Empirical strategy
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\series bold
+Pros and Cons of the 2nd approach VS 1st approach:
+\series default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Pros: does not require to add FE and so keeps a lot of variation and minimize
+ measurement error problem 
+\end_layout
+
+\begin_layout Itemize
+Pros: does not require perfect foresight or rational expectation 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Cons: assume no unobserved differences in preferences for labor supply/consumpti
+on between individuals 
+\end_layout
+
+\begin_layout Itemize
+Cons: requires separability of preferences (whereas FD can be seen as log-linear
+ approximation of true demand system) 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Altonji (1986) - Approach 1 results
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename Altonji1.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Altonji (1986) - Approach 2 results
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename Altonji2.png
+	lyxscale 30
+	width 90text%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Altonji (1986) - Conclusions
+\end_layout
+
+\begin_layout Itemize
+Estimates of ISE between 0.01 and 0.1721 : quite small and similar to MaCurdy.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Main concern:
+\series default
+ non-separable preferences lead to an upward bias in the ISE from the consumptio
+n approach.
+ 
+\end_layout
+
+\begin_layout Itemize
+In this case, 
+\begin_inset Formula $\ln w_{it}$
+\end_inset
+
+ enters in the consumption FOC.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

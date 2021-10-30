@@ -1,0 +1,402 @@
+%% LyX 2.3.5.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage{fourier}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{calc}
+\usepackage{units}
+\usepackage{bm}
+\usepackage{amsmath}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{babel}
+
+\usepackage{geometry}
+%\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=1in,headsep=1in,footskip=1in}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{units}
+\usepackage{amsmath}
+\usepackage{babel}
+\newcommand{\Der}[2]{\frac{\partial #1}{\partial #2}}
+\usepackage{pifont}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\title{14.661 Recitation 5}
+\author{Andrea Manera\thanks{These notes draw from the ones prepared by Clémence Idoux, who drew
+on Christopher Walters' (former TA, now Berkeley Professor), which
+in turn are based on Hamermesh's (not a former TA) HOLE chapter on
+labor demand.}}
+\date{October 22, 2021}
+
+\maketitle
+Today we will derive the \textit{fundamental law of labor demand},
+which allows us to express the long run elasticity of labor demand
+in terms of (1) the elasticity of substitution between inputs ($\sigma$),
+(2) the elasticity of demand for the final product ($\eta$), (3)
+the labor's share of income ($s_{L}$).
+
+\textbf{Fundamental Law of Labor Demand:} \textit{Suppose that (i)
+there is a perfectly competitive market for a final good with demand
+$D\left(p\right)$ and (ii) producers have access to a CRTS production
+function $F(K,L)$. Then the elasticity of labor demand ($\eta_{L}$)
+is:}
+
+\begin{equation}
+\eta_{L}\equiv\Der{\log L(w,r)}{\log w}=\underbrace{-\sigma(1-s_{L})}_{\text{substitution effect}}\underbrace{-\eta s_{L}}_{\text{scale effect}}\label{key}
+\end{equation}
+
+where 
+\begin{itemize}
+\item $\sigma$ is the elasticity of substitution between labor and capital,
+defined to be positive $\sigma\equiv\bm{-}\Der{\log(K/L)}{\log(r/w)}$ 
+\item $s_{L}$ is the labor share: $s_{L}\equiv\frac{wL}{PY}$ 
+\item $\eta$ is the final good demand elasticity $\eta\equiv D'\left(p\right)\frac{p}{D\left(p\right)}$ 
+\end{itemize}
+We will derive this result by building on several individual results,
+we show in the first sections.
+
+\section*{Review of Properties of Homogeneous Functions}
+
+A function $f(x_{1},...,x_{N})$ defined for all nonnegative values
+$(x_{1},...,x_{N})\geq0$ is said to be homogeneous of degree $k$,
+if for every $\alpha>0$,
+\begin{equation}
+f(\alpha x_{1},...,\alpha x_{N})=\alpha^{k}f(x_{1},...,x_{N}).\label{key}
+\end{equation}
+
+Homogeneous functions' derivatives have two interesting properties,
+that we can get using the implicit function theorem. Recall the IFT.
+For an implicit function for $y(x)$ defined so that:
+\[
+G(x,y)=0,
+\]
+as long as the function is differentiable in $x$ and $y$ and the
+derivative wrt $y$ is non-zero, we have:
+\[
+\rightarrow\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{\nicefrac{\partial G}{\partial x}}{\nicefrac{\partial G}{\partial y}}.
+\]
+Now consider:
+\[
+G(\bm{x},f(\bm{x}))=f(\alpha x_{1},...,\alpha x_{N})-\alpha^{k}f(x_{1},...,x_{N})
+\]
+Then:
+\begin{align*}
+\alpha\frac{\partial f(\alpha x_{1},...,\alpha x_{N})}{\partial x_{1}}\mathrm{dx}-\alpha^{k}\mathrm{d}f(x_{1},...,x_{N}) & =0,\\
+\frac{\partial f(\alpha x_{1},...,\alpha x_{N})}{\partial x_{1}} & =\alpha^{k-1}\frac{\partial f(x_{1},...,x_{N})}{\mathrm{\partial x}},
+\end{align*}
+so the derivative is homogenous of degree $k-1$!
+
+Another cool trick (aka Euler's homogeneous function theorem) by using
+the IFT wrt $\alpha$:
+\begin{align*}
+f(\alpha x_{1},...,\alpha x_{N})-\alpha^{k}f(x_{1},...,x_{N})\\
+\sum_{i=1}^{N}x_{1}\frac{\partial f(\alpha x_{1},...,\alpha x_{N})}{\partial x}\mathrm{d}\alpha-k\alpha^{k-1}f(x_{1},...,x_{N})\mathrm{d}\alpha
+\end{align*}
+Setting $\alpha=1$, gives Euler's formula
+\begin{align*}
+\sum_{i=1}^{N}x_{i}\Der{f(\alpha x_{1},...,\alpha x_{N})}{x_{i}} & =kf(x_{1},...,x_{N})
+\end{align*}
+
+
+\paragraph{Formal Recap}
+\begin{center}
+\fbox{\begin{minipage}[c]{6in}%
+\textbf{Property 1 (HF1):} If $f(x_{1},...,x_{N})$ is homogeneous
+of degree $k$, for $k=...-1,0,1....$ then $\Der{f(x_{1},...,x_{N})}{x_{i}}$
+is homogeneous of degree $k-1$ for all $i=1,...N$%
+\end{minipage}}
+\par\end{center}
+
+\begin{center}
+\fbox{\begin{minipage}[c]{6in}%
+\textbf{Property 2 (Euler's homogeneous function theorem):} If $f(x_{1},...,x_{N})$
+is homogeneous of degree $k$, for $k=...-1,0,1....$ then $\sum_{i=1}^{N}\Der{f(x_{1},...,x_{N})}{x_{i}}x_{i}=kf(x_{1},...,x_{N})$%
+\end{minipage}}
+\par\end{center}
+
+\section*{Applications to Cost Minimization}
+
+Dual of profit maximization is cost minimization:
+
+\begin{align*}
+c(w,r,q)=\min_{K,L}wL+rK\quad\text{s.t.}\quad F(K,L)\geq q
+\end{align*}
+
+Just like the expenditure minimization from consumer theory, with
+same properties. 
+
+First and foremost, Shephard's Lemma (aka Envelope Theorem).
+
+Second, The cost function is homogeneous of degree 1 in \emph{input
+prices }(double all prices, I do not change my optimal relative choices
+but cost doubles):
+
+\begin{align*}
+c(\alpha w,\alpha r,q)= & \min_{K,L}\alpha wL+\alpha rK\quad\text{s.t.}\quad F(K,L)\geq q\\
+= & \alpha\min_{K,L}wL+rK\quad\text{s.t.}\quad F(K,L)\geq q\\
+= & \alpha c(w,r,q)
+\end{align*}
+Third, the cost function is homogeneous in the \emph{quantity to produce,
+$q,$}\textbf{ assuming constant returns to scale} (homogeneity of
+degree 1 of the production function). In this case, the optimal capital/labor
+ratio is fixed regardless of $q$, and only depends on $\left(w,r\right)$.
+In math:
+
+\begin{align*}
+c(w,r,\alpha q)= & \min_{K,L}wL+rK\quad\text{s.t.}\quad F(K,L)\geq\alpha q,\\
+= & \alpha\min_{K,L}w\frac{L}{\alpha}+r\frac{K}{\alpha}\quad\text{s.t.}\quad F\left(\frac{K}{\alpha},\frac{L}{\alpha}\right)\geq q,\\
+= & \alpha c(w,r,q).
+\end{align*}
+In particular:
+\[
+c(w,r,q)=qc(w,r,1)\equiv qc^{U}(w,r),
+\]
+where $c^{U}$ denotes the \emph{unit cost function.}
+
+\paragraph{Formal Recap}
+\begin{center}
+\fbox{\begin{minipage}[c]{6in}%
+\textbf{Result 1 (Shephard's Lemma):} 
+\begin{align*}
+\dfrac{\partial c(w,r,q)}{\partial w}=L^{c}(w,r,q),\quad\dfrac{\partial c(w,r,q)}{\partial r}=K^{c}(w,r,q),
+\end{align*}
+Where $\left(L^{c}(w,r,q),K^{c}(w,r,q)\right)=\arg\min_{\left(L,K\right)}wL+rK\quad\text{s.t.}\quad F(K,L)\geq q$%
+\end{minipage}}\\
+ %
+\fbox{\begin{minipage}[c]{6in}%
+\textbf{Result 2:} \textit{For $\alpha\neq0$,}
+
+\[
+c(\alpha w,\alpha r,q)=\alpha c(w,r,q)
+\]
+%
+\end{minipage}}\\
+\fbox{\begin{minipage}[c]{6in}%
+\textbf{Result 3:} \textit{For $\alpha\neq0$,}
+
+\[
+c(w,r,\alpha q)=\alpha c(w,r,q).
+\]
+In particular,
+\[
+c(w,r,q)=qc^{U}(w,r)
+\]
+%
+\end{minipage}}
+\par\end{center}
+
+\subsection*{Elasticity of Substitution}
+
+The elasticity of substitution $\sigma$ for a production function
+is defined as\footnote{Trivia: the elasticity of substitution was first defined in Hicks'
+\emph{Theory of Wages}, which came out in 1932. This was the same
+year of too many horrible and tragic events: the Nazi party won the
+elections in Germany, Japan occupies Manchuria and restore the last
+Chinese Emperor Pu Yi as a puppet, the start of the Great Famine in
+Ukraine, the start of the fascist dictatorship in Portugal... But
+some good things happened too, in addition to Hicks' books: Aldous
+Axley published Brave New World, FDR won the election, and Goofy made
+his first appearance! Also, Australia declared war on Emus (check
+this one out!)}
+\begin{center}
+$\sigma\equiv\bm{-}\dfrac{\mathrm{d}\log\left(\nicefrac{K^{c}}{L^{c}}\right)}{\mathrm{d}\log\left(\nicefrac{r}{w}\right)}=\dfrac{\mathrm{d}\log\left(\nicefrac{K^{c}}{L^{c}}\right)}{\mathrm{d}\log\left(\nicefrac{w}{r}\right)}.$ 
+\par\end{center}
+
+This is just \emph{minus }the elasticity of the capital-labor ratio
+to relative factor prices $r/w$. We put a minus because the elasticity
+is clearly negative (also properties of the cost minimization problem).
+When the production function has constant returns to scale (CRS): 
+\begin{center}
+\fbox{\begin{minipage}[c]{6in}%
+ \textbf{Result 4:} 
+\[
+\sigma=\dfrac{c^{U}c_{wr}^{U}}{c_{r}^{U}c_{w}^{U}}.
+\]
+%
+\end{minipage}} 
+\par\end{center}
+
+This result relies heavily on the homogeneity of the cost function.
+By what we have see above:
+\begin{enumerate}
+\item $c(w,r,q)=wc_{w}+rc_{r}$, from Shephard' Lemma.
+\item $c_{w}(w,r,q)=c_{w}+wc_{ww}+rc_{rw}\Rightarrow wc_{ww}+rc_{rw}=0$.
+\item $c$ is homogeneous of degree 1 $\Rightarrow$ $c_{w},c_{r}$ are
+homogeneous of degree $0$ $\Rightarrow c_{ww},c_{rw}$ are homogeneous
+of degree $-1$.
+\end{enumerate}
+Combining these fact:
+
+\begin{align*}
+\log\left(\nicefrac{K^{c}}{L^{c}}\right)= & \log c_{r}(w,r,q)-\log c_{w}(w,r,q)\\
+= & \log c_{r}\left(\frac{w}{r},1,q\right)-\log c_{w}\left(\frac{w}{r},1,q\right)
+\end{align*}
+
+where the second line uses the fact that $c_{w},c_{r}$, are homogeneous
+of degree 0 in factor prices.
+
+Note:
+
+\begin{align*}
+\sigma= & \dfrac{\mathrm{d}\log\left(\nicefrac{K^{c}}{L^{c}}\right)}{\mathrm{d}\log\left(\nicefrac{w}{r}\right)}=\dfrac{\partial\log\left(\nicefrac{K^{c}}{L^{c}}\right)}{\partial\left(\nicefrac{w}{r}\right)}\cdot\dfrac{w}{r}\\
+= & \dfrac{w}{r}\left(\dfrac{c_{rw}\left(\frac{w}{r},1,q\right)}{c_{r}\left(\frac{w}{r},1,q\right)}-\dfrac{c_{ww}\left(\frac{w}{r},1,q\right)}{c_{w}\left(\frac{w}{r},1,q\right)}\right)\\
+= & \dfrac{w}{r}\left(\dfrac{rc_{rw}(w,r,q)}{c_{r}(w,r,q)}-\dfrac{rc_{ww}(w,r,q)}{c_{w}(w,r,q)}\right)
+\end{align*}
+
+where the last line uses the fact that $c_{ww}$, $c_{rw}$, are homogenous
+of degree -1 in $(w,r)$.
+
+By $wc_{ww}+rc_{wr}=0$:
+
+\begin{align*}
+\dfrac{w}{r}=-\dfrac{c_{wr}}{c_{ww}}\quad\text{and}\quad wc_{ww}=-rc_{wr}.
+\end{align*}
+
+Thus, finally:
+
+\begin{align*}
+\sigma= & -\dfrac{c_{wr}}{c_{ww}}\left(-\dfrac{wc_{ww}}{c_{r}}-\dfrac{rc_{ww}}{c_{w}}\right)\\
+= & c_{wr}\left(\dfrac{wc_{w}+rc_{r}}{c_{r}c_{w}}\right)\\
+= & \dfrac{c\cdot c_{wr}}{c_{r}c_{w}}\\
+= & \dfrac{c^{U}\cdot c_{wr}^{U}}{c_{r}^{U}c_{w}^{U}},
+\end{align*}
+
+where the third line uses Euler's HFT and the last the fact that $c$is
+homogeneous of degree 1, $c_{wr}$ of degree -1, and $c_{r},c_{w}$
+of degree $0$.
+
+\paragraph{Formal Recap}
+\begin{center}
+\fbox{\begin{minipage}[c]{6in}%
+\textbf{Result 4:} 
+\[
+\bm{-}\dfrac{\mathrm{d}\log\left(\nicefrac{K^{c}}{L^{c}}\right)}{\mathrm{d}\log\left(\nicefrac{r}{w}\right)}\equiv\sigma=\dfrac{c^{U}c_{wr}^{U}}{c_{r}^{U}c_{w}^{U}}.
+\]
+%
+\end{minipage}} 
+\par\end{center}
+
+\section*{Market Demand}
+\begin{center}
+\fbox{\begin{minipage}[c]{6in}%
+ \textbf{Result 5:} 
+\[
+L=Qc_{w}^{U}\text{and}\quad K=Qc_{r}^{U}
+\]
+%
+\end{minipage}} 
+\par\end{center}
+
+Assuming all firms have the same production function, we can thus
+write the market's demand for labor as:
+
+\begin{align*}
+L(w,r)= & \sum_{j}L_{j}^{c}(w,r,q_{j})\\
+= & \sum_{j}c_{w}(w,r,q_{j})\quad & \text{By R1}\\
+= & \sum_{j}q_{j}c_{w}^{U}(w,r)\quad & \text{By R4}\\
+= & Qc_{w}^{U}(w,r)
+\end{align*}
+
+where $Q$ is the total quantity produced in the market. A similar
+type of reasoning leads to the equivalent result for capital demand.
+
+The main result in this section gives us a convenient expression for
+the derivative of the market demand for labor $L(w,r)$, in terms
+of substitution and a scale effect.
+\begin{center}
+\fbox{\begin{minipage}[c]{6in}%
+ \textbf{Result 6:} 
+\[
+\frac{\partial L(w,r)}{\partial w}=D\left(p\right)c_{ww}^{U}+D'\left(p\right)\left(c_{w}^{U}\right){}^{2}
+\]
+%
+\end{minipage}} 
+\par\end{center}
+
+Begin by noticing that in equilibrium $Q$ will have to be equal to
+$D\left(p\right)$, so that
+
+\begin{align*}
+L(w,r)= & D\left(p\right)c_{w}^{U}(w,r)
+\end{align*}
+
+Furthermore, in competitive equilibrium it must be the case that the
+product price is equal to marginal cost for each firm, $p=c^{u}(w,r)$,
+so that we can write the previous expression as follows:
+
+\begin{align*}
+L(w,r)= & D(c^{U}(w,r))c_{w}^{U}(w,r)
+\end{align*}
+
+We can now differentiate this expression to obtain the result above.
+
+\section*{Finally: The Fundamental Law of Factor Demand}
+
+Let's put everything together:
+
+\begin{align*}
+\frac{\partial L(w,r)}{\partial w}= & D\left(p\right)c_{ww}^{U}+D'\left(p\right)\left(c_{w}^{U}\right)^{2}\\
+= & -D(c^{U}(w,r))\dfrac{r}{w}c_{wr}^{U}+D'\left(p\right)\left(c_{w}^{U}\right)^{2}\quad & \text{By Euler's HFT}\\
+= & -D\left(p\right)\cdot\dfrac{r}{w}\cdot\sigma\cdot\dfrac{c_{r}^{U}c_{w}^{U}}{c^{U}}+D'\left(p\right)\left(c_{w}^{U}\right)^{2}\quad & \text{By R4}\\
+= & -D\left(p\right)\cdot\dfrac{r}{w}\cdot\dfrac{\sigma}{c^{U}}\cdot\dfrac{LK}{Q^{2}}+D'\left(p\right)\cdot\dfrac{L^{2}}{Q^{2}}\quad & \text{By R5}\\
+= & -\dfrac{rK}{pQ}\cdot\dfrac{\sigma L}{w}+D'\left(p\right)\cdot\dfrac{L^{2}}{D\left(p\right)}
+\end{align*}
+
+were we used that $c^{U}=p$ and $D\left(p\right)=Q$ in the last
+step.
+
+We now write this as an elasticity:
+
+\begin{align*}
+\eta_{L}= & \dfrac{\partial L}{\partial w}\cdot\dfrac{w}{L}\\
+= & -\dfrac{rK}{pQ}\cdot\dfrac{\sigma L}{w}\cdot\dfrac{w}{L}+D'\left(p\right)\cdot\dfrac{L^{2}}{D\left(p\right)}\cdot\dfrac{w}{L}\\
+= & -s_{K}\cdot\sigma+\dfrac{D'\left(p\right)}{D\left(p\right)}\cdot\dfrac{wL}{D\left(p\right)}\quad & \text{Since }s_{K}=\dfrac{rK}{pQ}\\
+= & =-s_{K}\cdot\sigma+D'\left(p\right)\cdot\dfrac{p}{D\left(p\right)}\cdot\dfrac{wL}{pQ}\\
+= & -s_{K}\cdot\sigma-\eta\cdot s_{L}\quad & \text{Since }s_{L}=\dfrac{wL}{pQ}\\
+= & -(1-s_{L})\cdot\sigma-\eta\cdot s_{L}
+\end{align*}
+
+In the last step we used $s_{K}+s_{L}=1$ since there are no profits
+(or, alternatively, it is implied by Euler's HFT along with $p=c^{U}$).
+
+\subsection*{Comparative Statics}
+\begin{enumerate}
+\item $\sigma\uparrow\implies\vert\eta_{L}\vert\uparrow$: When substitution
+to other factors is easier, the market demand curve for labor is more
+elastic. Intuition: use more capital in response to higher wages
+\item $\eta\uparrow\implies\vert\eta_{L}\vert\uparrow$: When product demand
+is more elastic, labor demand is more elastic. Intuition: I loose
+more demand when I have to pass on higher wages to prices, so I also
+produce less.
+\item $\left(s_{L}\uparrow\implies\vert\eta_{L}\vert\uparrow\right)\Longleftrightarrow\left(\sigma<\eta\right)$:
+When labor's share of income increases, labor demand becomes more
+elastic iff the elasticity of product demand is larger than the elasticity
+of substitution. Intuition: if the labor share is high, it means $WL$
+is relatively high, that is I employ lots of labor. If the elasticity
+of product demand is very large, I loose lots of demand (labor) when
+the wage increases. However, if I have a high elasticity of substitution,
+I can trade off (relatively little) labor to save demand and charge
+not so high prices, which result in a lower decrease in labor demand.
+\end{enumerate}
+These are three of the ``Hicks-Marshall Laws of Derived Demand.''
+The remaining one requires looking at the elasticity of \emph{supply}
+of other factors, which here we did not cover, which would affect
+how much easy it is to scale up with capital relative to labor. That
+is:
+\begin{enumerate}
+\item[4.]  $\vert\eta_{L}\vert\uparrow$ if the supply of other factors is
+more elastic. Intuition: it is easier to scale up the use of alternative
+factors.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Applied Competitive Analysis}{3}{0}{1}
+\beamer@sectionintoc {2}{General Equilibrium: Pure Exchange}{12}{0}{2}
+\beamer@sectionintoc {3}{Gains from International Trade}{19}{0}{3}

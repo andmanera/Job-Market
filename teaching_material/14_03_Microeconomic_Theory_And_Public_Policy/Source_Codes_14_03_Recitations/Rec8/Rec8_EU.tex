@@ -1,0 +1,271 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2cm,rmargin=2cm}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{esint}
+\onehalfspacing
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Special footnote code from the package 'stblftnt.sty'
+%% Author: Robin Fairbairns -- Last revised Dec 13 1996
+\let\SF@@footnote\footnote
+\def\footnote{\ifx\protect\@typeset@protect
+    \expandafter\SF@@footnote
+  \else
+    \expandafter\SF@gobble@opt
+  \fi
+}
+\expandafter\def\csname SF@gobble@opt \endcsname{\@ifnextchar[%]
+  \SF@gobble@twobracket
+  \@gobble
+}
+\edef\SF@gobble@opt{\noexpand\protect
+  \expandafter\noexpand\csname SF@gobble@opt \endcsname}
+\def\SF@gobble@twobracket[#1]#2{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\usepackage{enumitem}		% customizable list environments
+\newlength{\lyxlabelwidth}      % auxiliary length 
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+  \theoremstyle{definition}
+  \newtheorem{defn}[thm]{\protect\definitionname}
+  \theoremstyle{plain}
+  \newtheorem*{prop*}{\protect\propositionname}
+
+\makeatother
+
+\usepackage{babel}
+  \providecommand{\definitionname}{Definition}
+  \providecommand{\propositionname}{Proposition}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+\title{Recitation 8: Expected Utility}
+\author{Andrea Manera\footnote{I thank Alex He for sharing his notes. Remaining errors are my own.}}
+\date{Spring 2020}
+\maketitle
+
+
+
+
+\section{Willingness to pay for insurance}
+
+\noindent Suppose that a risk-averse agent:
+\begin{itemize}
+\item has von Neumann-Morgenstern utility function given by $u(w)=\ln(w)$,
+\item faces a 50 percent chance of getting $w=\$200$ and a complementary
+50 percent chance of having $w=\$100$.\\
+\end{itemize}
+\textbf{Question: How much is the agent willing to pay, in expected
+value, to avoid this uncertainty?}
+\begin{itemize}
+\item In absence of insurance, the agent's expected utility is:
+\[
+E[u(w)]=0.5\ln200+0.5\ln100=4.952.
+\]
+\item Expected wealth is:
+\[
+E[w]=0.5\times200+0.5\times100=\$150.
+\]
+\item The certainty equivalent (i.e., the fixed amount of money the gives
+the same expected utility as the uncertain realization of the agent's
+wealth) is:
+\[
+CE=\exp[4.952]=\$141.5,
+\]
+because \$141.5 given to the agent with probability = 1 yield the
+same expected utility as the lottery described above.
+\item Thus, to avoid uncertainty, the agent is willing to pay:
+\[
+WTP=E[w]-CE=\$150-\$141.5=\$8.50.
+\]
+\end{itemize}
+The hard point to conceptualize in this example (and in the relevant
+question on the problem set) is that, given the uncertainty, ex-ante
+we don't know the exact realization of the agent's wealth (i.e., whether
+she'll have \$200 or \$100). Thus, the agent's willingness to pay
+for insurance has to be ``benchmarked'' to her expected wealth.
+Specifically, her willingness to pay is given by the difference between
+her expected wealth absent insurance and her certainty equivalent.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Deriving Expected Utility Theorem}
+
+
+
+\begin{defn}
+A simple lottery $L$ is a list $L=\left(p_{1},...p_{N}\right)$ with
+$p_{n}\geq0$ for all $n$ and $\Sigma_{n}p_{n}=1,$ where $p_{n}$
+is interpreted as the probability of outcome $n$ occurring. 
+\end{defn}
+
+ Take the set of alternatives the
+decision maker faces, denoted by $\pounds$ to be the set of all simple
+lotteries over possible outcomes $N$.
+We assume the consumer has a rational preference relation $\succsim$
+on $\pounds,$ a \emph{complete} and \emph{transitive} relation allowing
+comparison among any pair of simple lotteries.
+
+\vskip2ex
+ \textbf{Axiom 1. Continuity}\emph{. Small changes in probabilities
+do not change the nature of the ordering of two lotteries. This can
+be made concrete here (I won't use formal notation b/c it's a mess).
+If a ``bowl of miso soup\textquotedblright{} is preferable to a ``cup
+of Kenyan coffee,\textquotedblright{} then a mixture of the outcome
+``bowl of miso soup\textquotedblright{} and a sufficiently small
+but positive probability of ``death by sushi knife\textquotedblright{}
+is still preferred to ``cup of Kenyan coffee.\textquotedblright{}}
+ 
+\vskip2ex
+\textbf{Axiom 2. Independence.} \emph{The preference relation }$\succsim$\emph{\ on
+the space of simple lotteries }$\pounds$\emph{ satisfies the independence
+axiom if for all }$L,L^{\prime},L^{\prime\prime}\in\pounds$\emph{
+and }$\alpha\in\left(0,1\right)$\emph{, we have} 
+\[
+L\succsim L^{\prime}\text{ if and only if ~}\alpha L+\left(1-\alpha\right)L^{\prime\prime}\succsim\alpha L^{\prime}+\left(1-\alpha\right)L^{\prime\prime}\text{. }
+\]
+
+ In words, when we mix each of two lotteries with a third one, then
+the preference ordering of the two resulting mixtures does not depend
+on (is \emph{independent of}) the particular third lottery used.
+ Example: If a bowl of miso soup is preferred to cup of Peets coffee,
+then the lottery (bowl of miso soup with 50\% probability, steak dinner
+with 50\% probability) is preferred to the lottery (cup of Peets coffee
+with 50\% probability, steak dinner with 50\% probability). 
+
+\subsection{Expected utility theory}
+\begin{itemize}
+\item We now want to define a class of utility functions over risky choices
+that have the ``expected utility form.\textquotedblright{} We will
+then prove that if a utility function satisfies the definitions above
+for \emph{continuity }and \emph{independence} in preferences over
+lotteries, then the utility function has the expected utility form.
+
+\begin{defn}
+\emph{The utility function }$U:\pounds\rightarrow\mathbb{R}$\emph{
+has an expected utility form if there is an assignment of numbers
+}$\left(u_{1},...u_{N}\right)$\emph{ to the }$N$\emph{ outcomes
+such that for every simple lottery }$L=\left(p_{1},...,p_{N}\right)\in\pounds$\emph{
+we have that }
+\[
+U\left(L\right)=u_{1}p_{1}+...+u_{N}p_{N}.
+\]
+
+\end{defn}
+\item A utility function with the expected utility form is called a Von
+Neumann-Morgenstern (VNM) expected utility function.
+
+\item In other words, a utility function has the expected utility form if
+and only if:
+\[
+U\left(\sum{}_{k=1}^{K}\alpha_{k}L_{k}\right)=\sum{}_{k=1}^{K}\alpha_{k}U\left(L_{k}\right)
+\]
+for any $K$ lotteries $L_{k}\in\pounds$, $k=1,...,K,$ and probabilities
+$\left(\alpha_{1},...,\alpha_{K}\right)\geq0$, $\Sigma_{k}\alpha_{k}=1.$
+\item Intuitively, a utility function has the expected utility property
+if the utility of a lottery is simply the (probability) weighted average
+of the utility of each of the outcomes.
+
+\end{itemize}
+
+\subsection{Proof of expected utility property}
+\begin{prop*}
+  (Expected utility theory) Suppose that the rational preference
+  relation $\succsim$ on the space of lotteries $\pounds$ satisfies
+  the continuity and independence axioms. Then $\succsim$ admits a
+  utility representation of the expected utility form. That is, we can
+  assign a number $u_{n}$ to each outcome $n=1,...,N$ in such a manner
+  that for any two lotteries $L=\left(p_{1},...,p_{N}\right)$ and
+  $L^{\prime}=\left(p_{1}^{\prime},...p_{N}^{\prime}\right),$ we have
+  $L\succsim L^{\prime}$ if and only if \[
+\sum\limits _{n=1}^{N}u_np_{n}\geq\sum\limits _{n=1}^{N}u_{n}p_{n}^{\prime}
+\].
+\end{prop*}
+
+\begin{proof}
+  We will show that for any two lotteries $L$ and $L'$, and $\beta\in
+  (0,1)$, there is a utility function $U$ representing preferences
+  over lotteries, such that $U(\beta L + (1-\beta) L') = \beta U(L) +
+  (1-\beta) U(L')$. This is equivalent to showing the Expected Utility
+  Property stated above because if we take $L_n$ to be a lottery that
+  results in outcome $n$ with certainty, then $U(L) = U(\sum_np_nL_n)
+  = \sum_n p_nU(L_n) = \sum_n p_nu_n$
+
+
+Expected Utility Property (in five steps)
+\end{proof}
+\qquad{}Assume that there are best and worst lotteries in $\pounds$,
+$\bar{L}$ and \underline{$L$}.
+\begin{enumerate}
+\item If $L$ $\succ L^{\prime}$ and $\alpha\in\left(0,1\right),$ then
+$L\succ\alpha L+\left(1-\alpha\right)L^{\prime}\succ L^{\prime}.$
+This follows immediately from the independence axiom.
+\item Let $\alpha,\beta\in\left[0,1\right].$ Then $\beta\bar{L}+\left(1-\beta\right)$\underline{$L$}$\succ\alpha\bar{L}+\left(1-\alpha\right)$\underline{$L$}
+if and only if $\beta>\alpha$. This follows from the prior step.
+\item For any $L\in\pounds$, there is a unique $\alpha_{L}$ such that
+$\left[\alpha_{L}\bar{L}+\left(1-\alpha_{L}\right)\underline{L}\right]\sim L$.
+Existence follows from continuity. Uniqueness follows from the prior
+step.
+\item We now need to define a utility function that satisfies the
+  expected utility property. Though there may be many choices, our
+  proposition only requires us to pick one that represents the
+  preferences over lotteries and satisfies the expected utility
+  property. Condsider the function $U:\pounds\rightarrow\mathbb{R}$
+  that assigns $U\left(L\right)=\alpha_{L}$ for all $L\in\pounds$. It
+  represents the preference relation $\succsim$ because from Step 3,
+  we know that for any two lotteries $L,L^{\prime}\in\pounds,$ we have
+\[
+L\succsim L^{\prime}\text{ if and only if }\left[\alpha_{L}\bar{L}+\left(1-\alpha_{L}\right)\underline{L}\right]\succsim\left[\alpha_{L^{\prime}}\bar{L}+\left(1-\alpha_{L^{\prime}}\right)\underline{L}\right].
+\]
+Thus $L\succsim L^{\prime}$ if and only if $\alpha_{L}\geq\alpha_{L^{\prime}}$.
+\item The utility function $U\left(\cdot\right)$ that assigns $U\left(L\right)=\alpha_{L}$
+for all $L\in\pounds$ is linear and therefore has the expected utility
+form. \\
+\textbf{We want to show that for any }$L,L^{\prime}\in\pounds,$\textbf{\
+and }$\beta\left[0,1\right],$\textbf{\ we have }$U\left(\beta L+\left(1-\beta\right)L^{\prime}\right)=\beta U\left(L\right)+\left(1-\beta\right)U\left(L^{\prime}\right).$
+\\
+By step (3) above, we have 
+\begin{eqnarray*}
+L & \sim & U\left(L\right)\bar{L}+\left(1-U\left(L\right)\right)\underline{L}=\alpha_{L}\bar{L}+\left(1-\alpha_{L}\right)\underline{L}\\
+L^{\prime} & \sim & U\left(L^{\prime}\right)\bar{L}+\left(1-U\left(L^{\prime}\right)\right)\underline{L}=\alpha_{L^\prime}\bar{L}+\left(1-\alpha_{L^\prime}\right)\underline{L}.
+\end{eqnarray*}
+By the Independence Axiom, 
+\begin{eqnarray*}
+\beta L+\left(1-\beta\right)L^{\prime} &\sim & \beta\left[U\left(L\right)\bar{L}+\left(1-U\left(L\right)\right)\underline{L}\right]+\left(1-\beta\right)\left[U\left(L^{\prime}\right)\bar{L}+\left(1-U\left(L^{\prime}\right)\right)\underline{L}\right]\\
+&  = & \left[\beta U\left(L\right)+\left(1-\beta\right)U\left(L^{\prime}\right)\right]\bar{L}+\left[\beta\left(1-U\left(L\right)\right)+\left(1-\beta\right)\left(1-U\left(L\right)^{\prime}\right)\right]\underline{L}\\
+ & = & \left[\beta U\left(L\right)+\left(1-\beta\right)U\left(L^{\prime}\right)\right]\bar{L}+\left[1-\beta U\left(L\right)+\left(\beta-1\right)U\left(L^{\prime}\right)\right]\underline{L}.
+\end{eqnarray*}
+By step (4), this expression can be written as 
+\begin{eqnarray*}
+ &  & \left[\beta\alpha_{L}+\left(1-\beta\right)\alpha_{L^{\prime}}\right]\bar{L}+\left[1-\beta\alpha_{L}+\left(\beta-1\right)\alpha_{L^\prime}\right]\underline{L}\\
+ & = & \beta U\left(L\right)+\left(1-\beta\right)U\left(L^{\prime}\right).
+\end{eqnarray*}
+This establishes that a utility function that satisfies continuity
+and the Independence Axiom, has the expected utility property: $U\left(\beta L+\left(1-\beta\right)L^{\prime}\right)=\beta U\left(L\right)+\left(1-\beta\right)U\left(L^{\prime}\right)$ 
+\end{enumerate}
+
+
+
+\end{document}

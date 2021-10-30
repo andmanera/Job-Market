@@ -1,0 +1,1479 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+%\usetheme{metropolis}
+%\usetheme{Darmstadt}
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage[bottom]{footmisc}
+\usepackage{placeins}
+%\usepackage[adobe-utopia]{mathdesign}
+\usepackage{pifont}
+%\usepackage{kerkis}
+%\usepackage{pxfonts}
+\usepackage[default]{lato}
+%\usepackage{mathpazo}
+\usepackage{eulervm}
+
+
+
+\usepackage{dcolumn}
+\usepackage{bbm}
+\newcolumntype{d}[0]{D{.}{.}{5}}
+
+\usepackage{changepage}
+
+\addtobeamertemplate{frametitle}{}{\vspace{-0.2 cm}}
+
+\setbeamertemplate{frametitle} 
+{ 
+	\begin{centering} 
+		\LARGE
+		\insertframetitle
+		\par 
+	\end{centering} 
+} 
+
+\setbeamerfont{title}{size = \LARGE}
+
+
+
+
+
+%COLORS
+\definecolor{chamois}{RGB}{254,254,245}
+\definecolor{oldchamois}{RGB}{255,255,240}
+\definecolor{darkbrown}{RGB}{124,79,0}
+\definecolor{UniBlue}{RGB}{65,55,203}
+\definecolor{bordeaux}{RGB}{201,18,18}
+\definecolor{redd}{RGB}{245,29,29}
+
+
+\definecolor{hellgelb}{rgb}{1,1,0.8}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+\definecolor{textcolour}{rgb}{0.37,0.34,0.27}
+
+\definecolor{ITgreen}{rgb}{0,204/256,0}
+
+\iffalse
+%LIN AT THE TOP
+\usepackage{tikz}
+\newcommand{\topline}{%
+	\tikz[remember picture,overlay] {%
+		\draw[bordeaux,thick] ([yshift=-1.4cm]current page.north west)-- ([yshift=-1.4cm,xshift=\paperwidth]current page.north west);}}
+
+\addtobeamertemplate{frametitle}{
+}{\topline%
+}
+\fi
+
+%ITEMIZE SEP
+\setlength{\itemsep}{10mm}
+%BACKGROUND AND ITEMIZE
+%\setbeamercolor{background canvas}{bg=chamois}
+\setbeamercolor{itemize item}{fg=bordeaux}
+%\setbeamertemplate{itemize item}{\maltese}
+\setbeamercolor{itemize subitem}{fg=bordeaux}
+\setbeamertemplate{itemize subitem}{$\diamondsuit$}
+
+%ELEMENT COLORS
+\setbeamercolor{title}{fg=UniBlue}
+\setbeamercolor{frametitle}{fg=UniBlue}
+\setbeamercolor{structure}{fg=textcolour}
+
+%COLORS FIRST PAGE
+\setbeamercolor{author}{fg=darkbrown}
+\setbeamercolor{date}{fg=darkbrown!60}
+\setbeamercolor{institute}{fg=darkbrown}
+
+%BLOCK SPECS
+\setbeamercolor{block title}{bg=UniBlue!30,fg=white}
+\setbeamercolor{block body}{bg=UniBlue!10,fg=black}
+%\addtobeamertemplate{block begin}{%
+%	\centering
+%	\setlength{\textwidth}{1\textwidth}%
+%}{}
+
+%\setbeamercolor{block title alerted}{bg=yellow!60,fg=red}
+%\setbeamercolor{block body alerted}{bg=hellgelb!80,fg=UniBlue}
+
+
+\setbeamercolor{alert}{fg=redd}
+\renewcommand<>{\alert}[1]{%
+	{\usebeamercolor[fg]{alert}\only#2{}#1}%
+}
+
+\newcommand{\blue}{\color{blue}}
+
+
+
+
+
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+
+
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
+\usepackage{lscape}
+
+%%% TIKZ %%%%
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{snakes}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{matrix,shapes,arrows,fit,tikzmark}
+\usepackage{pgfplots}
+
+
+
+\usepackage{dcolumn}
+\usepackage{bbm}
+\newcolumntype{d}[0]{D{.}{.}{1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
+
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+
+%\usepackage{animate}
+\end_preamble
+\options aspectratio = 169,  serif, mathserif, professionalfont
+\use_default_options true
+\begin_modules
+theorems-ams
+graphicboxes
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "IBM Plex Serif"
+\font_sans "default" "IBM Plex Sans"
+\font_typewriter "default" "Hack"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine biblatex-natbib
+\cite_engine_type authoryear
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\branch Motivation 1
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Motivation 2
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+14.661 Recitation 4: Losses and Leases
+\end_layout
+
+\begin_layout Author
+Andrea Manera
+\end_layout
+
+\begin_layout Date
+October 15, 2021
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzset{            every picture/.style={remember picture,baseline},   
+      every node/.style={anchor=base,align=center,outer sep=1.5pt},      
+   every path/.style={thick}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+marktopleft[1]{% 
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+tikz[overlay,remember picture]          
+\backslash
+node (marker-#1-a) at (-.3em,.3em) {};% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+markbottomright[2]{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+tikz[overlay,remember picture]          
+\backslash
+node (marker-#1-b) at (0em,0em) {};%  
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzstyle{every picture}+=[remember picture] 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzstyle{mybox} =[draw=black, very thick, rectangle, inner sep=10pt, inner
+ ysep=20pt] 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzstyle{fancytitle} =[draw=black,fill=red, text=white] 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pgfplotsset{compat=1.9}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pgfplotsset{every axis/.append style={            label style={font=
+\backslash
+Large},                     tick label style={font=
+\backslash
+Large}                       }}
+\end_layout
+
+\begin_layout Plain Layout
+
+%%%% END TIKZ STUFF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Roadmap
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Revise compensating variation
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Analyze Taxi take-up
+\end_layout
+
+\begin_layout Itemize
+Loss aversion framework
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Estimate loss aversion on earnings
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Excess expenditure function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Recall that the expenditure function is defined as:
+\begin_inset Formula 
+\begin{align*}
+e(p,w,\bar{u}) & \equiv\min_{x,l:u(x,l)=\bar{u}}px+wl
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Gives optimal consumption 
+\begin_inset Formula $x^{c},$
+\end_inset
+
+ leisure 
+\begin_inset Formula $l^{c}$
+\end_inset
+
+ (Hicksian/compensated demand)
+\end_layout
+
+\begin_layout Itemize
+Can be used to define a money-metric utility, the 
+\emph on
+excess expenditure
+\emph default
+
+\begin_inset Formula 
+\[
+s(w,\bar{u})=e(p,w,\bar{u})-wT,
+\]
+
+\end_inset
+
+the amount of dollars I need transferred to achieve utility 
+\begin_inset Formula $\bar{u}$
+\end_inset
+
+ on top of the value of my endowment.
+\end_layout
+
+\begin_layout Itemize
+Note:
+\begin_inset Formula 
+\[
+s(w,\bar{u})=px^{c}-wh^{c}
+\]
+
+\end_inset
+
+amount of dollars needed to achieve utility 
+\begin_inset Formula $\bar{u}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+CV
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The more cash I need to achieve utility 
+\begin_inset Formula $\bar{u},$
+\end_inset
+
+ the happier I am (non-satiation!)
+\end_layout
+
+\begin_layout Itemize
+Compensating variation after a wage change:
+\begin_inset Formula 
+\begin{align*}
+CV & \equiv e(p,w',V(p,w'))-e(p,w',V(p,w)),\\
+ & =e(p,w,U)-e(p,w',U),
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $V(p,w)=U$
+\end_inset
+
+ is the indirect utility at the initial allocation, second line duality
+\end_layout
+
+\begin_layout Itemize
+This gives how much money I have to take from the agent after the change
+ to make them indifferent to it!
+\end_layout
+
+\begin_layout Itemize
+Note: 
+\emph on
+utility of new allocation is higher IFF CV is positive.
+
+\emph default
+ (I had to spend more/work more to achieve same 
+\begin_inset Formula $U$
+\end_inset
+
+ before)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+CV with excess expenditure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Applying this to the Uber context note first that minimum expenditure with
+ Taxi is (gotta pay the lease)
+\begin_inset Formula 
+\[
+e(p,w,\bar{u})\equiv\min_{x,l:u(x,l)=\bar{u}}px+wl+L.
+\]
+
+\end_inset
+
+Given this the CV for moving from Uber with fee 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ to taxi without fee is:
+\begin_inset Formula 
+\[
+CV=e\left(p,\underset{\equiv w_{0}}{\underbrace{w\left(1-t_{0}\right)}},u_{0}\right)-e\left(p,w,u_{0}\right)=s\left(w_{0},u_{0}\right)-s\left(w,u_{0}\right)-L.
+\]
+
+\end_inset
+
+From above, I choose taxi IFF
+\begin_inset Formula 
+\[
+s\left(w_{0},u_{0}\right)-s\left(w,u_{0}\right)-L>0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Writing the decision nicely
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Recall 
+\begin_inset Formula 
+\[
+s(w,u_{0})=px^{c}-wh^{c}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Second-order expansion of 
+\begin_inset Formula $s(w,u_{0})$
+\end_inset
+
+ around 
+\begin_inset Formula $w_{0}:$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+s(w,u_{0})-s(w_{0},u_{0}) & \approx-h^{c}\left(w-(1-t_{0})w\right)-\frac{1}{2}\left(\frac{\partial h^{c}}{\partial w}\right)\left(w-(1-t_{0})w\right)^{2}\\
+ & =-t_{0}wh_{0}-\frac{t_{0}^{2}w^{2}}{2}\left(\frac{\partial h^{c}}{\partial w}\right)\\
+ & =-t_{0}wh_{0}-\frac{1}{2}\left(\underset{\equiv\delta}{\underbrace{\frac{\partial h^{c}}{\partial w}\frac{w\left(1-t_{0}\right)}{h_{0}}}}\right)t_{0}wh_{0}\frac{t_{0}}{1-t_{0}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Here 
+\begin_inset Formula $\delta$
+\end_inset
+
+ is the 
+\emph on
+Hicksian 
+\emph default
+labor supply elasticity (at fixed utility) around the Uber equilibrium
+\end_layout
+
+\begin_layout Itemize
+See paper for the analogous LCLS derivation, in which case Frisch elasticity,
+ 
+\begin_inset Formula $\delta^{f}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Breakeven and Take-up
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Back to the fundamental question: when does someone take taxi and what can
+ we learn?
+\end_layout
+
+\begin_layout Itemize
+From above, taxi is better when:
+\begin_inset Formula 
+\begin{align*}
+s\left(w_{0},u_{0}\right)-s\left(w,u_{0}\right)-L & >0\\
+wh_{0} & >\underset{\text{adjusted breakeven}}{\underbrace{\underset{\text{Taxi lease breakeven}}{\underbrace{\frac{L}{t_{0}}}}\left(1+\frac{1}{2}\delta^{f}\frac{t_{0}}{1-t_{0}}\right)^{-1}}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Estimated take-up is the share of workers making more than the adjusted
+ breakeven.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Surprising Undersubscription?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Use the experiment to estimate the Frisch elasticity, 
+\begin_inset Formula $\delta^{f}$
+\end_inset
+
+, 2SLS regression:
+\begin_inset Formula 
+\begin{align*}
+\log h_{it} & =\delta^{f}\log w_{it}+\beta X_{it}+\eta_{it},\\
+\log w_{it} & =\gamma Z_{it}+\lambda X_{it}+\upsilon_{it}.
+\end{align*}
+
+\end_inset
+
+Use 
+\begin_inset Formula $\hat{\delta}^{f}$
+\end_inset
+
+ to compute adjusted breakeven and predicted take-up rate for 
+\begin_inset Formula $j$
+\end_inset
+
+ experimental strata:
+\begin_inset Formula 
+\[
+q_{0,j}(L,t)=\frac{1}{N_{j}}\sum_{i=1}^{N_{j}}\bm{1}\left\{ \log wh_{0i}>\log\left[\frac{L}{t}\left(1+\frac{1}{2}\hat{\delta}^{f}\frac{t}{1-t}\right)^{-1}\right]\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Surprising Undersubscription?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename undersubs.pdf
+	lyxscale 30
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+A Loss-Aversion Framework
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Earnings are uncertain and drivers are taking a gamble
+\end_layout
+
+\begin_layout Itemize
+Risk aversion to fix the facts with very low wealth is near 
+\begin_inset Formula $20$
+\end_inset
+
+ (mean of estimates is 2!)
+\end_layout
+
+\begin_layout Itemize
+Idea: drivers are loss averse and reference average earnings
+\end_layout
+
+\begin_layout Itemize
+We have to further adjust the breakeven!
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fehr and Goette (2007): Loss-Aversion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Consider a utility function linear in earnings, with a reference point 
+\begin_inset Formula $c$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+u(x)=\begin{cases}
+x-c & x\geq c\\
+\gamma\left(x-c\right) & x<c
+\end{cases}
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $\gamma>1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Every dollar earned below 
+\begin_inset Formula $c$
+\end_inset
+
+ lowers my utility by 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ (loss aversion), dollars above 
+\begin_inset Formula $c$
+\end_inset
+
+ increase utility by just 1
+\end_layout
+
+\begin_layout Itemize
+Assume:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Inelastic labor supply, hours fixed at 
+\begin_inset Formula $\bar{h}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Wage can be high, 
+\begin_inset Formula $w^{H}$
+\end_inset
+
+, with probability 
+\begin_inset Formula $p$
+\end_inset
+
+ or low, 
+\begin_inset Formula $w^{L}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Reference point is potential rideshare earnings 
+\begin_inset Formula $w^{H}\bar{h},$
+\end_inset
+
+ or 
+\begin_inset Formula $w^{L}\bar{h}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In the low state I make more with Uber than taxi: 
+\begin_inset Formula $w^{L}\bar{h}\left(1-t\right)>w^{L}\bar{h}-L$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Note: if 
+\begin_inset Formula $c=0$
+\end_inset
+
+ I take Taxi as long as I am above breakeven
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Take-up with loss-aversion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Expected utility from Taxi with reference dependence is:
+\begin_inset Formula 
+\begin{align*}
+\left\{ p\left[w^{H}\bar{h}-L-(1-t)w^{H}\bar{h}\right]+\left(1-p\right)\gamma\left[w^{L}\bar{h}-L-(1-t)w^{L}\bar{h}\right]\right\}  & =\\
+\left\{ p\left[tw^{H}\bar{h}\right]+\left(1-p\right)\gamma\left[tw^{L}\bar{h}\right]\right\} -\left(p+\left(1-p\right)\gamma\right)L
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Note: expected utility of Uber normalized to 
+\begin_inset Formula $0$
+\end_inset
+
+ via reference-dependence
+\end_layout
+
+\begin_layout Itemize
+We then have:
+\begin_inset Formula 
+\[
+\left\{ p\left[w^{H}\bar{h}\right]+\left(1-p\right)\gamma\left[w^{L}\bar{h}\right]\right\} \geq\left(p+\left(1-p\right)\gamma\right)\frac{L}{t},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Take-up with loss-aversion II
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Note:
+\begin_inset Formula 
+\begin{align*}
+\left\{ p\left[w^{H}\bar{h}\right]+\left(1-p\right)\gamma\left[w^{L}\bar{h}\right]\right\}  & =\mathbb{E}\left[w\bar{h}\right]+\left(1-p\right)\left(\gamma-1\right)\pi\frac{L}{t}\\
+ & =\mathbb{E}\left[w\bar{h}\right]+\left(1-p\right)\left(\gamma-1\right)\pi\frac{L}{t},
+\end{align*}
+
+\end_inset
+
+with 
+\begin_inset Formula $\pi<1$
+\end_inset
+
+ the ratio between 
+\begin_inset Formula $w^{L}\bar{h}$
+\end_inset
+
+ and the breakeven.
+ Then the decision rule is:
+\begin_inset Formula 
+\[
+\mathbb{E}\left[w\bar{h}\right]\geq\underset{\equiv\kappa>1}{\underbrace{\left(p+\left(1-p\right)\left(\pi+\left(1-\pi\right)\gamma\right)\right)}}\frac{L}{t}>\frac{L}{t}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Estimating 
+\begin_inset Formula $\kappa$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We can use take-up decisions to estimate loss aversion, parametrized by
+ 
+\begin_inset Formula $\kappa$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Need to know expected earnings, as well as distribution of earnings
+\end_layout
+
+\begin_layout Itemize
+Assume that earning forecasts are drawn from a log-normal, conditional on
+ covariates 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\ln y_{0i}\mid X_{i}\sim N\left(X_{i}'\beta,\tau_{0}^{2}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\tau_{0}^{2}$
+\end_inset
+
+ is the variance of forecasts errors
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Estimating 
+\begin_inset Formula $\kappa$
+\end_inset
+
+: Probit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Take logs of breakeven earnings of individual 
+\begin_inset Formula $i$
+\end_inset
+
+ with loss aversion:
+\begin_inset Formula 
+\[
+\kappa\frac{L_{i}}{t_{i}}\left(1+\frac{1}{2}\delta^{f}\frac{t_{i}}{1-t_{i}}\right)^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Then by symmetry of normal distribution, the predicted take-up is the inverse
+ normal CDF:
+\begin_inset Formula 
+\begin{align*}
+q_{0}\left(L_{i},t_{i};X_{i}\right) & =1-\Phi\left(\frac{\ln\kappa+\ln\frac{L_{i}}{t_{i}}-\ln\left(1+\frac{1}{2}\delta^{f}\frac{t_{i}}{1-t_{i}}\right)-X'_{i}\beta}{\tau_{0}}\right)\\
+ & =\Phi\left(\frac{1}{\tau_{0}}\chi_{i}-\frac{1}{\tau_{0}}\kappa\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Can use probit regression!
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Probit Regression
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+First compute:
+\begin_inset Formula 
+\[
+\hat{\chi}_{i}=\ln\left(1+\frac{1}{2}\hat{\delta}^{f}\frac{t_{i}}{1-t_{i}}\right)+X'_{i}\hat{\beta}-\ln\frac{L_{i}}{t_{i}},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is estimated in control group regressing log earnings on covariates 
+\end_layout
+
+\begin_layout Itemize
+Then estimate probit via maximum likelihood:
+\begin_inset Formula 
+\[
+P\left[D_{i}=1\mid L_{i},t_{i},X_{i}\right]=\Phi\left(\frac{1}{\tau_{0}}\hat{\chi}_{i}-\frac{1}{\tau_{0}}\kappa\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename KappaEst.pdf
+	width 65text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\longrightarrow$
+\end_inset
+
+Implies a loss aversion of 
+\begin_inset Formula $\approx2$
+\end_inset
+
+ close to Tversky and Kahneman (1991)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Non-Parametric
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+No need to assume that forecasts are log-normal, use quantile regression:
+\begin_inset Formula 
+\[
+F^{-1}\left(1-p_{L,t}\right)=\ln\kappa+\ln\frac{L}{t}-\sigma(t),
+\]
+
+\end_inset
+
+where:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma(t)$
+\end_inset
+
+ is the log of the breakeven correction factor
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p_{L,t}$
+\end_inset
+
+ is the fraction of drivers that take up give a taxi contract 
+\begin_inset Formula $[L,t]$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Itemize
+that is, with wages above corrected take-up
+\end_layout
+
+\begin_layout Itemize
+In each stratum, 
+\begin_inset Formula $F^{-1}\left(1-p_{L,t}\right)$
+\end_inset
+
+ the weekly earnings such that a proportion 
+\begin_inset Formula $p_{L,t}$
+\end_inset
+
+ of drivers accept taxi 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Non-Parametric Results
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Quantiles.pdf
+	width 63text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Black line: predicted non-take-up quantiles with 
+\begin_inset Formula $\kappa=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Light blue: actual non take-up quantiles, difference in intercept is 
+\begin_inset Formula $\log\kappa,$
+\end_inset
+
+
+\begin_inset Formula $\kappa\approx1.6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\end_body
+\end_document

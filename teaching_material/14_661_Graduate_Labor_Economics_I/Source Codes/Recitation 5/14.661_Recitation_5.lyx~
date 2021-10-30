@@ -1,0 +1,1326 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{babel}
+
+\usepackage{geometry}
+%\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=1in,headsep=1in,footskip=1in}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{units}
+\usepackage{amsmath}
+\usepackage{babel}
+\newcommand{\Der}[2]{\frac{\partial #1}{\partial #2}}
+\usepackage{pifont}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding iso8859-15
+\fontencoding T1
+\font_roman "utopia" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+14.661 Recitation 5
+\end_layout
+
+\begin_layout Author
+Andrea Manera
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+These notes draw from the ones prepared by Clémence Idoux, who drew on Christoph
+er Walters' (former TA, now Berkeley Professor), which in turn are based
+ on Hamermesh's (not a former TA) HOLE chapter on labor demand.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+October 22, 2021
+\end_layout
+
+\begin_layout Standard
+Today we will derive the 
+\shape italic
+fundamental law of labor demand
+\shape default
+, which allows us to express the long run elasticity of labor demand in
+ terms of (1) the elasticity of substitution between inputs (
+\begin_inset Formula $\sigma$
+\end_inset
+
+), (2) the elasticity of demand for the final product (
+\begin_inset Formula $\eta$
+\end_inset
+
+), (3) the labor's share of income (
+\begin_inset Formula $s_{L}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Fundamental Law of Labor Demand:
+\series default
+ 
+\shape italic
+Suppose that (i) there is a perfectly competitive market for a final good
+ with demand 
+\begin_inset Formula $D\left(p\right)$
+\end_inset
+
+ and (ii) producers have access to a CRTS production function 
+\begin_inset Formula $F(K,L)$
+\end_inset
+
+.
+ Then the elasticity of labor demand (
+\begin_inset Formula $\eta_{L}$
+\end_inset
+
+) is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{L}\equiv\Der{\log L(w,r)}{\log w}=\underbrace{-\sigma(1-s_{L})}_{\text{substitution effect}}\underbrace{-\eta s_{L}}_{\text{scale effect}}\label{key}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is the elasticity of substitution between labor and capital, defined to
+ be positive 
+\begin_inset Formula $\sigma\equiv\bm{-}\Der{\log(K/L)}{\log(r/w)}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $s_{L}$
+\end_inset
+
+ is the labor share: 
+\begin_inset Formula $s_{L}\equiv\frac{wL}{PY}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\eta$
+\end_inset
+
+ is the final good demand elasticity 
+\begin_inset Formula $\eta\equiv D'\left(p\right)\frac{p}{D\left(p\right)}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+We will derive this result by building on several individual results, we
+ show in the first sections.
+\end_layout
+
+\begin_layout Section*
+Review of Properties of Homogeneous Functions
+\end_layout
+
+\begin_layout Standard
+A function 
+\begin_inset Formula $f(x_{1},...,x_{N})$
+\end_inset
+
+ defined for all nonnegative values 
+\begin_inset Formula $(x_{1},...,x_{N})\geq0$
+\end_inset
+
+ is said to be homogeneous of degree 
+\begin_inset Formula $k$
+\end_inset
+
+, if for every 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+f(\alpha x_{1},...,\alpha x_{N})=\alpha^{k}f(x_{1},...,x_{N}).\label{key}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Homogeneous functions' derivatives have two interesting properties, that
+ we can get using the implicit function theorem.
+ Recall the IFT.
+ For an implicit function for 
+\begin_inset Formula $y(x)$
+\end_inset
+
+ defined so that:
+\begin_inset Formula 
+\[
+G(x,y)=0,
+\]
+
+\end_inset
+
+as long as the function is differentiable in 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ and the derivative wrt 
+\begin_inset Formula $y$
+\end_inset
+
+ is non-zero, we have:
+\begin_inset Formula 
+\[
+\rightarrow\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{\nicefrac{\partial G}{\partial x}}{\nicefrac{\partial G}{\partial y}}.
+\]
+
+\end_inset
+
+Now consider:
+\begin_inset Formula 
+\[
+G(\bm{x},f(\bm{x}))=f(\alpha x_{1},...,\alpha x_{N})-\alpha^{k}f(x_{1},...,x_{N})
+\]
+
+\end_inset
+
+Then:
+\begin_inset Formula 
+\begin{align*}
+\alpha\frac{\partial f(\alpha x_{1},...,\alpha x_{N})}{\partial x_{1}}\mathrm{dx}-\alpha^{k}\mathrm{d}f(x_{1},...,x_{N}) & =0,\\
+\frac{\partial f(\alpha x_{1},...,\alpha x_{N})}{\partial x_{1}} & =\alpha^{k-1}\frac{\partial f(x_{1},...,x_{N})}{\mathrm{\partial x}},
+\end{align*}
+
+\end_inset
+
+so the derivative is homogenous of degree 
+\begin_inset Formula $k-1$
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Standard
+Another cool trick (aka Euler's homogeneous function theorem) by using the
+ IFT wrt 
+\begin_inset Formula $\alpha$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+f(\alpha x_{1},...,\alpha x_{N})-\alpha^{k}f(x_{1},...,x_{N})\\
+\sum_{i=1}^{N}x_{1}\frac{\partial f(\alpha x_{1},...,\alpha x_{N})}{\partial x}\mathrm{d}\alpha-k\alpha^{k-1}f(x_{1},...,x_{N})\mathrm{d}\alpha
+\end{align*}
+
+\end_inset
+
+Setting 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+, gives Euler's formula
+\begin_inset Formula 
+\begin{align*}
+\sum_{i=1}^{N}x_{i}\Der{f(\alpha x_{1},...,\alpha x_{N})}{x_{i}} & =kf(x_{1},...,x_{N})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Formal Recap
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Box Boxed
+position "c"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "6in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Property 1 (HF1):
+\series default
+ If 
+\begin_inset Formula $f(x_{1},...,x_{N})$
+\end_inset
+
+ is homogeneous of degree 
+\begin_inset Formula $k$
+\end_inset
+
+, for 
+\begin_inset Formula $k=...-1,0,1....$
+\end_inset
+
+ then 
+\begin_inset Formula $\Der{f(x_{1},...,x_{N})}{x_{i}}$
+\end_inset
+
+ is homogeneous of degree 
+\begin_inset Formula $k-1$
+\end_inset
+
+ for all 
+\begin_inset Formula $i=1,...N$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "c"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "6in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Property 2 (Euler's homogeneous function theorem):
+\series default
+ If 
+\begin_inset Formula $f(x_{1},...,x_{N})$
+\end_inset
+
+ is homogeneous of degree 
+\begin_inset Formula $k$
+\end_inset
+
+, for 
+\begin_inset Formula $k=...-1,0,1....$
+\end_inset
+
+ then 
+\begin_inset Formula $\sum_{i=1}^{N}\Der{f(x_{1},...,x_{N})}{x_{i}}x_{i}=kf(x_{1},...,x_{N})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Applications to Cost Minimization
+\end_layout
+
+\begin_layout Standard
+Dual of profit maximization is cost minimization:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+c(w,r,q)=\min_{K,L}wL+rK\quad\text{s.t.}\quad F(K,L)\geq q
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Just like the expenditure minimization from consumer theory, with same propertie
+s.
+ 
+\end_layout
+
+\begin_layout Standard
+First and foremost, Shephard's Lemma (aka Envelope Theorem).
+\end_layout
+
+\begin_layout Standard
+Second, The cost function is homogeneous of degree 1 in 
+\emph on
+input prices 
+\emph default
+(double all prices, I do not change my optimal relative choices but cost
+ doubles):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+c(\alpha w,\alpha r,q)= & \min_{K,L}\alpha wL+\alpha rK\quad\text{s.t.}\quad F(K,L)\geq q\\
+= & \alpha\min_{K,L}wL+rK\quad\text{s.t.}\quad F(K,L)\geq q\\
+= & \alpha c(w,r,q)
+\end{align*}
+
+\end_inset
+
+Third, the cost function is homogeneous in the 
+\emph on
+quantity to produce, 
+\begin_inset Formula $q,$
+\end_inset
+
+
+\series bold
+\emph default
+ assuming constant returns to scale
+\series default
+ (homogeneity of degree 1 of the production function).
+ In this case, the optimal capital/labor ratio is fixed regardless of 
+\begin_inset Formula $q$
+\end_inset
+
+, and only depends on 
+\begin_inset Formula $\left(w,r\right)$
+\end_inset
+
+.
+ In math:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+c(w,r,\alpha q)= & \min_{K,L}wL+rK\quad\text{s.t.}\quad F(K,L)\geq\alpha q,\\
+= & \alpha\min_{K,L}w\frac{L}{\alpha}+r\frac{K}{\alpha}\quad\text{s.t.}\quad F\left(\frac{K}{\alpha},\frac{L}{\alpha}\right)\geq q,\\
+= & \alpha c(w,r,q).
+\end{align*}
+
+\end_inset
+
+In particular:
+\begin_inset Formula 
+\[
+c(w,r,q)=qc(w,r,1)\equiv qc^{U}(w,r),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $c^{U}$
+\end_inset
+
+ denotes the 
+\emph on
+unit cost function.
+\end_layout
+
+\begin_layout Paragraph
+Formal Recap
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "c"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "6in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Result 1 (Shephard's Lemma):
+\series default
+ 
+\begin_inset Formula 
+\begin{align*}
+\dfrac{\partial c(w,r,q)}{\partial w}=L^{c}(w,r,q),\quad\dfrac{\partial c(w,r,q)}{\partial r}=K^{c}(w,r,q),
+\end{align*}
+
+\end_inset
+
+Where 
+\begin_inset Formula $\left(L^{c}(w,r,q),K^{c}(w,r,q)\right)=\arg\min_{\left(L,K\right)}wL+rK\quad\text{s.t.}\quad F(K,L)\geq q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Box Boxed
+position "c"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "6in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Result 2:
+\series default
+ 
+\shape italic
+For 
+\begin_inset Formula $\alpha\neq0$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+c(\alpha w,\alpha r,q)=\alpha c(w,r,q)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "c"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "6in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Result 3:
+\series default
+ 
+\shape italic
+For 
+\begin_inset Formula $\alpha\neq0$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+c(w,r,\alpha q)=\alpha c(w,r,q).
+\]
+
+\end_inset
+
+In particular,
+\begin_inset Formula 
+\[
+c(w,r,q)=qc^{U}(w,r)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Elasticity of Substitution
+\end_layout
+
+\begin_layout Standard
+The elasticity of substitution 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ for a production function is defined as
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Trivia: the elasticity of substitution was first defined in Hicks' 
+\emph on
+Theory of Wages
+\emph default
+, which came out in 1932.
+ This was the same year of too many horrible and tragic events: the Nazi
+ party won the elections in Germany, Japan occupies Manchuria and restore
+ the last Chinese Emperor Pu Yi as a puppet, the start of the Great Famine
+ in Ukraine, the start of the fascist dictatorship in Portugal...
+ But some good things happened too, in addition to Hicks' books: Aldous
+ Axley published Brave New World, FDR won the election, and Goofy made his
+ first appearance! Also, Australia declared war on Emus (check this one
+ out!)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\sigma\equiv\bm{-}\dfrac{\mathrm{d}\log\left(\nicefrac{K^{c}}{L^{c}}\right)}{\mathrm{d}\log\left(\nicefrac{r}{w}\right)}=\dfrac{\mathrm{d}\log\left(\nicefrac{K^{c}}{L^{c}}\right)}{\mathrm{d}\log\left(\nicefrac{w}{r}\right)}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+This is just 
+\emph on
+minus 
+\emph default
+the elasticity of the capital-labor ratio to relative factor prices 
+\begin_inset Formula $r/w$
+\end_inset
+
+.
+ We put a minus because the elasticity is clearly negative (also properties
+ of the cost minimization problem).
+ When the production function has constant returns to scale (CRS): 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "c"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "6in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+ 
+\series bold
+Result 4:
+\series default
+ 
+\begin_inset Formula 
+\[
+\sigma=\dfrac{c^{U}c_{wr}^{U}}{c_{r}^{U}c_{w}^{U}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+This result relies heavily on the homogeneity of the cost function.
+ By what we have see above:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c(w,r,q)=wc_{w}+rc_{r}$
+\end_inset
+
+, from Shephard' Lemma.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c_{w}(w,r,q)=c_{w}+wc_{ww}+rc_{rw}\Rightarrow wc_{ww}+rc_{rw}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c$
+\end_inset
+
+ is homogeneous of degree 1 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $c_{w},c_{r}$
+\end_inset
+
+ are homogeneous of degree 
+\begin_inset Formula $0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow c_{ww},c_{rw}$
+\end_inset
+
+ are homogeneous of degree 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Combining these fact:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\log\left(\nicefrac{K^{c}}{L^{c}}\right)= & \log c_{r}(w,r,q)-\log c_{w}(w,r,q)\\
+= & \log c_{r}\left(\frac{w}{r},1,q\right)-\log c_{w}\left(\frac{w}{r},1,q\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the second line uses the fact that 
+\begin_inset Formula $c_{w},c_{r}$
+\end_inset
+
+, are homogeneous of degree 0 in factor prices.
+\end_layout
+
+\begin_layout Standard
+Note:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\sigma= & \dfrac{\mathrm{d}\log\left(\nicefrac{K^{c}}{L^{c}}\right)}{\mathrm{d}\log\left(\nicefrac{w}{r}\right)}=\dfrac{\partial\log\left(\nicefrac{K^{c}}{L^{c}}\right)}{\partial\left(\nicefrac{w}{r}\right)}\cdot\dfrac{w}{r}\\
+= & \dfrac{w}{r}\left(\dfrac{c_{rw}\left(\frac{w}{r},1,q\right)}{c_{r}\left(\frac{w}{r},1,q\right)}-\dfrac{c_{ww}\left(\frac{w}{r},1,q\right)}{c_{w}\left(\frac{w}{r},1,q\right)}\right)\\
+= & \dfrac{w}{r}\left(\dfrac{rc_{rw}(w,r,q)}{c_{r}(w,r,q)}-\dfrac{rc_{ww}(w,r,q)}{c_{w}(w,r,q)}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the last line uses the fact that 
+\begin_inset Formula $c_{ww}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{rw}$
+\end_inset
+
+, are homogenous of degree -1 in 
+\begin_inset Formula $(w,r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+By 
+\begin_inset Formula $wc_{ww}+rc_{wr}=0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\dfrac{w}{r}=-\dfrac{c_{wr}}{c_{ww}}\quad\text{and}\quad wc_{ww}=-rc_{wr}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, finally:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\sigma= & -\dfrac{c_{wr}}{c_{ww}}\left(-\dfrac{wc_{ww}}{c_{r}}-\dfrac{rc_{ww}}{c_{w}}\right)\\
+= & c_{wr}\left(\dfrac{wc_{w}+rc_{r}}{c_{r}c_{w}}\right)\\
+= & \dfrac{c\cdot c_{wr}}{c_{r}c_{w}}\\
+= & \dfrac{c^{U}\cdot c_{wr}^{U}}{c_{r}^{U}c_{w}^{U}},
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the third line uses Euler's HFT and the last the fact that 
+\begin_inset Formula $c$
+\end_inset
+
+is homogeneous of degree 1, 
+\begin_inset Formula $c_{wr}$
+\end_inset
+
+ of degree -1, and 
+\begin_inset Formula $c_{r},c_{w}$
+\end_inset
+
+ of degree 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Formal Recap
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Box Boxed
+position "c"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "6in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Result 4:
+\series default
+ 
+\begin_inset Formula 
+\[
+\bm{-}\dfrac{\mathrm{d}\log\left(\nicefrac{K^{c}}{L^{c}}\right)}{\mathrm{d}\log\left(\nicefrac{r}{w}\right)}\equiv\sigma=\dfrac{c^{U}c_{wr}^{U}}{c_{r}^{U}c_{w}^{U}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section*
+Market Demand
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "c"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "6in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+ 
+\series bold
+Result 5:
+\series default
+ 
+\begin_inset Formula 
+\[
+L=Qc_{w}^{U}\text{and}\quad K=Qc_{r}^{U}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Assuming all firms have the same production function, we can thus write
+ the market's demand for labor as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+L(w,r)= & \sum_{j}L_{j}^{c}(w,r,q_{j})\\
+= & \sum_{j}c_{w}(w,r,q_{j})\quad & \text{By R1}\\
+= & \sum_{j}q_{j}c_{w}^{U}(w,r)\quad & \text{By R4}\\
+= & Qc_{w}^{U}(w,r)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $Q$
+\end_inset
+
+ is the total quantity produced in the market.
+ A similar type of reasoning leads to the equivalent result for capital
+ demand.
+\end_layout
+
+\begin_layout Standard
+The main result in this section gives us a convenient expression for the
+ derivative of the market demand for labor 
+\begin_inset Formula $L(w,r)$
+\end_inset
+
+, in terms of substitution and a scale effect.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "c"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "6in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+ 
+\series bold
+Result 6:
+\series default
+ 
+\begin_inset Formula 
+\[
+\frac{\partial L(w,r)}{\partial w}=D\left(p\right)c_{ww}^{U}+D'\left(p\right)\left(c_{w}^{U}\right){}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Begin by noticing that in equilibrium 
+\begin_inset Formula $Q$
+\end_inset
+
+ will have to be equal to 
+\begin_inset Formula $D\left(p\right)$
+\end_inset
+
+, so that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+L(w,r)= & D\left(p\right)c_{w}^{U}(w,r)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Furthermore, in competitive equilibrium it must be the case that the product
+ price is equal to marginal cost for each firm, 
+\begin_inset Formula $p=c^{u}(w,r)$
+\end_inset
+
+, so that we can write the previous expression as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+L(w,r)= & D(c^{U}(w,r))c_{w}^{U}(w,r)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can now differentiate this expression to obtain the result above.
+\end_layout
+
+\begin_layout Section*
+Finally: The Fundamental Law of Factor Demand
+\end_layout
+
+\begin_layout Standard
+Let's put everything together:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial L(w,r)}{\partial w}= & D\left(p\right)c_{ww}^{U}+D'\left(p\right)\left(c_{w}^{U}\right)^{2}\\
+= & -D(c^{U}(w,r))\dfrac{r}{w}c_{wr}^{U}+D'\left(p\right)\left(c_{w}^{U}\right)^{2}\quad & \text{By Euler's HFT}\\
+= & -D\left(p\right)\cdot\dfrac{r}{w}\cdot\sigma\cdot\dfrac{c_{r}^{U}c_{w}^{U}}{c^{U}}+D'\left(p\right)\left(c_{w}^{U}\right)^{2}\quad & \text{By R4}\\
+= & -D\left(p\right)\cdot\dfrac{r}{w}\cdot\dfrac{\sigma}{c^{U}}\cdot\dfrac{LK}{Q^{2}}+D'\left(p\right)\cdot\dfrac{L^{2}}{Q^{2}}\quad & \text{By R5}\\
+= & -\dfrac{rK}{pQ}\cdot\dfrac{\sigma L}{w}+D'\left(p\right)\cdot\dfrac{L^{2}}{D\left(p\right)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+were we used that 
+\begin_inset Formula $c^{U}=p$
+\end_inset
+
+ and 
+\begin_inset Formula $D\left(p\right)=Q$
+\end_inset
+
+ in the last step.
+\end_layout
+
+\begin_layout Standard
+We now write this as an elasticity:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\eta_{L}= & \dfrac{\partial L}{\partial w}\cdot\dfrac{w}{L}\\
+= & -\dfrac{rK}{pQ}\cdot\dfrac{\sigma L}{w}\cdot\dfrac{w}{L}+D'\left(p\right)\cdot\dfrac{L^{2}}{D\left(p\right)}\cdot\dfrac{w}{L}\\
+= & -s_{K}\cdot\sigma+\dfrac{D'\left(p\right)}{D\left(p\right)}\cdot\dfrac{wL}{D\left(p\right)}\quad & \text{Since }s_{K}=\dfrac{rK}{pQ}\\
+= & =-s_{K}\cdot\sigma+D'\left(p\right)\cdot\dfrac{p}{D\left(p\right)}\cdot\dfrac{wL}{pQ}\\
+= & -s_{K}\cdot\sigma-\eta\cdot s_{L}\quad & \text{Since }s_{L}=\dfrac{wL}{pQ}\\
+= & -(1-s_{L})\cdot\sigma-\eta\cdot s_{L}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the last step we used 
+\begin_inset Formula $s_{K}+s_{L}=1$
+\end_inset
+
+ since there are no profits (or, alternatively, it is implied by Euler's
+ HFT along with 
+\begin_inset Formula $p=c^{U}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsection*
+Comparative Statics
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sigma\uparrow\implies\vert\eta_{L}\vert\uparrow$
+\end_inset
+
+: When substitution to other factors is easier, the market demand curve
+ for labor is more elastic.
+ Intuition: use more capital in response to higher wages
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\eta\uparrow\implies\vert\eta_{L}\vert\uparrow$
+\end_inset
+
+: When product demand is more elastic, labor demand is more elastic.
+ Intuition: I loose more demand when I have to pass on higher wages to prices,
+ so I also produce less.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(s_{L}\uparrow\implies\vert\eta_{L}\vert\uparrow\right)\Longleftrightarrow\left(\sigma<\eta\right)$
+\end_inset
+
+: When labor's share of income increases, labor demand becomes more elastic
+ iff the elasticity of product demand is larger than the elasticity of substitut
+ion.
+ Intuition: if the labor share is high, it means 
+\begin_inset Formula $WL$
+\end_inset
+
+ is relatively high, that is I employ lots of labor.
+ If the elasticity of product demand is very large, I loose lots of demand
+ (labor) when the wage increases.
+ However, if I have a high elasticity of substitution, I can trade off (relative
+ly little) labor to save demand and charge not so high prices, and preserve
+ labor.
+\end_layout
+
+\begin_layout Standard
+These are three of the 
+\begin_inset Quotes eld
+\end_inset
+
+Hicks-Marshall Laws of Derived Demand.
+\begin_inset Quotes erd
+\end_inset
+
+ The remaining one requires looking at the elasticity of 
+\emph on
+supply
+\emph default
+ of other factors, which here we did not cover, which would affect how much
+ easy it is to scale up with capital relative to labor.
+ That is:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\vert\eta_{L}\vert\uparrow$
+\end_inset
+
+ if the supply of other factors is more elastic.
+ Intuition: it is easier to scale up the use of alternative factors.
+\end_layout
+
+\end_body
+\end_document

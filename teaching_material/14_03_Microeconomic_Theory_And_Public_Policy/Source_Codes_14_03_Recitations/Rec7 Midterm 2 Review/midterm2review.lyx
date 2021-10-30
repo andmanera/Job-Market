@@ -1,0 +1,777 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{floatrow}
+
+\floatsetup[table]{capposition=top}
+\floatsetup[figure]{capposition=top}
+
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{epsf}
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{24pt}
+\makeatother
+
+\usepackage[bottom]{footmisc}
+\usepackage{pdflscape}
+
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+
+\usepackage{tabularx, booktabs}
+
+\usepackage{multirow}
+
+\usepackage{changepage}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 2
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\size largest
+14.03 Midterm 2 Review
+\end_layout
+
+\begin_layout Author
+Andrea Manera
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+I thank Alex He for sharing his notes.
+ All remaining errors are my own.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+
+\size large
+Spring 2020
+\end_layout
+
+\begin_layout Section
+Applied Competitive Analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+quad
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Market demand curve:
+\series default
+ the set of consumers arranged in inverse ordering from the person with
+ the highest willingness to pay (WTP) to the person with the lowest WTP
+ for a commodity.
+ It is aggregated from Marshallian demands.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Market supply curve:
+\series default
+ the set of producers arranged in order from the firm willing to produce
+ at the lowest price to the firm demanding the highest price to produce
+ a good.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Consumer surplus:
+\series default
+ the difference between the maximum value that a consumer is willing to
+ pay for a commodity and the market price of that commodity.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Producer surplus:
+\series default
+ what the producer receives for goods in excess of the cost of production.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A competitive market maximizes the sum of producer and consumer surplus:
+ all gains from trade are realized; all transactions that benefit both parties
+ occur; no transactions occur that do not benefit both parties.
+\end_layout
+
+\begin_layout Subsection
+How to calculate consumer and producer surplus?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+quad
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Denote the equilibrium price before a price change as 
+\begin_inset Formula $p_{mkt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Consumer surplus is the region below the demand curve and above the price,
+ and is equal to:
+\begin_inset Formula 
+\[
+\int_{p_{mkt}}^{\infty}D(p)\mathrm{d}p.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $p_{min}$
+\end_inset
+
+ denote the price required to supply 
+\begin_inset Formula $0$
+\end_inset
+
+ units of the good.
+ Producer surplus is the region below the market price and above the supply
+ curve, and is equal to:
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Usually 
+\begin_inset Formula $p_{min}=0$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int_{p_{min}}^{p_{mkt}}S(p)\mathrm{d}p.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose that there is a change in the price paid by consumers (from 
+\begin_inset Formula $p_{mkt}$
+\end_inset
+
+ to 
+\begin_inset Formula $p^{C}$
+\end_inset
+
+) and received by suppliers (from 
+\begin_inset Formula $p_{mkt}$
+\end_inset
+
+ to 
+\begin_inset Formula $p^{S}$
+\end_inset
+
+).
+ Then, the change in consumer surplus is:
+\begin_inset Formula 
+\[
+\int_{p^{C}}^{\infty}D(p)\mathrm{d}p-\int_{p_{mkt}}^{\infty}D(p)\mathrm{d}p=\int_{p_{mkt}}^{p^{C}}D(p)\mathrm{d}p.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The change in producer surplus is:
+\begin_inset Formula 
+\[
+\int_{p_{min}}^{p^{S}}S(p)\mathrm{d}p-\int_{p_{min}}^{p_{mkt}}S(p)\mathrm{d}p=\int_{p_{mkt}}^{p^{S}}S(P)dP.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Deadweight loss
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+quad
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Deadweight loss is the difference between the total producer and consumer
+ surplus and the maximized producer and consumer surplus in competitive
+ market.
+ There is deadweight loss whenever the quantity is not equal to the quantity
+ in the competitive market, and the gains from trading are not maximized
+ (either unrealized beneficial trading or harmful trading).
+\end_layout
+
+\begin_layout Standard
+The deadweight loss only depends on the quantity consumed.
+ The price alone determines the transfer between consumer and producer but
+ does not affect the total surplus.
+\end_layout
+
+\begin_layout Subsection
+Elasticity
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+quad
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The elasticity of supply/demand is:
+\begin_inset Formula 
+\[
+\varepsilon=\frac{dQ}{dP}\frac{P}{Q}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tax burden falls more on the side that is less elastic (the absolute value
+ of elasticity is smaller).
+\end_layout
+
+\begin_layout Section
+General Equilibrium in Exchange Economy
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+quad
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Two consumers, A and B, two goods, F and S.
+\end_layout
+
+\begin_layout Standard
+They have endowment:
+\begin_inset Formula 
+\[
+E_{A}=(E_{A}^{F},E_{A}^{S})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E_{B}=(E_{B}^{F},E_{B}^{S})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Without trade, they each consume their endowment:
+\begin_inset Formula 
+\[
+X_{A}=E_{A}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{B}=E_{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With trade, the only constraint is that market clears :
+\begin_inset Formula 
+\[
+X_{A}^{F}+X_{B}^{F}=E_{A}^{F}+E_{B}^{F}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{A}^{S}+X_{B}^{S}=E_{A}^{S}+E_{B}^{S}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Walras' Law: when one market clears the other one also clears.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To solve for the equilibrium, first derive each consumer's Marshallian demand,
+ and then apply the market clearing condition to solve for the equilibrium
+ prices.
+\end_layout
+
+\begin_layout Subsection
+Pareto Efficiency
+\end_layout
+
+\begin_layout Standard
+At a Pareto efficient allocation, it is not possible to make one person
+ better o without making at least one other person worse off.
+ At a Pareto efficient allocation, all gains from trade are exhausted.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At a Pareto efficient allocation, the indifference curves of A and B will
+ be tangent.
+ The set of points that satisfy this criterion comprise the 
+\series bold
+Contract Curve
+\series default
+ (CC).
+ On the contract curve the MRS of the two consumers are equal:
+\begin_inset Formula 
+\[
+\left(\frac{\partial U/\partial F}{\partial U/\partial S}\right)_{A}=\left(\frac{\partial U/\partial F}{\partial U/\partial S}\right)_{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Welfare Theorems
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+quad
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+First Welfare Theorem:
+\series default
+ If
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(C1) No externalities
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(C2) Perfect competition
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(C3) No transaction costs
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(C4) Full information
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then competitive equilibrium is Pareto efficient.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Second Welfare Theorem:
+\series default
+ Providing that preferences are convex and conditions C1-C4 are satisfied,
+ any Pareto efficient allocation can be supported as a market equilibrium.
+ (there is no intrinsic trade-off between equity and efficiency.)
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The second welfare theorem indicates that we can achieve any allocation
+ of resources 
+\series bold
+on the contract curve
+\series default
+ through lump-sum distributions.
+ That is, a planner can achieve 
+\series bold
+any competitive equilibrium
+\series default
+ she desires through lump-sum distributions, but cannot achieve points off
+ the contract curve as long as agents are free to trade
+\series bold
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+A planner will never be able to achieve an allocation that is not on the
+ contract curve without banning trade outright.
+ If she tried to achieve a non-equilibrium point, agents will just trade
+ with each other and converge to an equilibrium on the contract curve.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+International Trade and Comparative Advantage
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+quad
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+International trade relaxes the constraint that 
+\begin_inset Quotes eld
+\end_inset
+
+no more goods can be demanded/consumed than the economy is endowed with,
+ and the sum of the consumption of both parties cannot exceed the total
+ endowment.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The movement from autarky (no trade) to free trade usually expands the Home's
+ budget set, and therefore Home can achieve higher utility.
+ The gap between production and consumption reflects the gains from trade.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gains from trade come entirely from differences between countries.
+ There is no gains from trade if relative prices are the same under autarky
+ and trade:
+\begin_inset Formula 
+\[
+\left(\frac{P_{F}}{P_{S}}\right)_{A}=\left(\frac{P_{F}}{P_{S}}\right)_{W}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Countries have 
+\shape italic
+comparative advantage
+\shape default
+ if the relative prices in autarky differ from the world price, and this
+ may be due to preferences, technology, or endowments.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Principle of comparative advantage: as long as relative prices differ between
+ two countries, both countries experience gains from trade.
+ Because trade allows Home to specialize in production of the good in which
+ it is has comparative advantage relative to the rest of the world, and
+ use that good to trade for other goods in the world market.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+International 
+\series default
+trade is Pareto improvement relative to initial endowment but not necessarily
+ Pareto improvement relative to autarky (in the sense of 
+\series bold
+within-country trade
+\series default
+).
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See the ADH diagram in Lecture 14.
+ In particular, some parties within the economy might be worse-off than
+ in a situation with only 
+\series bold
+within-country
+\series default
+ trade, but will still be better-off than in a situation where they are
+ forced to consume their initial endowments.
+ 
+\end_layout
+
+\end_inset
+
+ But through an appropriate set of transfers, we can both exhaust all gains
+ from trade and achieve any Pareto efficient allocation desired.
+ 
+\end_layout
+
+\end_body
+\end_document

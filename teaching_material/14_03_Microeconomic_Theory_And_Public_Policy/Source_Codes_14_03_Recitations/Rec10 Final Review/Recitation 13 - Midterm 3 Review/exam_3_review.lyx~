@@ -1,0 +1,2308 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1.5in
+\rightmargin 1in
+\bottommargin 1.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14.03/14.003: Microeconomic Theory and Public Policy
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12/14/18
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none" width="5in">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size large
+Exam #3 Review
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape italic
+Carolyn Stein (cstein@mit.edu)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Lotteries, Expected Utility, and Risk Aversion
+\end_layout
+
+\begin_layout Itemize
+A 
+\series bold
+lottery
+\series default
+ is a list 
+\begin_inset Formula $L$
+\end_inset
+
+ of probabilities and associated payoffs:
+\begin_inset Formula 
+\[
+L=\begin{cases}
+\pi_{1} & \textrm{with probability }p_{1}\\
+\pi_{2} & \textrm{with probability }p_{2}\\
+... & ...\\
+\pi_{n} & \textrm{with probability }p
+\end{cases}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ denotes a probability and 
+\begin_inset Formula $\pi_{i}$
+\end_inset
+
+ denotes a monetary payoff.
+ 
+\begin_inset Formula $\sum_{i=1}^{n}p_{i}=1$
+\end_inset
+
+ (probabilities sum to 1).
+ 
+\end_layout
+
+\begin_layout Itemize
+The von Neuman Morgenstern
+\series bold
+ expected utility property
+\series default
+ says that utility is linear in probabilities.
+ For example, the expected utility of lottery 
+\begin_inset Formula $L$
+\end_inset
+
+ can be written as:
+\begin_inset Formula 
+\[
+u(L)=p_{1}u(\pi_{1})+p_{2}u(\pi_{2})+...+p_{n}u(\pi_{n}).
+\]
+
+\end_inset
+
+Alternatively, if we had two lotteries 
+\begin_inset Formula $(L$
+\end_inset
+
+ and 
+\begin_inset Formula $L'$
+\end_inset
+
+) and some 
+\begin_inset Formula $\beta\in[0,1]$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+u(\beta L+(1-\beta)L')=\beta u(L)+(1-\beta)u(L').
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Agents are risk-averse if their utility functions are concave (they display
+ diminishing marginal returns).
+ They are risk-loving if their utility functions are convex (they display
+ increasing marginal returns).
+ They are risk-neutral if their utility functions are linear (they display
+ constant marginal returns)
+\end_layout
+
+\begin_layout Itemize
+Two key concepts:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+The utility of expected wealth
+\series default
+.
+ This is the utility if you gave the agent the expected value of the bet
+ 
+\shape italic
+for sure
+\shape default
+.
+ Let 
+\begin_inset Formula $w$
+\end_inset
+
+ be the agent's wealth after the bet.
+ Then the utility of expected wealth is 
+\begin_inset Formula 
+\[
+u\left(E[w]\right)=u\left(p_{1}w_{1}+p_{2}w_{2}+...+p_{n}w_{n}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+The expected utility of wealth
+\series default
+.
+ This is the expected utility if the agent takes the bet.
+ Again, let 
+\begin_inset Formula $w$
+\end_inset
+
+ be the agent's wealth after the bet.
+ Then the expected utility of wealth is 
+\begin_inset Formula 
+\[
+E\left[u(w)\right]=p_{1}u(w_{1})+p_{2}u(w_{2})+...+p_{n}u(w_{n}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The following inequalities are true:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If the agent is risk-averse, then 
+\begin_inset Formula $u\left(E[w]\right)>E\left[u(w)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If the agent is risk-loving, then 
+\begin_inset Formula $u\left(E[w]\right)<E\left[u(w)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If the agent is risk-neutral, then 
+\begin_inset Formula $u\left(E[w]\right)=E\left[u(w)\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The certainty equivalent is the amount of money you would accept for sure
+ instead of taking the bet.
+ For a risk-averse agent, the certainty equivalent is less than the expected
+ value of the bet, i.e.
+ 
+\begin_inset Formula $CE<E[w]$
+\end_inset
+
+.
+ For a risk-loving agent, the certainty equivalent is more than the expected
+ value of the bet, i.e.
+ 
+\begin_inset Formula $CE>E[w]$
+\end_inset
+
+.
+ For a risk-neutral agent, they are equal.
+\end_layout
+
+\begin_layout Subsubsection*
+Examples - Short Answer (2014 Exam #3) 
+\end_layout
+
+\begin_layout Enumerate
+State Lotteries sold $53 billion of lottery tickets in 2010.
+ Suppose the cost of playing is $1 and the expected value of playing is
+ 50 cents (i.e.
+ 
+\begin_inset Formula $\Sigma_{i}p_{i}W_{i}=\$0.50$
+\end_inset
+
+ where 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ is payout 
+\begin_inset Formula $i$
+\end_inset
+
+, and 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ is probability of that payout).
+ Mr.
+ Jo, a VNM expected utility maximizer, is indifferent between playing the
+ lottery or not.
+ Is Mr.
+ Jo risk-averse, risk-loving, neither, or is there not enough information
+ to say? Explain.
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Solution.
+ 
+\shape italic
+\emph default
+Mr.
+ Jo's certainty equivalent of playing the lottery is $1 (since he is indifferent
+ between playing or not), so 
+\begin_inset Formula $CE[Lottery]>EV[Lottery]$
+\end_inset
+
+ and the risk premium is 
+\begin_inset Formula $-50$
+\end_inset
+
+ cents.
+ This makes Mr.
+ Jo a risk-lover (even though he may not actually play the lottery).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Consider the following lotteries:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+$100 with certainty 
+\end_layout
+
+\begin_layout Enumerate
+$200 with probability 0.7; $0 with probability 0.3
+\end_layout
+
+\begin_layout Enumerate
+$110 with certainty 
+\end_layout
+
+\begin_layout Enumerate
+$1200 with probability 0.1; $0 with probability 0.9
+\end_layout
+
+\begin_layout Enumerate
+$200 with probability 0.35; $100 with probability 0.5; $0 with probability
+ 0.15
+\end_layout
+
+\begin_layout Enumerate
+$1200 with probability 0.05; $110 with probability 0.5; $0 with probability
+ 0.45
+\end_layout
+
+\begin_layout Enumerate-Resume
+Suppose Bob is indifferent between lottery (a) and lottery (b).
+ He is also indifferent between lottery (c) and lottery (d).
+ Is Bob risk-averse, risk-loving, risk-neutral or is it impossible to say?
+ Explain your answer.
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Solution.
+
+\series bold
+ 
+\series default
+The expected value to lottery (b) is $140.
+ Bob is indifferent between lottery (a), that provides $100 with certainty
+ and lottery (b), that provides a higher amount, $140, in expectation but
+ with uncertainty.
+ This must mean that he is risk-averse in this choice.
+ The same conclusion follow if we examine his choice between lottery (c)
+ and (d).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Cynthia has same choices as Bob.
+ She is indifferent between lotteries (a) and (b) and between lotteries
+ (c) and (d).
+ If Cynthia is an expected utility maximizer and her utility is increasing
+ in money/wealth, which lottery will she pick when faced with a choice between
+ lotteries (e) and (f)?
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+\emph on
+Solution.
+ Note that lottery (e) a convex combination of lotteries (a) and (b): It
+ offers lottery (a) with 50% probability and lottery (b) with 50% probability.
+ Since Cynthia is indifferent between lotteries (a) and (b), lottery (e)
+ is equivalent to lottery (a).
+ Similarly, lottery (f) is a convex combination of lotteries (c) and (d)
+ and is therefore equivalent to lottery (c).
+ As Cynthia's utility is increasing in wealth, she prefers lottery (c) to
+ (a).
+ Therefore, she will pick lottery (f) to lottery (e).
+ More formally, Cynthia's choice between lotteries (a) and (b) and lotteries
+ (c) and (d) imply that (normalizing Cynthia's initial wealth level to 0)
+ 
+\begin_inset Formula 
+\[
+\begin{aligned}u\left(100\right)= & 0.7u\left(200\right)+0.3u\left(0\right)\\
+\implies0.5u\left(100\right)= & 0.35u\left(200\right)+0.15u\left(0\right)
+\end{aligned}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\begin{aligned}u\left(110\right)= & 0.1u\left(1200\right)+0.9u\left(0\right)\\
+\implies0.5u\left(110\right)= & 0.05u\left(1200\right)+0.45u\left(0\right)
+\end{aligned}
+\]
+
+\end_inset
+
+Now, the expected utility from lottery (e) is given by 
+\begin_inset Formula 
+\[
+\begin{aligned} & 0.35u\left(200\right)+0.5u\left(100\right)+0.15u\left(0\right)\\
+= & 0.5u\left(100\right)+0.5u\left(100\right)\\
+= & u\left(100\right)
+\end{aligned}
+\]
+
+\end_inset
+
+The expected utility from lottery (f) is given by
+\begin_inset Formula 
+\[
+\begin{aligned} & 0.05u\left(1200\right)+0.5u\left(110\right)+0.45u\left(0\right)\\
+= & 0.5u\left(110\right)+0.5u\left(110\right)\\
+= & u\left(110\right)
+\end{aligned}
+\]
+
+\end_inset
+
+Since Cynthia's utility is increasing in wealth 
+\begin_inset Formula 
+\[
+u\left(110\right)>u\left(100\right)
+\]
+
+\end_inset
+
+so she will pick lottery (f).
+\end_layout
+
+\begin_layout Subsection*
+Insurance
+\end_layout
+
+\begin_layout Itemize
+If most people are risk averse, they will pay money to avoid risk.
+ This is the key idea behind insurance.
+\end_layout
+
+\begin_layout Itemize
+Three key concepts:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Risk pooling: defrays the risk across independent events by exploiting the
+ law of large numbers.
+ Example: most insurance companies work this way - they pool many independent
+ risks.
+\end_layout
+
+\begin_layout Enumerate
+Risk spreading: because of the concavity of the utility function, taking
+ a little bit of money away from many people incurs lower social costs than
+ taking a lot of money from a few people.
+ Example: disaster relief - tax money (taken from everyone) funds disaster
+ victims (a few people who were hit very hard).
+\end_layout
+
+\begin_layout Enumerate
+Risk transfer: if the utility cost of risk is declining in wealth, then
+ less wealthy people can pay wealthy people to bear their risks, and everyone
+ will be better off.
+ Example: Llyods of London used to pool wealthy peoples' money to take on
+ large idiosyncratic risks (insuring the Titanic, for example).
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Example - Startup Insurance (2017 Problem Set #5)
+\end_layout
+
+\begin_layout Standard
+Following the increase in the number of MIT graduates who start new companies
+ and given the inherent risks of starting a company, Cambridge Savings Bank
+ offers insurance to startup companies with more than 5 employees.
+ Before the startup hires any employees, the startup's founder has to invest
+ 
+\begin_inset Formula $\$100,000$
+\end_inset
+
+ in equipment.
+ Throughout the question, assume that the initial wealth of startup founders
+ is given by 
+\begin_inset Formula $w_{0}=\$150,000$
+\end_inset
+
+ and that they are risk-averse with a VNM utility function over wealth that
+ is given by 
+\begin_inset Formula $u(w)=\ln(w)$
+\end_inset
+
+.
+ A startup becomes the 
+\begin_inset Quotes eld
+\end_inset
+
+next Uber
+\begin_inset Quotes erd
+\end_inset
+
+ with probability 
+\begin_inset Formula $\pi=.05$
+\end_inset
+
+, resulting in a net gain of 
+\begin_inset Formula $\$19,850,000$
+\end_inset
+
+ to its founder (so the total wealth of the founder if the startup is successful
+ will be 20 million dollars); with probability of 
+\begin_inset Formula $1-\pi$
+\end_inset
+
+, the startup goes bust, resulting in the loss of the 
+\begin_inset Formula $\$100,000$
+\end_inset
+
+ invested in equipment.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The startup insurance offered by Cambridge Savings Bank looks as follows:
+ The bank offers to pay the startup 
+\begin_inset Formula $\$1$
+\end_inset
+
+ if it goes bust in exchange for receiving 
+\begin_inset Formula $\$S$
+\end_inset
+
+ dollars if the startup is successful.
+ What should the value of 
+\begin_inset Formula $S$
+\end_inset
+
+ be for the insurance to be considered actuarially fair?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Solution.
+ 
+\emph default
+The expected return to the bank of this contract is given by 
+\begin_inset Formula $\pi S-(1-\pi)$
+\end_inset
+
+.
+ For the insurance to be actuarially fair, this expected return must be
+ equal to zero; that is,
+\begin_inset Formula 
+\[
+S=\frac{1-\pi}{\pi}=\frac{.95}{.05}=19.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+How much startup insurance do startup founders buy if 
+\begin_inset Formula $S$
+\end_inset
+
+ is chosen as in the previous part?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Solution.
+
+\emph default
+ 
+\shape italic
+Suppose the startup founder buys 
+\begin_inset Formula $x$
+\end_inset
+
+ units of insurance.
+ Then his/her expected utility is given by 
+\begin_inset Formula 
+\[
+\pi\ln(20M-19x)+(1-\pi)\ln(50,000+x).
+\]
+
+\end_inset
+
+The startup founder chooses 
+\begin_inset Formula $x$
+\end_inset
+
+ to maximize this expression.
+ We can solve this problem by taking the FOC with respect to 
+\begin_inset Formula $x$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+-\frac{19\pi}{20M-19x}+\frac{(1-\pi)}{50,000+x}=0.
+\]
+
+\end_inset
+
+Noting that 
+\begin_inset Formula $19\pi=1-\pi$
+\end_inset
+
+, we can immediately see that it must be that 
+\begin_inset Formula $20M-19x=50,000+x$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $x=997,500$
+\end_inset
+
+.
+ Regardless of whether the startup succeeds, the founder will have 
+\begin_inset Formula $20M-19\cdot997,500=50,000+997,500=1,047,500$
+\end_inset
+
+ dollars in wealth.
+ This is a more general principle: risk-averse agents always purchase full
+ insurance if they are offered insurance at the actuarially fair price.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suppose that every MIT graduate who starts a company also buys startup insurance
+ (to the extent that you found in the previous part).
+ Are MIT graduates better off starting companies (and buying startup insurance)
+ or not starting a company at all (and keeping their 
+\begin_inset Formula $\$150,000$
+\end_inset
+
+ to themselves)?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Solution.
+
+\shape italic
+\emph default
+ The payoff to the founder from starting a company and buying full insurance
+ is given by 
+\begin_inset Formula $\ln(1,047,500)$
+\end_inset
+
+, whereas if they don't start start a company their payoff will be 
+\begin_inset Formula $\ln(150,000)$
+\end_inset
+
+.
+ So MIT graduates are better off starting companies and buying insurance.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+A new deep learning algorithm can analyze a startup immediately after the
+ 
+\begin_inset Formula $\$100,000$
+\end_inset
+
+ investment in equipment has been made to determine whether the startup
+ will be a success or not.
+ The algorithm's output is posted on a publicly-accessible online database.
+ Who will buy insurance in equilibrium after the introduction of the algorithm?
+ [Hint: The output of the algorithm will be publicly visible 
+\emph on
+before
+\emph default
+ the startup hires any employees and so before it is eligible for insurance.
+ Assume that Cambridge Savings Bank cannot reject any customers but it can
+ adjust 
+\begin_inset Formula $S$
+\end_inset
+
+ in response to changes in the set of customers who buy insurance.]
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Solution.
+
+\shape italic
+\emph default
+ Since all the uncertainty is resolved after the output of the algorithm
+ is observed, there are no insurance opportunities left: as long as 
+\begin_inset Formula $S>0$
+\end_inset
+
+, only startups founders whose companies will not be successful will buy
+ insurance.
+ But if that's the case, then no contract (with finite 
+\begin_inset Formula $S$
+\end_inset
+
+) would be actuarially fair.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+How does your answer to part (3) change as a result of the advent of the
+ algorithm?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Solution.
+
+\emph default
+ 
+\shape italic
+Given that there are no longer any opportunities to buy insurance, the expected
+ utility of an MIT graduate from starting a company is given by 
+\begin_inset Formula $\pi\ln(20M)+(1-\pi)\ln(50,000)\approx11.120$
+\end_inset
+
+, whereas their expected payoff from not starting a company is given by
+ 
+\begin_inset Formula $\ln(150,000)\approx11.918$
+\end_inset
+
+.
+ Therefore, MIT graduates are better off not starting a company.
+ This problem shows that more information can lead to a decrease in welfare
+ if it is provided at an interim stage (when investments are made but the
+ risky output has not yet to realize).
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Regression Discontinuity
+\end_layout
+
+\begin_layout Itemize
+As always, we'd like to estimate the causal effect of treatment:
+\begin_inset Formula 
+\[
+T=E[Y_{i1}-Y_{i0}\vert D_{i}=1]
+\]
+
+\end_inset
+
+but we run into the Fundamental Problem of Causal Inference - we can't observe
+ both 
+\begin_inset Formula $Y_{i1}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y_{i0}$
+\end_inset
+
+ for a single unit.
+ 
+\end_layout
+
+\begin_layout Itemize
+The idea of regression discontinuity (RD) is to find some arbitrary cutoff,
+ where there is no treatment on one side of the cutoff 
+\begin_inset Formula $(D_{i}=0)$
+\end_inset
+
+ and treatment on the other side of the cutoff 
+\begin_inset Formula $(D_{i}=1)$
+\end_inset
+
+.
+ The idea is that right on either side of the cutoff, units are similar.
+ Therefore, contrasting outcomes on either side of the cutoff is a fairly
+ 
+\begin_inset Quotes eld
+\end_inset
+
+apples to apples
+\begin_inset Quotes erd
+\end_inset
+
+ comparison.
+ 
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ denote the 
+\begin_inset Quotes eld
+\end_inset
+
+running variable
+\begin_inset Quotes erd
+\end_inset
+
+ and let 
+\begin_inset Formula $X_{i}=x^{*}$
+\end_inset
+
+ denote the 
+\begin_inset Quotes eld
+\end_inset
+
+cutoff.
+\begin_inset Quotes erd
+\end_inset
+
+ If 
+\begin_inset Formula $X_{i}\leq x^{*}$
+\end_inset
+
+, then unit 
+\begin_inset Formula $i$
+\end_inset
+
+ does not receive treatment.
+ If 
+\begin_inset Formula $X_{i}=x^{*}$
+\end_inset
+
+, then unit 
+\begin_inset Formula $i$
+\end_inset
+
+ does receive treatment.
+ The RD estimator is given by:
+\begin_inset Formula 
+\[
+\hat{T}_{RD}=\lim_{\epsilon\downarrow0}E[Y_{i}\vert X_{i}=x^{*}+\epsilon]-\lim_{\epsilon\uparrow0}E[Y_{i}\vert X_{i}=x^{*}+\epsilon].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+What is this estimating? It's not the ATT for the full sample - rather it's
+ the ATT for the subsample with values of 
+\begin_inset Formula $X_{i}\approx x^{*}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+For the RD estimator to be valid, we need three assumptions:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+There is no manipulation of the running variable.
+ If people know about the rule and they are able to manipulate 
+\begin_inset Formula $X,$
+\end_inset
+
+ then they may selectively change the recorded value of 
+\begin_inset Formula $X$
+\end_inset
+
+ to ensure that a given individual does or does not receive the treatment.
+ How would we try to check this assumption?
+\end_layout
+
+\begin_layout Enumerate
+In the absence of the discontinuity, the outcome 
+\begin_inset Formula $Y$
+\end_inset
+
+ is changing smoothly as a function of the running variable.
+ In other words, in the absence of the cutoff 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, for both untreated and treated units, we have:
+\begin_inset Formula 
+\begin{align*}
+\lim_{\epsilon\downarrow0}E[Y_{i0}\vert X_{i} & =x+\epsilon]=\lim_{\epsilon\uparrow0}E[Y_{i0}\vert X_{i}=x+\epsilon]\\
+\lim_{\epsilon\downarrow0}E[Y_{i1}\vert X_{i} & =x+\epsilon]=\lim_{\epsilon\uparrow0}E[Y_{i1}\vert X_{i}=x+\epsilon].
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Nothing else changes at the discontinuity (besides the policy of interest).
+ Otherwise, we don't know whether the policy of interest or something else
+ caused the effect we observe.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Example - Saving Babies (2017 Problem Set #6)
+\end_layout
+
+\begin_layout Standard
+Medical expenditures in the United States are high and increasing.
+ A key policy question is, therefore, whether the benefits of additional
+ medical expenditures exceed their costs.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Note: this question is based on the paper 
+\begin_inset Quotes eld
+\end_inset
+
+Estimating marginal returns to medical care: evidence from at-risk newborns,
+\begin_inset Quotes erd
+\end_inset
+
+ by Douglas Almond, Joseph Doyle, Amanda Kowalski, and Heidi Williams, 
+\emph on
+Quarterly Journal of Economics
+\emph default
+, 2011.
+ It is not necessary to read the paper to answer this question.
+ But it is a terrific paper to read.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $Y$
+\end_inset
+
+ be a health outcome of newborns (for example, one-year mortality), and
+ 
+\begin_inset Formula $(Y_{0},Y_{1})$
+\end_inset
+
+ be the potential outcomes when the newborn does not receive intensive medical
+ treatment (
+\begin_inset Formula $T=0$
+\end_inset
+
+) and when the newborn receives intensive medical treatment (
+\begin_inset Formula $T=1$
+\end_inset
+
+).
+ Explain in words and show mathematically why comparing 
+\begin_inset Formula $E[Y|T=1]$
+\end_inset
+
+ and 
+\begin_inset Formula $E[Y|T=0]$
+\end_inset
+
+ would not be a good idea to estimate the causal effect of intensive medical
+ treatment on health outcomes of newborns.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Solution.
+ 
+\emph default
+We might have a problem of omitted variables that are correlated with both
+ intensive treatment and health outcomes.
+ In this example, newborns that have a higher risk probably receive more
+ intensive treatment.
+ Mathematically:
+\begin_inset Formula 
+\[
+E[Y|T=1]-E[Y|T=0]=E[Y_{1}|T=1]-E[Y_{0}|T=0]=E[Y_{1}-Y_{0}|T=1]+\{E[Y_{0}|T=1]-E[Y_{0}|T=0]\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In a 2011 paper, Douglas Almond, Joseph Doyle, Amanda Kowalski, and Heidi
+ Williams estimate the causal effect of intensive medical treatment on the
+ health outcomes of low birth weight newborns using a regression discontinuity
+ approach.
+ When a newborn weighs less than 
+\begin_inset Formula $1,500g$
+\end_inset
+
+, he/she is classified as 
+\begin_inset Quotes eld
+\end_inset
+
+very low birth weight
+\begin_inset Quotes erd
+\end_inset
+
+ (VLBW).
+ Newborns classified as VLBW are more likely to receive Intensive Medical
+ Treatment (IMT), such as admission to neonatal intensive care, ventilation,
+ incubation, etc.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $Z$
+\end_inset
+
+ be a dummy variable equal to 
+\begin_inset Formula $1$
+\end_inset
+
+ if a newborn is classified as VLBW, and 
+\begin_inset Formula $0$
+\end_inset
+
+ otherwise.
+ Let 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ be the birth weight of a newborn.
+ Hence, 
+\begin_inset Formula $Z=1$
+\end_inset
+
+ if 
+\begin_inset Formula $w_{i}<1,500$
+\end_inset
+
+ and 
+\begin_inset Formula $Z=0$
+\end_inset
+
+ otherwise.
+ Would it be a good idea to use 
+\begin_inset Formula $Z$
+\end_inset
+
+ as an instrument for 
+\begin_inset Formula $T$
+\end_inset
+
+ to estimate the causal effect of intensive medical treatment on health
+ outcomes? Which IV identification assumption might be invalid?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Solution.
+ 
+\emph default
+This would not be a good idea.
+ 
+\begin_inset Formula $Z$
+\end_inset
+
+ would satisfy one IV condition, because it is correlated with IMT.
+ However, newborns with 
+\begin_inset Formula $T=1$
+\end_inset
+
+ would have lower birth weight than newborns with 
+\begin_inset Formula $T=0$
+\end_inset
+
+.
+ Since birth weight might have an independent effect on health outcomes,
+ the exclusion restriction would not be satisfied.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Instead, the authors use the discontinuity at 
+\begin_inset Formula $1,500g$
+\end_inset
+
+ to estimate the causal effect of interest.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Explain the rationale of this strategy.
+ What are the identification assumptions?
+\end_layout
+
+\begin_layout Enumerate
+Write the appropriate RD estimator using causal notation.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Solution.
+ 
+\emph default
+(a) The rationale of this strategy is that the only difference between newborns
+ just below and just above the cutoff is that the one classified as VLBW
+ are more likely to receive IMT.
+ The key assumptions are (1) no manipulation of the running variable (weight),
+ (2) the outcome variable evolves smoothly in the absence of treatment,
+ i.e.
+\begin_inset Formula 
+\[
+\underset{\varepsilon\downarrow0}{\lim}E\left[Y_{0}|w=1500+\varepsilon\right]=\underset{\varepsilon\uparrow0}{\lim}E\left[Y_{0}|w=1500+\varepsilon\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\underset{\varepsilon\downarrow0}{\lim}E\left[Y_{1}|w=1500+\varepsilon\right]=\underset{\varepsilon\uparrow0}{\lim}E\left[Y_{1}|w=1500+\varepsilon\right].
+\]
+
+\end_inset
+
+and (3) intensive medical treatment is the only thing that changes when
+ a baby crosses the 
+\begin_inset Formula $1500g$
+\end_inset
+
+ threshold.
+ 
+\end_layout
+
+\begin_layout Standard
+(b) The RD estimator would be:
+\begin_inset Formula 
+\[
+\hat{T}_{RD}=\underset{\varepsilon\downarrow0}{\lim}E\left[Y|w=1500+\varepsilon\right]-\underset{\varepsilon\uparrow0}{\lim}E\left[Y|w=1500+\varepsilon\right]=E\left[Y_{1}-Y_{0}|w=1500\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The graphs in Figure V plot the relationship between several covariates
+ and birth weight.
+ Are these graphs consistent with the identification assumptions? Explain.
+ What pattern(s) would tell you that the graphs are 
+\emph on
+not
+\emph default
+ consistent with the identification assumptions?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Exam-3-Review/birth_wt_covs.png
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Solution.
+ 
+\emph default
+These graphs show that there are not any discontinuous change in these covariate
+s around the threshold, which is consistent with the identification assumption.
+ If there were a discontinuous change in some covariates around the threshold,
+ we should worry that there are factors that change around the threshold
+ other than IMT.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The graph in Figure II.A plots the relationship between one-year mortality
+ and birth weight.
+ Based on this graph and on the graph from III.A, what would you conclude
+ about the causal effect of Intensive Medical Care on one-year mortality
+ of newborns?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Exam-3-Review/birth_wt_rd.png
+	width 4in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Solution.
+ 
+\emph default
+This graph shows that newborns just below the cutoff have a lower mortality
+ rate.
+ Under the assumptions that the only difference between newborns just below
+ and just above the cutoff is that the ones just below were more likely
+ to receive IMT, this suggests that IMT reduces mortality.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Signaling
+\end_layout
+
+\begin_layout Standard
+In a world where skills or ability are private information, agents may engage
+ in costly signaling to 
+\begin_inset Quotes eld
+\end_inset
+
+prove
+\begin_inset Quotes erd
+\end_inset
+
+ their skills.
+ Below, we will go through two ways of modeling this.
+ In one model, there are two types: high and low ability.
+ In the other model, there is a continuum of types.
+ In both setups, the broad strategy for solving for an equilibrium is the
+ same.
+ First, you assume one type of equilibrium.
+ Second, you calculate the wages (and cutoff, if applicable).
+ Finally, you check that the equilibrium type you assumed indeed holds.
+\end_layout
+
+\begin_layout Subsubsection*
+Example - Signaling with Two Types
+\end_layout
+
+\begin_layout Subsubsection*
+Setup:
+\end_layout
+
+\begin_layout Itemize
+There are two types of ability.
+ Half of agents are type 
+\begin_inset Formula $H$
+\end_inset
+
+ with 
+\begin_inset Formula $a_{H}=1$
+\end_inset
+
+ and half of agents are type 
+\begin_inset Formula $L$
+\end_inset
+
+ with 
+\begin_inset Formula $a_{L}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Productivity is given by 
+\begin_inset Formula $Y(a)=a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Before entering the workforce, agents can choose to obtain schooling 
+\begin_inset Formula $S\in\{0,1\}$
+\end_inset
+
+.
+ Schooling is costly, but less costly if you are high ability.
+ Let the cost be given by 
+\begin_inset Formula 
+\[
+c(a)=k(1-a)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $k\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The labor market is competitive, so firms pay employees their expected productiv
+ity.
+ Wages are given by 
+\begin_inset Formula $W(S=0)$
+\end_inset
+
+ and 
+\begin_inset Formula $W(S=1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The agents' utility is given by
+\begin_inset Formula 
+\[
+u(W,c)=W-c.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Separating Equilibrium
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $k=\frac{3}{2}$
+\end_inset
+
+.
+ We are looking for an equilibrium that consists of:
+\end_layout
+
+\begin_layout Itemize
+Agents with 
+\begin_inset Formula $a_{H}$
+\end_inset
+
+ get schooling and agents with 
+\begin_inset Formula $a_{L}$
+\end_inset
+
+ don't get schooling
+\end_layout
+
+\begin_layout Itemize
+A set of wages for agents without and with schooling 
+\begin_inset Formula $W(S=0)$
+\end_inset
+
+ and 
+\begin_inset Formula $W(S=1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Start by assuming that we have a separating equilibrium.
+ Then,
+\begin_inset Formula 
+\begin{align*}
+W(S=0) & =E[a\vert S=0]=0\\
+W(S=1) & =E[a\vert S=1]=1.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Is this a truly a separating equilibrium, or will one type want to deviate?
+ Compare the payoffs from school and no school for both types of agents.
+ For the 
+\begin_inset Formula $H$
+\end_inset
+
+ type:
+\begin_inset Formula 
+\begin{align*}
+\textrm{no school: }u(W(S=0),0) & =0-0=0\\
+\textrm{school: }u(W(S=1),c(a_{H})) & =1-\frac{3}{2}(1-a_{H})=1
+\end{align*}
+
+\end_inset
+
+For the 
+\begin_inset Formula $L$
+\end_inset
+
+ type:
+\begin_inset Formula 
+\begin{align*}
+\textrm{no school: }u(W(S=0),0) & =0-0=0\\
+\textrm{school: }u(W(S=1),c(a_{L})) & =1-\frac{3}{2}(1-a_{L})=-\frac{1}{2}.
+\end{align*}
+
+\end_inset
+
+So nobody will want to deviate.
+ 
+\begin_inset Formula $H$
+\end_inset
+
+ prefers school, 
+\begin_inset Formula $L$
+\end_inset
+
+ prefers no school.
+\end_layout
+
+\begin_layout Subsubsection*
+Pooling Equilibrium
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $k=\frac{1}{4}$
+\end_inset
+
+.
+ We are looking for an equilibrium that consists of:
+\end_layout
+
+\begin_layout Itemize
+All agents want to get schooling
+\end_layout
+
+\begin_layout Itemize
+A set of wages for agents without and with schooling 
+\begin_inset Formula $W(S=0)$
+\end_inset
+
+ and 
+\begin_inset Formula $W(S=1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Start by assuming that we have a pooling equilibrium.
+ Then,
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Why is 
+\begin_inset Formula $W(S=0)=0$
+\end_inset
+
+ in a pooling equilibrium when in a pooling equilibrium everyone selects
+ 
+\begin_inset Formula $S=1$
+\end_inset
+
+? We have to assume that the employer will make some assumption about an
+ agent's type if they go 
+\begin_inset Quotes eld
+\end_inset
+
+off-equilibrium.
+\begin_inset Quotes erd
+\end_inset
+
+ It seems more likely that somebody who goes off equilibrium in this case
+ is the 
+\begin_inset Formula $L$
+\end_inset
+
+ type.
+ This is formalized by a notion called the 
+\begin_inset Quotes eld
+\end_inset
+
+Intuitive Criterion
+\begin_inset Quotes erd
+\end_inset
+
+ which is beyond the scope of this course.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+W(S=0) & =0\\
+W(S=1) & =E[a\vert S=1]=\frac{1}{2}\times1+\frac{1}{2}\times0=\frac{1}{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Is this a truly a pooling equilibrium, or will one type want to deviate?
+ Compare the payoffs from school and no school for both types of agents.
+ For the 
+\begin_inset Formula $H$
+\end_inset
+
+ type:
+\begin_inset Formula 
+\begin{align*}
+\textrm{no school: }u(W(S=0),0) & =0-0=0\\
+\textrm{school: }u(W(S=1),c(a_{H})) & =\frac{1}{2}-\frac{1}{4}(1-a_{H})=\frac{1}{2}
+\end{align*}
+
+\end_inset
+
+For the 
+\begin_inset Formula $L$
+\end_inset
+
+ type:
+\begin_inset Formula 
+\begin{align*}
+\textrm{no school: }u(W(S=0),0) & =0-0=0\\
+\textrm{school: }u(W(S=1),c(a_{L})) & =\frac{1}{2}-\frac{1}{4}(1-a_{L})=\frac{1}{4}.
+\end{align*}
+
+\end_inset
+
+So nobody will want to deviate.
+ 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $L$
+\end_inset
+
+ both prefer school.
+\end_layout
+
+\begin_layout Subsubsection*
+Example - Signaling with a Continuum of Types
+\end_layout
+
+\begin_layout Subsubsection*
+Setup:
+\end_layout
+
+\begin_layout Itemize
+There is a continuum of ability: 
+\begin_inset Formula $a\sim U[0,1]$
+\end_inset
+
+ where 
+\begin_inset Formula $U[\cdot]$
+\end_inset
+
+ is the uniform distribution.
+\end_layout
+
+\begin_layout Itemize
+Productivity is given by 
+\begin_inset Formula $Y(a)=a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Before entering the workforce, agents can choose to obtain schooling 
+\begin_inset Formula $S\in\{0,1\}$
+\end_inset
+
+.
+ Schooling is costly, but less costly if you are high ability.
+ Let the cost be given by 
+\begin_inset Formula 
+\[
+c(a)=k(1-a)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $k\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The labor market is competitive, so firms pay employees their expected productiv
+ity.
+ Wages are given by 
+\begin_inset Formula $W(S=0)$
+\end_inset
+
+ and 
+\begin_inset Formula $W(S=1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The agents' utility is given by
+\begin_inset Formula 
+\[
+u(W,c)=W-c.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Separating Equilibrium
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $k=\frac{3}{4}$
+\end_inset
+
+.
+ We are looking for an equilibrium that consists of:
+\end_layout
+
+\begin_layout Itemize
+A cutoff value 
+\begin_inset Formula $a^{*}$
+\end_inset
+
+, above which agents will choose 
+\begin_inset Formula $S=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+A set of wages for agents without and with schooling 
+\begin_inset Formula $W(S=0)$
+\end_inset
+
+ and 
+\begin_inset Formula $W(S=1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Start by just assuming that we have a separating equilibrium, with a cutoff
+ of 
+\begin_inset Formula $a^{*}$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\begin{align*}
+W(S=0) & =E[a\vert S=0]=E[a\vert a\leq a^{*}]=\frac{a^{*}}{2}\\
+W(S=1) & =E[a\vert S=1]=E[a\vert a>a^{*}]=\frac{1+a^{*}}{2}.
+\end{align*}
+
+\end_inset
+
+Next, solve for the cutoff 
+\begin_inset Formula $a^{*}$
+\end_inset
+
+.
+ We want to find the agent who is indifferent between schooling and no schooling
+:
+\begin_inset Formula 
+\begin{align*}
+\underbrace{W(S=0)-0}_{\textrm{utility from no school}} & =\underbrace{W(S=1)-c(a^{*})}_{\textrm{utility from school}}\\
+\frac{a^{*}}{2}-0 & =\frac{1+a^{*}}{2}-\frac{3}{4}\left(1-a^{*}\right)\\
+0 & =\frac{1}{2}-\frac{3}{4}+\frac{3}{4}a^{*}\\
+\frac{3}{4}a^{*} & =\frac{1}{4}\\
+a^{*} & =\frac{1}{3}.
+\end{align*}
+
+\end_inset
+
+Plugging in 
+\begin_inset Formula $a^{*}$
+\end_inset
+
+ to 
+\begin_inset Formula $W(S=0)$
+\end_inset
+
+ and 
+\begin_inset Formula $W(S=1)$
+\end_inset
+
+ gives us
+\begin_inset Formula 
+\begin{align*}
+W(S=0) & =\frac{1}{6}\\
+W(S=1) & =\frac{2}{3}.
+\end{align*}
+
+\end_inset
+
+Finally, we need to check whether this is a separating equilibrium.
+ Will anyone want to deviate? Compare the payoffs from school and no school:
+\begin_inset Formula 
+\begin{align*}
+\textrm{no school: }u(W(S=0),0) & =\frac{1}{6}-0=\frac{1}{6}\\
+\textrm{school: }u(W(S=1),c(a)) & =\frac{2}{3}-\frac{3}{4}(1-a)
+\end{align*}
+
+\end_inset
+
+If 
+\begin_inset Formula $a=\frac{1}{3}-\epsilon$
+\end_inset
+
+, then the utility from school is 
+\begin_inset Formula 
+\begin{align*}
+\frac{2}{3}-\frac{3}{4}(1-\frac{1}{3}+\epsilon) & =\frac{2}{3}-\frac{3}{4}(1-\frac{1}{3}+\epsilon)\\
+ & =\frac{2}{3}-\frac{3}{4}(\frac{2}{3}+\epsilon)\\
+ & =\frac{1}{6}-\frac{3}{4}\epsilon<\frac{1}{6}
+\end{align*}
+
+\end_inset
+
+so this person will prefer 
+\begin_inset Formula $S=0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $a=\frac{1}{3}+\epsilon$
+\end_inset
+
+, then the utility from school is 
+\begin_inset Formula 
+\begin{align*}
+\frac{2}{3}-\frac{3}{4}(1-\frac{1}{3}-\epsilon) & =\frac{2}{3}-\frac{3}{4}(1-\frac{1}{3}-\epsilon)\\
+ & =\frac{2}{3}-\frac{3}{4}(\frac{2}{3}-\epsilon)\\
+ & =\frac{1}{6}+\frac{3}{4}\epsilon>\frac{1}{6}
+\end{align*}
+
+\end_inset
+
+so this person will prefer 
+\begin_inset Formula $S=1$
+\end_inset
+
+.
+ So nobody will want to deviate.
+ 
+\begin_inset Formula $H$
+\end_inset
+
+ prefers school, 
+\begin_inset Formula $L$
+\end_inset
+
+ prefers no school.
+\end_layout
+
+\begin_layout Subsubsection*
+Pooling Equilibrium
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $k=\frac{1}{4}$
+\end_inset
+
+.
+ We are looking for an equilibrium that consists of:
+\end_layout
+
+\begin_layout Itemize
+All agents want to get schooling.
+\end_layout
+
+\begin_layout Itemize
+A set of wages for agents without and with schooling 
+\begin_inset Formula $W(S=0)$
+\end_inset
+
+ and 
+\begin_inset Formula $W(S=1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Start by just assuming that we have a pooling equilibrium
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Again, we are assuming that 
+\begin_inset Formula $E[a\vert S=0]=0$
+\end_inset
+
+ even though choosing 
+\begin_inset Formula $s=0$
+\end_inset
+
+ is off the equilibrium.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+W(S=0) & =E[a\vert S=0]=0\\
+W(S=1) & =E[a\vert S=1]=E[a]=\frac{1}{2}.
+\end{align*}
+
+\end_inset
+
+Finally, we need to check whether this is a separating equilibrium.
+ Will anyone want to deviate? Compare the payoffs from school and no school:
+\begin_inset Formula 
+\begin{align*}
+\textrm{no school: }u(W(S=0),0) & =0-0=0\\
+\textrm{school: }u(W(S=1),c(a)) & =\frac{1}{2}-\frac{1}{4}(1-a)
+\end{align*}
+
+\end_inset
+
+The utility of school is positive for all values of 
+\begin_inset Formula $a\in[0,1]$
+\end_inset
+
+, so nobody will want to deviate.
+ 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $L$
+\end_inset
+
+ both prefer school.
+\end_layout
+
+\end_body
+\end_document

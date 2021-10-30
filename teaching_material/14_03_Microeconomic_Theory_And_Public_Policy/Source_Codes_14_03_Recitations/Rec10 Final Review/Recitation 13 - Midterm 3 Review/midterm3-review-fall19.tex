@@ -1,0 +1,131 @@
+\documentclass[letter,12pt]{article}
+%\usepackage[doublespacing]{setspace}
+\usepackage[margin=1in]{geometry}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage[super]{nth}
+\usepackage[short]{optidef}
+\usepackage{physics}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage[justification=centering]{caption}
+\lstset{breaklines=true}
+\author{}
+\title{}
+\date{}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{lastpage}
+\lhead{14.03 Midterm 3 Review}
+\chead{}
+\rhead{Jonathan Cohen (jpcohen@mit.edu)}
+\lfoot{}
+\cfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+\rfoot{}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\begin{document}
+
+\section{Expected Utility and Insurance}
+
+\begin{enumerate}
+	\item \textbf{Main Intuition}: Take standard consumer theory and replace different goods with consumption in different states of the world. Risk-aversion $\Rightarrow$ prefer a sure thing to a risky alternative.
+	\item \textbf{Necessary Math}: Write expected utility in terms of lottery/insurance choice and take the FOC to solve for the consumer's optimal decision.
+	\item \textbf{Graphs to understand}: 
+	\begin{itemize}
+		\item Draw utility as a function of wealth where the consumer faces an uncertain outcome. Observe the different ways to observe risk aversion from the graph. Show the certainty equivalent and understand how it translates to WTP for insurance/WTA risk exposure.
+		\item Draw indifference curves and fair odds lines in the space of consumption in either state. Understand how these translate to standard consumer theory. Show how actuarially fair/unfair insurance leads to different insurance decisions. 
+	\end{itemize}
+	\item \textbf{Other Details}:
+	\begin{itemize}
+		\item How do aspects of these standard insurance problems show up in future insurance units (e.g. adverse selection in health insurance, Rothschild Stiglitz of insurance contracts)?
+		\item Like a lot of the rest of the course, the market for risk comes down to gains from trade (i.e. exploiting gains from trade due to differential exposure/appetite for risk)! I personally find this more intuitive than risk pooling vs. risk spreading vs. risk transfer dichotomy.
+	\end{itemize} 
+\end{enumerate}
+
+
+\section{Value of Statistical Life}
+\begin{enumerate}
+	\item \textbf{Main Intuition}: Governments need to decide how much to spend on the margin to enhance safety. Use a person's revealed preference for safety to determine how much that person values additional safety.
+	\item \textbf{Necessary Math}: VSL is defined by (increase in risk exposure)*VSL=(necessary compensation to face increased risk)
+	\item \textbf{Graphs to understand}: None.
+	\item \textbf{Other Details}:
+	\begin{itemize}
+		\item Understand how revealed preference obtains bounds
+		\begin{itemize}
+			\item If the risk exposure and the compensation are fixed, then choosing to be exposed (forgoing exposure) recovers an upper bound (lower bound) for the VSL
+		\end{itemize}
+		\item Understand how risk aversion enters the VSL calculation
+		\item Poorer people may have a lower estimated VSL due to lower wealth. This is not to say that their lives are worth less. Rather, it suggests that the people may themselves prefer government spending on direct cash transfers rather than additional safety.
+		\item Key assumption: People understand the risks they face and are making an optimal decision given the budget constraint they face.
+	\end{itemize} 
+\end{enumerate}
+
+
+\section{Adverse Selection}
+
+\begin{enumerate}
+	\item \textbf{Main Intuition}: In standard markets, sellers don't care about the identity of buyers and buyers don't care about the identity of sellers; all that matter is the price paid. In selection markets (e.g. insurance), the types of the other side matters (e.g. whether the person is someone likely to be sick). The unknown side of the market has strategic incentives to misrepresent themselves, and this strategic may prevent parties from fully realizing the potential gains from trade.
+	\item \textbf{Necessary Math}: None.
+	\item \textbf{Graphs to understand}: 
+	\begin{itemize}
+		\item Lemons graph: Plot seller's willingness to accept as a function of market price and buyer's willingness to pay as a function of the goods that are sold at that price. Understand the equilibrium conditions that buyer's have to be willing to pay at least the market price and sellers must be willing to accept at most the market price.
+		\item Health insurance graph: Plot standard demand curve ranking people by willingness to pay for insurance. Construct marginal cost curve by calculating the marginal costs of insuring people when ordered by their willingness to pay. Construct the average cost curve at a given quantity/price by averaging over marginal costs of all the people who buy at that price. Observe that the efficient allocation is to have everyone buy with WTP>MC, while the competitive equilibrium is determined by the point at which WTP=AC due to zero profits. Understand why a downward sloping MC curve indicates adverse selection while an upward sloping MC curve indicates advantageous selection.
+	\end{itemize}
+	\item \textbf{Other Details}:
+	\begin{itemize}
+		\item How does costless verification undo adverse selection market unraveling? Why does this solve the problem while in the job market signaling models we've seen we require the signal to be differentially costly?
+		\item Risk aversion is a property of individual consumers (i.e. curvature of utility function), while adverse/advantageous selection in insurance is a property about a population of consumers (i.e. correlation between WTP and own costs)
+	\end{itemize} 
+\end{enumerate}
+
+
+\section{(Job Market) Signaling}
+\begin{enumerate}
+	\item \textbf{Main Intuition}: One side of the market's type is unknown, so the less desirable type would like to pool while the more desirable type would like to separate. A costly signal is the only way to communicate type. 
+	\item \textbf{Necessary Math}: Understand what constitutes an equilibrium. Know what must be true about wages in a competitive pooling equilibrium and competitive separating equilibrium. Be able to check that each type is best responding to the wage schedule
+	\item \textbf{Graphs to understand}: 
+	\begin{itemize}
+		\item Show that each agent is best responding in an equilibrium by plotting indifference curves in the action-payoff space. Be able to do this for both pooling and separating equilibria.
+	\end{itemize}
+	\item \textbf{Other Details}:
+	\begin{itemize}
+		\item In what sense are there externalities?
+		\item Understand the distinction between private returns (i.e. gains to an individual's utility from their own decision) and social returns (i.e. gains to the sum of everyone's utility in society from an individual's own decision).
+	\end{itemize} 
+\end{enumerate}
+
+
+
+\section{(Insurance Market) Screening}
+\begin{enumerate}
+	\item \textbf{Main Intuition}: While signaling was about the informed party taking an action to communicate their information, screening is about the uninformed party taking an action to get the informed party to reveal their information. In insurance markets, this takes the form of offering contracts that are differentially desirable for different types of consumers.
+	\item \textbf{Necessary Math}: None.
+	\item \textbf{Graphs to understand}: 
+	\begin{itemize}
+		\item I have an extended discussion of the Rothschild Stiglitz graphs on Piazza. Be able to understand why fair odds lines and indifference curves for different consumers look the way they do. Understand which direction utility (profits) increase for consumers (producers).
+	\end{itemize}
+	\item \textbf{Other Details}: Understand the distributional consequences of insurance market mandates/price restrictions that enforce pooling/separating equilibria.
+\end{enumerate}
+
+
+\end{document}
+
+
+\section{}
+\begin{enumerate}
+	\item \textbf{Main Intuition}:
+	\item \textbf{Necessary Math}: 
+	\item \textbf{Graphs to understand}: 
+	\begin{itemize}
+		\item 
+	\end{itemize}
+	\item \textbf{Other Details}:
+	\begin{itemize}
+		\item
+	\end{itemize} 
+\end{enumerate}

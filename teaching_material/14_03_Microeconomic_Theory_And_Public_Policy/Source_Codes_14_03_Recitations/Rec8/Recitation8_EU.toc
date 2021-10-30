@@ -1,0 +1,3 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Expected Utility}{3}{0}{1}
+\beamer@sectionintoc {2}{The Allais Paradox}{13}{0}{2}

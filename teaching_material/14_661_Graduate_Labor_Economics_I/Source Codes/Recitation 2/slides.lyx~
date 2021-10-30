@@ -1,0 +1,1911 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+%\usetheme{metropolis}
+\usetheme{Darmstadt}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{invisible}
+
+\usepackage{animate}
+\end_preamble
+\options handout
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "IBM Plex Serif"
+\font_sans "default" "IBM Plex Sans"
+\font_typewriter "default" "Hack"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex-natbib
+\cite_engine_type authoryear
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+14.661 Recitation 2: DD, SC
+\end_layout
+
+\begin_layout Author
+Andrea Manera
+\end_layout
+
+\begin_layout Date
+September 23, 2021
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Potential Outcome and DD
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Potential Outcome: the What and How of Causality
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X_{i}$
+\end_inset
+
+: treatment actually administered to a unit 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X_{i}=1$
+\end_inset
+
+ administered, 
+\begin_inset Formula $\forall i\in\mathbf{T},$
+\end_inset
+
+ treatment;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X_{i}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\forall i\in\mathbf{C},$
+\end_inset
+
+ control.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $Y_{ij}$
+\end_inset
+
+ the outcomes of some unit 
+\begin_inset Formula $i$
+\end_inset
+
+, after receiving treatment 
+\begin_inset Formula $j$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{i}=(Y_{i}|X_{i}=1)-(Y_{i}|X_{i}=0)$
+\end_inset
+
+: treatment effect for unit 
+\begin_inset Formula $i$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Two objects of interest:
+\begin_inset Formula 
+\[
+ATT\equiv E_{i\in\mathbf{T}}\left[Y_{i1}-Y_{i0}\right]
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ATE & \equiv E_{i\in\text{pop}}\left[Y_{i1}-Y_{i0}\right]\\
+ & =Pr\left\{ i\in\mathbf{C}\right\} E_{i\in\mathbf{C}}\left[Y_{i1}-Y_{i0}\right]+Pr\left\{ i\in\mathbf{T}\right\} E_{i\in\mathbf{T}}\left[Y_{i1}-Y_{i0}\right]
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+ATT: causal effect of intervention on treated units
+\end_layout
+
+\begin_layout Itemize
+ATE: causal effect of intervention if scaled up to both treatment and control
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Selection Bias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Almost all papers estimate the ATT as:
+\begin_inset Formula 
+\begin{align*}
+\hat{ATT} & =E_{i\in\mathbf{T}}\left[Y_{i1}\right]-E_{i\in\mathbf{C}}\left[Y_{i0}\right]\\
+ & =E_{i\in\mathbf{T}}\left[Y_{i1}\right]\pm E_{i\in\mathbf{T}}\left[Y_{i0}\right]-E_{i\in\mathbf{C}}\left[Y_{i0}\right]\\
+ & =ATT+E_{i\in\mathbf{T}}\left[Y_{i0}\right]-E_{i\in\mathbf{C}}\left[Y_{i0}\right]
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The rightmost term is selection bias, difference between treatment and control
+ 
+\emph on
+in the absence of treatment 
+\emph default
+(counterfactual!)
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $E_{i\in\mathbf{T}}\left[Y_{i0}\right]-E_{i\in\mathbf{C}}\left[Y_{i0}\right]$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ is treatment and control balance in the counterfactual world where 
+\begin_inset Formula $T$
+\end_inset
+
+ are not treated
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Literally 
+\emph on
+almost every empirical issue is about selection bias!
+\emph default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Caveat: Even if 
+\begin_inset Formula $\hat{ATT}=ATT,$
+\end_inset
+
+ it might be that 
+\begin_inset Formula $ATE\neq ATT,$
+\end_inset
+
+ since the latter requires:
+\begin_inset Formula 
+\[
+E_{i\in\mathbf{T}}\left[Y_{i1}\right]-E_{i\in\mathbf{C}}\left[Y_{i1}\right]!
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example: Parallel Trends
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In Rubin's Notation diff-in-diff has:
+\begin_inset Formula 
+\begin{align*}
+\hat{ATT} & =E_{i\in\mathbf{T}}\left[\Delta Y_{i1}\right]-E_{i\in\mathbf{C}}\left[\Delta Y_{i0}\right]\\
+ & =ATT+E_{i\in\mathbf{T}}\left[\Delta Y_{i0}\right]-E_{i\in\mathbf{C}}\left[\Delta Y_{i0}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Selection bias is now called 
+\begin_inset Quotes eld
+\end_inset
+
+Parallel Trends
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+DD Extensions and Checks
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Many States, Treated Variably
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Card (1992) makes the 
+\shape italic
+federal min
+\shape default
+ into a DD experiment using an equation like 
+\begin_inset Formula 
+\begin{equation}
+\text{\textsc{y}}_{ist}=\gamma_{s}+\lambda_{t}+\delta(\text{\textsc{fa}}_{s}\cdot d_{t})+\varepsilon_{ist},\label{didcont-1}
+\end{equation}
+
+\end_inset
+
+where 
+\shape smallcaps
+fa
+\shape default
+
+\begin_inset Formula $_{s}$
+\end_inset
+
+ is 
+\shape italic
+fraction affected
+\shape default
+ in each state (pre-increase proportion of teen labor force earning < 3.80$)
+ and 
+\begin_inset Formula $d_{t}$
+\end_inset
+
+ is a dummy for observations in 1990, after increase.
+\end_layout
+
+\begin_layout Itemize
+Card (1992) used two periods, before and after and 51 states
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Double-Diff: 
+\begin_inset Formula $\gamma_{s}$
+\end_inset
+
+ differences across states, 
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+ across periods
+\end_layout
+
+\begin_layout Itemize
+Two periods: levels w/fixed (state) effects = first differences: 
+\begin_inset Formula 
+\begin{equation}
+\Delta\text{\textsc{\={y}}}_{s}=\lambda^{\ast}+\delta\text{\textsc{fa}}_{s}+\Delta\bar{\varepsilon}_{s},\label{didcont_avg-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta$
+\end_inset
+
+
+\shape smallcaps
+ȳ
+\shape default
+
+\begin_inset Formula $_{s}$
+\end_inset
+
+ is the change in teen employment in state 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta\bar{\varepsilon}_{s}$
+\end_inset
+
+ is the differenced error
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Event Studies
+\begin_inset Quotes erd
+\end_inset
+
+: Design and Diagnostics 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Formula 
+\[
+\text{\textsc{y}}_{st}=\gamma_{s}+\lambda_{t}+\sum_{\tau=-T_{\text{pre}},\tau\neq1}^{T_{\text{post}}}\delta_{\tau}\text{\textsc{d}}_{s,t,\tau}+\text{\textsc{X}}_{st}^{\prime}\beta+\varepsilon_{st},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{\textsc{d}}_{s,t,\tau}\equiv\bm{1}\left\{ s\text{ received treatment \ensuremath{\tau} periods ago}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is negative, 
+\begin_inset Formula $\delta_{\tau}$
+\end_inset
+
+ gives the 
+\emph on
+pre-trend
+\emph default
+, or 
+\emph on
+anticipatory effects
+\emph default
+.
+ If significant, trouble for parallel trends!
+\end_layout
+
+\begin_layout Itemize
+Usually omit 
+\begin_inset Formula $\tau=-1,$
+\end_inset
+
+ normalize by period just before treatment.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Beware: if treatment period is not the same for all treated units, 
+\begin_inset Formula $\delta_{\tau}$
+\end_inset
+
+, 
+\begin_inset Formula $\tau<0$
+\end_inset
+
+ are spurious
+\end_layout
+
+\begin_layout Itemize
+Use Sun and Abraham (2020): Interaction-weighted estimator!
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Unit/covariate time trends (3 periods min) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Randomization/exact p-values
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Nice Graphs!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EPL_and_technology_pdf.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Interaction-Weighted
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename IWestimator.png
+	lyxscale 30
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Randomization
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Random.png
+	lyxscale 30
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Synthetic Control
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Synthetic Control (Abadie et al., JEL 2021)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Abadie et al.
+ (2003, 2010):
+\end_layout
+
+\begin_layout Itemize
+Control group is called 
+\begin_inset Quotes eld
+\end_inset
+
+donor pool
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Covariates are called 
+\begin_inset Quotes eld
+\end_inset
+
+predictors
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Synthetic controls use a weighted average of comparison units to match lagged
+ predictors:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Idea: if you are similar on observables you are also on unobservables
+\end_layout
+
+\begin_layout Itemize
+Not necessarily, but often, matches also pre-treatment outcomes
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Notation In Abadie Case
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The data consist of observations on regions 
+\begin_inset Formula $i$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,\ldots,J+1$
+\end_inset
+
+, and 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+, where 
+\begin_inset Formula $1\leq T_{0}<T$
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+is the intervention date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha_{it}=Y_{it}^{I}-Y_{it}^{N}$
+\end_inset
+
+ is the effect of the intervention for unit 
+\begin_inset Formula $i$
+\end_inset
+
+ at time 
+\begin_inset Formula $t>$
+\end_inset
+
+ 
+\begin_inset Formula $T_{0}.$
+\end_inset
+
+ The first unit is treated and the aim is to estimate 
+\begin_inset Formula $(\alpha_{1T_{0}+1},\ldots,\alpha_{1T})$
+\end_inset
+
+.
+ 
+\begin_inset space \space{}
+\end_inset
+
+For 
+\begin_inset Formula $t>T_{0}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\alpha_{1t}=Y_{1t}^{I}-Y_{1t}^{N}=Y_{1t}-Y_{1t}^{N}.
+\]
+
+\end_inset
+
+
+\begin_inset Formula $Y_{1t}^{I}$
+\end_inset
+
+ is observed in post-intervention periods.
+ 
+\emph on
+Counterfactual 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $Y_{1t}^{N}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+Y_{1t}^{N}=\sum_{j=2}^{J+1}w_{j}Y_{jt}^{N},
+\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Weighted average of untreated units, effectively a vastly more general DD!
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Choice of SC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The 
+\emph on
+Synthetic Control 
+\emph default
+is defined as the vector of weights 
+\begin_inset Formula $\bm{W}$
+\end_inset
+
+.
+ How to choose it?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Abadie, Diamond, and Hainmuller (2010):
+\end_layout
+
+\begin_layout Itemize
+Choose a set of covariates (
+\begin_inset Quotes eld
+\end_inset
+
+predictors
+\begin_inset Quotes erd
+\end_inset
+
+ for the dep.
+ variable), 
+\begin_inset Formula $h\in\mathcal{H}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Choose a set of importance weights 
+\begin_inset Formula $v_{h}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Synthetic control solves:
+\begin_inset Formula 
+\[
+\bm{W(V)}=\arg\min_{\bm{w\geq0}}\left(\sum_{h\in\mathcal{H}}v_{h}\left[X_{1,h}-\sum_{j=2}^{J+1}w_{j}X_{j,h}\right]^{2}\right)^{\frac{1}{2}}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+But how to choose 
+\begin_inset Formula $v_{h}$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Choosing weights
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Choose 
+\begin_inset Formula $\bm{V}$
+\end_inset
+
+ such that:
+\begin_inset Formula 
+\[
+\bm{V}=\arg\min_{\bm{\upsilon}}\text{MSPE(\ensuremath{\bm{\upsilon}})}\equiv\sum_{t<T_{0}}\left(Y_{1t}-\sum_{j=2}^{J+1}w_{j}(\bm{\upsilon})Y_{jt}\right)^{2}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Minimizes the mean square prediction error (MSPE) of outcome in the pre-period.
+\end_layout
+
+\begin_layout Itemize
+A more sophisticated way is using 
+\emph on
+out-of-sample validation 
+\emph default
+(see JEL and Abadie et al, 2015).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Final result:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Synthetic control is a set of nonnegative weights, which you can report
+ in a table
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Also regression creates weights for each observation, but nobody sees them!
+ (Cunningham, 2021)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Estimator bias decreases with length of pre-period.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+All Data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Cal.png
+	lyxscale 30
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Matching Table
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename CalMatch.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Matching Weights (?)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename CalStates.png
+	lyxscale 30
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Result
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename synthCal.png
+	lyxscale 30
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What About Inference? Randomize!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Empirical CDF of 
+\emph on
+real 
+\emph default
+treatment post-outcome relative to 
+\emph on
+random 
+\emph default
+treatment (
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+exact p-value
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Abadie et al.
+ (2010) compute a synthetic control 
+\begin_inset Formula $W_{j}$
+\end_inset
+
+ for each unit in the sample
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Then compute:
+\begin_inset Formula 
+\[
+\text{RMSPE}_{j,t_{1},t_{2}}=\left(\frac{1}{t_{2}-t_{1}+1}\sum_{t\in[t_{1,}t_{2}]}\left(Y_{1t}-\sum_{j=2}^{J+1}w_{j}(\bm{\upsilon})Y_{jt}\right)^{2}\right)^{\frac{1}{2}}.
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Compute the ratio of RMSPE post versus pre:
+\begin_inset Formula 
+\[
+r_{j}=\frac{\text{RMSPE}_{j,T_{0}+1,T}}{\text{RMSPE}_{j,1,T_{0}}}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Show the 
+\emph on
+permutation distribution 
+\emph default
+of 
+\begin_inset Formula $r_{j}$
+\end_inset
+
+ or compute the p-value as the empirical inverse CDF of 
+\begin_inset Formula $r_{j}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Show all Placebo Gaps, 
+\begin_inset Formula $Y_{j,t}-\hat{Y}_{j,t}^{N}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Inference.png
+	lyxscale 30
+	height 80pheight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Last Words on Mariel? Peri and Yasenov (2018)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Peri_and_Yasenov_Res.png
+	lyxscale 30
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Peri and Yasenov v.
+ Borjas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Peri_and_Yasenov.png
+	lyxscale 30
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Peri and Yasenov vs.
+ Josh and Krueger
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Peri_and_Yasenov_NonEvent.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

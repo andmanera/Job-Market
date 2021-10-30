@@ -1,0 +1,1377 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+%\usetheme{metropolis}
+%\usetheme{Darmstadt}
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage[bottom]{footmisc}
+\usepackage{placeins}
+%\usepackage[adobe-utopia]{mathdesign}
+\usepackage{pifont}
+%\usepackage{kerkis}
+%\usepackage{pxfonts}
+\usepackage[default]{lato}
+%\usepackage{mathpazo}
+\usepackage{eulervm}
+
+
+
+\usepackage{dcolumn}
+\usepackage{bbm}
+\newcolumntype{d}[0]{D{.}{.}{5}}
+
+\usepackage{changepage}
+
+\addtobeamertemplate{frametitle}{}{\vspace{-0.2 cm}}
+
+\setbeamertemplate{frametitle} 
+{ 
+	\begin{centering} 
+		\LARGE
+		\insertframetitle
+		\par 
+	\end{centering} 
+} 
+
+\setbeamerfont{title}{size = \LARGE}
+
+
+
+
+
+%COLORS
+\definecolor{chamois}{RGB}{254,254,245}
+\definecolor{oldchamois}{RGB}{255,255,240}
+\definecolor{darkbrown}{RGB}{124,79,0}
+\definecolor{UniBlue}{RGB}{65,55,203}
+\definecolor{bordeaux}{RGB}{201,18,18}
+\definecolor{redd}{RGB}{245,29,29}
+
+
+\definecolor{hellgelb}{rgb}{1,1,0.8}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+\definecolor{textcolour}{rgb}{0.37,0.34,0.27}
+
+\definecolor{ITgreen}{rgb}{0,204/256,0}
+
+\iffalse
+%LIN AT THE TOP
+\usepackage{tikz}
+\newcommand{\topline}{%
+	\tikz[remember picture,overlay] {%
+		\draw[bordeaux,thick] ([yshift=-1.4cm]current page.north west)-- ([yshift=-1.4cm,xshift=\paperwidth]current page.north west);}}
+
+\addtobeamertemplate{frametitle}{
+}{\topline%
+}
+\fi
+
+%ITEMIZE SEP
+\setlength{\itemsep}{10mm}
+%BACKGROUND AND ITEMIZE
+%\setbeamercolor{background canvas}{bg=chamois}
+\setbeamercolor{itemize item}{fg=bordeaux}
+%\setbeamertemplate{itemize item}{\maltese}
+\setbeamercolor{itemize subitem}{fg=bordeaux}
+\setbeamertemplate{itemize subitem}{$\diamondsuit$}
+
+%ELEMENT COLORS
+\setbeamercolor{title}{fg=UniBlue}
+\setbeamercolor{frametitle}{fg=UniBlue}
+\setbeamercolor{structure}{fg=textcolour}
+
+%COLORS FIRST PAGE
+\setbeamercolor{author}{fg=darkbrown}
+\setbeamercolor{date}{fg=darkbrown!60}
+\setbeamercolor{institute}{fg=darkbrown}
+
+%BLOCK SPECS
+\setbeamercolor{block title}{bg=UniBlue!30,fg=white}
+\setbeamercolor{block body}{bg=UniBlue!10,fg=black}
+%\addtobeamertemplate{block begin}{%
+%	\centering
+%	\setlength{\textwidth}{1\textwidth}%
+%}{}
+
+%\setbeamercolor{block title alerted}{bg=yellow!60,fg=red}
+%\setbeamercolor{block body alerted}{bg=hellgelb!80,fg=UniBlue}
+
+
+\setbeamercolor{alert}{fg=redd}
+\renewcommand<>{\alert}[1]{%
+	{\usebeamercolor[fg]{alert}\only#2{}#1}%
+}
+
+\newcommand{\blue}{\color{blue}}
+
+
+
+
+
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+
+
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
+\usepackage{lscape}
+
+%%% TIKZ %%%%
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{snakes}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{matrix,shapes,arrows,fit,tikzmark}
+\usepackage{pgfplots}
+
+
+
+\usepackage{dcolumn}
+\usepackage{bbm}
+\newcolumntype{d}[0]{D{.}{.}{1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
+
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+
+%\usepackage{animate}
+\end_preamble
+\options aspectratio = 169,  serif, mathserif, professionalfont
+\use_default_options true
+\begin_modules
+theorems-ams
+graphicboxes
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "IBM Plex Serif"
+\font_sans "default" "IBM Plex Sans"
+\font_typewriter "default" "Hack"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine biblatex-natbib
+\cite_engine_type authoryear
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\branch Motivation 1
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Motivation 2
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+14.661 Recitation 6: LATE and Discount Rate Bias 
+\end_layout
+
+\begin_layout Author
+Andrea Manera
+\end_layout
+
+\begin_layout Date
+October 29, 2021
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Roadmap
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Review of the LATE theorem (Angrist and Imbens, 1994)
+\end_layout
+
+\begin_layout Itemize
+Application: Discount Rate Bias (Lang, 1993; Card, 1995; Card, 2001)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Setting the Stage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Throughout, we consider a setting with a single instrument, treatment, and
+ outcome:
+\begin_inset Formula 
+\begin{align*}
+Y_{i} & =\alpha+\beta_{i}D_{i}+\eta_{i}\\
+D_{i} & =\alpha+\gamma Z_{i}+\upsilon_{i}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ are dummies for treatment and instrument
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\beta_{\bm{i}}$
+\end_inset
+
+ a random coefficient that can differ across 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Important: outcome can in principle depend on both treatment and instrument:
+ 
+\begin_inset Formula 
+\[
+Y_{i}(d,z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+We want to estimate ATE:
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\beta_{i}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+First Stage, Independence and Exclusion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+For reference, consider first the case 
+\begin_inset Formula $\beta_{i}=\beta\ \forall i$
+\end_inset
+
+.
+ Assume:
+\end_layout
+
+\begin_layout Enumerate
+Independence:
+\begin_inset Formula 
+\[
+\left[\left\{ Y_{i}(d,z)\ \forall\ d,z\right\} ,D_{1i},D_{0i}\right]\perp Z_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ as good as random, 
+\begin_inset Formula $D_{1i},D_{0i}$
+\end_inset
+
+ are potential outcomes for first stage
+\end_layout
+
+\begin_layout Itemize
+Vietnam lottery example: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $D_{1i}$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+tells us if individual drawing low number serves in the military, 
+\begin_inset Formula $D_{0i}$
+\end_inset
+
+ if high.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Causal Interpretation 
+\emph default
+for the 
+\emph on
+reduced form
+\emph default
+, regression of 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Exclusion Restriction:
+\begin_inset Formula 
+\[
+Y_{i}\left(d,0\right)=Y_{i}\left(d,1\right)\ d=0,1,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Instrument affects outcome only through treatment
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+First Stage: 
+\begin_inset Formula $\mathbb{E}\left(D_{1i}-D_{0i}\right)\neq0$
+\end_inset
+
+.
+ Instrument affects treatment.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Wald Estimator with Homogeneous 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Super-easy derivation of Wald estimator
+\end_layout
+
+\begin_layout Itemize
+Under assumptions (1)-(3) above, we get:
+\begin_inset Formula 
+\[
+\mathbb{E}\left[Y_{i}\mid Z_{i}\right]=\alpha+\beta\mathbb{E}\left[D_{i}\mid Z_{i}\right],\ Z_{i}=1,0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Subtract line-by-line the system with 
+\begin_inset Formula $Z_{i}=1,Z_{i}=0$
+\end_inset
+
+ and divide through:
+\begin_inset Formula 
+\[
+\beta=\frac{\mathbb{E}\left[Y_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[Y_{i}\mid Z_{i}=0\right]}{\mathbb{E}\left[D_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[D_{i}\mid Z_{i}=0\right]},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Reduced-form causal effect of 
+\begin_inset Formula $Z$
+\end_inset
+
+ rescaled by the first-stage
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LATE, aka when 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+ varies
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Now consider 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+ different across 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Add assumption:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4.
+\end_layout
+
+\end_inset
+
+ Monotonicity:
+\begin_inset Formula 
+\[
+D_{i1}-D_{i0}\geq0,\ \forall i\quad\text{or}\quad D_{i1}-D_{i0}\leq0,\ \forall i
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Instrument shifts treatment only in one direction for everyone
+\end_layout
+
+\begin_layout Itemize
+We will go with the first: there are only 
+\emph on
+compliers 
+\emph default
+or 
+\emph on
+always takers
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Under (1)-(4) the LATE theorem (Angrist and Imbens, 1994) states:
+\begin_inset Formula 
+\[
+\frac{\mathbb{E}\left[Y_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[Y_{i}\mid Z_{i}=0\right]}{\mathbb{E}\left[D_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[D_{i}\mid Z_{i}=0\right]}=\mathbb{E}\left[Y_{1i}-Y_{0i}\mid D_{1i}>D_{0i}\right]=\mathbb{E}\left[\beta_{i}\mid D_{1i}>D_{0i}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We get an average 
+\emph on
+of compliers' treatment effects, 
+\emph default
+differs in general from ATE
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LATE proof
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathbb{E}\left[Y_{i}\mid Z_{i}=1\right] & =\mathbb{E}\left[Y_{0i}+\left(Y_{1i}-Y_{i0}\right)D_{i}\mid Z_{i}=1\right]\\
+ & =\mathbb{E}\left[Y_{0i}+\left(Y_{1i}-Y_{i0}\right)D_{1i}\right]
+\end{align*}
+
+\end_inset
+
+First line by exclusion restriction, second by independence.
+ Similar formula for 
+\begin_inset Formula $Z_{i}=0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\left(Y_{1i}-Y_{i0}\right)\left(D_{1i}-D_{0i}\right)\right]=\mathbb{E}\left[\left(Y_{1i}-Y_{i0}\right)\mid D_{1i}>D_{0i}\right]P\left(D_{1i}>D_{0i}\right)
+\]
+
+\end_inset
+
+Since if 
+\begin_inset Formula $D_{1i}=D_{0i}$
+\end_inset
+
+, 
+\begin_inset Formula $\left(Y_{1i}-Y_{i0}\right)\left(D_{1i}-D_{0i}\right)=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Note: Monotonicity 
+\begin_inset Formula $D_{1i}\geq D_{0i}$
+\end_inset
+
+ essential, otherwise there might be 
+\emph on
+defiers
+\emph default
+ for which 
+\begin_inset Formula $D_{1i}<D_{0i}$
+\end_inset
+
+; theorem does not hold!
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $D_{1i}\leq D_{0i}\ \forall i$
+\end_inset
+
+, LATE is effect for defiers.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Average Causal Response (Angrist and Imbens, 1995)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Extension of LATE theorem for treatment with multiple discrete values (intensity
+ levels)
+\end_layout
+
+\begin_layout Itemize
+Notation for return to schooling example:
+\begin_inset Formula 
+\[
+Y_{si}=f_{i}\left(s\right)\ s\in\left\{ 0,1,\dots,\bar{s}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Now there are 
+\begin_inset Formula $\bar{s}$
+\end_inset
+
+ causal effects for each unit, one for each specific notch:
+\begin_inset Formula 
+\[
+Y_{s,i}-Y_{s-1,i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+ACR Theorem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The ACR theorem, under assumptions (1)-(4) with changed notation (see Mostly
+ Harmless):
+\begin_inset Formula 
+\[
+\frac{\mathbb{E}\left[Y_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[Y_{i}\mid Z_{i}=0\right]}{\mathbb{E}\left[D_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[D_{i}\mid Z_{i}=0\right]}=\sum_{j=1}^{\bar{s}}\omega_{s}\mathbb{E}\left[\left(Y_{j,i}-Y_{j-1,i}\right)\mid s_{1i}>j>s_{0i}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\omega_{s}=\frac{P\left[s\mid s_{1i}>s>s_{0i}\right]}{\sum_{j=1}^{\bar{s}}P\left[s\mid s_{1i}>j>s_{0i}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Why ACR is so Cool
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\mathbb{E}\left[Y_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[Y_{i}\mid Z_{i}=0\right]}{\mathbb{E}\left[s_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[s_{i}\mid Z_{i}=0\right]}=\sum_{j=1}^{\bar{s}}\omega_{s}\mathbb{E}\left[\left(Y_{j,i}-Y_{j-1,i}\right)\mid s_{1i}>j>s_{0i}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\omega_{s}=\frac{P\left[s\mid s_{1i}>s>s_{0i}\right]}{\sum_{j=1}^{\bar{s}}P\left[s\mid s_{1i}>j>s_{0i}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+IV estimates weighted average of 
+\emph on
+unit causal responses
+\emph default
+ at each point 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\omega_{s}$
+\end_inset
+
+ tells us how much 
+\emph on
+weight
+\emph default
+ compliers with 
+\begin_inset Formula $s$
+\end_inset
+
+ have on the estimate
+\end_layout
+
+\begin_layout Itemize
+The rescaled 
+\emph on
+size of the group of compliers!
+\end_layout
+
+\begin_layout Itemize
+Estimate weights consistently subtracting CDFs at 
+\begin_inset Formula $s$
+\end_inset
+
+ for group with 
+\begin_inset Formula $Z_{i}=1$
+\end_inset
+
+ from 
+\begin_inset Formula $Z_{i}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Weights tell us exactly 
+\emph on
+who
+\emph default
+ we are learning about (useful for external validity)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous Treatment Extension
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Assume the outcome is now a continuous function 
+\begin_inset Formula $g$
+\end_inset
+
+ with derivative 
+\begin_inset Formula $g'$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+Y_{i}=g_{i}\left(s\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note:
+\begin_inset Formula 
+\begin{align*}
+\mathbb{E}\left[Y_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[Y_{i}\mid Z_{i}=0\right] & =\mathbb{E}\left[\int_{s_{0i}}^{s_{1i}}g_{i}'\left(j\right)\mathrm{d}j\right]\\
+ & =\int\mathbb{E}\left[g_{i}'\left(j\right)\mid s_{1i}>j>s_{0i}\right]P\left(s_{1i}>j>s_{0i}\right)\mathrm{d}j
+\end{align*}
+
+\end_inset
+
+Where the first line is fundamental thm of calculus, the second uses independenc
+e.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous ACR
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\mathbb{E}\left[Y_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[Y_{i}\mid Z_{i}=0\right]}{\mathbb{E}\left[s_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[s_{i}\mid Z_{i}=0\right]}=\frac{\int\mathbb{E}\left[g_{i}'\left(j\right)\mid s_{1i}>j>s_{0i}\right]P\left(s_{1i}>j>s_{0i}\right)\mathrm{d}j}{\int P\left(s_{1i}>j>s_{0i}\right)\mathrm{d}j}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Similar to before, but derivative turns out to play a very important point
+ in education lit!
+\end_layout
+
+\begin_layout Itemize
+Important special case when:
+\begin_inset Formula 
+\[
+g_{i}(s)=\alpha_{0i}+\alpha_{1i}s,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\mathbb{E}\left[Y_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[Y_{i}\mid Z_{i}=0\right]}{\mathbb{E}\left[s_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[s_{i}\mid Z_{i}=0\right]}=\frac{\mathbb{E}\left[\alpha_{1i}\left(S_{1i}-S_{0i}\right)\right]}{\mathbb{E}\left[S_{1i}-S_{0i}\right]}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Weighted average of random coefficients, 
+\emph on
+weighted by how much schooling shifts.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Note on Special Case
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Thanks to continuity of 
+\begin_inset Formula $g(\cdot)$
+\end_inset
+
+, we can always use the mean value theorem.
+ 
+\end_layout
+
+\begin_layout Itemize
+There exists 
+\begin_inset Formula $\tilde{S}_{i}\in\left[S_{i0},S_{i1}\right]$
+\end_inset
+
+ such that:
+\begin_inset Formula 
+\[
+g_{i}\left(S_{1i}\right)=g_{i}\left(S_{i0}\right)+g_{i}'\left(\tilde{S}_{i}\right)\left(S_{1i}-S_{i0}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Thus we always have:
+\begin_inset Formula 
+\[
+\frac{\mathbb{E}\left[Y_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[Y_{i}\mid Z_{i}=0\right]}{\mathbb{E}\left[s_{i}\mid Z_{i}=1\right]-\mathbb{E}\left[s_{i}\mid Z_{i}=0\right]}=\frac{\mathbb{E}\left[g_{i}'\left(\tilde{S}_{i}\right)\left(S_{1i}-S_{0i}\right)\right]}{\mathbb{E}\left[S_{1i}-S_{0i}\right]}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Back to School
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Card (2001) assumes HK model with returns to schooling:
+\begin_inset Formula 
+\[
+g\left(s_{i}\right)=\log y_{i}=\alpha_{i}+b_{i}s_{i}-\frac{1}{2}k_{1}s_{i}^{2}
+\]
+
+\end_inset
+
+optimal schooling is then (see Card, 2001 for details):
+\begin_inset Formula 
+\[
+s_{i}^{\star}=\frac{\left(b_{i}-r_{i}\right)}{k},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ is the individual's discount rate.
+ Two implications:
+\end_layout
+
+\begin_layout Enumerate
+By concavity, returns to schooling at low 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ are higher: 
+\begin_inset Formula $g''(s_{i})<0$
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Enumerate
+Individuals with a high discount factor choose less education
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Implications of ACR for Returns to Schooling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Given the above, the ACR estimated with an IV that reduces schooling costs
+ is:
+\begin_inset Formula 
+\[
+\frac{\mathbb{E}\left[g_{i}'\left(\tilde{S}_{i}\right)\left(S_{1i}-S_{0i}\right)\right]}{\mathbb{E}\left[S_{1i}-S_{0i}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In the real world, reduction in costs affects more people with 
+\emph on
+low schooling, 
+\emph default
+which means:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $S_{1i}-S_{0i}$
+\end_inset
+
+ is largest for people with lower 
+\begin_inset Formula $S_{0i}$
+\end_inset
+
+, get more weight in ACR
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{i}'\left(\tilde{S}_{i}\right)$
+\end_inset
+
+ is larger for people with low 
+\begin_inset Formula $S$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Therefore:
+\begin_inset Formula 
+\[
+\frac{\mathbb{E}\left[g_{i}'\left(\tilde{S}_{i}\right)\left(S_{1i}-S_{0i}\right)\right]}{\mathbb{E}\left[S_{1i}-S_{0i}\right]}>\mathbb{E}\left[g_{i}'\left(S_{i}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+It is called 
+\emph on
+discount rate bias
+\emph default
+ since in the model low 
+\begin_inset Formula $S_{0i}$
+\end_inset
+
+ happens because of high 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Why Does This All Matter?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The literature on schooling 
+\emph on
+almost always 
+\emph default
+finds IV estimates that are larger than OLS 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+e.g., Angrist and Krueger (1991) have OLS 0.07, and IV 0.10
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Ability bias is positive, measurement error is negative
+\end_layout
+
+\begin_layout Itemize
+AK say ability bias is small, so measurement error dominates
+\end_layout
+
+\begin_layout Itemize
+Discount rate bias produces larger estimates regardless!
+\end_layout
+
+\begin_layout Itemize
+Policy relevance:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Measurement error has no real-world implications...
+\end_layout
+
+\begin_layout Itemize
+...
+ but discount rate has: estimates are high just because of population of
+ compliers
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

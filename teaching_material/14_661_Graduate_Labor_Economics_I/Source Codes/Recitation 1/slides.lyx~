@@ -1,0 +1,1860 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+%\usetheme{metropolis}
+\usetheme{Darmstadt}
+\setbeamertemplate{navigation symbols}{}
+
+
+%\usepackage{animate}
+\end_preamble
+\options handout
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "IBM Plex Serif"
+\font_sans "default" "IBM Plex Sans"
+\font_typewriter "default" "Hack"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex-natbib
+\cite_engine_type authoryear
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+14.661 Recitation 1: The Task Framework, or Modeling Wage Inequality
+\end_layout
+
+\begin_layout Author
+Andrea Manera
+\end_layout
+
+\begin_layout Date
+September 16, 2021
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Motivation, or CES and its Discontents
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Wage Trends in Search of a Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Troubling inequalities:
+\end_layout
+
+\begin_layout Enumerate
+Increased 
+\emph on
+wage premium
+\emph default
+ between college and the rest;
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Fall 
+\emph default
+in real wages of low-skilled workers;
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Falling labor share;
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Hollowing-out
+\emph default
+ of the wage and employment distribution;
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Changes in skill allocation across occupations;
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Machines replacing workers.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+How do you explain all these changes together? And how do you 
+\emph on
+model 
+\emph default
+them?
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What is the cause of these changes? Technology, but I also like unionization
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Examples to model 1? Examples to model 2? Examples to model 6?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Objective and Roadmap
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Build the 
+\emph on
+most tractable model
+\emph default
+ with features we want:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Competitive labor markets (workers get their marginal product);
+\end_layout
+
+\begin_layout Itemize
+Changes explained by 
+\emph on
+technology only
+\emph default
+, and endogenous response;
+\end_layout
+
+\begin_layout Itemize
+Easy aggregation.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Roadmap:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Review of facts 
+\end_layout
+
+\begin_layout Itemize
+CES model
+\end_layout
+
+\begin_layout Itemize
+Task Framework (Acemoglu and Autor, HoLE 2011)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Byproduct: Review CES and GE, very useful in 
+\begin_inset Quotes eld
+\end_inset
+
+life
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fact 1: Increase in College Wage Premium
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename CLGHS.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Source: Acemoglu and Autor (HoLE, 2011)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fact 2: Lower Wages for Low-Skilled and 
+\begin_inset Quotes eld
+\end_inset
+
+Fanning Out
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename WageGraph.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Source: Autor (AEA P&P, 2019)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fact 3: Occupational Employment Polarization
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename OccPolarization.png
+	lyxscale 30
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename OccPolarization2.png
+	lyxscale 30
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Source: Autor (AEA P&P, 2019)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fact 4: Automation, Some Workers are Replaced...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Automation.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Source: Acemoglu and Restrepo (2018)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Katz and Murphy (1992): CES
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Increasing wage premium is easy to explain.
+\end_layout
+
+\begin_layout Itemize
+Assume output aggregates low-skilled and high-skilled labor:
+\begin_inset Formula 
+\[
+Y=\left[\left(A_{L}L_{L}\right)^{\frac{\sigma-1}{\sigma}}+\left(A_{H}L_{H}\right)^{\frac{\sigma-1}{\sigma}}\right]^{\frac{\sigma}{\sigma-1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma>0$
+\end_inset
+
+: 
+\begin_inset Formula $\sigma\in(0,1)$
+\end_inset
+
+ gross complements; 
+\begin_inset Formula $\sigma>1$
+\end_inset
+
+ gross substitutes
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Competitive markets:
+\begin_inset Formula 
+\[
+w_{s}=Y^{\frac{1}{\sigma}}L_{s}^{-\frac{1}{\sigma}}A_{s}^{\frac{\sigma-1}{\sigma}}\Rightarrow\frac{w_{H}}{w_{L}}=\left(\frac{A_{H}}{A_{L}}\right)^{\frac{\sigma-1}{\sigma}}\left(\frac{L_{H}}{L_{L}}\right)^{-\frac{1}{\sigma}}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Race between education and technology
+\begin_inset Quotes erd
+\end_inset
+
+ (Goldin and Katz, 2008), estimates of 
+\begin_inset Formula $\sigma\in(1,2)$
+\end_inset
+
+ imply:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Technology increased, biased towards high-skilled 
+\begin_inset Formula $\left(\frac{A_{H}}{A_{L}}\uparrow\uparrow\uparrow\right)$
+\end_inset
+
+;
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Supply of highly-educated could not keep up 
+\begin_inset Formula $\left(\frac{L_{H}}{L_{L}}\uparrow\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Issue: It is a Factor-Augmenting Model!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Technology is modeled as increase in productivity of a group, which raises
+ overall productivity
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+How to see that:
+\begin_inset Formula 
+\[
+w_{s}=Y^{\frac{1}{\sigma}}L_{s}^{-\frac{1}{\sigma}}A_{s}^{\frac{\sigma-1}{\sigma}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ Wage increases when 
+\begin_inset Formula $Y$
+\end_inset
+
+ increases, regardless of 
+\begin_inset Formula $s$
+\end_inset
+
+ or whether 
+\begin_inset Formula $A_{s}$
+\end_inset
+
+ increases
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Further, suppose equilibrium labor supply is:
+\begin_inset Formula 
+\[
+L_{s}=\chi w_{s}^{\varphi},\ \varphi>0
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ Either groups' employment increases when technology improves!!
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Thus framework fails to capture:
+\end_layout
+
+\begin_layout Enumerate
+Worker substitution by other factors (offshoring, automation)
+\end_layout
+
+\begin_layout Enumerate
+Falling real wages for low skilled (would only work if relative supply of
+ low-skilled increased, FALSE).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Task Framework
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solution: David and Daron's Task Framework
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In words:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Each good is produced through a 
+\emph on
+collection of tasks
+\emph default
+ (can be thought of as intermediate services)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Each type of workers has comparative advantages in producing some of them,
+ which gives a split of tasks across skill groups
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Factor-augmenting technology now shifts the task allocation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Increases the marginal product of workers with growing assigned tasks
+\end_layout
+
+\begin_layout Itemize
+And reduces it for workers who lose tasks
+\end_layout
+
+\begin_layout Itemize
+Great to model substitution!
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Overview
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In math:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The collection of tasks is a continuum measure-one, aggregate Cobb-Douglas:
+\begin_inset Formula 
+\[
+\log Y=\int_{0}^{1}\log y(i)\mathrm{d}i
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Each task is produced linearly by different factors:
+\begin_inset Formula 
+\[
+y(i)=\sum_{j\in\mathcal{\mathcal{J}}=\left\{ L,M,H,K\right\} }A_{j}\alpha_{j}(i)l_{j}(i)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha_{j}(i)$
+\end_inset
+
+ is a schedule of productivities giving a comp.adv.
+ structure
+\end_layout
+
+\begin_layout Itemize
+Linearity and schedules 
+\begin_inset Formula $\alpha_{j}$
+\end_inset
+
+ imply the existence of a cutoff, that partitions tasks across factors 
+\begin_inset Formula $j$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Increasing 
+\begin_inset Formula $A_{j}$
+\end_inset
+
+ will shift the task assignment.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Now, to the details!
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Task Demand
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Derivation that the aggregate is Cobb-Douglas:
+\begin_inset Formula 
+\begin{align*}
+\max_{y(i)}\  & \exp\left\{ \int_{0}^{1}\log y(i)\mathrm{d}i\right\} \\
+\text{s.t.} & \int_{0}^{1}p(i)y(i)\mathrm{d}i=Y
+\end{align*}
+
+\end_inset
+
+(Imposed final good is numeraire 
+\begin_inset Formula $P=1$
+\end_inset
+
+) gives:
+\begin_inset Formula 
+\[
+\frac{Y}{y(i)}=\lambda p(i)\ \forall i,\Rightarrow p(i)y(i)=p(s)y(s)=Y
+\]
+
+\end_inset
+
+Equal expenditure on all goods!
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Factor Demands
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Task-level profit-max:
+\begin_inset Formula 
+\begin{align*}
+\max_{\left\{ l_{j}\right\} }\  & p\left(\sum_{j\in\mathcal{J}}A_{j}\alpha_{j}l_{j}\right)-\sum_{j\in\mathcal{J}}w_{j}l_{j}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Implies:
+\end_layout
+
+\begin_layout Enumerate
+Use only 
+\begin_inset Formula $l_{j}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\frac{pA_{j}\alpha_{j}}{w_{j}}=\max_{j\in\mathcal{J}}\left\{ \frac{pA_{j}\alpha_{j}}{w_{j}}\right\} $
+\end_inset
+
+;
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $j$
+\end_inset
+
+ workers can move freely across tasks 
+\begin_inset Formula $i$
+\end_inset
+
+ and comp.
+ labor markets:
+\begin_inset Formula 
+\[
+w_{j}=p(i)A_{j}\alpha_{j}(i),\ \forall i\ \text{s.t.}l_{j}(i)>0.
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Use task demand from Cobb-Douglas:
+\begin_inset Formula 
+\begin{align*}
+p(i)y(i) & =p(s)y(s)\\
+p(i)\left(A_{j}\alpha_{j}(i)l_{j}(i)\right) & =p(s)\left(A_{j}\alpha_{j}(s)l_{j}(s)\right)\\
+l_{j}(i) & =l_{j}(s)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Thresholds I
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consider the three skill groups and assume:
+\begin_inset Formula 
+\[
+\frac{\alpha_{M}(i)}{\alpha_{L}(i)},\frac{\alpha_{H}(i)}{\alpha_{M}(i)}
+\]
+
+\end_inset
+
+increasing in 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ That is 
+\begin_inset Formula $H$
+\end_inset
+
+ has comp.
+ adv.
+ on high 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $L$
+\end_inset
+
+ on low 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+All 
+\begin_inset Formula $i$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $i<I_{L}$
+\end_inset
+
+ performed by 
+\begin_inset Formula $L$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Threshold given by 
+\begin_inset Quotes eld
+\end_inset
+
+arbitrage condition
+\begin_inset Quotes erd
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+p\left(I_{L}\right)A_{L}\alpha_{L}\left(I_{L}\right)l_{L} & =p\left(I_{L}\right)A_{M}\alpha_{M}\left(I_{L}\right)l_{M}\\
+\frac{A_{L}\alpha_{L}\left(I_{L}\right)}{A_{M}\alpha_{M}\left(I_{L}\right)} & =\frac{l_{M}}{l_{L}},
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Analogously for 
+\begin_inset Formula $I_{H}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $H$
+\end_inset
+
+ is used for all 
+\begin_inset Formula $i>I_{H}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Equilibrium Thresholds
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Above we found that 
+\begin_inset Formula $l_{j}$
+\end_inset
+
+ is the same for all tasks performed by 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ With total supply of each type, 
+\begin_inset Formula $L_{j}:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+L_{L} & =\int_{0}^{I_{L}}l_{L}\mathrm{d}i\Rightarrow l_{L}=\frac{L_{L}}{I_{L}},\\
+L_{M} & =\int_{I_{L}}^{I_{H}}l_{M}\mathrm{d}i\Rightarrow l_{M}=\frac{L_{M}}{I_{H}-I_{L}},\\
+L_{H} & =\int_{I_{H}}^{1}l_{M}\mathrm{d}i\Rightarrow l_{H}=\frac{L_{H}}{1-I_{H}}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Equilibrium Thresholds II
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+In equilibrium, the NA conditions found before are, e.g.
+ for 
+\begin_inset Formula $L$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\underset{\text{decr. in \ensuremath{I_{L}}}}{\underbrace{\frac{\alpha_{L}\left(I_{L}\right)}{\alpha_{M}\left(I_{L}\right)}}}=\frac{A_{M}L_{M}}{A_{L}L_{L}}\underset{\text{incr. in \ensuremath{I_{L}}}}{\underbrace{\frac{I_{L}}{I_{H}-I_{L}}}},
+\]
+
+\end_inset
+
+Crucial result:
+\end_layout
+
+\begin_layout Itemize
+The increase in the relative 
+\emph on
+effective supply 
+\emph default
+
+\begin_inset Formula $A_{j}L_{j}$
+\end_inset
+
+ of a factor shifts the task assignment in favor of that factor
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Prices
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Now define price 
+\begin_inset Quotes eld
+\end_inset
+
+indexes for
+\begin_inset Quotes erd
+\end_inset
+
+ the goods produced by each skill, e.g.
+\begin_inset Formula 
+\[
+P_{L}=p\left(i\right)\alpha_{M}\left(i\right),\forall i<I_{L}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+NA gives (just multiply 
+\begin_inset Formula $p(I_{L})$
+\end_inset
+
+ at the threshold):
+\begin_inset Formula 
+\[
+\frac{P_{M}}{P_{L}}=\left(\frac{A_{M}L_{M}}{I_{H}-I_{L}}\right)^{-1}\left(\frac{A_{L}L_{L}}{I_{L}}\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Relative price of the good sold by a skill group increases in assigned tasks.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Wages, Finally!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Wages are simply:
+\begin_inset Formula 
+\[
+w_{s}=A_{s}P_{s}
+\]
+
+\end_inset
+
+for all skill levels.
+ Relative wages:
+\begin_inset Formula 
+\[
+\frac{w_{L}}{w_{M}}=\frac{A_{L}P_{L}}{A_{M}P_{M}}=\frac{L_{M}}{L_{L}}\left(\frac{I_{L}}{I_{H}-I_{L}}\right),
+\]
+
+\end_inset
+
+depends positively on relative tasks, negatively on relative labor.
+ Intuition from labor market clearing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Measure of assigned tasks gives demand for that skill group,
+\end_layout
+
+\begin_layout Itemize
+Total labor is supply.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results on Wages
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Various great CS:
+\end_layout
+
+\begin_layout Enumerate
+Increase in 
+\begin_inset Formula $A_{H}$
+\end_inset
+
+ increases relative high-skilled wages, as in CES
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Machines or other factors that get more productive can reduce the labor
+ share
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Increase in 
+\begin_inset Formula $A_{H}$
+\end_inset
+
+ can create wage polarization (middle deprived of tasks), or some routine
+ tech.
+ competing with 
+\begin_inset Formula $L_{M}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Increase in 
+\begin_inset Formula $A_{H}$
+\end_inset
+
+ (or 
+\begin_inset Formula $A_{K}$
+\end_inset
+
+ with capital) can reduce low-skilled wages
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Increase in high-skilled relative supply reallocates tasks
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In sum, technical change can 
+\emph on
+lower wages!
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
