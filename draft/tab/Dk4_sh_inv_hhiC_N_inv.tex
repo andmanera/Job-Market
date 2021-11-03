@@ -1,0 +1,19 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &$\Delta$ Inventor Share (pp)   &               &               &               &               &               \\
+                    &\multicolumn{1}{c}{(1)}   &\multicolumn{1}{c}{(2)}   &\multicolumn{1}{c}{(3)}   &\multicolumn{1}{c}{(4)}   &\multicolumn{1}{c}{(5)}   &\multicolumn{1}{c}{(6)}   \\
+\hline
+$\Delta$ HHI        &      74.131** &      68.527*  &      73.740** &      68.982** &      74.128** &      66.239*  \\
+                    &    (24.337)   &    (26.009)   &    (24.969)   &    (25.936)   &    (24.365)   &    (29.286)   \\
+$\Delta \log$ Sales &       3.687*  &       2.531   &       2.716+  &       2.310   &       3.902*  &       3.538   \\
+                    &     (1.780)   &     (1.724)   &     (1.511)   &     (1.718)   &     (1.917)   &     (2.244)   \\
+\hline
+Knowledge Market FE &               &   \ding{51}   &               &   \ding{51}   &               &   \ding{51}   \\
+Sample              & Full Sample   & Full Sample   &Trim Outliers   &Trim Outliers   &Mahalanobis 5\%   &Mahalanobis 5\%   \\
+Weight              &       Sales   &       Sales   &       Sales   &       Sales   &       Sales   &       Sales   \\
+Observations        &          80   &          79   &          79   &          78   &          76   &          72   \\
+\hline\hline
+\end{tabular}
+}
