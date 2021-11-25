@@ -1,0 +1,395 @@
+#LyX file created by tex2lyx 2.3
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/teaching_material/14_03_Microeconomic_Theory_And_Public_Policy/Source_Codes_14_03_Recitations/Rec8/
+\textclass beamer
+\begin_preamble
+%% Beamer Presentation
+
+% !TeX program = xelatex
+
+\usepackage{xcolor}
+\usepackage{systeme}
+
+
+
+\usepackage[export]{adjustbox}
+%\geometry{paperwidth=140mm,paperheight=105mm}
+\usepackage{tikz}
+%\usepackage{bm}
+%\usepackage{dsfont}
+
+
+\newenvironment{myitemize}{ \begin{itemize}[<+->]
+		\setlength{\itemsep}{6pt}
+		\setlength{\parskip}{0pt}
+		\setlength{\parsep}{0pt}     }{ \end{itemize}                  } 
+
+\usetheme{default}
+\usepackage{texnansi}
+\usepackage{fontspec}
+
+
+%COLORS
+\definecolor{chamois}{RGB}{254,254,245}
+\definecolor{oldchamois}{RGB}{255,255,240}
+\definecolor{darkbrown}{RGB}{124,79,0}
+\definecolor{UniBlue}{RGB}{83,101,130}
+\definecolor{bordeaux}{RGB}{201,18,18}
+\definecolor{redd}{RGB}{245,29,29}
+
+
+\definecolor{hellgelb}{rgb}{1,1,0.8}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+\definecolor{textcolour}{rgb}{0.37,0.34,0.27}
+
+\definecolor{ITgreen}{rgb}{0,204/256,0}
+
+%% use main font for base text
+%\usefonttheme{serif}
+%
+%% font for base text
+%\setmainfont{Palatino}
+%
+%%\setmainfont{Palatino}
+%
+%% font for title
+%\setbeamerfont{title}{family=\fontspec{Palatino}}
+%
+%% for other elements on title page (author, date)
+%\setbeamerfont{title page}{family=\fontspec{Palatino}}
+
+
+
+%\setbeamertemplate{background canvas}{\includegraphics
+%	[width=\paperwidth]{Vintage1.png}}
+%\setbeamertemplate{background canvas}{}
+\setbeamercolor{structure}{fg=textcolour}
+\setbeamertemplate{items}[circle]
+\setbeamerfont{structure}{family = \rmfamily}
+\setbeamertemplate{blocks}[rounded]
+
+\setbeamertemplate{frametitle} 
+{ 
+	\begin{centering} 
+		\huge
+		\insertframetitle
+		\par 
+	\end{centering} 
+} 
+
+\setbeamerfont{title}{size = \Huge}
+\usefonttheme{structuresmallcapsserif}
+\usefonttheme{serif}
+\setbeamercolor{normal text}{fg=textcolour}
+
+
+
+
+%LIN AT THE TOP
+\usepackage{tikz}
+\newcommand{\topline}{%
+	\tikz[remember picture,overlay] {%
+		\draw[bordeaux,thick] ([yshift=-1.2cm]current page.north west)-- ([yshift=-1.2cm,xshift=\paperwidth]current page.north west);}}
+
+\addtobeamertemplate{frametitle}{
+}{\topline%
+}
+
+%BACKGROUND AND ITEMIZE
+\setbeamercolor{background canvas}{bg=chamois}
+\setbeamercolor{itemize item}{fg=bordeaux}
+%\setbeamertemplate{itemize item}{\maltese}
+\setbeamercolor{itemize subitem}{fg=bordeaux}
+\setbeamertemplate{itemize subitem}{$\diamondsuit$}
+
+%ELEMENT COLORS
+\setbeamercolor{title}{fg=UniBlue}
+\setbeamercolor{frametitle}{fg=UniBlue}
+\setbeamercolor{structure}{fg=textcolour}
+
+%COLORS FIRST PAGE
+\setbeamercolor{author}{fg=darkbrown}
+\setbeamercolor{date}{fg=darkbrown!60}
+\setbeamercolor{institute}{fg=darkbrown}
+
+%BLOCK SPECS
+\setbeamercolor{block title}{bg=darkbrown!40,fg=bordeaux}
+\setbeamercolor{block body}{bg=darkbrown!20,fg=UniBlue}
+\addtobeamertemplate{block begin}{%
+	\centering
+	\setlength{\textwidth}{1\textwidth}%
+}{}
+
+\setbeamercolor{block title alerted}{bg=yellow!60,fg=red}
+\setbeamercolor{block body alerted}{bg=hellgelb!80,fg=UniBlue}
+
+%CHANGE EMPH
+\setbeamercolor{emph}{fg=blue}
+\renewcommand{<}{>}{\emph}[1]{%
+	{\usebeamercolor[fg]{emph}\only#2{\itshape}#1}%
+}
+
+\setbeamercolor{alert}{fg=redd}
+\renewcommand{<}{>}{\alert}[1]{%
+	{\usebeamercolor[fg]{alert}\only#2{}#1}%
+}
+
+\newcommand{\blue}{\color{blue}}
+
+
+
+%Underset with underbrace
+\newcommand{\under}[2]{\underset{#2}{\underbrace{#1}}}
+
+%Sequences and sets
+\newcommand{\set}[1]{\left\lbrace #1 \right \rbrace}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\qt}[1]{``#1''}
+
+% Idiosyncratic
+\newcommand{\io}[1]{#1^{i,\omega}}
+\newcommand{\ii}[1]{#1^{i}}
+\newcommand{\oo}[1]{#1^\omega}
+\newcommand{\Der}[2]{\dfrac{\partial #1}{\partial #2}}
+
+%%%%%% BACKUP SLIDES NUMBERING
+
+\newcommand{\backupbegin}{
+	\newcounter{finalframe}
+	\setcounter{finalframe}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+	\setcounter{framenumber}{\value{finalframe}}
+}
+
+%Setting bullet spacing
+\newcommand{\isep}[1]{\setlength{\itemsep}{#1pt}}
+\newcommand{\graphinstrim}[6]{\begin{center}
+		\includegraphics[scale=#1, trim={#3 #4 #5 #6},clip,valign=top]{../graphs/#2}
+\end{center}}
+\newcommand{\graphins}[2]{\begin{center}
+		\includegraphics[scale=#1]{../graphs/#2}
+\end{center}}
+
+\newif\ifpersonal
+%\personaltrue
+
+\newcommand{\pers}[1]{\ifpersonal{#1}\fi}
+
+\usepackage{listings}
+%% R environment
+%\usepackage[usenames,dvipsnames]{color}    
+
+
+%
+%
+%% Packages
+%\usepackage[T1]{fontenc}
+%\usepackage{appendixnumberbeamer}
+%\usepackage{hyperref}
+%\usepackage{graphicx}
+%%\usepackage{dsfont}
+%%\usepackage{amssymb}
+%%\usepackage{bbm}
+%\usetheme{Singapore}
+%%\usetheme{Berlin}
+%\usepackage{enumerate}
+
+%\usepackage{multicol}
+\usepackage{tikz}
+%\setbeamertemplate{footline}[frame number]
+\usepackage{subfiles}
+
+
+
+
+\title{14.03/14.003 Recitation 8 \\ Expected Utility}
+\author{Andrea Manera}
+\date{Spring 2020}
+
+
+
+
+
+
+\end_preamble
+\options aspectratio=169,dvipsnames,handout
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding T1
+\font_roman "md-utopia" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\begin_inset Argument 4
+status collapsed
+
+
+\begin_layout Standard
+Agenda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Derivation of the Expected Utility Theorem 
+\end_layout
+
+\begin_layout Itemize
+Interesting Issues 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%main presentation
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+subfile
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+sections/main
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
