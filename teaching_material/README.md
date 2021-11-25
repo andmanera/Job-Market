@@ -2,7 +2,7 @@
 
 Welcome to my Teaching Material page!
 
-This collects sample recitations from my Teaching Assistant work on two MIT classes:
+This collects sample recitations from my Teaching Assistant work on three MIT classes:
 
 - 14.02 Undergraduate Principles of Macroeconomics (Old, Fall 2018)
 - 14.03 Undergraduate Microeconomic Theory And Public Policy
