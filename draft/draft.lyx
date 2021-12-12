@@ -167,9 +167,9 @@ I am extremely grateful to my advisors Daron Acemoglu, Martin Beraja, and
  and Nicholas Zolas, who kindly shared with me the ALP classifications of
  patents into NAICS sectors of application.
  I also thank David Autor, Pierre Azoulay, Ricardo Caballero, Arnaud Costinot,
- Joel Flynn, Germán Gutiérrez, Clémence Idoux, John Sturm, Martina Uccioli,
- Iván Werning, Christian Wolf, and participants in the MIT Macro Lunch,
- Applied Micro Lunch, and Macro Seminar for useful comments and suggestions.
+ Joel Flynn, Germán Gutiérrez, Clémence Idoux, Martina Uccioli, Iván Werning,
+ Christian Wolf, and participants in the MIT Macro Lunch, Applied Macro
+ Lunch, and Macro Seminar for useful comments and suggestions.
 \end_layout
 
 \end_inset
@@ -304,34 +304,37 @@ Inventors are a scarce resource, whose skill sets can apply to R&D in disparate
  First, I delineate the boundaries of “knowledge markets”, employing USPTO
  patent data to group NAICS sectors that employ inventors with similar skills.
  Second, I analyze the relation between 4-digit NAICS sectors’ market concentrat
-ion and their share of knowledge-market inventors.
- I establish that: (i) the last thirty years saw a sizable increase in the
- concentration of inventors across NAICS sectors of application; (ii) over
- the period 1997-2012, sectors with increasing concentration have captured
- rising shares of inventors; (iii) high-concentration sectors saw an increase
- in inventors at the top of the innovating firms distribution, a fall in
- forward citations, and a decrease in R&D productivity, as measured by growth
- in output per worker per inventor.
- Quantitatively, my estimates imply that inventor misallocation to less
- competitive sectors produced a 27% reduction in output per worker growth
- over the period 1997-2012 (-0.78pp in absolute value).
+ion and the share of inventors employed in R&D projects relevant to these
+ sectors.
+ Four findings emerge from the analysis.
+ First, the last thirty years saw a sizable increase in the concentration
+ of inventors across NAICS sectors of application.
+ Second, over the period 1997-2012, increases in sector-level concentration
+ are positively correlated with the share of inventor markets captured by
+ each sector.
+ An IV analysis based on the increase in sector-specific regulations suggests
+ a causal interpretation of this result.
+ Third, higher shares of relevant inventors are positively correlated with
+ rising concentration of inventors at the top of the innovating firms distributi
+on, and negatively with forward citations.
+ Fourth, concentrating sectors have seen a decrease in R&D productivity,
+ as measured by growth in output per worker per inventor.
+ A back-of-the-envelope computation suggest that the increased concentration
+ of inventors in less competitive sectors can account for about 27% of the
+ overall decrease in output per worker growth over the period 1997-2012
+ (a fall of 0.78% in absolute value).
  I interpret my findings through a Schumpeterian model of creative destruction,
- where incumbents can conduct 
-\begin_inset Quotes eld
-\end_inset
-
-defensive patenting
-\begin_inset Quotes erd
-\end_inset
-
- with the primary aim to erect barriers to entry for potential competitors.
+ where incumbents can conduct defensive patenting.
  In the model, unbalanced increases in markups shift inventors towards less
- competitive sectors, and towards monopolistic firms carrying out defensive
- innovation, reducing R&D productivity and growth.
- A calibration of this model reveals that directing R&D subsidies to entrants
- in high-concentration sectors is the most effective policy to maximize
- productivity, raising annual GDP growth by 0.5pp (17% of the calibrated
- baseline).
+ competitive sectors, and towards monopolistic firms carrying out R&D projects
+ with the aim to erect barriers to entry.
+ This shift reduces equilibrium inventors’ productivity and growth.
+ I calibrate a two-sector version of this model to match moments of the
+ inventor distribution and R&D spending in the US and study the optimal
+ allocation of R&D subsidies for a planner wishing to maximize growth.
+ I show that subsidies to entrants in highly concentrated sectors constitute
+ the most effective policy, raising output by 0.5% in absolute value in the
+ calibrated model (17% of the baseline in percentage terms).
 \end_layout
 
 \begin_layout Standard
@@ -400,7 +403,7 @@ literal "false"
 
 \end_inset
 
-, a concern that is echoed in policy circles as well as the press 
+, a concern that is echoed in the policy circles as well as the press 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "metzTechGiantsAre2017,bassBigTechSwallows2020"
@@ -409,12 +412,13 @@ literal "false"
 \end_inset
 
 .
- Central in the current policy debate is the concern that big-tech firms
- are attracting a large share of highly-educated, highly-skilled workers,
- potentially subtracting these resources from more dynamic and competitive
- sectors.
- A case in point is the high concentration of AI specialists.
- According to 
+ Central in the current policy debate is the concern that dominant big-tech
+ firms are inefficiently appropriating a large share of highly-educated,
+ highly-skilled workers, subtracting this crucial resource from more competitive
+ and dynamic sectors.
+ A stark example of this phenomenon is the high concentration of AI expert
+ workforce.
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "talentseer2020AITalent2020"
@@ -422,76 +426,31 @@ literal "false"
 
 \end_inset
 
-, up to 20% of total AI experts are employed by just five big-tech companies:
- Google, Microsoft, Apple, Amazon and IBM.
- At the same time, smaller firms in different sectors appear unable to attract
- this scarce talent.
- Two natural questions then arise: Is such allocation inefficient? And if
- so, can inventor misallocation explain the observed fall in R&D productivity?
+ estimates that up to 20% of total AI experts are employed by just five
+ companies: Google, Microsoft, Apple, Amazon and IBM.
+ At the same time, smaller firms in other economic sectors appear unable
+ to attract this scarce talent, raising concerns over the potential misallocatio
+n of innovators.
  
 \end_layout
 
 \begin_layout Standard
-To answer these questions, I study the broader effect of increasing market
- concentration on the allocation of inventors across sectors.
- I start by documenting several novel facts using USPTO patent data and
- concentration measures from the Economic Census over the period 1997-2012.
- First and foremost, I show that there is a positive correlation between
- increases in sectors' market concentration and the share of inventors they
- attract.
- This correlation might indicate either that high-concentration firms have
- attracted more inventors, or that more inventive firms have captured an
- increasing share of their product market thanks to successful innovations.
- In order to address this reverse causality problem, I adopt an IV strategy
- employing the increase in the number of product-market regulations from
- Mercatus RegData as an instrument for increased concentration.
- This specification shows that sectors with increased concentration have
- increased their share of inventors, and not vice versa.
- 
-\end_layout
-
-\begin_layout Standard
-I then present three additional facts that bolster the interpretation that
- high-concentration sectors are absorbing excessive R&D resources, depressing
- aggregate research productivity.
+This paper studies the broader effect of increasing concentration on the
+ allocation of inventors across sectors, and shows that such concerns are
+ justified.
+ Using USPTO patent data and concentration measures from the Economic Census
+ over the period 1997-2012, I demonstrate that sectors where concentration
+ has increased have indeed attracted an increasing share of inventors.
+ This relation has a causal interpretation, according to an IV specification
+ where I use the increase in the number of regulations from Mercatus RegData
+ as an instrument for increased concentration.
+ I establish three additional facts that suggest that this allocation is
+ inefficient.
  First, researchers accrued mostly to incumbent firms in concentrated sectors.
- Second, the quality of patents in sectors with increased concentration
- has fallen, as measured by patent forward citations.
+ Second, the quality of patents in concentrating sectors has fallen, as
+ measured by patent forward citations.
  Third, inventors' productivity, that I measure as growth in output per
- worker per inventor, has decreased in these sectors.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-This measure of inventor productivity mirrors the analogous definition of
- 
-\begin_inset Quotes eld
-\end_inset
-
-research productivity
-\begin_inset Quotes erd
-\end_inset
-
- offered by 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "bloomAreIdeasGetting2020"
-literal "false"
-
-\end_inset
-
-.
- In the introduction to their paper, and following a large growth literature,
- they decompose economic growth into the product of the number of researchers
- and a term capturing research productivity.
- Following this definition, I compute inventors' productivity as the ratio
- of the growth in each sector, which I measure using output per worker growth,
- and the number of inventors employed by that sector.
- 
-\end_layout
-
-\end_inset
-
+ worker per inventor, has fallen in these sectors.
  These findings suggest that additional inventors have accrued to incumbents
  who employed them on 
 \begin_inset Quotes eld
@@ -503,9 +462,9 @@ defensive innovation
 
 , that is, projects with a low growth footprint conducted with the primary
  aim of preventing further entry and sheltering existing dominant positions.
- Quantitatively, the midpoint of my estimates implies that inventor misallocatio
-n is responsible for a 0.78pp fall in output-per-worker growth in the sectors
- I study (27.3% of the overall observed reduction over the period 1997-2012).
+ Quantitatively, my findings imply that inventor misallocation implies a
+ fall of up to 0.78pp in output-per-worker growth in the sectors I study
+ (27.3% of the overall observed reduction over the period 1997-2012).
  
 \end_layout
 
@@ -519,9 +478,10 @@ knowledge markets,
 \end_inset
 
  defined as sets of product markets that share similar inventors.
- These markets originate from the network of transitions of individual inventors
- across product categories, identified using USPTO patents classified by
- their NAICS sectors of application.
+ These inventor markets originate from the network generated by transitions
+ of individual inventors across product categories, identified using USPTO
+ patent data, where patents are classified according to their main NAICS
+ sector of applications.
  This classification is crucial to avoid pooling inventors and sectors that
  do not share the same technical expertise.
  If this were the case, the response of inventor mobility to changes in
@@ -530,38 +490,34 @@ d as potential outlets for each inventor would in facts not be such.
 \end_layout
 
 \begin_layout Standard
-In the second part of the paper, I develop a model of R&D resource allocation.
- My objectives are twofold.
- First, I use the model to explain how inefficient defensive innovations
- can arise and become intensified as concentration increases.
- Second, I quantify the R&D productivity effects of increasing concentration,
- and evaluate how R&D subsidies can be best allocated in the presence of
- defensive innovation.
- I adopt a Schumpeterian creative-destruction framework where, in addition
- to productive R&D conducted by new entrants, incumbents can engage in defensive
- projects to increase entry cost faced by potential competitors.
+In order to interpret these results, I build a Schumpeterian model where,
+ in addition to productive R&D conducted by new entrants, incumbents can
+ engage in defensive projects to increase entry cost faced by potential
+ competitors.
  A two-sector general equilibrium model shows that unbalanced changes in
  concentration across sectors generate a fall in inventor productivity and
  growth.
- Indeed, inventors are misallocated to less competitive markets where defensive
- projects—which hamper entry and Schumpeterian growth—are more prevalent,
- and away from competitive sectors where growth is more sustained.
+ Indeed, inventors are misallocated towards less competitive markets where
+ defensive projects—which hamper entry and Schumpeterian growth—are more
+ prevalent, and away from more competitive sectors where growth is more
+ sustained.
  The theoretical analysis shows that defensive innovation is a crucial mechanism
  to generate the increased concentration of inventors among incumbents that
  I find in the data, as well as the fall in R&D productivity, which are
  both absent in a framework abstracting from these features.
+ 
 \end_layout
 
 \begin_layout Standard
 I calibrate a two-sector version of my model to match moments of the R&D
  spending distribution in 1997 and growth over the period 1997-2012.
- This calibration produces a 2.5% fall in output per worker growth from misalloca
-tion, close to the 3% lower bound implied by my estimates.
+ This calibration implies productivity losses from misallocation that are
+ close to the lower bound implied by my estimates.
  In the context of this model, I study the allocation of cost-neutral R&D
  subsidies that maximizes growth.
- The model suggests that subsidizing entrants' R&D in more concentrated
- sectors constitutes the most effective policy, leading to a rise in annual
- GDP growth of about 0.5pp (a 17% increase from the 2012 benchmark).
+ Subsidizing entrants' R&D in more concentrated sectors constitutes the
+ most effective policy, leading to a rise in annual GDP growth of about
+ 0.5pp (17% relative to my benchmark).
  Similar results obtain if entry is uniformly subsidized across the two
  sectors.
  This finding resonates with the fact that defensive innovation constitutes
