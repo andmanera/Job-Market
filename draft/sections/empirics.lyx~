@@ -127,8 +127,8 @@ name "sec:Data-description"
 \end_layout
 
 \begin_layout Standard
-In this section, I describe my main data sources and the procedure to build
- the dataset employed in my empirical analysis.
+In this section, I detail source material and the construction of the dataset
+ used in my empirical analysis.
  Subsection 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -174,7 +174,6 @@ noprefix "false"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Subsection
@@ -190,27 +189,26 @@ name "subsec:Data-Sources"
 
 \begin_layout Standard
 My empirical analysis relies on the variation of concentration across product
- markets, as defined by 4-digit NAICS sectors, and the impact of these shifts
+ markets, as defined by 4-digit NAICS sectors, the impact of these shifts
  on the allocation of inventors with specific competences across these sectors,
- and their effect on inventors' productivity.
+ and the subsequent effect on inventor productivity.
  I use USPTO patent data to measure inventor productivity and establish
  the set of product markets that share similar inventors, and US Economic
  Census data to obtain concentration and productivity growth measures.
  Finally, I also use a dataset of product market regulations, Mercatus RegData
- 4.0, to conduct an instrumental variable analysis, as well as NBER-CES that
- I employ to obtain estimates of the Lerner Index that I employ in the calibrati
-on of my theoretical model.
- 
+ 4.0, to conduct an instrumental variable analysis, as well as NBER-CES to
+ obtain estimates of the Lerner Index that I employ in the calibration of
+ my theoretical model.
 \end_layout
 
 \begin_layout Standard
-My primary source is given by USPTO patent data from PatentsView.
- This dataset contains disambiguated patent, inventor and assignee identifiers,
+My primary source is USPTO patent data from PatentsView.
+ This dataset contains disambiguated patent, inventor, and assignee identifiers,
  as well as Cooperative Patent Classification (CPC) classes for each of
- the patents deposited in the period 1975-2021.
- I employ these data to construct inventor flows across different sectors,
- which I build employing the ALP classification of 1976-2016 patents into
- NAICS sectors of application developed by 
+ the patents registered from1975 to 2021.
+ I then identify inventor flows across different sectors, employing the
+ ALP classification of 1976-2016 patents into NAICS sectors of application
+ developed by 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "goldschlagAlgorithmicLinksProbabilities2016"
@@ -229,6 +227,7 @@ See
 \begin_inset CommandInset href
 LatexCommand href
 target "https://patentsview.org/forum/7/topic/143"
+literal "false"
 
 \end_inset
 
@@ -236,6 +235,7 @@ target "https://patentsview.org/forum/7/topic/143"
 \begin_inset CommandInset href
 LatexCommand href
 target "https://rawpatentdata.blogspot.com/2019/07/patstat-patentsview-concordance-update.html"
+literal "false"
 
 \end_inset
 
@@ -244,12 +244,11 @@ target "https://rawpatentdata.blogspot.com/2019/07/patstat-patentsview-concordan
 
 \end_inset
 
- This leaves me with around one third of all the patents registered between
- 1975 and 2021, due to the restriction of the time frame to 1976-2016 as
- well as an incomplete match between PATSTAT and PatentsView.
- Patent data also provides my with citation data, which I use to build self-cita
-tions as well as truncation-corrected forward citations and patent generality,
- following the procedure in 
+ This leaves me with one third of all the patents registered between 1975
+ and 2021, due to the restriction of the time frame to 1976-2016 and an
+ incomplete match between PATSTAT and PatentsView.
+ I comb patent records for self-citations, truncation-corrected forward
+ citations, and patent generality, following the procedure in 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "hallNBERPatentCitation2001"
@@ -261,24 +260,24 @@ literal "false"
 \begin_inset CommandInset citation
 LatexCommand citet
 key "acemogluRadicalIncrementalInnovationForthcoming"
-literal "true"
+literal "false"
 
 \end_inset
 
 .
- I restrict my attention to utility patents, since I am interested in patents
- with a technological content, and not just design improvements.
+ I restrict my attention to utility patents, as I am interested in patents
+ with a technological content and not just design improvements.
 \end_layout
 
 \begin_layout Standard
-My main data source for concentration and sales data is given by the US
- Economic Census (EC), which reports sales shares for the top 4, 8, 20,
- and 50 firms, Herfindal-Hirschman Index, sales and number of companies
- in various NAICS 4-digit sectors at a 5 year frequency.
+My main source for concentration and sales data is the US Economic Census
+ (EC), which reports sales shares for the top 4, 8, 20, and 50 firms; the
+ Herfindal-Hirschman Index; sales and number of companies in various NAICS
+ 4-digit sectors at a 5-year frequency.
  I restrict my attention to the period between 1997 and 2012 for three main
  reasons.
- First, as I show below, this period saw a substantial increase in the concentra
-tion of inventors in specific technology classes.
+ First, as I show below, this period saw substantial increase in the concentrati
+on of inventors in specific technology classes.
  Second, the start of this period coincides with an acceleration in the
  growth of market concentration and markups 
 \begin_inset CommandInset citation
@@ -290,9 +289,8 @@ literal "false"
 \end_inset
 
 .
- Third, 1997 marks the adoption of the NAICS classification, ensuring a
- consistent definition of product markets throughout the period I analyze,
- without the need to rely on crosswalk with the pre-existing SIC classification.
+ Third, 1997 saw the adoption of the NAICS classification, thus ensuring
+ a consistent definition of product markets throughout the period I analyze
  As my baseline concentration measure, I rely on the HHI lower bound constructed
  by 
 \begin_inset CommandInset citation
@@ -311,6 +309,7 @@ Available at
 \begin_inset CommandInset href
 LatexCommand href
 target "https://sites.google.com/site/drjankeil/data."
+literal "false"
 
 \end_inset
 
@@ -319,8 +318,8 @@ target "https://sites.google.com/site/drjankeil/data."
 
 \end_inset
 
- This choice is dictated by the fact that the Economic Census reports the
- HHI only for a subset of industries, which would severely limit my sample.
+ I did so because the Economic Census reports the HHI only for a subset
+ of industries, which would severely limit my sample.
  The method proposed by 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -329,7 +328,7 @@ literal "false"
 
 \end_inset
 
- obviates to this issue by constructing the implied lower bound of the HHI
+ obviates this issue by constructing the implied lower bound of the HHI
  implied by top sales shares reported in the Economic Census, which are
  available for a much wider set of industries than the HHI.
 \begin_inset Foot
@@ -351,25 +350,26 @@ literal "false"
 \end_inset
 
  While my estimates are robust to using the EC-reported HHI, this choice
- allows me to obtain more power for my findings as well as generalize them.
+ allows me to obtain more power for my findings as well as to generalize
+ them.
 \end_layout
 
 \begin_layout Standard
-The Economic Census also provides me with sector-level growth in output
- per worker, which constitutes my main measure of productivity growth in
- the sectors I analyze.
+The Economic Census also provides sector-level growth in output per worker,
+ which constitutes my main measure of productivity growth.
  I choose this measure instead of multi-factor productivity since the latter
  is available only for a limited set of sectors, mostly in manufacturing.
- I deflate sales using NAICS-specific price indices from the BLS.
+ I deflate sales using NAICS-specific price indices from the Bureau of Labor
+ Statistics.
 \end_layout
 
 \begin_layout Standard
 I employ two additional data sources in the empirical analysis and in the
  calibration of my model.
  First, I obtain sector-specific counts of regulations for various NAICS
- 4-digit sector from the Mercatus RegData 4.0 dataset, which I employ to
- conduct an instrumental variable analysis, strengthening the causal interpretat
-ion of my results.
+ 4-digit sector from the Mercatus RegData 4.0 dataset.
+ I employ them to conduct an instrumental variable analysis, strengthening
+ the causal interpretation of my results.
 \begin_inset Foot
 status collapsed
 
@@ -392,10 +392,9 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Matching my various data sources results in a dataset of 157 NAICS 4-digit
- sectors over the period 1997-2012, out of a total of 304 business sectors,
- for which I have data on concentration and that I merge to my estimates
- of knowledge markets.
+All told, out of a total of 304 NAICS 4-digit sectors, I have assembled
+ 157 business sectors for which I can measure the interrelation between
+ concentration and knowledge markets.
 \end_layout
 
 \begin_layout Subsection
@@ -410,33 +409,18 @@ name "subsec:KnowledgeMarkets"
 \end_layout
 
 \begin_layout Standard
-In order to identify the effect of product market concentration on the allocatio
-n of inventors, I first have to establish which set of sectors different
- categories of inventors can actually choose from.
- Indeed, pooling all sectors together would inevitably attenuate the response
- of the inventor distribution to changes in the features of individual product
- markets, as this design would correspond to the assumption that all inventors
- could potentially be employed by any sector.
- Since inventors have limited employment opportunities due to their specific
- skills set, this assumption would incorrectly suggest that, in a majority
- of cases, sector characteristics have no impact on the allocation of researcher
-s.
- That is, the mismeasurement of labor market for inventors would produce
- an attenuation bias in my coefficient of interest.
- 
-\end_layout
-
-\begin_layout Standard
-The main aim of this section is correctly grouping product markets that
- share the same 
+The main aim of this section is grouping product markets that share the
+ same 
 \emph on
-required knowledge to innovate
+required
 \emph default
-, and therefore compete for the same R&D inputs, namely inventors.
- In practice, I construct transition of inventors across different product
- markets, and use the resulting network of flows to identify sectors that
- routinely exchange researchers through a Louvain community-detection algorithm
  
+\emph on
+knowledge to innovate
+\emph default
+ and therefore compete for the same R&D inputs, namely inventors.
+ I identify sectors that routinely exchange researchers through the Louvain
+ community-detection algorithm 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "blondelFastUnfoldingCommunities2008"
@@ -445,7 +429,6 @@ literal "false"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -459,39 +442,35 @@ noprefix "false"
 
 \end_inset
 
- presents a graphical illustration that clarifies my definition of knowledge
- markets as well as the procedure I follow to construct them.
- Each node in the Figure represents a different NAICS 4-digit sector, which
- is connected to other sectors by inventor flows, indicated with black lines.
- The width of each line represents the strength of these flows.
- The procedure described in detail in the rest of this section, shows how
- I define these flows and measure their strength.
+ illustrates how I construct knowledge markets.
+ Each node in the Figure represents a different NAICS 4-digit sector, and
+ the black lines designate the inventor flows.
+ The procedure shows how I determine these flows and measure their strength.
  After obtaining these weighted flows, I employ a community detection algorithm
- to group together sectors that are most closely connected to each other.
- In the sectors that I selected for this illustration, as one might expect,
- there are strong flows between grain, vegetable farming and animal food
- manufacturing, all of which involve knowledge related to agriculture and
- nutrition, and separately between footwear and leather tanning, which both
- require knowledge of leather crafting.
- In this case, my algorithm would identify two knowledge markets, one given
- by the agriculture and food manufacturing sectors, and one given by leather
- crafting sectors, leaving the laundry services sector isolated.
- 
-\end_layout
+ to group together sectors most closely connected.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig: KmarketGraph"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Standard
-This example makes clear the importance of identifying separate knowledge
- market to analyze the effects of the evolution of product markets on the
- allocation of inventors.
- In this figure, where there are routinely almost no links of the laundry
- sectors to the others, we would not observe a response of the inventor
- distribution to changes in the concentration of these sectors, since the
- other inventors in the economy specialize on different skills set and would
- therefore not be able to transition there.
- Analogously, we would expect a higher profitability in footwear manufacturing
- to attract inventors away from leather tanning, but not from vegetable
- farming.
- 
+\end_inset
+
+ depicts strong flows among grain, vegetable farming and animal food manufacturi
+ng, all of which involve knowledge related to agriculture and nutrition,
+ and separately between footwear and tanning, which both require knowledge
+ of leather crafting.
+ In this case, my algorithm would identify two knowledge markets, one given
+ by the agriculture and food manufacturing sectors, and the other by leather
+ crafting sectors, leaving the laundry services sector isolated.
+ Based on the strength of connections, we would expect increased concentration
+ in footwear manufacturing to attract inventors away from leather tanning,
+ but not from vegetable farming.
+ Increased concentration in the laundry sector, which has weak ties to the
+ other sectors, would lead to negligible inventor movement within this particula
+r grouping.
 \end_layout
 
 \begin_layout Standard
@@ -539,7 +518,7 @@ name "fig: KmarketGraph"
 \begin_layout Plain Layout
 
 \size footnotesize
-Note: This Figure provides a graphical illustration of the definition of
+Note: This figure provides a graphical illustration of the definition of
  knowledge markets as sets of product markets sharing the same required
  knowledge to innovate.
  This illustration is based on transitions of inventors across product markets
@@ -4387,7 +4366,7 @@ status open
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/tab/Lprod_hhi_inv_fe1.tex"
+filename "../tab/Lprod_hhi_inv_fe1.tex"
 
 \end_inset
 
