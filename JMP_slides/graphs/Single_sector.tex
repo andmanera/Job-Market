@@ -1,0 +1,153 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=3.021in,
+height=3.791in,
+at={(1.174in,6.379in)},
+scale only axis,
+xmin=1.08,
+xmax=1.98,
+xlabel style={font=\color{white!15!black}},
+xlabel={Markup},
+ymin=1,
+ymax=6.68181818181818,
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={Profits}
+]
+\addplot [color=mycolor1, forget plot]
+  table[row sep=crcr]{%
+1.08	1\\
+1.18	2.0593220338983\\
+1.28	2.953125\\
+1.38	3.71739130434782\\
+1.48	4.37837837837838\\
+1.58	4.95569620253164\\
+1.68	5.46428571428571\\
+1.78	5.91573033707865\\
+1.88	6.31914893617021\\
+1.98	6.68181818181818\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=3.021in,
+height=3.791in,
+at={(5.149in,6.379in)},
+scale only axis,
+area style,
+stack plots=y,
+xmin=1.08,
+xmax=1.98,
+xlabel style={font=\color{white!15!black}},
+xlabel={Markup},
+ymin=0,
+ymax=154.606305471986,
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={Inventors},
+axis x line*=bottom,
+axis y line*=left,
+legend style={at={(0.5,-0.03)}, anchor=north, legend cell align=left, align=left, fill=none, draw=none}
+]
+\addplot[fill=mycolor1, draw=black] table[row sep=crcr]{%
+1.08	43.1619800797596\\
+1.18	53.4743865890148\\
+1.28	59.4154327353764\\
+1.38	63.5159125104713\\
+1.48	66.5863930478788\\
+1.58	68.9993782601235\\
+1.68	70.9585602777979\\
+1.78	72.5876693790402\\
+1.88	73.9674088323612\\
+1.98	75.1532116507449\\
+}
+\closedcycle;
+\addlegendentry{Entrants' Inv.}
+
+\addplot[fill=mycolor2, draw=black] table[row sep=crcr]{%
+1.08	23.8172202381318\\
+1.18	38.0469046941621\\
+1.28	47.8337279167555\\
+1.38	55.2727101558244\\
+1.48	61.2108788630704\\
+1.58	66.099260291394\\
+1.68	70.2122315338169\\
+1.78	73.7306834792555\\
+1.88	76.7805564072039\\
+1.98	79.4530938212406\\
+}
+\closedcycle;
+\addlegendentry{Incumbent's Inv.}
+
+\end{axis}
+
+\begin{axis}[%
+width=3.021in,
+height=3.055in,
+at={(1.174in,1.958in)},
+scale only axis,
+xmin=1.08,
+xmax=1.98,
+xlabel style={font=\color{white!15!black}},
+xlabel={Markup},
+ymin=1,
+ymax=1.70755116563496,
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={Growth}
+]
+\addplot [color=mycolor1, forget plot]
+  table[row sep=crcr]{%
+1.08	1\\
+1.18	1.22930423998861\\
+1.28	1.36081395555573\\
+1.38	1.45136777328391\\
+1.48	1.51907201048421\\
+1.58	1.57222044260658\\
+1.68	1.61533772555461\\
+1.78	1.65116743960525\\
+1.88	1.68149657552157\\
+1.98	1.70755116563496\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=3.021in,
+height=3.055in,
+at={(5.149in,1.958in)},
+scale only axis,
+xmin=1.08,
+xmax=1.98,
+xlabel style={font=\color{white!15!black}},
+xlabel={Markup},
+ymin=0.739752568480054,
+ymax=1,
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={Inventor Productivity}
+]
+\addplot [color=mycolor1, forget plot]
+  table[row sep=crcr]{%
+1.08	1\\
+1.18	0.899657487207735\\
+1.28	0.849854954298308\\
+1.38	0.818356595435947\\
+1.48	0.796153368269253\\
+1.58	0.779475419577032\\
+1.68	0.766405201193097\\
+1.78	0.755844174946435\\
+1.88	0.747109891577814\\
+1.98	0.739752568480054\\
+};
+\end{axis}
+\end{tikzpicture}%

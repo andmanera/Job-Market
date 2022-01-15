@@ -2104,7 +2104,7 @@ Trim Outliers
  the sample average of each variable and that are most likely to drive the
  results estimated using the full sample.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 I justify the choices for each variable in detail in my replication code
@@ -2129,13 +2129,12 @@ Mahalanobis 5%
 
 \begin_layout Standard
 Table 
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-I justify the choices for each variable in detail in my replication code
- using the empirical kernel density and detailed tabulations.
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegShInvNoctrl"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -3963,9 +3962,9 @@ noprefix "false"
 
 \end_inset
 
- presents the results of running regression 
+ presents the results of running (
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "eq: spec"
 plural "false"
 caps "false"
@@ -3973,14 +3972,14 @@ noprefix "false"
 
 \end_inset
 
- when the outcome is the average growth in output per worker per effective
+) when the outcome is the average growth in output per worker per effective
  inventor.
  I use growth in annual output per worker provided by the Economic Census
  and average this measure over the five-year window starting in the Economic
- Census year, and I proceed analogously to build a measure of average effective
- inventors over the same period.
+ Census year, and I analogously build a measure of average effective inventors
+ over the same period.
  Inventor productivity is then defined as average output per worker growth
- divided by average effective inventors.
+ divided by average number of effective inventors.
  Both the outcome and the dependent variable are measured in percentage
  points.
  Table 
@@ -3994,14 +3993,12 @@ noprefix "false"
 \end_inset
 
  reveals a negative and significant correlation between the increase in
- the effective inventors' change and inventor productivity, regardless of
- the independent variable employed and the sample restriction adopted.
+ the number of effective inventors and inventor productivity, regardless
+ of the independent variable employed and the sample restriction adopted.
 \end_layout
 
 \begin_layout Standard
-The magnitude of estimated coefficients can be grasped considering the scale
- of the variables and their changes over the sample period.
- Starting from the upper panel of Table 
+Starting from the upper panel of Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab: RegProd"
@@ -4024,16 +4021,14 @@ Recall that effective inventors in each year are measured as the sum of
 
 \end_inset
 
- Using the coefficient in Column (5) to predict the median annual change
- in labor productivity growth implied by rising inventor concentration amounts
- to a fall of .15pp (
+ The coefficient for concentration in Column (5) implies a fall of .15pp
+ (
 \begin_inset Formula $-.005\times.014pp\times2018$
 \end_inset
 
-).
- This number increases to .
- 28pp when using the statistics relative to sectors with positive growth
- in labor productivity only, which accounted for the bulk of the increase
+) in average annual labor productivity growth.
+ This number decreases to -.28pp when considering only sectors with positive
+ growth in labor productivity, which accounted for the bulk of the increase
  in inventor shares.
  An alternative back-of-the-envelope computation, using the change in product
  market concentration to predict the change in inventor shares gives even
@@ -4048,25 +4043,17 @@ noprefix "false"
 
 \end_inset
 
-(a), and considering a median change in the HHI of 0.002 yields an increase
- in the share of effective inventors in concentrating sectors of 0.045pp,
- which implies a fall in average labor productivity implied by misallocation
- of 
-\begin_inset Formula $0.45$
-\end_inset
-
-pp.
- While these numbers might appear sizable considering the entirety of the
- economy, it is worth noting that the sample I have data for includes mainly
- manufacturing and retail sectors, which experienced a sizable reduction
- of about 
-\begin_inset Formula $2.8$
-\end_inset
-
-pp in average annual productivity growth from 1997-2012, driven by a steep
+(a) and considering a median change in the HHI of 0.002 yields an increase
+ in the share of effective inventors in concentrating sectors of 0.045pp.
+ This implies a fall in average labor productivity implied by misallocation
+ of 0.45pp.
+ While these numbers might appear large considering the entirety of the
+ economy, it is worth noting that my sample includes mainly manufacturing
+ and retail sectors, which experienced a sizable reduction of about 2.8pp
+ in average annual productivity growth from 1997 to 2012, driven by a steep
  decline in output per worker growth in manufacturing.
- Therefore, the mechanism I propose would explain around 15% of the observed
- decrease in output per worker growth in these sectors.
+ Therefore, the mechanism I propose would explain around 15 percent of the
+ observed decrease in output per worker growth in these sectors.
 \end_layout
 
 \begin_layout Standard
@@ -4099,10 +4086,15 @@ pp change in output per worker growth from misallocation, with a confidence
 
 pp.
  The midpoint of these estimates would explain 
-\begin_inset Formula $27\%$
+\begin_inset Formula $28.6\%$
 \end_inset
 
- of the observed fall in output per worker growth over the sample period,
+ of the observed fall in output per worker growth over the sample period
+ 
+\begin_inset Formula $-2.73pp$
+\end_inset
+
+.
  with bounds ranging from around 
 \begin_inset Formula $5\%$
 \end_inset
@@ -4115,15 +4107,11 @@ pp.
 \end_layout
 
 \begin_layout Standard
-This last set of results provides further support to the hypothesis that
- defensive innovation increased in concentrating sectors.
- Indeed, a central feature of this type of R&D activity is that it does
- not produce substantial growth, since it is aimed at hampering innovation
- projects by potential entrants.
- In this sense, patents are registered in order to prevent others from doing
- so and implementing inventions that would threaten the incumbents' dominant
- position.
- This interpretation also resonates with the finding in 
+This last set of results further supports the hypothesis that defensive
+ innovation increased in concentrating sectors.
+ To protect their dominant position, firms engage in such R&D to thwart
+ innovation by potential competitors.
+ Similarly citing defensive innovation as a motive, 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "argentePatentsProductsProduct2020a"
@@ -4131,9 +4119,8 @@ literal "false"
 
 \end_inset
 
-, who note that incumbent firms tend to register a large number of patents,
- but account for a small share of overall innovations; a finding they also
- interpret as evidence of defensive innovation.
+ report that incumbent firms tend to register a large number of patents,
+ but account for a small share of overall innovations.
 \end_layout
 
 \begin_layout Standard
@@ -4291,12 +4278,12 @@ filename "../tab/Lprod_hhi_inv_fe1.tex"
 \align left
 
 \size small
-Note: Regressions weighted by sales in 2012; Robust standard errors in parenthes
-es; Symbols denote significance levels 
+Note: Regressions weighted by sales in 2012; robust standard errors in parenthes
+es; symbols denote significance levels 
 \begin_inset Formula $\left(+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001\right)$
 \end_inset
 
-; Checkmarks indicate the inclusion of fixed effects.
+; checkmarks indicate the inclusion of fixed effects.
  Please refer to notes in Table 
 \begin_inset CommandInset ref
 LatexCommand ref

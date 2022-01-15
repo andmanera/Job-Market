@@ -2104,7 +2104,7 @@ Trim Outliers
  the sample average of each variable and that are most likely to drive the
  results estimated using the full sample.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 I justify the choices for each variable in detail in my replication code
@@ -2129,13 +2129,12 @@ Mahalanobis 5%
 
 \begin_layout Standard
 Table 
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-I justify the choices for each variable in detail in my replication code
- using the empirical kernel density and detailed tabulations.
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegShInvNoctrl"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -4010,7 +4009,11 @@ noprefix "false"
 \end_inset
 
 , the median change in the share of effective inventors over the period
- was .014pp, while the measure of effective inventors has a median of 2018.
+ was 
+\begin_inset Formula $.014pp$
+\end_inset
+
+, while the measure of effective inventors has a median of 2018.
 \begin_inset Foot
 status collapsed
 
@@ -4022,14 +4025,20 @@ Recall that effective inventors in each year are measured as the sum of
 
 \end_inset
 
- The coefficient for concentration in Column (5) implies a fall of .15pp
- .15pp (
+ The coefficient for concentration in Column (5) implies a fall of 
+\begin_inset Formula $.15pp$
+\end_inset
+
+(
 \begin_inset Formula $-.005\times.014pp\times2018$
 \end_inset
 
 ) in average annual labor productivity growth.
- This number decreases to -.
- 28pp when considering only sectors with positive growth in labor productivity,
+ This number decreases to 
+\begin_inset Formula $-.28pp$
+\end_inset
+
+ when considering only sectors with positive growth in labor productivity,
  which accounted for the bulk of the increase in inventor shares.
  An alternative back-of-the-envelope computation, using the change in product
  market concentration to predict the change in inventor shares gives even
@@ -4044,13 +4053,24 @@ noprefix "false"
 
 \end_inset
 
-(a) and considering a median change in the HHI of 0.002 yields an increase
- in the share of effective inventors in concentrating sectors of 0.045pp.
+(a) and considering a median change in the HHI of 
+\begin_inset Formula $0.002$
+\end_inset
+
+ yields an increase in the share of effective inventors in concentrating
+ sectors of 
+\begin_inset Formula $0.045pp$
+\end_inset
+
+.
  This implies a fall in average labor productivity implied by misallocation
  of 0.45pp.
  While these numbers might appear large considering the entirety of the
  economy, it is worth noting that my sample includes mainly manufacturing
- and retail sectors, which experienced a sizable reduction of about 2.8pp
+ and retail sectors, which experienced a sizable reduction of 
+\begin_inset Formula $2.73pp$
+\end_inset
+
  in average annual productivity growth from 1997 to 2012, driven by a steep
  decline in output per worker growth in manufacturing.
  Therefore, the mechanism I propose would explain around 15 percent of the
@@ -4087,16 +4107,20 @@ pp change in output per worker growth from misallocation, with a confidence
 
 pp.
  The midpoint of these estimates would explain 
-\begin_inset Formula $27\%$
+\begin_inset Formula $28.6\%$
 \end_inset
 
- of the observed fall in output per worker growth over the sample period,
- with bounds ranging from around 
-\begin_inset Formula $5\%$
+ of the observed fall in output per worker growth over the sample period
+ (
+\begin_inset Formula $-2.73pp$
 \end_inset
 
- to about 
-\begin_inset Formula $50\%$
+), with bounds ranging from 
+\begin_inset Formula $4.8\%$
+\end_inset
+
+ to 
+\begin_inset Formula $53\%$
 \end_inset
 
 .

@@ -12,6 +12,12 @@
 \setbeamertemplate{navigation symbols}{}
 
 \usepackage[bottom]{footmisc}
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
 \usepackage{placeins}
 %\usepackage[adobe-utopia]{mathdesign}
 \usepackage{pifont}
@@ -1407,8 +1413,8 @@ Trends in innovation and R&D productivity
 \size scriptsize
 \emph default
  Acemoglu et al.
- (2018, 2021), Akcigit and Ates (2020), Akcigit and Kerr (2018), Bloom et
- al.
+ (2018, 2021),  Akcigit and Kerr (2018), Arora et al.
+ (2020), Bloom et al.
  (2020) 
 \size default
 
@@ -3603,7 +3609,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename graphs/Community_3d.png
-	lyxscale 40
+	lyxscale 20
 	height 90pheight%
 
 \end_inset
@@ -3677,47 +3683,7 @@ begin{itemize}
 
 
 \backslash
-item<1-> Inventor flows between many different product markets!
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-item<2-> Orange: 
-\begin_inset Quotes eld
-\end_inset
-
-Mining, Heavy Industry
-\begin_inset Quotes erd
-\end_inset
-
- 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-.8em}
-\end_layout
-
-\begin_layout Plain Layout
-
-{
-\backslash
-tiny{Petroleum and Coal Products, Chemical, Machinery Manufacturing}}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-item<3-> Green: 
+item<1-> Orange: 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3750,11 +3716,30 @@ tiny{Crop Production, Food Manufacturing, Beverage and Tobacco}}
 
 
 \backslash
-item<4-> Yellow: 
+item<2-> Light Blue: 
 \begin_inset Quotes eld
 \end_inset
 
-Communications, Electronics
+Oil, Gas, Mining
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item<3-> Green: 
+\begin_inset Quotes eld
+\end_inset
+
+Heavy Manufacturing
 \begin_inset Quotes erd
 \end_inset
 
@@ -3776,7 +3761,45 @@ vspace{-.8em}
 
 {
 \backslash
-tiny{Computer Products, Telecommunications, Data Processing}}
+tiny{Chemicals, Plastics and Petroleum Products}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item<4-> Blue: 
+\begin_inset Quotes eld
+\end_inset
+
+Retail, Data Processing
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item<4-> Violet: 
+\begin_inset Quotes eld
+\end_inset
+
+Electronics, Machinery
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\backslash
+
+\backslash
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3858,6 +3881,28 @@ end{columns}
 
 \end_deeper
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The first market, including sector 111, groups sectors involving agricultural
+ production (111, 112 and 114) and food manufacturing (311).
+ The second market, starting with 211, includes oil, gas, and mining.
+ The green cluster at the top of the figure groups several heavy manufacturing
+ industries, such as chemicals plastics and petroleum products, and pipeline
+ transportation (486).
+ The market in yellow consists largely of transportation services and manufactur
+ing as well as motor vehicle dealers.
+ The large blue cluster captures many retail sectors, as well as data processing
+, telecom, and broadcasting services.
+ The remaining three markets include insurance and finance (red cluster),
+ computer, electronics, and machinery manufacturing and professional services
+ (violet), and wholesalers (gray).
+\end_layout
+
+\end_inset
+
+
 \begin_inset Separator plain
 \end_inset
 
@@ -5555,11 +5600,11 @@ Optimal to subsidize entrants' R&D in concentrated sectors
 
 \begin_layout Itemize
 Cost-neutral policy gives up to 
-\begin_inset Formula $.28pp$
+\begin_inset Formula $.50pp$
 \end_inset
 
  higher annual growth 
-\begin_inset Formula $\left(+10\%\right)$
+\begin_inset Formula $\left(+17\%\right)$
 \end_inset
 
 
@@ -5954,11 +5999,7 @@ pause
 \end_layout
 
 \begin_layout Itemize
-Fix 
-\begin_inset Formula $w^{RD}=1$
-\end_inset
-
- for now
+Isoelastic R&D labor supply
 \end_layout
 
 \end_deeper
@@ -6317,7 +6358,7 @@ Inventors' productivity (growth per inventor):
 status open
 
 \begin_layout Plain Layout
-One-Sector Equilibrium Proposition 
+Constant-Growth Equilibrium Proposition 
 \begin_inset Note Note
 status collapsed
 
@@ -6376,30 +6417,56 @@ name "prop: partialEq-2"
 
 \end_inset
 
-Consider the above model with a perfectly elastic production and R&D labor
- supply.
- Assume 
-\begin_inset Formula $\delta,\lambda=0,$
+ Around and equilibrium with constant growth, an increase in the markup
+ 
+\begin_inset Formula $\phi$
 \end_inset
 
- and 
+ raises incumbents' and entrants' research efforts, and the share of R&D
+ labor employed by incumbents.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+If (i) 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+; (ii) inventor supply is elastic; and (iii) the model parameters are such
+ that equilibrium incumbents' research effort is more elastic than entrants'
 \begin_inset Formula 
 \[
-\sqrt{\frac{\phi-1}{\phi}}\left(\frac{\alpha_{I}-\zeta\omega\left(\omega-1\right)}{\alpha_{I}\zeta\omega}\right)>\rho.
+\frac{\partial x_{I}^{\star}}{\partial\phi}\frac{\phi}{x_{I}^{\star}}>\frac{\partial x_{e,\omega}^{\star}}{\partial\phi}\frac{\phi}{x_{e,\omega}^{\star}},
 \]
 
 \end_inset
 
- An increase in the markup factor 
-\begin_inset Formula $m\equiv\frac{\phi-1}{\phi}$
+it further holds
+\begin_inset Formula 
+\[
+\frac{\partial\left(\nicefrac{g}{L^{RD}}\right)}{\partial\phi}<0.
+\]
+
 \end_inset
 
-, increases incumbents' and entrants' R&D and the incumbents' share of total
- R&D labor, and decreases inventor productivity, 
-\begin_inset Formula $g/L^{RD}.$
+That is, an increase in the markup, 
+\begin_inset Formula $\phi$
 \end_inset
 
-
+, lowers equilibrium inventors' productivity.
+ 
 \begin_inset ERT
 status open
 
@@ -6420,10 +6487,6 @@ pause
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-Sufficient conditions, holds for wider range of parameters in simulations
 \end_layout
 
 \end_deeper
@@ -6869,7 +6932,7 @@ textwidth}{!}{
 
 
 \backslash
-begin{tabular}{L{6cm}C{1.3cm}C{1cm}C{8cm}}
+begin{tabular}{L{5.5cm}C{1.2cm}C{1cm}C{9cm}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -6907,7 +6970,7 @@ tabularnewline
 
 
 \backslash
-onslide<2-> Value Added Share & $
+onslide<1-> Value Added Share & $
 \backslash
 beta$ & .5 & Share of sectors with $
 \backslash
@@ -6920,11 +6983,9 @@ tabularnewline
 
 
 \backslash
-onslide<3-> Average Sectors' Markup & $
+onslide<1-> Average Sectors' Markup & $
 \backslash
-phi$ & 1.13 & Incumbents' Relative Efficiency {
-\backslash
-tiny (Aghion et al., 2019)}
+phi$ & 1.08 & De Loecker et al., 2020; Eggertsson et al., 2018
 \backslash
 tabularnewline
 \end_layout
@@ -6933,7 +6994,7 @@ tabularnewline
 
 
 \backslash
-onslide<4-> Innovation Cost Curvature & $
+onslide<2-> Innovation Cost Curvature & $
 \backslash
 gamma$ & $1/.6$ &  Kortum (1993)
 \backslash
@@ -6944,7 +7005,7 @@ tabularnewline
 
 
 \backslash
-onslide<5-> Patent Expiration Rate & $
+onslide<2-> Patent Expiration Rate & $
 \backslash
 delta$ & .05 & Uruguay Round Agreements Act (1994) 
 \backslash
@@ -6955,7 +7016,7 @@ tabularnewline
 
 
 \backslash
-onslide<6-> Incumbent Innovation Probability & $
+onslide<2-> Incumbent Innovation Probability & $
 \backslash
 lambda$ & .785 & Internal patent share {
 \backslash
@@ -6968,11 +7029,9 @@ tabularnewline
 
 
 \backslash
-onslide<7-> Patent Wall Size & $
+onslide<2-> Value of Blocking Patents & $
 \backslash
-omega$ & 1.469 & Entry to patents elasticity {
-\backslash
-tiny(Hall and Helmers, 2015)}
+omega$ & 2 & Czarnitzki et al., 2020; Grimpe and Hussinger, 2008 
 \backslash
 tabularnewline
 \end_layout
@@ -7008,7 +7067,7 @@ status open
 
 
 \backslash
-onslide<8->
+onslide<3->
 \end_layout
 
 \end_inset
@@ -7093,11 +7152,7 @@ pause
 \end_layout
 
 \begin_layout Itemize
-Lower fall in growth from misallocation than what implied by data (
-\emph on
-about 1/5 of lower bound
-\emph default
-)
+Lower bound of fall in growth from data (3%)
 \begin_inset ERT
 status open
 
@@ -7151,7 +7206,7 @@ tabularnewline
 
 Incumbent Costs & $
 \backslash
-alpha_{I}$ & 6.67 &  Top 10
+alpha_{I}$ & 21.97 &  Top 10
 \backslash
 % Firms' Inventor Share, 1997: 30.3
 \backslash
@@ -7159,7 +7214,7 @@ alpha_{I}$ & 6.67 &  Top 10
 \backslash
 tabularnewline Entrants' Costs & $
 \backslash
-zeta$ & 3.38 & Business R
+zeta$ & 4.75 & Business R
 \backslash
 &D Share over GDP, 1997: 1.81
 \backslash
@@ -7167,7 +7222,7 @@ zeta$ & 3.38 & Business R
 \backslash
 tabularnewline Innovation Step & $
 \backslash
-eta$ & 0.0024 & Average Annual Growth, 1997-2012: 2.45
+eta$ & 0.0047 & Average Annual Growth, 1997-2012: 2.45
 \backslash
 %
 \backslash
@@ -7840,9 +7895,9 @@ onslide<7->
 
  
 \series bold
-Subsidizing entry 
+Subsidizing entrants' R&D 
 \series default
-is the most effective policy: .28-.31pp higher growth
+is most effective: .45-.50pp higher growth
 \end_layout
 
 \end_deeper
@@ -7884,7 +7939,7 @@ Incumbents increasingly deployed inventors to defensive projects
 \end_layout
 
 \begin_layout Itemize
-Misallocation can explain 28.6% of 1997-2012 fall in annual output/worker
+Misallocation can explain 28% of 1997-2012 fall in annual output/worker
  growth
 \begin_inset VSpace smallskip
 \end_inset
@@ -7917,7 +7972,7 @@ less competitive sectors
 \end_layout
 
 \begin_layout Itemize
-Cost-neutral entry subsidies give .28pp higher annual growth 
+Cost-neutral entry subsidies give .50pp higher annual growth 
 \end_layout
 
 \end_deeper
@@ -8331,7 +8386,7 @@ beamergotobutton{Back}}
 
 \begin_deeper
 \begin_layout Itemize
-Louvain method (Blodel et al., 2008).
+Louvain method (Blondel et al., 2008).
  Assign each node to its own community.
  Then, repeat iteratively:
 \end_layout
