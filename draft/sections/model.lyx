@@ -1958,8 +1958,30 @@ name "subsec:Calibration"
 I calibrate my model in order to match features of the R&D distribution
  and concentration around 1997, the starting year for my analysis.
  This approach provides conservative parameter choices to analyze the model.
- Under my calibration, inventor productivity falls by 2.5% over the period
- 1997-2012, nearly half of the 5% lower bound of my estimates.
+ Under my calibration, inventor productivity falls by about 2.5% over the
+ period 1997-2012, consistent with the lower bounds of my estimates.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Column (4) in the upper panel of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegProd"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ implies a lower bound for the fall in inventor productivity of about 1.5%,
+ while the lower panel implies a fall in inventor productivity of at least
+ 4.8%.
+ The 2.5% fall in my calibration is in between these two lower bounds.
+\end_layout
+
+\end_inset
+
  This calibration therefore produces a lower bound for the impact of optimal
  R&D subsidies.
  
@@ -3156,8 +3178,7 @@ An increase in the relative markup of sector 2 leads to a pronounced reallocatio
 n of inventors away from sector 1.
  In sector 2, incoming inventors are allocated disproportionately to incumbents,
  who expand their share of researchers relative to entrants.
- This leads to a decrease in overall inventor productivity of about Computing
- the Lerner Index on NBER-CES data as described in Appendix 
+ Computing the Lerner Index on NBER-CES data as described in Appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "app:Using-the-Lerner"
@@ -3175,13 +3196,13 @@ noprefix "false"
 \begin_inset Formula $L^{RD}=100$
 \end_inset
 
-, this results in a 
+, this also results in a 
 \begin_inset Formula $2.5\%$
 \end_inset
 
  fall in GDP growth, about 0.075pp.
- This estimate is close to the lower bound of 0.13pp implied by my estimates
- in Table 
+ This estimate is in between the lower bound of 0.13pp implied by my estimates
+ in the lower panel of Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab: RegProd"
@@ -3191,7 +3212,7 @@ noprefix "false"
 
 \end_inset
 
-.
+ and the lower bound of .03pp implied by the upper panel.
  Assuming an inelastic labor supply mutes the response of inventors' productivit
 y to increases in the markup, so it is reasonable to expect the model in
  this section to understate the productivity effects of increased concentration.

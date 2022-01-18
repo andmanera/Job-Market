@@ -3417,7 +3417,7 @@ literal "false"
 , computing the forward citation lag distribution conditioning on the technology
  class of the cited patent.
  Column (2) also conditions on the technology class of citing patents.
- Column 3 presents the estimates relative to patent generality, a measure
+ Column (3) presents the estimates relative to patent generality, a measure
  of patent impact that increases with the scope of application.
  The regressions in this table are unweighted since they rely only on patent
  data, but results are robust to using the HHI as a regressor and weighting
@@ -4010,7 +4010,7 @@ noprefix "false"
 
 , the median change in the share of effective inventors over the period
  was 
-\begin_inset Formula $.014pp$
+\begin_inset Formula $.014\text{pp}$
 \end_inset
 
 , while the measure of effective inventors has a median of 2018.
@@ -4025,17 +4025,17 @@ Recall that effective inventors in each year are measured as the sum of
 
 \end_inset
 
- The coefficient for concentration in Column (5) implies a fall of 
-\begin_inset Formula $.15pp$
+ The coefficient for concentration in Column (4) implies a fall of 
+\begin_inset Formula $.15\text{pp}$
 \end_inset
 
-(
-\begin_inset Formula $-.005\times.014pp\times2018$
+ (
+\begin_inset Formula $-.005\times.014\text{pp}\times2018$
 \end_inset
 
 ) in average annual labor productivity growth.
  This number decreases to 
-\begin_inset Formula $-.28pp$
+\begin_inset Formula $-.28\text{pp}$
 \end_inset
 
  when considering only sectors with positive growth in labor productivity,
@@ -4059,7 +4059,7 @@ noprefix "false"
 
  yields an increase in the share of effective inventors in concentrating
  sectors of 
-\begin_inset Formula $0.045pp$
+\begin_inset Formula $0.045\text{pp}$
 \end_inset
 
 .
@@ -4101,7 +4101,7 @@ pp change in output per worker growth from misallocation, with a confidence
 \begin_inset Formula $-0.13$
 \end_inset
 
- to 
+pp to 
 \begin_inset Formula $-1.45$
 \end_inset
 
@@ -4112,7 +4112,7 @@ pp.
 
  of the observed fall in output per worker growth over the sample period
  (
-\begin_inset Formula $-2.73pp$
+\begin_inset Formula $-2.73\text{pp}$
 \end_inset
 
 ), with bounds ranging from 
