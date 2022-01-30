@@ -273,7 +273,7 @@ Andrea Manera
 \end_layout
 
 \begin_layout Date
-January 18, 2022
+January 29, 2022
 \end_layout
 
 \begin_layout Standard
@@ -1024,7 +1024,9 @@ tiny{Bloom et al.
 
 
 \backslash
-item<3->  Concerns over inventors' misallocation
+item<3->  Concerns over R
+\backslash
+&D allocation
 \backslash
 
 \backslash
@@ -1043,7 +1045,8 @@ vspace{-.8em}
 {
 \backslash
 tiny{Acemoglu et al.
- (2018, 2021)}}
+ (2018, 2021), Arora et al.
+ (2020)}}
 \end_layout
 
 \begin_layout Plain Layout
