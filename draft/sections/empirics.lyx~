@@ -4400,6 +4400,16 @@ Markets with Growing Inventors' Share Experienced Increased Patent Litigation
 \begin_layout Standard
 In this section, I restrict my attention to the period 2002 to 2012 for
  which data on patent litigation cases are available.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+I verify that my main results are robust to restricting the sample to this
+ horizon, using long-differences over 2002-2012 rather than 1997-2012.
+\end_layout
+
+\end_inset
+
  I employ the same specification as in (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4440,7 +4450,11 @@ For example, I have 3 patents for NAICS sector 4539 for the Economic Census
 
 \end_inset
 
- Table 
+ 
+\end_layout
+
+\begin_layout Standard
+Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab: RegLitigations"
@@ -4457,7 +4471,27 @@ noprefix "false"
  of 3.6 litigation cases per 1000 patents.
  This compares to a cross-sector weighted average increase of 1.33 litigations
  per 1000 patents.
+ Alternatively, a one standard deviation increase in the share of inventors
+ (3pp) raises litigations per 1000 patents by 11.8, which corresponds to
+ 0.5 standard deviations.
+ The results are robust to using sales per company where available, and
+ to using the Mahalanobis distance to drop extreme observations, all of
+ which return coefficients that are statistically indistinguishable.
+ I also verify that my results are robust to using a size quartic and to
+ lagging the increase in inventor shares, since the specification in Table
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegLitigations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ might raise concerns of reverse causality.
+ Adopting these alternative specifications also returns statistically indistingu
+ishable coefficients (results are available upon request).
 \end_layout
 
 \begin_layout Standard

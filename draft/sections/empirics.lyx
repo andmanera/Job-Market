@@ -4400,6 +4400,17 @@ Markets with Growing Inventors' Share Experienced Increased Patent Litigation
 \begin_layout Standard
 In this section, I restrict my attention to the period 2002 to 2012 for
  which data on patent litigation cases are available.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+I verify that my main results are robust to restricting the sample to this
+ horizon, using long-differences over 2002-2012 rather than 1997-2012.
+ The resulting regression tables are available upon request.
+\end_layout
+
+\end_inset
+
  I employ the same specification as in (
 \begin_inset CommandInset ref
 LatexCommand ref
