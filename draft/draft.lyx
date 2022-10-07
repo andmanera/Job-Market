@@ -167,6 +167,10 @@ I am extremely grateful to my advisors Daron Acemoglu, Martin Beraja, and
  Martina Uccioli, Iván Werning, Christian Wolf, and participants in the
  MIT Macro Lunch, Applied Micro Lunch, and Macro Seminar for useful comments
  and suggestions.
+ This research was conducted previous to joining the International Monetary
+ Fund.
+ All views expressed in this paper are my own and do not necessarily reflect
+ the position of the IMF, its Executive Board, or IMF management.
 \end_layout
 
 \end_inset
@@ -198,13 +202,14 @@ protect
 
 \begin_inset CommandInset href
 LatexCommand href
-target "manera@mit.edu"
+target "andrea.manera04@gmail.com"
 type "mailto:"
 literal "false"
 
 \end_inset
 
 .
+ 
 \end_layout
 
 \end_inset
@@ -298,6 +303,8 @@ The rapid productivity gains achieved by technological innovations in the
  captured a disproportionate share of researchers, while also experiencing
  a decrease in R&D productivity, signaled by falling forward citations and
  slowing growth per inventor.
+ Further, sectors with rising inventor shares saw a significant increase
+ in patent litigation cases.
  These findings imply that inventors became increasingly misallocated, accountin
 g for nearly 30 percent of the decline in the average annual growth rate
  of output per worker over the 15-year study period.
@@ -413,6 +420,7 @@ To answer these questions, I study the broader effect of increasing market
  RegData as an instrument for increased concentration.
  This specification shows that sectors with increased concentration have
  increased their share of inventors and not vice versa.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -467,6 +475,27 @@ defensive innovation,
 \end_inset
 
  that is, projects with the primary aim of warding off potential competition.
+ I provide suggestive evidence for this mechanism for the period 2002-2012,
+ where I document a strong correlation between increases in sectors' inventor
+ shares and patent litigation cases.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+I have to restrict the analysis to 2002-2012 since the USPTO Patent Number
+ and Case Code File Dataset 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "schwartzUSPTOPatentNumber2019"
+literal "false"
+
+\end_inset
+
+ only provides data on patent litigation for the period 2003-2016.
+\end_layout
+
+\end_inset
+
  Quantitatively, the midpoint of my estimates implies that inventor misallocatio
 n is responsible for a 0.78pp fall in the average annual growth in output-per-wor
 ker growth in the study sample.
@@ -698,6 +727,16 @@ literal "false"
  the competitive structure to the allocation of R&D resources across more
  and less concentrated sectors, and their deployment to productive or defensive
  projects.
+ The results I present are consistent with the findings of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vaziriAntitrustLawBusiness2021"
+literal "false"
+
+\end_inset
+
+, who shows that stricter antitrust enforcement reduces R&D investments,
+ while increasing productivity and firm entry.
 \end_layout
 
 \begin_layout Standard
@@ -881,8 +920,9 @@ My empirical results show that increasing misallocation of inventors across
  I interpret my findings as resulting from an increase in defensive innovation
  in concentrated sectors.
  Such R&D activities are conducted with the primary aim of blocking further
- entry and are reflected in a decline in patents’ forward citations and
- an increased share of inventors employed by the largest incumbents.
+ entry and are reflected in a decline in patents’ forward citations, an
+ increased share of inventors employed by the largest incumbents, and a
+ rise in patent litigation cases.
  
 \end_layout
 

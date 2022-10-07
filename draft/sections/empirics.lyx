@@ -355,6 +355,21 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schwartzUSPTOPatentNumber2019"
+literal "false"
+
+\end_inset
+
+ provide the data on patents enforced in litigation cases between 2003 and
+ 2016.
+ This dataset allows me to analyze the evolution in patent litigation across
+ NAICS 4-digit sectors for the sub-period 2002-2012.
+ 
+\end_layout
+
+\begin_layout Standard
 The Economic Census also provides sector-level growth in output per worker,
  which constitutes my main measure of productivity growth.
  I choose this measure instead of multi-factor productivity since the latter
@@ -1471,6 +1486,42 @@ I employ the measure of effective inventors constructed as detailed above
 \end_layout
 
 \begin_layout Paragraph
+Patent Litigation Cases
+\end_layout
+
+\begin_layout Standard
+I match the data on litigation cases compiled by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schwartzUSPTOPatentNumber2019"
+literal "false"
+
+\end_inset
+
+ with the data on inventors by NAICS 4-digit.
+ For each sector, I compute the number of litigation cases per patent.
+ These data are available only for the sub-period 2003-2016, which does
+ not allow me to reliably estimate an empirical CDF of cases to correct
+ for truncation.
+ I therefore choose to keep only the litigation cases occurring in the same
+ year as the patent registration, which amounts to assuming that the time
+ profile of cases is constant over time and across sectors.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+More precisely, this would be the same as using only the contemporaneous
+ patent litigation cases and correcting for truncation dividing by the inverse
+ CDF at period 0, which would scale the estimated coefficient upwards.
+\end_layout
+
+\end_inset
+
+ I then average the litigations per patent over the years 2003-2006 and
+ 2013-2016 for the Economic Census waves 2002 and 2012 respectively.
+\end_layout
+
+\begin_layout Paragraph
 Aggregation at Census Frequency
 \end_layout
 
@@ -1501,7 +1552,8 @@ literal "false"
 \end_inset
 
 's matching only covers the period up to 2016, I run all specifications
- in long-differences over the time frame 1997-2012.
+ in long-differences over the time frame 1997-2012, with the exception of
+ the patent litigation regression which uses the period 2002-2012.
 \end_layout
 
 \begin_layout Section
@@ -4321,6 +4373,204 @@ noprefix "false"
  The upper panel presents estimates when the independent variable is the
  change in the share of inventors accruing to a sector, while the bottom
  panel uses the change in the lower bound of the HHI index.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Markets with Growing Inventors' Share Experienced Increased Patent Litigation
+\end_layout
+
+\begin_layout Standard
+In this section, I restrict my attention to the period 2002 to 2012 for
+ which data on patent litigation cases are available.
+ I employ the same specification as in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: spec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), but now I difference the data over the horizon 2002-2012, using as dependent
+ variable the number of litigations per 1000 patents, computed as described
+ in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Other data and aggregation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ I weight the regressions by the number of patents registered in each sector
+ in 2012, as this drives a significant amount of the variance of the measure
+ of litigations per patents.
+ This is to avoid that sectors with very few patents drive the results.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+For example, I have 3 patents for NAICS sector 4539 for the Economic Census
+ year 2012 and 2 litigations per patent, compared to 0 litigations in the
+ 2002 census year.
+ This implies an increase of 2000 litigations per patent, compared to an
+ unweighted sample average of 22.6.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegLitigations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ displays a strong and sizable correlation between increases in inventor
+ shares and litigations per patent.
+ The baseline specification in column (2) implies that 1pp increase in the
+ share of inventors employed by a sector was associated with and increase
+ of 3.6 litigation cases per 1000 patents.
+ This compares to a cross-sector weighted average increase of 1.33 litigations
+ per 1000 patents.
+ Alternatively, a one standard deviation increase in the share of inventors
+ (3pp) raises litigations per 1000 patents by 11.8, which corresponds to
+ 0.5 standard deviations.
+ The results are robust to using sales per company where available, and
+ to using the Mahalanobis distance to drop extreme observations, all of
+ which return coefficients that are statistically indistinguishable.
+ I also verify that my results are robust to using a size quartic and to
+ lagging the increase in inventor shares, since the specification in Table
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegLitigations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ might raise concerns of reverse causality.
+ Adopting these alternative specifications also returns statistically indistingu
+ishable coefficients (results are available upon request).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Regressions of Change in Litigation Cases per 1000 Patents over 4-digit
+ Knowledge Market Share, Long-Differences, 2002-2012
+\begin_inset CommandInset label
+LatexCommand label
+name "tab: RegLitigations"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.7
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/tab/D_lit_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+\size small
+Note: Regressions weighted by number of patents; robust standard errors
+ in parentheses; symbols denote significance levels 
+\begin_inset Formula $\left(+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001\right)$
+\end_inset
+
+; checkmarks indicate the inclusion of fixed effects.
+ This table presents the results of specifications (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: spec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), when the outcome is the change in litigations per 1000 patents in sector
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ over the change in the share of inventors employed in sector 
+\begin_inset Formula $p$
+\end_inset
+
+.
 \end_layout
 
 \end_inset

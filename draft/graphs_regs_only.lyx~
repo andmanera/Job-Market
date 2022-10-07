@@ -1,0 +1,948 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{babel}
+\usepackage[bottom]{footmisc}
+\usepackage{pifont}
+\usepackage{placeins}
+
+
+\usepackage{tabularx}
+
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
+
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+
+%%% TIKZ %%%%
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{snakes}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{matrix,shapes,arrows,fit,tikzmark}
+\usepackage{pgfplots}
+
+
+\tikzset{            every picture/.style={remember picture,baseline},         every node/.style={anchor=base,align=center,outer sep=1.5pt},         every path/.style={thick}} 
+\newcommand{\marktopleft}[1]{% 
+   \tikz[overlay,remember picture]          \node (marker-#1-a) at (-.3em,.3em) {};% 
+}
+\newcommand{\markbottomright}[2]{%   
+ \tikz[overlay,remember picture]          \node (marker-#1-b) at (0em,0em) {};%  
+}
+\tikzstyle{every picture}+=[remember picture] 
+\tikzstyle{mybox} =[draw=black, very thick, rectangle, inner sep=10pt, inner ysep=20pt] 
+\tikzstyle{fancytitle} =[draw=black,fill=red, text=white] 
+\pgfplotsset{compat=1.9}
+\pgfplotsset{every axis/.append style={            label style={font=\Large},                     tick label style={font=\Large}                       }}
+%%%% END TIKZ STUFF
+
+
+
+
+\providecommand{\corollaryname}{Corollary}
+\providecommand{\definitionname}{Definition}
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\propositionname}{Proposition}
+\providecommand{\theoremname}{Theorem}
+\end_preamble
+\use_default_options false
+\begin_modules
+theorems-ams
+graphicboxes
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding iso8859-15
+\fontencoding T1
+\font_roman "utopia" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_author "Andrea Manera"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfborderstyle=,allcolors=blue"
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options round
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Competing for Inventors: Market Concentration and the Misallocation of Innovativ
+e Talent
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+I am extremely grateful to my advisors Daron Acemoglu, Martin Beraja, and
+ John Van Reenen for invaluable advice and support.
+ I am also grateful to Michele Fornino for lending indispensable computing
+ power and for his collaboration on a previous version of this project,
+ and Nicholas Zolas, who kindly shared with me the ALP classifications of
+ patents into NAICS sectors of application.
+ I also thank Josh Angrist, David Autor, Pierre Azoulay, Ricardo Caballero,
+ Arnaud Costinot, Joel Flynn, Germán Gutiérrez, Clémence Idoux, John Sturm,
+ Martina Uccioli, Iván Werning, Christian Wolf, and participants in the
+ MIT Macro Lunch, Applied Micro Lunch, and Macro Seminar for useful comments
+ and suggestions.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Andrea Manera
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Massachusetts Institute of Technology, Department of Economics, E52-480,
+ 50 Memorial Dr, Cambridge, MA 02142.
+ Email: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+target "manera@mit.edu"
+type "mailto:"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Date
+\begin_inset VSpace -0.5em
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace -2.5em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\begin_inset CommandInset href
+LatexCommand href
+name "LINK TO LATEST VERSION"
+target "https://github.com/andmanera/competing-for-inventors/blob/main/draft/draft.pdf"
+literal "false"
+
+\end_inset
+
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset VSpace -3em
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Abstract
+\paragraph_spacing single
+The rapid productivity gains achieved by technological innovations in the
+ 
+\begin_inset Formula $20^{\text{th}}$
+\end_inset
+
+ century have slowed in recent decades.
+ This has come at a time of increased market concentration.
+ In this paper, I explore how dominant companies in concentrated sectors
+ have siphoned off inventors that might have been employed more productively
+ in competitive industries.
+ For the period 1997-2012, I establish that sectors with rising concentration
+ captured a disproportionate share of researchers, while also experiencing
+ a decrease in R&D productivity, signaled by falling forward citations and
+ slowing growth per inventor.
+ These findings imply that inventors became increasingly misallocated, accountin
+g for nearly 30 percent of the decline in the average annual growth rate
+ of output per worker over the 15-year study period.
+ I show that these results arise naturally in a Schumpeterian growth model
+ where monopolistic firms conduct 
+\begin_inset Quotes eld
+\end_inset
+
+defensive patenting
+\begin_inset Quotes erd
+\end_inset
+
+ to hamper competitors' R&D.
+ A calibration of this model reveals that a planner interested in maximizing
+ growth should allocate R&D tax credits to entrants in high-concentration
+ sectors.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+JEL Codes
+\series default
+: O30, O31, O32, O40.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Keywords
+\series default
+: Market Concentration, Defensive Innovation, R&D Productivity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Research and Development activities, which are key to innovation and growth,
+ have generated increasingly smaller gains in productivity over the last
+ few decades 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "bloomAreIdeasGetting2020,fernaldFutureUSEconomic2014,gordonRiseFallAmerican2016"
+literal "false"
+
+\end_inset
+
+.
+ A prominent explanation: Technological complexity is making it harder to
+ come up with new ideas.
+ A less explored alternative is misallocation of R&D resources 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "acemogluInnovationReallocationGrowth2018a,acemogluBottlenecksSectoralImbalances2021"
+literal "false"
+
+\end_inset
+
+, a concern that is echoed in policy circles and the press 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "metzTechGiantsAre2017,bassBigTechSwallows2020"
+literal "false"
+
+\end_inset
+
+.
+ At issue, for example, is whether dominant high-tech firms are attracting
+ a disproportionate share of highly educated, highly skilled workers at
+ the expense of companies in more competitive sectors.
+ According to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "talentseer2020AITalent2020"
+literal "false"
+
+\end_inset
+
+, 20% of total Artificial Intelligence experts are employed by just five
+ big-tech companies: Google, Microsoft, Apple, Amazon, and IBM.
+ At the same time, smaller firms in other sectors appear unable to attract
+ this scarce talent.
+ Two natural questions then arise: Is such allocation inefficient? And if
+ so, can inventor misallocation explain the observed fall in R&D productivity?
+\end_layout
+
+\begin_layout Standard
+To answer these questions, I study the broader effect of increasing market
+ concentration on the allocation of inventors across sectors.
+ I start by documenting several novel facts using US Patent and Trademark
+ Office (USPTO) data and concentration measures from the Economic Census
+ over the period 1997-2012.
+ First and foremost, I show a positive correlation between increases in
+ a sector's market concentration and the share of inventors it attracts.
+ This correlation might indicate either that firms in high-concentration
+ sectors have drawn more inventors or that they owe their success to large
+ investment in research.
+ To address this reverse causality problem, I adopt an instrumental variable
+ strategy.
+ I use the increase in the number of product-market regulations from Mercatus
+ RegData as an instrument for increased concentration.
+ This specification shows that sectors with increased concentration have
+ increased their share of inventors and not vice versa.
+\end_layout
+
+\begin_layout Standard
+Two additional findings substantiate that high-concentration sectors are
+ using R&D resources inefficiently and consequently depressing aggregate
+ research productivity.
+ First, the quality of patents in sectors with increased concentration declined,
+ as measured by patent forward citations.
+ Second, research productivity, as measured as growth in output per worker
+ per inventor, has decreased in these sectors.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This measure of inventor productivity mirrors the analogous definition of
+ 
+\begin_inset Quotes eld
+\end_inset
+
+research productivity
+\begin_inset Quotes erd
+\end_inset
+
+ offered by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "bloomAreIdeasGetting2020"
+literal "false"
+
+\end_inset
+
+.
+ In the introduction to their paper, they decompose economic growth into
+ the product of the number of researchers and a term capturing research
+ productivity.
+ Following this definition, I compute inventors' productivity as the ratio
+ of the growth in each sector, which I measure using output per worker growth,
+ and the number of inventors employed by that sector.
+\end_layout
+
+\end_inset
+
+ Further, I find that dominant firms draw a disproportionate share of their
+ sector's inventors.
+ Based on these three observations, I conclude that incumbent firms are
+ focusing their research efforts on 
+\begin_inset Quotes eld
+\end_inset
+
+defensive innovation,
+\begin_inset Quotes erd
+\end_inset
+
+ that is, projects with the primary aim of warding off potential competition.
+ Quantitatively, the midpoint of my estimates implies that inventor misallocatio
+n is responsible for a 0.78pp fall in the average annual growth in output-per-wor
+ker growth in the study sample.
+ That translates to 27.3% of the observed decline over the period 1997-2012.
+\end_layout
+
+\begin_layout Standard
+Methodologically, my analysis relies on a novel dataset of 
+\begin_inset Quotes eld
+\end_inset
+
+knowledge markets,
+\begin_inset Quotes erd
+\end_inset
+
+ defined as sets of product markets that share similar inventors.
+ These markets are based on the network of inventor transitions across product
+ categories, identified using USPTO patents classified by their NAICS sectors
+ of application.
+ This approach avoids pooling inventors with unrelated technical expertise,
+ which would bias the response of inventor mobility to sectoral characteristics
+ toward zero.
+\end_layout
+
+\begin_layout Standard
+In the second part of the paper, I develop a model of R&D resource allocation.
+ My objectives are twofold.
+ First, I use the model to explain how inefficient defensive innovations
+ can arise and proliferate as concentration increases.
+ Second, I quantify the R&D productivity effects of increasing concentration
+ and evaluate how R&D subsidies can be best allocated in the presence of
+ defensive innovation.
+ I adopt a Schumpeterian creative-destruction framework in which new entrants
+ conduct productive R&D while incumbents employ inventors in defensive projects.
+ A two-sector general equilibrium model shows that unbalanced changes in
+ concentration across sectors generate a fall in inventor productivity and
+ growth.
+ Indeed, inventors shift to less competitive markets, where defensive projects,
+ which hamper entry and Schumpeterian growth, are more prevalent, and away
+ from competitive sectors where their efforts would be more productive.
+ The theoretical analysis shows that defensive innovation is the key factor
+ behind increased concentration of inventors among incumbents and the fall
+ in R&D productivity.
+\end_layout
+
+\begin_layout Standard
+I calibrate a two-sector version of my model to match moments of the R&D
+ spending distribution in 1997 and growth over the period 1997-2012.
+ This calibration produces a 2.5% fall in output per worker growth from misalloca
+tion, close to the 3% lower bound implied by my estimates.
+ In the context of this model, I study the allocation of cost-neutral R&D
+ subsidies that maximize growth.
+ The model suggests that subsidizing entrants' R&D in more concentrated
+ sectors constitutes the most effective policy, leading to a rise in annual
+ GDP growth of about 0.5pp (a 17% increase from the 2012 benchmark).
+ Similar results obtain if entry is uniformly subsidized across sectors.
+ This finding resonates with the fact that defensive innovation is the main
+ inefficiency in the model.
+ Since this friction acts through an increase in entry barriers, the best
+ way to counter it is to lower entry costs.
+\end_layout
+
+\begin_layout Standard
+The rest of the paper proceeds as follows.
+ In the following section, I survey the related literature place my study
+ in its context.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Data-description"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ describes my data sources, focusing in particular on the construction of
+ knowledge markets.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Results"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ reports the results of my empirical analysis.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Model"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ details my theoretical framework, and conducts the policy analysis.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Conclusion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ concludes and provides directions for future work.
+\end_layout
+
+\begin_layout Subsection
+Related Literature
+\end_layout
+
+\begin_layout Standard
+My work builds on the empirical and theoretical literature analyzing the
+ impact of product market competition on innovation.
+ First, I analyze how increased concentration affects the allocation of
+ R&D 
+\emph on
+across sectors
+\emph default
+ in a departure from previous work that took either a within-sector or economy-w
+ide approach.
+ Second, I explicitly analyze the allocation of R&D inputs across sectors
+ by identifying the boundaries of markets for inventors rather than relying
+ on R&D spending or similar measures of innovative effort as in previous
+ work.
+ Third, I correlate changes in the competitive environment to documented
+ trends on falling R&D productivity.
+ Fourth, I model the impact on R&D productivity of pre-emptive innovation
+ in a multi-sector model, and I arrive at a growth-maximizing policy in
+ this context.
+ Both the focus on R&D productivity and the policy analysis are novel to
+ the theoretical literature analyzing defensive innovation.
+\end_layout
+
+\begin_layout Standard
+First an foremost, my paper relates to the vast literature estimating the
+ empirical effect of competition on innovation.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "aghionCompetitionInnovationInvertedU2005a"
+literal "false"
+
+\end_inset
+
+ found that innovation increased at low levels of competition and decreased
+ at high levels, depicting the relationship as an inverted U.
+ Accordingly, papers in this literature have highlighted contrasting effects
+ of competition on overall R&D activity, focusing mostly on episodes of
+ trade liberalization 
+\begin_inset CommandInset citation
+LatexCommand citep
+after " for an extensive review"
+before "see"
+key "shuImpactTradeLiberalization2019"
+literal "false"
+
+\end_inset
+
+.
+ Most papers in this strand identify these effects at the firm-level, which
+ restricts their scope to the effect of competition within product markets.
+ My paper instead adopts a cross-sector view, analyzing the extent to which
+ decreased competition in one market draws away resources from other markets.
+ To do so, I build a novel dataset of 
+\begin_inset Quotes eld
+\end_inset
+
+knowledge markets,
+\begin_inset Quotes erd
+\end_inset
+
+ sets of product markets that share the same inventors.
+ While several papers investigate the mobility of inventors 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "see,  e.g., "
+key "azoulayMobilityEliteLife2017,morettiEffectStateTaxes2017"
+literal "false"
+
+\end_inset
+
+, I believe mine to be the first to analyze the effects of market structure
+ on inventors' movements across sectors.
+\end_layout
+
+\begin_layout Standard
+With its focus on competition and innovation, my paper connects to literatures
+ that document increased concentration 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "autorFallLaborShareForthcoming,gutierrezDecliningCompetitionInvestment2017,grullonAreUSIndustries2019a"
+literal "false"
+
+\end_inset
+
+; profits and markups 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "barkaiDecliningLaborCapital2020,deloeckerRiseMarketPower2020,eggertssonKaldorPikettyFacts2018"
+literal "false"
+
+\end_inset
+
+; and the relationship between falling innovation and R&D productivity 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "akcigitWhatHappenedBusiness2019a,akcigitSlowingBusinessDynamism2020,akcigitTenFactsDeclining2021,bloomAreIdeasGetting2020"
+literal "false"
+
+\end_inset
+
+ and the allocation of R&D within and across sectors 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "acemogluInnovationReallocationGrowth2018a,acemogluBottlenecksSectoralImbalances2021,akcigitGrowthHeterogeneousInnovations2018"
+literal "false"
+
+\end_inset
+
+.
+ My contribution bridges these literatures, explicitly linking changes in
+ the competitive structure to the allocation of R&D resources across more
+ and less concentrated sectors, and their deployment to productive or defensive
+ projects.
+\end_layout
+
+\begin_layout Standard
+Several papers document the role of pre-emptive innovation in ordinary firm
+ operations 
+\begin_inset CommandInset citation
+LatexCommand citep
+after " for a review of the evidence"
+before "see"
+key "guellecPreemptivePatentingSecuring2012"
+literal "false"
+
+\end_inset
+
+, and the high valuation of the resulting patents 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "abramsPatentValueCitations2013,czarnitzkiHowValuableAre2020,grimpePreemptingTechnologyCompetition2008"
+literal "false"
+
+\end_inset
+
+.
+ Most recently, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "argentePatentsProductsProduct2020a"
+literal "false"
+
+\end_inset
+
+ show that, within product markets, large firms tend to account for the
+ bulk of patenting activity, but are responsible for a smaller share of
+ implemented innovations relative to non-patenting firms.
+ The authors interpret this finding as evidence of defensive innovation,
+ intended to deter competition.
+ My paper builds on this literature showing that increased concentration
+ raises the incentives for defensive innovation, as demonstrated by a fall
+ in forward citations in concentrating sectors.
+ This result connects to the findings and the model of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abramsPatentValueCitations2013"
+literal "false"
+
+\end_inset
+
+, who study the cross-sectional relation between patent value and forward
+ citations theoretically, showing that high-value patents also tend to receive
+ fewer citations, and rationalize this result through pre-emptive innovation.
+\end_layout
+
+\begin_layout Standard
+On a theoretical standpoint, I embed defensive patenting as modeled in in
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "abramsPatentValueCitations2013"
+literal "false"
+
+\end_inset
+
+ into a Schumpeterian growth model, building on the extensive literature
+ inaugurated by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "aghionModelGrowthCreative1992"
+literal "false"
+
+\end_inset
+
+.
+ My solution relies on several results derived by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "acemogluIntellectualPropertyRights2012"
+literal "false"
+
+\end_inset
+
+.
+ To the best of my knowledge, my paper is the first to analyze the impact
+ of defensive innovation in the context of a general-equilibrium growth
+ model.
+ The closest precedent to this analysis is 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "joDefensiveInnovationFirm2019"
+literal "false"
+
+\end_inset
+
+, who builds on 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "akcigitGrowthHeterogeneousInnovations2018"
+literal "false"
+
+\end_inset
+
+, and characterizes incremental innovation, that is refinement of existing
+ product lines, as 
+\begin_inset Quotes eld
+\end_inset
+
+defensive.
+\begin_inset Quotes erd
+\end_inset
+
+ Therefore, in his framework, defensive innovation aims to increase the
+ technological distance of incumbents from entrants, in the tradition of
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "aghionCompetitionImitationGrowth2001"
+literal "false"
+
+\end_inset
+
+.
+ By contrast, in my framework defensive innovation is specifically aimed
+ at protecting dominant positions and reducing entry as in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abramsPatentValueCitations2013"
+literal "false"
+
+\end_inset
+
+.
+ I extend their model to consider the effects of defensive innovation on
+ R&D productivity and overall innovation.
+ My final contribution consists in analyzing the growth-maximizing allocation
+ of R&D subsidies, which has not been previously studied in this context.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "sections/empirics.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "sections/model.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusion and Future Work
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Conclusion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this paper, I propose and document a novel explanation for the observed
+ decline in growth and R&D productivity over the last few decades.
+ 
+\end_layout
+
+\begin_layout Standard
+My empirical results show that increasing misallocation of inventors across
+ different product markets can account for up to 27% of the observed decline
+ in output per worker growth in the sectors I analyze.
+ This misallocation stems from uneven increases in concentration across
+ product markets that are accompanied by a larger share of inventors accruing
+ to less competitive sectors.
+ I interpret my findings as resulting from an increase in defensive innovation
+ in concentrated sectors.
+ Such R&D activities are conducted with the primary aim of blocking further
+ entry and are reflected in a decline in patents’ forward citations and
+ an increased share of inventors employed by the largest incumbents.
+ 
+\end_layout
+
+\begin_layout Standard
+The theoretical analysis examines the effects of defensive innovation in
+ a Schumpeterian model of creative destruction, where incumbents can conduct
+ defensive innovation to raise new entrants’ costs.
+ In the model, pre-emptive innovation is the driving force behind misallocation
+ across sectors.
+ Having established the importance of this mechanism, I employ a calibrated
+ two-sector version of the model to study the growth-maximizing allocation
+ of R&D subsidies across sectors, as well as between incumbents and entrants.
+ My analysis suggests that R&D subsidies provided to entrants constitute
+ the most effective policy, directly tackling the friction generated by
+ defensive innovation and potentially increasing growth by 17% of my baseline
+ (0.5pp in absolute terms).
+ 
+\end_layout
+
+\begin_layout Standard
+Two main directions for future research stand out.
+ The first would be to investigate the validity of my findings in an internation
+al context, given that results in the literature of competition and innovation
+ depend strongly on the country and the period analyzed.
+ The second would be to conduct a thorough investigation of the evolution,
+ causes, and consequences of pre-emptive innovation.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "bibliography/Bibliography"
+options "bibtotoc,abbrvnat"
+
+\end_inset
+
+ 
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "sections/appendix.lyx"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

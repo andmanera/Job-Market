@@ -1,0 +1,37 @@
+\begin{tabular}{l  <{\onslide<1->}d<{\onslide<1->}d<{\onslide<2->} HH d<{\onslide<2->}d<{\onslide<4->}d<{\onslide<4->}d<{\onslide<5->}d<{\onslide<5->} d<{\onslide}}
+& \multicolumn{2}{c}{Baseline} &	\multicolumn{2}{H}{Optimal Subsidies} & \multicolumn{2}{c}{Optimal Cost-Neutral} & \multicolumn{2}{c}{Cost-Neutral Sector}  & \multicolumn{2}{c}{Cost-Neutral Entry}  \\
+\midrule
+&Sector \ 1 & Sector \ 2 & Sector \ 1 & Sector \ 2 & Sector \ 1 & Sector \ 2 & Sector \ 1 & Sector \ 2 & Sector \ 1 &Sector \ 2 \\ 
+&(1)&(2)&(3)&(4)&(3)&(4)&(5)&(6)&(7)&(8)\\ \midrule 
+\textsl{R\&D Subsidies:} \\ 
+%$\tau$ & $23\%$ & $23\%$ & $23\%$ & $23\%$ & $23\%$ & $23\%$ & $23\%$ & $23\%$ & $23\%$ & $23\%$ \\ 
+$s_{I}$ &\marktopleft{b1} $19\%$ & $19\%$ & $0\%$ & $0\%$ & \marktopleft{b3}$0\%$ & $0\%$ &  \marktopleft{b8}$46.17\%$ & $0\%$ & $0\%$ & $0\%$  \\ 
+$s_e$ & $19\%$ & $19\%$ \markbottomright{b1}{red} & $1\%$ & $75.39\%$ & $0\%$ & $41.78\%$ \markbottomright{b3}{red} & $46.17\%$ & $0\%$ \markbottomright{b8}{red}&\marktopleft{b12} $29\%$ & $29\%$   \markbottomright{b12}{red} \\ 
+\\[-.2cm]
+\textsl{Aggregates:}\\ 
+$L^{RD}_{I}$ &\marktopleft{b10} $6.70$ & \marktopleft{b5} $24.87$ & $24.87$ & $4.47$ & $6.37$ & \marktopleft{b6} $15.95$ &\marktopleft{b7} $10.83$ & $19.51$ & $4.83$ & $18.45$ \\ 
+$L^{RD}_{e}$ & $24.41$  \markbottomright{b10}{red} & $44.02$ \markbottomright{b5}{red} & $23.12$ & $66.57$ & $23.87$ & $53.81$\markbottomright{b6}{red}& $30.24$ \markbottomright{b7}{red}& $39.42$ & $27.41$ & $49.30$ \\ 
+$L^{RD}_{TOT}$ &\marktopleft{b2} $31.11$ & $68.89$ & $28.96$ &  $71.04$ &\marktopleft{b4} $30.25$ & $69.75$ & $41.07$ & $58.93$ & $32.25$ & $67.75$ \\ 
+Sector Growth &$2.12\%$ & $3.74\%$  & &  & $2.08\%$ & $4.78\%$ & $2.61\%$ & $3.36\%$ & $2.45\%$ & $4.31\%$ \\ 
+\midrule
+GDP Growth &  \multicolumn{2}{c}{\onslide<1->{\marktopleft{b11}$2.93\%$}}  \markbottomright{b2}{red}  & \multicolumn{2}{H}{$3.15\%$} & \multicolumn{2}{c}{\onslide<2-> \marktopleft{b14}$3.43\%$} \markbottomright{b4}{red}   & \multicolumn{2}{c}{\onslide<4-> \marktopleft{b9} $2.99\%$} \markbottomright{b9}{red}& \multicolumn{2}{c}{\onslide<5-> \marktopleft{b13} $3.38\%$} {\onslide<1->} \markbottomright{b13}{red} \\ \hline %
+%Subsidy/GDP & $0.20\%$ & $0.36\%$ & $0\%$ & $1.66\%$ & $0\%$ & $0.56\%$ & $0.55\%$ & $0\%$ & $0.22\%$ & $0.34\%$ \\ 
+%Revenue/GDP & $1.02\%$ & $2.32\%$ & $1.02\%$ & $2.32\%$ & $1.02\%$ & $2.32\%$ & $1.02\%$ & $2.32\%$ & $1.02\%$ & $2.32\%$ \\ 
+
+\end{tabular}
+\uncover<1-2>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b1-a.north west) (marker-b1-b.south east)] {};}
+\uncover<1-2>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b2-a.north west) (marker-b2-b.south east)] {};}
+\uncover<2>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b3-a.north west) (marker-b3-b.south east)] {};}
+\uncover<2>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b4-a.north west) (marker-b4-b.south east)] {};}
+\uncover<3>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b5-a.north west) (marker-b5-b.south east)] {};}
+\uncover<3>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b6-a.north west) (marker-b6-b.south east)] {};}
+\uncover<4>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b7-a.north west) (marker-b7-b.south east)] {};}
+\uncover<4>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b8-a.north west) (marker-b8-b.south east)] {};}
+\uncover<4>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b9-a.north west) (marker-b9-b.south east)] {};}
+\uncover<4>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b10-a.north west) (marker-b10-b.south east)] {};}
+\uncover<4>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b11-a.north west) (marker-b2-b.south east)] {};}
+
+\uncover<5-6>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b12-a.north west) (marker-b12-b.south east)] {};}
+\uncover<5-6>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b13-a.north west) (marker-b13-b.south east)] {};}
+\uncover<6>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b14-a.north west) (marker-b4-b.south east)] {};}
+\uncover<6>{\tikz[overlay,remember picture,inner sep=1pt] \node[draw=red,rounded corners,fit=(marker-b11-a.north west) (marker-b2-b.south east)] {};}
