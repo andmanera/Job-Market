@@ -252,6 +252,12 @@ graphicboxes
 \begin_body
 
 \begin_layout Title
+Competing for Inventors: Market Concentration and the Misallocation of Innovativ
+e Talent
+\end_layout
+
+\begin_layout Author
+Andrea Manera (MIT)
 \begin_inset ERT
 status open
 
@@ -259,25 +265,23 @@ status open
 
 
 \backslash
-thispagestyle{empty}
+footnote[frame]{This research was carried out prior to joining the International
+ Monetary Fund.
+ All views expressed herein are my own and do not necessarily reflect the
+ position of the IMF, its Executive Board, or IMF management.}
 \end_layout
 
 \end_inset
 
-Competing for Inventors: Market Concentration and the Misallocation of Innovativ
-e Talent
-\end_layout
 
-\begin_layout Author
-Andrea Manera (MIT)
-\begin_inset Foot
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-This research was carried out prior to joining the International Monetary
- Fund.
- All views expressed herein are my own and do not necessarily reflect the
- position of the IMF, its Executive Board, or IMF management.
+
+
+\backslash
+footnotemark
 \end_layout
 
 \end_inset
@@ -286,7 +290,26 @@ This research was carried out prior to joining the International Monetary
 \end_layout
 
 \begin_layout Date
-February 2, 2022
+October 7, 2022
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotetext[1]{This research was carried out prior to joining the International
+ Monetary Fund.
+ All views expressed herein are my own and do not necessarily reflect the
+ position of the IMF, its Executive Board, or IMF management.}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
