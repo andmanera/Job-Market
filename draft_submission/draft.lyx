@@ -243,10 +243,10 @@ today
 \end_layout
 
 \begin_layout Standard
- 
-\end_layout
+\begin_inset Note Note
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 
 \series bold
@@ -263,7 +263,7 @@ literal "false"
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 
 \series bold
@@ -286,6 +286,11 @@ thispagestyle{empty}
 \end_inset
 
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Abstract
