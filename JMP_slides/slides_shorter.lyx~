@@ -273,7 +273,7 @@ Andrea Manera
 \end_layout
 
 \begin_layout Date
-January 31, 2022
+November 2, 2022
 \end_layout
 
 \begin_layout Standard
@@ -1338,7 +1338,7 @@ Sectors with increasing concentration attracted more inventors
 \end_layout
 
 \begin_layout Itemize
-Fall in inventors' productivity
+Fall in inventors' productivity in same sectors
 \end_layout
 
 \end_deeper
@@ -1421,19 +1421,6 @@ Trends in innovation and R&D productivity
  (2020) 
 \size default
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -1456,19 +1443,6 @@ Increasing Concentration and Profits
  (2019), Keil (2017)
 \size default
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -1490,19 +1464,6 @@ Aghion et al.
  (2020), Autor et al.
  (2021)
 \size default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
 
 \begin_inset VSpace smallskip
 \end_inset
@@ -1634,19 +1595,6 @@ knowledge markets
 \end_inset
 
 : labor markets for inventors with same skills
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -1656,19 +1604,6 @@ Build a network of flows of inventors across sectors (NAICS 4-digit)
 
 \begin_layout Itemize
 Group product markets that hire the same type of inventors
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -1713,21 +1648,6 @@ vspace{2em}
 
 \emph on
 Within knowledge markets: 
-\emph default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -1778,6 +1698,11 @@ Cooperative Patent Classification (CPC)
 
 \begin_layout Itemize
 patent classification by NAICS of application (1978-2016)
+\end_layout
+
+\begin_layout Itemize
+Patent litigation cases (2003-2016) compiled by Schwartz et al.
+ (2019) 
 \end_layout
 
 \end_deeper
@@ -3096,7 +3021,7 @@ begin{itemize}
 
 
 \backslash
-item Flows shall adjust for productivity of inventors who move
+item Flows adjusted for productivity of inventors who move
 \end_layout
 
 \begin_layout Plain Layout
@@ -3202,21 +3127,12 @@ gamma_{cft}$: CPC class 1-digit, $c$, by firm (assignee), $f$, by year,
 
 
 \backslash
-onslide<3->{
-\backslash
-item Results robust to using raw number of inventors}
+end{itemize}
 \end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-end{itemize}}
-\end_layout
-
-\begin_layout Plain Layout
-
-
+}
 \backslash
 end{itemize}
 \end_layout
@@ -3241,7 +3157,7 @@ status open
 
 
 \backslash
-onslide<4->
+onslide<3->
 \end_layout
 
 \end_inset
@@ -3291,19 +3207,6 @@ flow_{12}=\sum_{t}\left(flow_{1\rightarrow2,t}+flow_{2\rightarrow1,t}\right)
 \end_inset
 
 used as network weights.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
  Normalize to: 
 \end_layout
 
@@ -3332,19 +3235,6 @@ beamergotobutton{Details}}
 \begin_inset CommandInset label
 LatexCommand label
 name "button: BackToFlows"
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
 
 \end_inset
 
@@ -3403,21 +3293,6 @@ within
 communities versus 
 \emph on
 between
-\emph default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -3572,7 +3447,7 @@ textwidth}
 
 
 \backslash
-onslide<1-4>
+onslide<1->
 \backslash
 vspace{2em}
 \backslash
@@ -3616,7 +3491,7 @@ tiny{Crop Production, Food Manufacturing, Beverage and Tobacco}}
 
 
 \backslash
-item<2-> Light Blue: 
+item<1-> Light Blue: 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3635,7 +3510,7 @@ Oil, Gas, Mining
 
 
 \backslash
-item<3-> Green: 
+item<1-> Green: 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3668,7 +3543,7 @@ tiny{Chemicals, Plastics and Petroleum Products}}
 
 
 \backslash
-item<4-> Blue: 
+item<1-> Blue: 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3687,7 +3562,7 @@ Retail, Data Processing
 
 
 \backslash
-item<4-> Violet: 
+item<1-> Violet: 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3868,13 +3743,10 @@ end{center}
 
 \end_deeper
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
+\begin_inset Note Note
+status collapsed
 
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Separator plain
 \end_inset
 
@@ -3945,7 +3817,9 @@ Correlation between patent metrics and changes in inventors' share
 
 \end_deeper
 \end_deeper
-\begin_layout Standard
+\end_inset
+
+
 \begin_inset Separator plain
 \end_inset
 
@@ -4656,6 +4530,23 @@ pause
 
 \end_layout
 
+\begin_layout Itemize
+Patent litigation 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Itemize
 Significantly decreases
@@ -4679,14 +4570,84 @@ beamergotobutton{Table}}
 \end_inset
 
 
-\begin_inset ERT
+\end_layout
+
+\begin_layout Itemize
+Inventors' productivity
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
+Increase in Patent Litigation 
+\end_layout
+
+\end_inset
 
 
-\backslash
-pause
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tab/D_lit_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size tiny
+Robust standard errors in parentheses, 
+\begin_inset Formula $+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4695,10 +4656,15 @@ pause
 \end_layout
 
 \begin_layout Itemize
-Inventors' productivity (next slide)
+1 s.d.
+ increase in inventors' share
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ .5 s.d.
+ increase in litigations
 \end_layout
 
-\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -4865,7 +4831,7 @@ underline{HHI}}}%
 
 
 \backslash
-only<2-5>{
+only<2>{
 \backslash
 underset{
 \backslash
@@ -4892,7 +4858,7 @@ underline{HHI}}}}}%
 
 
 \backslash
-only<6->{
+only<3->{
 \backslash
 underset{
 \backslash
@@ -4919,7 +4885,7 @@ underline{HHI}}}}}%
 
 
 \backslash
-only<1-2>{
+only<1>{
 \backslash
 times
 \backslash
@@ -4932,7 +4898,7 @@ underline{HHI}}
 
 
 \backslash
-only<3->{
+only<2->{
 \backslash
 times
 \backslash
@@ -4949,7 +4915,7 @@ underline{HHI}}}}
 
 
 \backslash
-only<1-3>{
+only<1>{
 \backslash
 times Inventors}
 \end_layout
@@ -4958,7 +4924,7 @@ times Inventors}
 
 
 \backslash
-only<4->{
+only<2->{
 \backslash
 times
 \backslash
@@ -4971,11 +4937,11 @@ underbrace{Inventors}}}
 
 
 \backslash
-onslide<5->{
+onslide<2->{
 \backslash
-only<5>{=-0.78pp}
+only<2>{=-0.78pp}
 \backslash
-only<6->{
+only<3->{
 \backslash
 in [-1.45pp, -.13pp]}}
 \end_layout
@@ -4996,7 +4962,7 @@ end{equation*}
 
 
 \backslash
-onslide<7->{
+onslide<4->{
 \end_layout
 
 \begin_layout Plain Layout
@@ -5010,7 +4976,7 @@ begin{itemize}
 
 
 \backslash
-onslide<7->{
+onslide<4->{
 \backslash
 item Misallocation would explain $28.6
 \backslash
@@ -5025,22 +4991,11 @@ item Misallocation would explain $28.6
 
 
 \backslash
-onslide<8->{
+onslide<4->{
 \backslash
 item 23
 \backslash
 % fall in output per worker growth for these sectors relative to 1997}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-onslide<9->{
-\backslash
-item Similar results regressing of inventors' productivity on $
-\backslash
-Delta$ Inventor Share} 
 \end_layout
 
 \begin_layout Plain Layout
@@ -5141,7 +5096,7 @@ Increase of .045pp in the share of inventors
 status open
 
 \begin_layout Plain Layout
-Recap of Key Results
+Alternative Mechanisms
 \end_layout
 
 \end_inset
@@ -5151,12 +5106,30 @@ Recap of Key Results
 
 \begin_deeper
 \begin_layout Itemize
-Within knowledge markets:
+Ideas harder to find (Bloom et al.
+ 2020)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Sector that become more concentrated attract more inventors
+Increased inventor share means 
+\emph on
+more patents
+\emph default
+ in concentrated sectors
 \begin_inset ERT
 status open
 
@@ -5174,6 +5147,65 @@ pause
 
 \end_deeper
 \begin_layout Itemize
+Incremental/firm-specific innovation (Akcigit and Ates, 2019)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+No significant increase in self-citations
+\end_layout
+
+\begin_layout Itemize
+No reduction in patent generality (technological fields of application)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Recap of Key Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Within knowledge markets:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sector that become more concentrated attract more inventors
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
 Within product markets, increasing concentration:
 \end_layout
 
@@ -5187,7 +5219,7 @@ Increases share of inventors at top firms
 \end_layout
 
 \begin_layout Itemize
-Lowers forward citations
+Lowers forward citations, increases litigation
 \end_layout
 
 \end_deeper
@@ -5280,19 +5312,6 @@ Model Objectives
 \begin_deeper
 \begin_layout Itemize
 Explain mechanism behind empirical facts
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -5301,19 +5320,6 @@ Schumpeterian model
 with defensive innovation
 \emph default
  
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -5341,19 +5347,6 @@ pause
 \end_deeper
 \begin_layout Itemize
 Calibrate two sectors, one knowledge market model to evaluate policy:
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -5424,19 +5417,6 @@ name "button: BackToSS"
 \[
 \ln Y_{t}=\int_{0}^{1}\ln y_{t}(i)\mathrm{d}i
 \]
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
 
 \end_inset
 
@@ -5533,19 +5513,6 @@ c_{t+\Delta t}=\frac{c_{t}}{\left(1+\eta\right)\phi},
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5558,19 +5525,6 @@ cost of all other firms drops to:
 \[
 c_{t+\Delta t}=\frac{c_{t}}{\left(1+\eta\right)}
 \]
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
 
 \end_inset
 
@@ -5613,19 +5567,6 @@ Incumbents' R&D
 \begin_deeper
 \begin_layout Itemize
 Incumbents' R&D gives:
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -5640,19 +5581,6 @@ a
 
  w.p.
  1, which raises entrants' costs,
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -5662,15 +5590,6 @@ an innovation w.p.
 \end_inset
 
 .
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-State of each market is the size of patent wall 
-\begin_inset Formula $\Omega\in\left\{ 1,\omega\right\} $
-\end_inset
-
-
 \begin_inset ERT
 status open
 
@@ -5686,6 +5605,7 @@ pause
 
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 Incumbents choose an innovation intensity 
 \begin_inset Formula $x_{I}$
@@ -5700,30 +5620,6 @@ C\left(x_{I};w^{RD}\right)=\alpha_{I}\frac{x_{I}^{\gamma}}{\gamma}w^{RD},\ \gamm
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\alpha_{I}\frac{x_{I}^{\gamma}}{\gamma}$
-\end_inset
-
- total incumbents' inventors
-\end_layout
-
-\begin_layout Itemize
-Isoelastic R&D labor supply
 \end_layout
 
 \end_deeper
@@ -5762,19 +5658,6 @@ Incumbents' normalized values
 \end_inset
 
  with constant output growth:
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \begin_inset Formula 
 \begin{align*}
 \rho v(1) & =\max_{x_{I}}\left(\frac{\phi-1}{\phi}\right)-\alpha_{I}\frac{x_{I}^{\gamma}}{\gamma}w^{RD}+x_{I}\left(v(\bm{\omega})-v(1)\right)-x_{e,1}\left(v(1)\right)\\
@@ -5847,36 +5730,6 @@ unprotected value
 \begin_inset Formula $v(1)$
 \end_inset
 
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Entrants are atomistic, mass determined in equilibrium
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
@@ -5899,23 +5752,10 @@ Crowding externalities in entrants' research (Abrams et al., 2018) with linear
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
-Finite inventor demand IFF:
+Free entry gives:
 \begin_inset Formula 
 \[
 x_{e,\Omega}=\frac{v(1)}{\zeta\bm{\Omega}}
@@ -6024,19 +5864,6 @@ beamergotobutton{Derivation}}
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -6045,19 +5872,6 @@ Growth is given by:
 \[
 g=\eta\left(x_{e,\omega}\mu_{e,\omega}+x_{e,1}\mu_{e,1}+\lambda x_{I}\mu_{1}\right)
 \]
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
 
 \end_inset
 
@@ -6085,7 +5899,7 @@ Inventors' productivity (growth per inventor):
 \end_layout
 
 \begin_layout Section
-Calibration and Policy 
+Policy 
 \begin_inset Separator plain
 \end_inset
 
@@ -6130,7 +5944,7 @@ begin{center}
 \backslash
 color{UniBlue} 
 \backslash
-Huge Calibration and Policy} 
+Huge Policy} 
 \end_layout
 
 \begin_layout Plain Layout
@@ -6168,7 +5982,7 @@ Two-Sectors, Inventor Market Equilibrium
 
 \begin_deeper
 \begin_layout Itemize
-Two Cobb-Douglas sectors as above:
+Two Cobb-Douglas sectors identical to above:
 \begin_inset Formula 
 \[
 \ln Y=\beta_{1}\int_{0}^{1}\ln y_{1,t}(i)\mathrm{d}i+\left(1-\beta_{1}\right)\int_{0}^{1}\ln y_{2,t}(i)\mathrm{d}i
@@ -6177,53 +5991,14 @@ Two Cobb-Douglas sectors as above:
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
-Inventors' market clearing:
-\begin_inset Formula 
-\begin{align*}
-L^{RD,s}\left(w^{RD}\right) & =\sum_{i=1,2}\left\lbrace \mu_{1,i}\left(w^{RD}\right)\alpha_{I}\frac{x_{I,i}^{\gamma}\left(w^{RD}\right)}{\gamma}+\right.\\
- & \left.+\mu_{\omega,i}\left(w^{RD}\right)\zeta_{i}\omega_{i}x_{e,\omega,i}\left(w^{RD}\right)+\mu_{1,e,i}\left(w^{RD}\right)\zeta_{i}x_{e,1,i}\left(w^{RD}\right)\right\rbrace 
-\end{align*}
-
+Inventor market clears with a fixed supply of inventors, 
+\begin_inset Formula $L^{RD}=100.$
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Normalize 
-\begin_inset Formula $L^{RD,s}=100.$
-\end_inset
-
- 
 \end_layout
 
 \begin_layout Itemize
@@ -6233,33 +6008,17 @@ Normalize
  Misallocation only from flows across sectors.
 \end_layout
 
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_layout Itemize
+Markups 
+\begin_inset Formula $\phi$
 \end_inset
 
-
+ vary across sectors
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-External Calibration
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
+\begin_layout Itemize
+Calibrate the model to match moments of the R&D distribution in 1997 and
+ average growth
 \begin_inset ERT
 status open
 
@@ -6267,156 +6026,17 @@ status open
 
 
 \backslash
-resizebox{
+hyperlink{appendix: Cal}{
 \backslash
-textwidth}{!}{
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tabular}{L{5.5cm}C{1.2cm}C{1cm}C{9cm}}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-toprule  
-\end_layout
-
-\begin_layout Plain Layout
-
-Parameter Name & Symbol & Value & Source/Target
-\backslash
-tabularnewline 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-midrule 
-\backslash
-midrule 
-\backslash
-onslide<1-> Discount rate & $
-\backslash
-rho$ & .04 & $r
-\backslash
-approx 7
-\backslash
-%$ pre-1997, $g=3
-\backslash
-%$ 
-\backslash
-tabularnewline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-onslide<1-> Value Added Share & $
-\backslash
-beta$ & .5 & Share of sectors with $
-\backslash
-uparrow$ HHI  
-\backslash
-tabularnewline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-onslide<1-> Average Sectors' Markup & $
-\backslash
-phi$ & 1.08 & De Loecker et al., 2020; Eggertsson et al., 2018
-\backslash
-tabularnewline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-onslide<2-> Innovation Cost Curvature & $
-\backslash
-gamma$ & $1/.6$ &  Kortum (1993)
-\backslash
-tabularnewline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-onslide<2-> Patent Expiration Rate & $
-\backslash
-delta$ & .05 & Uruguay Round Agreements Act (1994) 
-\backslash
-tabularnewline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-onslide<2-> Incumbent Innovation Probability & $
-\backslash
-lambda$ & .785 & Internal patent share {
-\backslash
-tiny(Akcigit and Kerr, 2018)}
-\backslash
-tabularnewline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-onslide<2-> Value of Blocking Patents & $
-\backslash
-omega$ & 2 & Czarnitzki et al., 2020; Grimpe and Hussinger, 2008 
-\backslash
-tabularnewline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-bottomrule {
-\backslash
-onslide}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tabular} 
-\end_layout
-
-\begin_layout Plain Layout
-
-}
+beamergotobutton{Calibration}}
 \end_layout
 
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-onslide<3->
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "button: BackToCal"
 
 \end_inset
 
@@ -6424,57 +6044,47 @@ onslide<3->
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\tau,s$
-\end_inset
-
-: corp.
- tax 
-\begin_inset Formula $23\%$
-\end_inset
-
- and R&D subsidy 
-\begin_inset Formula $19\%$
-\end_inset
-
- (Akcigit et al., 2019)
+Reproduces (untargeted) lower bound fall in growth from data 
 \end_layout
 
 \end_deeper
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Internal Calibration
-\end_layout
+\align center
+\begin_inset Note Note
+status collapsed
 
-\end_inset
-
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Internal calibration for 
-\begin_inset Formula $\alpha_{I},\text{\ensuremath{\zeta},\ensuremath{\eta}},$
-\end_inset
-
- 
-\begin_inset ERT
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphs/GE_aggregates.eps
+	width 65theight%
+
+\end_inset
 
 
-\backslash
-pause
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $\approx1.5\%$
+\end_inset
+
+ lower growth for 
+\begin_inset Formula $20\%$
+\end_inset
+
+ increase in gap, 1/5 of empirics
 \end_layout
 
 \end_inset
@@ -6482,130 +6092,14 @@ pause
 
 \end_layout
 
-\begin_layout Itemize
-Target R&D moments and average growth
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $\approx$
-\end_inset
-
- lower bound fall in growth from data 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-resizebox{
-\backslash
-textwidth}{!}{
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tabular}{L{4cm}C{1.3cm}C{1.3cm}C{8cm}}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-toprule  
-\end_layout
-
-\begin_layout Plain Layout
-
-Parameter Name & Symbol & Value & Target
-\backslash
-tabularnewline 
-\end_layout
-
-\begin_layout Plain Layout
-
-Incumbent Costs & $
-\backslash
-alpha_{I}$ & 21.97 &  Top 10
-\backslash
-% Firms' Inventor Share, 1997: 30.3
-\backslash
-% 
-\backslash
-tabularnewline Entrants' Costs & $
-\backslash
-zeta$ & 4.75 & Business R
-\backslash
-&D Share over GDP, 1997: 1.81
-\backslash
-%
-\backslash
-tabularnewline Innovation Step & $
-\backslash
-eta$ & 0.0047 & Average Output per Worker Growth, 1997: 3.03
-\backslash
-%
-\backslash
-tabularnewline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-bottomrule 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tabular} 
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -6694,51 +6188,6 @@ input{graphs/FigTwoSecLarge.tex}
 \begin_layout Plain Layout
 
 	}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename graphs/GE_aggregates.eps
-	width 65theight%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Formula $\approx1.5\%$
-\end_inset
-
- lower growth for 
-\begin_inset Formula $20\%$
-\end_inset
-
- increase in gap, 1/5 of empirics
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -7004,19 +6453,6 @@ Growth-Maximizing Policy
 \begin_deeper
 \begin_layout Itemize
 Planner wishes to maximize constant growth rate
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -7068,19 +6504,6 @@ current
 \end_inset
 
  system (flat taxes and subsidies):
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -7170,7 +6593,7 @@ status open
 
 
 \backslash
-onslide<7->
+onslide<5->
 \end_layout
 
 \end_inset
@@ -7225,8 +6648,7 @@ Incumbents increasingly deployed inventors to defensive projects
 \end_layout
 
 \begin_layout Itemize
-Misallocation can explain 28% of 1997-2012 fall in annual output/worker
- growth
+Misallocation can explain 28% of 1997-2012 fall in output/worker growth
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -9577,6 +8999,344 @@ Consider the above model with a perfectly elastic production and R&D labor
 \end_inset
 
 
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+External Calibration
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{button: BackToCal}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "appendix: cal"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{
+\backslash
+textwidth}{!}{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{L{5.5cm}C{1.2cm}C{1cm}C{9cm}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule  
+\end_layout
+
+\begin_layout Plain Layout
+
+Parameter Name & Symbol & Value & Source/Target
+\backslash
+tabularnewline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule 
+\backslash
+midrule  Discount rate & $
+\backslash
+rho$ & .04 & $r
+\backslash
+approx 7
+\backslash
+%$ pre-1997, $g=3
+\backslash
+%$ 
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+Value Added Share & $
+\backslash
+beta$ & .5 & Share of sectors with $
+\backslash
+uparrow$ HHI  
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+ Average Sectors' Markup & $
+\backslash
+phi$ & 1.08 & De Loecker et al., 2020; Eggertsson et al., 2018
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+ Innovation Cost Curvature & $
+\backslash
+gamma$ & $1/.6$ &  Kortum (1993)
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+ Patent Expiration Rate & $
+\backslash
+delta$ & .05 & Uruguay Round Agreements Act (1994) 
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+ Incumbent Innovation Probability & $
+\backslash
+lambda$ & .785 & Internal patent share {
+\backslash
+tiny(Akcigit and Kerr, 2018)}
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+ Value of Blocking Patents & $
+\backslash
+omega$ & 2 & Czarnitzki et al., 2020; Grimpe and Hussinger, 2008 
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule {
+\backslash
+onslide}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular} 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\tau,s$
+\end_inset
+
+: corp.
+ tax 
+\begin_inset Formula $23\%$
+\end_inset
+
+ and R&D subsidy 
+\begin_inset Formula $19\%$
+\end_inset
+
+ (Akcigit et al., 2019)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Internal Calibration
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{button: BackToCal}{
+\backslash
+beamergotobutton{Back}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Internal calibration for 
+\begin_inset Formula $\alpha_{I},\text{\ensuremath{\zeta},\ensuremath{\eta}},$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{
+\backslash
+textwidth}{!}{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{L{4cm}C{1.3cm}C{1.3cm}C{8cm}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule  
+\end_layout
+
+\begin_layout Plain Layout
+
+Parameter Name & Symbol & Value & Target
+\backslash
+tabularnewline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Incumbent Costs & $
+\backslash
+alpha_{I}$ & 21.97 &  Top 10
+\backslash
+% Firms' Inventor Share, 1997: 30.3
+\backslash
+% 
+\backslash
+tabularnewline Entrants' Costs & $
+\backslash
+zeta$ & 4.75 & Business R
+\backslash
+&D Share over GDP, 1997: 1.81
+\backslash
+%
+\backslash
+tabularnewline Innovation Step & $
+\backslash
+eta$ & 0.0047 & Average Output per Worker Growth, 1997: 3.03
+\backslash
+%
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular} 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 

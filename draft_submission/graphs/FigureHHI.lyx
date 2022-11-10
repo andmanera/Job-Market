@@ -1,0 +1,1018 @@
+#LyX file created by tex2lyx 2.3
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/graphs/
+\textclass article
+\use_default_options false
+\begin_modules
+graphicboxes
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding iso8859-15
+\fontencoding T1
+\font_roman "utopia" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_author "Andrea Manera, Michele Fornino"
+\pdf_bookmarks 1
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 1
+\pdf_pdfborder 0
+\pdf_colorlinks 1
+\pdf_backref false
+\pdf_pdfusetitle 0
+\pdf_quoted_options "pdfborderstyle=,allcolors=blue"
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\biblio_options round
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% This file was created by matlab2tikz.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%The latest updates can be retrieved from
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%where you can also make suggestions and rate matlab2tikz.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{tikzpicture}[every plot/.append style=line width=2pt, ]
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+begin{axis}[%
+\end_layout
+
+\begin_layout Plain Layout
+width=6.028in,
+\end_layout
+
+\begin_layout Plain Layout
+height=4.754in,
+\end_layout
+
+\begin_layout Plain Layout
+at={(1.011in,0.642in)},
+\end_layout
+
+\begin_layout Plain Layout
+scale only axis,
+\end_layout
+
+\begin_layout Plain Layout
+unbounded coords=jump,
+\end_layout
+
+\begin_layout Plain Layout
+xmin=1978,
+\end_layout
+
+\begin_layout Plain Layout
+xmax=2016,
+\end_layout
+
+\begin_layout Plain Layout
+xlabel style={font=
+\backslash
+color{white!15!black}
+\backslash
+Large},
+\end_layout
+
+\begin_layout Plain Layout
+xlabel={Year},
+\end_layout
+
+\begin_layout Plain Layout
+ymin=0.039,
+\end_layout
+
+\begin_layout Plain Layout
+ymax=0.053,
+\end_layout
+
+\begin_layout Plain Layout
+ylabel style={font=
+\backslash
+color{white!15!black}
+\backslash
+Large},
+\end_layout
+
+\begin_layout Plain Layout
+ylabel={Inventor Share HHI},
+\end_layout
+
+\begin_layout Plain Layout
+axis background/.style={fill=white},
+\end_layout
+
+\begin_layout Plain Layout
+y tick label style ={at={(axis description cs:-0.1,.5)},anchor=east},
+\end_layout
+
+\begin_layout Plain Layout
+ytick = {0.04,0.042,0.044,0.046,0.048, 0.05, 0.052},
+\end_layout
+
+\begin_layout Plain Layout
+y tick label style={
+\end_layout
+
+\begin_layout Plain Layout
+	/pgf/number format/fixed,
+\end_layout
+
+\begin_layout Plain Layout
+	/pgf/number format/precision=5
+\end_layout
+
+\begin_layout Plain Layout
+},
+\end_layout
+
+\begin_layout Plain Layout
+scaled y ticks=false,
+\end_layout
+
+\begin_layout Plain Layout
+xtick={1980,1985,1990, 1995, 2000, 2005, 2010, 2015},
+\end_layout
+
+\begin_layout Plain Layout
+xticklabels={1980,1985,1990, 1995, 2000, 2005, 2010, 2015},
+\end_layout
+
+\begin_layout Plain Layout
+x tick label style ={anchor= north}
+\end_layout
+
+\begin_layout Plain Layout
+]
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+addplot [color=mycolor1, line width=1.5pt, forget plot]
+\end_layout
+
+\begin_layout Plain Layout
+  table[row sep=crcr]{%
+\end_layout
+
+\begin_layout Plain Layout
+nan	nan
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1978	0.0417984237617184
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1979	0.041865943461162
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1980	0.0425100849840285
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1981	0.0404165474758174
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1982	0.0414850170308884
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1983	0.0417179055226448
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1984	0.0432632445706016
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1985	0.0425934637572142
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1986	0.0424437943535038
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1987	0.0426487415630975
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1988	0.0404062095501874
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1989	0.0401573240963281
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1990	0.0406927600630656
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1991	0.0412992513614422
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1992	0.041138393556136
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1993	0.0406693746648277
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1994	0.0413310120810032
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1995	0.0413126309337206
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1996	0.0423492568606421
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1997	0.0419223808393097
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1998	0.0432275263401199
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1999	0.0439676369101738
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2000	0.0448781396927707
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2001	0.0444851109285532
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2002	0.045355586010565
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2003	0.0448533488065059
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2004	0.0458083627148588
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2005	0.0470595951790626
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2006	0.0487199215166572
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2007	0.0469593145935897
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2008	0.0504175960522995
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2009	0.0506507430434959
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2010	0.0483525068216056
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2011	0.0488744447971619
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2012	0.0496982207720558
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2013	0.0505200316014288
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2014	0.0515706462575142
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2015	0.0512630884274197
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2016	0.051109748541941
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+addplot[only marks, mark=o, mark options={}, mark size=1.5000pt, draw=mycolor2, forget plot] table[row sep=crcr]{%
+\end_layout
+
+\begin_layout Plain Layout
+x	y
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+nan	nan
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1978	0.0417984237617184
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1979	0.041865943461162
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1980	0.0425100849840285
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1981	0.0404165474758174
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1982	0.0414850170308884
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1983	0.0417179055226448
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1984	0.0432632445706016
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1985	0.0425934637572142
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1986	0.0424437943535038
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1987	0.0426487415630975
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1988	0.0404062095501874
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1989	0.0401573240963281
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1990	0.0406927600630656
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1991	0.0412992513614422
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1992	0.041138393556136
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1993	0.0406693746648277
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1994	0.0413310120810032
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1995	0.0413126309337206
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1996	0.0423492568606421
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1997	0.0419223808393097
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1998	0.0432275263401199
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+1999	0.0439676369101738
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2000	0.0448781396927707
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2001	0.0444851109285532
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2002	0.045355586010565
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2003	0.0448533488065059
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2004	0.0458083627148588
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2005	0.0470595951790626
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2006	0.0487199215166572
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2007	0.0469593145935897
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2008	0.0504175960522995
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2009	0.0506507430434959
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2010	0.0483525068216056
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2011	0.0488744447971619
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2012	0.0496982207720558
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2013	0.0505200316014288
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2014	0.0515706462575142
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2015	0.0512630884274197
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+2016	0.051109748541941
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

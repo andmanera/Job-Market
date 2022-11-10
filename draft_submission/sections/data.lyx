@@ -1,0 +1,1458 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage[bottom]{footmisc}
+\usepackage{pifont}
+\usepackage{placeins}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-std
+theorems-sec
+graphicboxes
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "utopia" "IBM Plex Serif"
+\font_sans "default" "IBM Plex Sans"
+\font_typewriter "default" "IBM Plex Mono"
+\font_math "auto" "default"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_author "Andrea Manera, Michele Fornino"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "allcolors = blue"
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options round
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\branch Tikz
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Data description
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Data-description"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this section, I detail source material and the construction of the dataset
+ used in my empirical analysis.
+ Subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Data-Sources"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ lists the sources of the raw data.
+ Subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:KnowledgeMarkets"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ focuses on the definition of inventor productivity measures and knowledge
+ markets, which I identify through realized inventor flows across sectors.
+ Subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Other data and aggregation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ briefly describes other data construction steps that are discussed in more
+ detail in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "app: Data-Construction-Details"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Data Sources
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Data-Sources"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+My empirical analysis relies on the variation of concentration across product
+ markets, as defined by 4-digit NAICS sectors, the impact of these shifts
+ on the allocation of inventors with specific competences across these sectors,
+ and the subsequent effect on inventor productivity.
+ I use USPTO patent data to measure inventor productivity and establish
+ the set of product markets that share similar inventors, and US Economic
+ Census data to obtain concentration and productivity growth measures.
+ Finally, I use a dataset of product market regulations, Mercatus RegData
+ 4.0, to conduct an instrumental variable analysis, as well as NBER-CES to
+ estimate the Lerner Index for the calibration of my theoretical model.
+\end_layout
+
+\begin_layout Standard
+My primary source is USPTO patent data from PatentsView.
+ This dataset contains disambiguated patent, inventor, and assignee identifiers,
+ as well as Cooperative Patent Classification (CPC) classes for each of
+ the patents registered from 1975 to 2021.
+ I identify inventor flows across different sectors employing the ALP classifica
+tion of 1976-2016 patents into NAICS sectors of application developed by
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "goldschlagAlgorithmicLinksProbabilities2016"
+literal "false"
+
+\end_inset
+
+.
+ Since this classification is constructed using the PATSTAT dataset, I rely
+ on the crosswalk built by Gianluca Tarasconi to match these two sources.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+See 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://patentsview.org/forum/7/topic/143"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://rawpatentdata.blogspot.com/2019/07/patstat-patentsview-concordance-update.html"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ This leaves me with one third of all the patents registered between 1975
+ and 2021, due to the restriction of the time frame to 1976-2016 and incomplete
+ matching between PATSTAT and PatentsView.
+ I comb patent records for self-citations, truncation-corrected forward
+ citations, and patent generality, following 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hallNBERPatentCitation2001"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "acemogluRadicalIncrementalInnovationForthcoming"
+literal "false"
+
+\end_inset
+
+.
+ I restrict my attention to utility patents, as I am interested in patents
+ with a technological content and not just design improvements.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schwartzUSPTOPatentNumber2019"
+literal "false"
+
+\end_inset
+
+ provide data on patents enforced in litigation cases between 2003 and 2016.
+ This dataset allows me to analyze the evolution in patent litigation across
+ NAICS 4-digit sectors for the sub-period 2002-2012.
+ 
+\end_layout
+
+\begin_layout Standard
+My main source for concentration and sales data is the US Economic Census
+ (EC), which reports sales shares for the top 4, 8, 20, and 50 firms; the
+ Herfindal-Hirschman Index; sales and number of companies in various NAICS
+ 4-digit sectors at a 5-year frequency.
+ I focus on the period between 1997 and 2012 for three reasons.
+ First, as I show below, this period saw substantial increase in the concentrati
+on of inventors in specific technology classes.
+ Second, the start of this period coincides with an acceleration of market
+ concentration and markups 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "see,  e.g., "
+key "deloeckerRiseMarketPower2020"
+literal "false"
+
+\end_inset
+
+.
+ Third, 1997 saw the adoption of the NAICS classification, ensuring a consistent
+ definition of product markets throughout the period I analyze.
+ I select the HHI lower bound 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "keilTroubleApproximatingIndustry2017"
+literal "false"
+
+\end_inset
+
+ as a measure of concentration, instead of the Economic Census HHI.
+ This measure allows me to analyze a larger sample of sectors, since it
+ requires only top sales shares in the Economic Census, which are available
+ for a much wider set of industries than the census-computed HHI.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The expression used to obtain this measure is: 
+\begin_inset Formula 
+\begin{align*}
+\text{\ensuremath{\underbar{HHI}}}_{p,t} & =4\left[\frac{\text{CR4}_{p,t}}{4}\right]^{2}+4\left[\frac{\text{CR8}_{p,t}-\text{CR4}_{p,t}}{4}\right]^{2}+12\left[\frac{\text{CR20}_{p,t}-\text{CR8}_{p,t}}{12}\right]^{2}+30\left[\frac{\text{CR50}_{p,t}-\text{CR20}_{p,t}}{30}\right]^{2},
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Quotes eld
+\end_inset
+
+CR{X}
+\begin_inset Quotes erd
+\end_inset
+
+ denotes the concentration ratio, that is the share of sales, of the top
+ X firms.
+ This measure is a lower bound, and coincides with the actual HHI if the
+ sector has less than 50 firms, and sales share are distributed equally
+ in each of the top 0-4, 5-8, 9-20, 21-50 brackets.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "keilTroubleApproximatingIndustry2017"
+literal "false"
+
+\end_inset
+
+ reports a correlation of 
+\begin_inset Formula $\text{\ensuremath{\underbar{HHI}}}$
+\end_inset
+
+ with the actual index of 0.93.
+ Available at 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://sites.google.com/site/drjankeil/data."
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ The Economic Census also provides sector-level growth in output per worker,
+ which constitutes my main measure of productivity growth.
+ I choose this measure instead of multi-factor productivity since the latter
+ is available for selected sectors, mostly in manufacturing.
+ I deflate sales using NAICS-specific price indices from the Bureau of Labor
+ Statistics.
+ All told, out of a total of 304 NAICS 4-digit sectors, I have assembled
+ 157 business sectors for which I can measure the interrelation between
+ concentration and knowledge markets.
+\end_layout
+
+\begin_layout Standard
+I employ two additional data sources.
+ First, I obtain sector-specific counts of regulations for various NAICS
+ 4-digit sector from the Mercatus RegData 4.0 dataset.
+ I employ them to conduct an instrumental variable analysis, strengthening
+ the causal interpretation of my results.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Available at https://www.quantgov.org/bulk-download.
+\end_layout
+
+\end_inset
+
+ Second, I use NBER-CES data to produce estimates of the Lerner Index following
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "grullonAreUSIndustries2019a"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Effective Inventors and Knowledge Markets
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:KnowledgeMarkets"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The main aim of this section is grouping product markets that share the
+ same 
+\emph on
+required
+\emph default
+ 
+\emph on
+knowledge to innovate
+\emph default
+ and therefore compete for the same R&D inputs, namely inventors.
+ I identify sectors that routinely exchange researchers through the Louvain
+ community-detection algorithm 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "blondelFastUnfoldingCommunities2008"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig: KmarketGraph"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ exemplifies how I construct knowledge markets.
+ Each node in the Figure represents a different NAICS 4-digit sector, and
+ the black lines designate inventor flows, with thickness proportional to
+ the size of the flow.
+ I describe below how flows are computed.
+ I employ a community detection algorithm to group together sectors most
+ closely connected.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig: KmarketGraph"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ depicts strong flows among grain, vegetable farming and animal food manufacturi
+ng, all of which involve knowledge related to agriculture and nutrition,
+ and separately between footwear and tanning, which both require knowledge
+ of leather crafting.
+ In this illustrative example, my algorithm would identify two knowledge
+ markets, one given by the agriculture and food manufacturing sectors, and
+ the other by leather crafting sectors, leaving the laundry services sector
+ isolated.
+ Based on the strength of these connections, we would expect market conditions
+ in footwear manufacturing to affect the distribution of inventors across
+ the two leather crafting sectors, leaving agriculture and nutrition sectors
+ largely unaffected.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graphical Illustration of Knowledge Markets
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: KmarketGraph"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../graphs/Kmarkets/Kmarkets.006.png
+	lyxscale 30
+	width 90text%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Note: This figure displays examples of knowledge markets as sets of product
+ markets with the same required knowledge to innovate.
+ This illustration is based on a subset of transitions and classifications
+ from my data.
+ Additional sectors inside and outside these knowledge markets are excluded
+ for ease of exposition.
+ Nodes represent NAICS sectors 1111 (Oilseed and Grain Farming), 1112 (Vegetable
+ and Melon Farming), 3111 (Animal Food Manufacturing), 3161 (Leather and
+ Hide Tanning and Finishing), 3162 (Footwear Manufacturing), and 8123 (Drycleani
+ng and Laundry Services).
+ Edges represent inventor transitions, with width proportional to the size
+ of undirected inventor flows.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Measuring Inventor Transitions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+USPTO Data Structure
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Data"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Patent ID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inventor ID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "goldschlagAlgorithmicLinksProbabilities2016"
+literal "false"
+
+\end_inset
+
+ NAICS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Year
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1112
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1112
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1980
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US00002
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00001-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1981
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Note: This table displays a hypothetical example of the structure of my
+ data.
+ The first two columns report patent and inventor identifiers from PatentsView;
+ the third column reports NAICS 4-digit classifications.
+\end_layout
+
+\end_inset
+
+I employ the USPTO patent data classified into 4-digit NAICS sectors by
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "goldschlagAlgorithmicLinksProbabilities2016"
+literal "false"
+
+\end_inset
+
+ to construct knowledge markets.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Data"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ depicts a hypothetical matching of the USPTO dataset with NAICS classifications.
+ Inventors are each assigned a disambiguated ID corresponding to the serial
+ number of their first patent.
+ In this example, inventor 00001-1 and 00001-2 both cooperate on the development
+ of patent US00001.
+ The third column in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Data"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "goldschlagAlgorithmicLinksProbabilities2016"
+literal "false"
+
+\end_inset
+
+ classification for NAICS 4-digit industries.
+ This classification is not limited to a single sector per patent, and includes
+ multiple sectors in almost all instances.
+ For instance, patent US00001 relates to multiple sectors, while patent
+ US00002 is applicable to just one sector.
+ Importantly, this classification captures the 
+\emph on
+technological nature
+\emph default
+ of the patent and the sectors of application of the knowledge required
+ to develop that patent.
+ While other classifications, like the CPC or the USPC, also describe the
+ technological nature of patents, they do not allow a direct match to sectors
+ of application.
+\end_layout
+
+\begin_layout Standard
+I define a transition in two ways.
+ First, I consider transitions 
+\emph on
+within patents.
+
+\emph default
+ This transition occurs between two sectors if an inventor works on a patent
+ that applies to both.
+ The direction of flows does not matter for the definition of knowledge
+ markets, since I am only interested in grouping sectors that exchange researche
+rs.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Data"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ depicts two transitions between sectors 1111 and 1112 in 1980.
+ The second type of transition that I consider is 
+\emph on
+across patents
+\emph default
+.
+ This transition occurs when an inventor applies his knowledge to patents
+ in different product markets, such as between sector 1112 and 3111 by inventor
+ 00001-1.
+ Raw transition counts are the basis of my measure of inventor flows.
+\end_layout
+
+\begin_layout Paragraph
+Weighting Inventor Flows: Effective Inventors
+\end_layout
+
+\begin_layout Standard
+I construct two alternative measures to assess the effective flow of inventors
+ across sectors.
+ The first measure weighs each transition equally, computing inventor flows
+ as the raw count of researchers moving across NAICS.
+ The second measure adjusts for the productivity of individual inventors,
+ since raw counts might overstate or understate the importance of each transitio
+n, depending on the size of origin and destination sectors, their technological
+ nature, as well as the proficiency of each inventor.
+ I therefore define a measure of 
+\begin_inset Quotes eld
+\end_inset
+
+effective inventors
+\begin_inset Quotes erd
+\end_inset
+
+ to correct for these and other omitted factors.
+ For each inventor, I estimate the fixed effect, 
+\begin_inset Formula $\alpha_{i},$
+\end_inset
+
+ in the fully-saturated regression 
+\begin_inset Formula 
+\begin{align}
+\text{\#Patents}_{cfit} & =\alpha_{i}+\gamma_{cft}+\varepsilon_{cfit},\label{eq:one-1-1}
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $\text{\#Patents}_{cfit}$
+\end_inset
+
+ denotes the number of patents registered in CPC class 
+\begin_inset Formula $c$
+\end_inset
+
+; firm (assignee) 
+\begin_inset Formula $f$
+\end_inset
+
+; and year 
+\begin_inset Formula $t$
+\end_inset
+
+, that include inventor 
+\begin_inset Formula $i.$
+\end_inset
+
+ In this regression 
+\begin_inset Formula $\gamma_{cft}$
+\end_inset
+
+ denotes a of CPC class by firm (assignee) by year fixed effect.
+ I choose to include indicators for one-digit CPC classes, the broadest
+ classification, to identify as many fixed effects as possible.
+ The fixed effect 
+\begin_inset Formula $\gamma_{cft}$
+\end_inset
+
+ controls for specific technological features of the patented technology,
+ the firm environment, as well as the year.
+ Further, this specification produces an estimate of inventor productivity
+ that accounts for the number of collaborators on each patent.
+ Given this specification, I define an 
+\emph on
+effective inventor
+\emph default
+ as one unit of the resulting fixed effect 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+, rescaled to take nonnegative values.
+ Since these fixed effects might be inconsistently estimated, I check the
+ robustness of all my results, including the construction of knowledge markets,
+ to the use of the raw count of inventors.
+\end_layout
+
+\begin_layout Standard
+I define 
+\emph on
+effective inventor flows
+\emph default
+ between sector 
+\begin_inset Formula $j$
+\end_inset
+
+ and sector 
+\begin_inset Formula $k$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ as: 
+\begin_inset Formula 
+\begin{align*}
+flow_{j\rightarrow k,t} & =\sum_{i}\#\left\{ \text{\ensuremath{i\text{'s}\ \text{transitions}\ j\rightarrow k\text{ \ensuremath{\text{in}} }t}}\right\} \cdot\alpha_{i},
+\end{align*}
+
+\end_inset
+
+that is, the sum of transition counts weighted by effective inventors.
+ The 
+\emph on
+total undirected flow
+\emph default
+ between two sectors is the sum of inflows and outflows with ends in one
+ of the two sectors over all sample years, 
+\begin_inset Formula $t$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+flow_{jk}=\sum_{t}\left(flow_{j\rightarrow k,t}+flow_{k\rightarrow j,t}\right).
+\]
+
+\end_inset
+
+This flow measure defines a network of inventor transitions across product
+ markets, where the nodes, 
+\begin_inset Formula $j,k$
+\end_inset
+
+, are given by 4-digit NAICS codes and edges are transitions across sectors.
+ Edge weights are a rescaled version of 
+\begin_inset Formula $flow_{jk}$
+\end_inset
+
+ and measure the strength of the connection between pairs of sectors in
+ the network.
+ Rescaling the flow measure is necessary to remove mechanical effects of
+ sector sizes and to avoid double counting of inventors.
+ More details are in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "app: Data-Construction-Details"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Community Detection and Resulting Knowledge Markets
+\end_layout
+
+\begin_layout Standard
+I use the rescaled undirected flow measure as a network edge weight to identify
+ communities through the Louvain algorithm developed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "blondelFastUnfoldingCommunities2008"
+literal "false"
+
+\end_inset
+
+.
+ This procedure maximizes the modularity of the network by choosing the
+ number of communities (knowledge markets) and the assignment of nodes (NAICS
+ sectors) to communities.
+ Modularity, a commonly used measure of connectedness of networks, measures
+ the distance between the density of links 
+\emph on
+within
+\emph default
+ communities versus 
+\emph on
+between.
+\emph default
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Knowledge Markets Obtained from NAICS 3-digit Sectors
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: KmarketGraph-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.075
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../graphs/NewCommunity_3d.png
+	lyxscale 10
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Note: This figure displays the network of inventor flows between NAICS 3-digit
+ sectors and the knowledge markets resulting from the Louvain algorithm.
+ Lines denote inventor transitions within (black) and between (gray) knowledge
+ markets, with width proportional to effective undirected inventor flows.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This procedures produces 10 sets of NAICS 4-digit sectors that share the
+ same inventors and have concentration measures.
+ Applying the community detection algorithm results in knowledge markets
+ that do not overlap: Each NAICS 4-digit sector belongs to one and only
+ one knowledge market.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig: KmarketGraph-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ displays the result of my procedure applied to NAICS 3-digit sectors.
+ I report this exercise since the 4-digit equivalent would be too dense
+ to depict.
+ However, the knowledge markets identified by the two exercises are qualitativel
+y similar although they are clearly more numerous in the 4-digit case.
+ In this figure, lines denote inventor transitions, with width proportional
+ to the effective undirected inventor flow between sectors.
+ Black lines depict flows within knowledge markets, while gray lines represent
+ transitions between communities.
+\end_layout
+
+\begin_layout Standard
+Three features are worth emphasizing.
+ First, the network is very dense, and transitions across 3-digit as well
+ as 2-digit sectors are pervasive, differing largely in intensity.
+ The approach I propose is therefore far more illuminating than grouping
+ sectors based on broad product markets, which would neglect the linkages
+ across disparate markets, or pooling all sectors together, which would
+ neglect the difference in the strength of inventor flows.
+ Second, the flows between communities appear more numerous than within
+ communities, but this is solely a by-product of the circular layout of
+ the network, whereby nodes mask flows within close communities on the circle.
+ Less than a third of flows occur between communities, as expected since
+ the community detection algorithm maximizes the density of within-community
+ linkages.
+ Third, the classification sensibly groups together sectors that we might
+ expect to share similar knowledge to innovate.
+ Starting from sector 111 and going counter-clockwise, the knowledge markets
+ are as follows.
+ The first market groups sectors involving agricultural production (111,
+ 112 and 114) and food manufacturing (311).
+ The second market, starting with 211, includes oil, gas, and mining.
+ The green cluster at the top of the figure groups several heavy manufacturing
+ industries, such as chemicals, plastics and petroleum products, and pipeline
+ transportation (486).
+ The market in yellow consists largely of transportation services and manufactur
+ing as well as motor vehicle dealers.
+ The large blue cluster captures many retail sectors, as well as data processing
+, telecom, and broadcasting services.
+ The remaining three markets include insurance and finance (red cluster),
+ computer, electronics, machinery manufacturing and professional services
+ (violet), and wholesalers (gray).
+\end_layout
+
+\begin_layout Standard
+I identify knowledge markets using effective inventors, but I obtain nearly
+ identical results using raw inventor counts; more than 97% of 4-digit NAICS
+ sectors are classified in the same manner using the two measures.
+ That is, 97% of sector pairs belong to the same knowledge market according
+ to both measures.
+\end_layout
+
+\begin_layout Subsection
+Other Constructed Measures and Aggregation at Census Frequency
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Other data and aggregation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Patent Citation Measures
+\end_layout
+
+\begin_layout Standard
+For each patent classified by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "goldschlagAlgorithmicLinksProbabilities2016"
+literal "false"
+
+\end_inset
+
+, I compute forward citations, a measure of patent generality, and self-citation
+s.
+ I describe self-citation measures together with the related estimation
+ results in the Appendix.
+\end_layout
+
+\begin_layout Standard
+I count forward citations and measure patent generality following 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hallNBERPatentCitation2001"
+literal "false"
+
+\end_inset
+
+.
+ The forward citation measures compute the average number of citations received
+ by each firm's patents, giving an indication of the importance of each
+ patent for future technological developments.
+ As in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hallNBERPatentCitation2001"
+literal "false"
+
+\end_inset
+
+, I correct for truncation by estimating the empirical CDF of the forward
+ citations lag distribution of patents in the relevant CPC 2-digit technology
+ class, and dividing the overall number of forward citations at the latest
+ available date by the inverse of this CDF.
+ The procedure suggested by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hallNBERPatentCitation2001"
+literal "false"
+
+\end_inset
+
+ uses only information pertaining to the CPC 2-digit technology class of
+ the cited patent.
+ I also compute an alternative correction that estimates a separate distribution
+ for each citing CPC 2-digit class and sums the corrected forward citations
+ across all citing classes.
+ Patent generality also measures the scope of application of the patent
+ by computing the dispersion of citations received across different CPC
+ classes.
+ The higher the dispersion, the wider the technological applicability of
+ the patent.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The interested reader should consult 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "acemogluRadicalIncrementalInnovationForthcoming"
+literal "false"
+
+\end_inset
+
+ for a detailed discussion, and the related appendix for details on the
+ construction of these measures.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Paragraph
+Regulation Data
+\end_layout
+
+\begin_layout Standard
+Mercatus RegData provides a count of restrictions imposed on a number of
+ NAICS 4-digit product markets, obtained by matching a set of keywords in
+ NAICS descriptions to regulatory texts, and then taking the best match
+ for each document.
+ However, the available data does not include a set of codes due to data
+ quality reasons.
+ Therefore, I process the description of NAICS 4-digit codes and compute
+ the cosine-similarity between all pairs of sectors.
+ I build an estimate of sector-relevant restrictions for missing sectors
+ by taking an average weighted by cosine similarity of sectors included
+ in RegData.
+ I include in the average the five most similar NAICS codes if similarity
+ is larger than .2, and I attribute the regulations of the most similar sector
+ otherwise.
+ I chose this threshold by inspecting the similarity associated to various
+ NAICS pairs, and the assignment of regulations to sectors is not highly
+ sensitive to this choice.
+\end_layout
+
+\begin_layout Paragraph
+Inventor Distribution Measures
+\end_layout
+
+\begin_layout Standard
+I employ the measure of effective inventors constructed as detailed above
+ to compute measures of researchers' concentration within sectors for each
+ year in my sample.
+ Specifically, I use the PatentsView assignee ID to identify firms that
+ employ specific inventors in each sector, and then compute several measures
+ of the concentration of inventors within sectors.
+ I also compute the HHI of inventors across NAICS to document increasing
+ concentration of inventors in specific sectors.
+\end_layout
+
+\begin_layout Paragraph
+Patent Litigation Cases
+\end_layout
+
+\begin_layout Standard
+I match the data on litigation cases compiled by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schwartzUSPTOPatentNumber2019"
+literal "false"
+
+\end_inset
+
+ with the data on inventors by NAICS 4-digit.
+ For each sector, I compute the number of litigation cases per patent.
+ These data are available only for the sub-period 2003-2016, which does
+ not allow me to reliably estimate an empirical CDF to correct for truncation.
+ I therefore choose to keep only the litigation cases occurring in the same
+ year as the patent registration, which amounts to assuming that the time
+ profile of cases is constant over time and across sectors.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+More precisely, this would be the same as using only the contemporaneous
+ patent litigation cases and correcting for truncation dividing by the inverse
+ CDF at period 0, which would scale the estimated coefficient upwards.
+\end_layout
+
+\end_inset
+
+ I then average the litigations per patent over the years 2003-2006 and
+ 2013-2016 for the Economic Census waves 2002 and 2012.
+\end_layout
+
+\begin_layout Paragraph
+Aggregation at Census Frequency
+\end_layout
+
+\begin_layout Standard
+Data from the Economic Census are available at five-year intervals for the
+ years 1997-2017, which requires aggregating the other data at the same
+ frequency.
+ Since I am interested in the effect of concentration on the allocation
+ of inventors, I average all variables related to inventors and productivity
+ using the five-year window 
+\emph on
+starting
+\emph default
+ in the census year (e.g., 1997- 2001 for 1997), while I use concentration
+ measures for the corresponding census year.
+ In the IV regression I use product restrictions as an instrument for concentrat
+ion, which is why I average restrictions in the five-year window 
+\emph on
+ending
+\emph default
+ in the census year (e.g., 1993-1997 for 1997).
+ Since 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "goldschlagAlgorithmicLinksProbabilities2016"
+literal "false"
+
+\end_inset
+
+'s matching only covers the period up to 2016, I run all specifications
+ in long-differences over the time frame 1997-2012.
+ The only exception is the patent litigation regression, which uses the
+ period 2002-2012.
+\end_layout
+
+\end_body
+\end_document

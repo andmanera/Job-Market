@@ -1,0 +1,2408 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage[bottom]{footmisc}
+\usepackage{pifont}
+\usepackage{placeins}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1.3} 
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-std
+theorems-sec
+graphicboxes
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "utopia" "IBM Plex Serif"
+\font_sans "default" "IBM Plex Sans"
+\font_typewriter "default" "IBM Plex Mono"
+\font_math "auto" "default"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_author "Andrea Manera, Michele Fornino"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "allcolors = blue"
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options round
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\branch Tikz
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Empirical Analysis
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Results"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This section presents five main findings that apply to the periods under
+ consideration: (i) effective inventors became more concentrated across
+ economic sectors; (ii) sectors with increased product market concentration
+ attracted a growing share of relevant inventor types; (iii) growth in the
+ share of relevant inventors negatively correlated with inventor productivity,
+ as measured by forward citations as well as average growth in output per
+ worker divided by effective inventors employed; (iv) growth in the share
+ of inventors coincided with increased concentration of inventors 
+\emph on
+within
+\emph default
+ sectors; and (v) growth in inventor shares are positively correlated with
+ increases in patent enforcement cases.
+\end_layout
+
+\begin_layout Standard
+Results (i) and (ii) indicate a positive causal link between the growth
+ in product market concentration and the increase in sectors' inventor share.
+ Findings (iii), (iv) and (v) point to misallocation: Inventor concentration
+ in less competitive sectors turns out to be inefficient, as researchers
+ are predominantly employed on projects that do not contribute to the growth
+ of the sector.
+ This work amounts to defensive innovation, as evidenced by the decline
+ in forward citations of patents obtained by these firms, the decrease in
+ growth per inventor, and the increase in patent litigations that accompany
+ the increase in product market concentration.
+ I discuss the causal interpretation of my results through an IV specification
+ in Subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:MainResults"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Variable Definitions and Main Specification
+\end_layout
+
+\begin_layout Standard
+Key to my analysis are measures of inventor concentration and of R&D productivit
+y.
+ I rely on the definition of effective inventors, 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+, explained in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:KnowledgeMarkets"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ For each product market 
+\begin_inset Formula $p$
+\end_inset
+
+, I define the share of inventors employed by the sector in year 
+\begin_inset Formula $t$
+\end_inset
+
+ as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{Inventor\ Share}{}_{p,t}\equiv\frac{\sum_{p(i,t)=p}\alpha_{i}}{\sum_{k(i,t)=k}\alpha_{i}},
+\]
+
+\end_inset
+
+where the numerator sums effective inventors in product market 
+\begin_inset Formula $p,$
+\end_inset
+
+ and the denominator computes total effective inventors in the relevant
+ knowledge market.
+ I also use effective inventors 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ to evaluate the dispersion of inventors across sectors.
+ Results are robust to using raw counts of researchers instead of effective
+ inventors.
+ 
+\end_layout
+
+\begin_layout Standard
+When analyzing R&D productivity I focus on two patent-based measures described
+ in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Other data and aggregation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+—forward citations and patent generality.
+ Further, I compute a more direct measure of the productivity of inventors
+ as the growth in output per worker divided by the number of effective inventors
+ employed by the sector.
+\end_layout
+
+\begin_layout Standard
+In most specifications, the independent variables are measures of concentration
+ and controls for the size of the sector considered.
+ As discussed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Data-Sources"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, my baseline measure of concentration is the lower bound of the Herfindal-Hirsc
+hman Index constructed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "keilTroubleApproximatingIndustry2017"
+literal "false"
+
+\end_inset
+
+, which I label 
+\begin_inset Formula $\underline{\text{HHI}}_{p,t}$
+\end_inset
+
+.
+ I show below that the Economic Census HHI and its lower bound, when both
+ available, produce equivalent results.
+\end_layout
+
+\begin_layout Standard
+I obtain measures of sales from the Economic Census, which I deflate using
+ BLS NAICS-specific price indexes.
+ I use sales variables for two purposes.
+ First, real sales in 2012 are the weight in my regressions.
+ Second, I use the logarithm real sales as well as a quartic in real sales
+ to control for changes in the size of sectors during my sample period.
+ For the selected subset of sectors that reports the number of companies,
+ I show that my findings are robust to controlling for sales per company,
+ a proxy for the average firm size.
+\end_layout
+
+\begin_layout Standard
+I estimate a sector-level long-difference regression over the period 1997-2012
+ 
+\begin_inset Formula 
+\begin{equation}
+\Delta\text{Share}_{p,\ 2012-1997}=f_{k}\mathbf{1}\left\{ p\in k\right\} \ +\ \beta\Delta\underline{\text{HHI}}_{p,\ 2012-1997}\ +\ \gamma'\Delta\text{Size}_{p,\ 2012-1997}\ +\ \varepsilon_{p},\label{eq: spec}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta\text{Share}$
+\end_inset
+
+ denotes the change in the inventors' share of product market 
+\begin_inset Formula $p$
+\end_inset
+
+; 
+\begin_inset Formula $f_{k}\mathbf{1}\left\{ p\in k\right\} $
+\end_inset
+
+ is a dummy variable that takes value 1 if the product market belongs to
+ knowledge market 
+\begin_inset Formula $k$
+\end_inset
+
+; 
+\begin_inset Formula $\Delta\underline{\text{HHI}}$
+\end_inset
+
+ is the change in the HHI lower bound; and 
+\begin_inset Formula $\Delta\text{Size}$
+\end_inset
+
+ is a set of controls for the size of sector 
+\emph on
+p
+\emph default
+.
+ Depending on the specification, 
+\begin_inset Formula $\Delta\text{Size}$
+\end_inset
+
+ is the change in log real sales, the change in log real sales per firm,
+ or a quadratic polynomial in real sales changes.
+\end_layout
+
+\begin_layout Standard
+Regressions are weighted by sector sales in 2012 for the findings which
+ rely on Economic Census sector-level measures, and I estimate robust standard
+ errors in all specifications.
+ When looking at patent measures, I employ the same specification as in
+ equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: spec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, where I replace the outcome variable with the change in patent productivity
+ and the independent variable with the change in inventors' share.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+As I will show, the change in the inventor share is highly correlated with
+ the change in the HHI, so this specification essentially amounts to a rescaling
+ of the coefficient that would be obtained using the HHI.
+\end_layout
+
+\end_inset
+
+ In this case, since I do not rely on Economic Census measures, I report
+ unweighted regressions.
+ I discuss the robustness of these findings to using the HHI lower bound
+ and weighting by sales.
+\end_layout
+
+\begin_layout Subsection
+Results
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:MainResults"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Inventor Concentration across NAICS Sectors has Increased
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Effective-inventor-HHI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ reports the time series of inventor concentration across NAICS 4-digit
+ industries for the period 1976-2016, for which the 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "goldschlagAlgorithmicLinksProbabilities2016"
+literal "false"
+
+\end_inset
+
+ data is available.
+ Panel (a) depicts the share of effective inventors and panel (b) that of
+ raw inventors.
+ I use the HHI index of inventor shares accruing to each sector as a measure
+ of concentration.
+ Both panels display an increasing concentration of inventors beginning
+ in the late 1990s.
+ The increase in inventor concentration is sizable, corresponding to about
+ a 20% increase in the HHI for the effective inventor measure over the period
+ 1997-2012.
+ Based on raw inventor data, the figure rises to 30%.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Effective-inventor-HHI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ extends the findings in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "akcigitWhatHappenedBusiness2019a"
+literal "false"
+
+\end_inset
+
+, who document a rising share of patents registered by top firms within
+ sectors, to the cross-industry allocation of inventors.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+A similar pattern emerges for concentration in specific CPC classes (available
+ on request).
+\end_layout
+
+\end_inset
+
+ As for the results presented below, the effective inventor measure and
+ the raw inventor count behave similarly, although the figure for effective
+ inventors is less volatile since this measure derives from a regression
+ that residualizes time, firm, and technology class fixed effects.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Inventor Concentration, NAICS 4-digit Industries, 1976-2016 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Effective-inventor-HHI"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Effective Inventors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.4
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../graphs/FigureHHI.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Inventor Count
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.4
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../graphs/FigureHHI_N_inv.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+\size small
+Note: This figure reports the time series of inventor concentration, as
+ measured by the HHI index of inventor shares across NAICS 4-digit sectors.
+ The left panel reports the series constructed using effective inventors
+ as defined in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:KnowledgeMarkets"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the right panel uses instead raw inventor counts.
+ Only the NAICS 4-digit sectors with data for all years are included.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Markets with Growing Concentration Increased Their Inventor Share
+\end_layout
+
+\begin_layout Standard
+In this section, I present three sets of results for each specification,
+ which differ in the estimation sample to account for extreme observations.
+ In regression tables, the 
+\begin_inset Quotes eld
+\end_inset
+
+Full Sample
+\begin_inset Quotes erd
+\end_inset
+
+ includes all non-missing observations for the variables considered.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+Trim Outliers
+\begin_inset Quotes erd
+\end_inset
+
+ sample drops the most extreme observations for the outcome and the independent
+ variable.
+ I exclude the observations that fall beyond three standard deviations from
+ the sample average of each variable and that are most likely to drive the
+ results estimated using the full sample.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+I justify the choices for each variable in detail in my replication code
+ using the empirical kernel density and detailed tabulations.
+\end_layout
+
+\end_inset
+
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+Mahalanobis
+\begin_inset Quotes erd
+\end_inset
+
+ sample excludes the 5% extreme observations based on the Mahalanobis distance
+ of pairs of observations from the data centroid.
+ This procedure is based on the joint distribution of outcomes and independent
+ variables, which may result in a different sample for each regression.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Regressions of Change in 4-digit Knowledge Market Share over Change in HHI
+ Measures, Long-Differences, 1997-2012
+\begin_inset CommandInset label
+LatexCommand label
+name "tab: RegShInvNoctrl"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.85
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../tab/Dk4_sh_inv_hhi_noctrl_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+\size small
+Note: Regressions weighted by sales in 2012; robust standard errors in parenthes
+es; symbols denote significance levels 
+\begin_inset Formula $\left(+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001\right)$
+\end_inset
+
+; N is the number of observations.
+ This table presents the results of specification (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: spec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), regressing sector 
+\begin_inset Formula $p$
+\end_inset
+
+'s share of effective inventors in knowledge market 
+\begin_inset Formula $k$
+\end_inset
+
+, over the HHI lower bound for product market 
+\begin_inset Formula $p$
+\end_inset
+
+, or the HHI index.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Full
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Trimmed
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Mahalanobis
+\begin_inset Quotes erd
+\end_inset
+
+ refer to the samples described in the main text.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegShInvNoctrl"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents the results of specification (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: spec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) obtained regressing the change in knowledge-market inventor share over
+ either the change in the lower bound of the Herfindal- Hirschman Index
+ or the HHI reported by the Economic Census.
+ The results in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegShInvNoctrl"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ highlight a strong positive correlation between the change in the HHI and
+ the change in the share of effective inventors accruing to each NAICS sector.
+ These results are unlikely to be driven by the contemporaneous correlation
+ between the two variables, as the share of effective inventors is averaged
+ over the five years 
+\emph on
+starting
+\emph default
+ in the Economic Census year, while concentration measures refer to the
+ Economic Census year only.
+\end_layout
+
+\begin_layout Standard
+Two important notes on the scale of the variables are in order.
+ First, here and in all following tables and graphs, all variables that
+ refer to shares or growth rates are reported in percentage points.
+ Second, HHI indices are constructed to range between 0 and 1.
+ With regard to the coefficient in Column (1) of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegShInvNoctrl"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, for example, an increase in one unit of the HHI index leads to an increase
+ in the share of the relevant knowledge market of 
+\begin_inset Formula $27.25$
+\end_inset
+
+ percentage points.
+ In 2012, the HHI lower bound has a sales-weighted average of .03 and a standard
+ deviation of .032.
+ According to Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegShInvNoctrl"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, a standard deviation increase in this measure yields a .87 percentage point
+ increase in the share of inventors accruing to the relevant NAICS sector.
+ In comparison, the sales-weighted average share of inventors in 2012 is
+ 1.18%, with a standard deviation of 1.82%, so the estimated effect of a one
+ standard deviation increase in concentration corresponds to about half
+ a standard deviation increase in the share of inventors.
+ The estimates using the HHI lower bound tend to be noisier as this is a
+ constructed, and therefore imprecise, measure of concentration.
+ However, the number of available observations is much larger than the actual
+ HHI, allowing me to extend my findings to about double the number of sectors.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Regressions using the Economic Census HHI not reported in the main text
+ or the Appendix are available on request.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While suggestive, the correlation presented above neglects two fundamental
+ components.
+ First, it does not include controls for the size of the sectors or firms,
+ which could have a mechanical effect on the share of scientists.
+ Second, it estimates the correlation both across and within knowledge markets.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegShInvHHI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ addresses these two limitations by restricting the analysis to within knowledge
+ markets, and controlling for two measures of size.
+ The upper panel uses the change in the logarithm of real sales to measure
+ the change in the size of each sector, while the lower panel include average
+ sales per firm are included as a control.
+ I include sales per firm to account for the fact that there might be significan
+t barriers to entry in R&D, easier to overcome for larger firms, thus mechanical
+ly linking concentration and inventor shares.
+ Since the Economic Census reports the number of companies only for a subset
+ of firms, the sample in the lower panel is smaller.
+ The results in are largely unchanged relative to the baseline estimates.
+ These findings imply that sectors with increasing concentration have attracted
+ a rising share of scientists above what would be predicted by their expansion
+ in overall sales and in average firm size.
+ Results are also robust to using the raw number of inventors to compute
+ inventor shares.
+\end_layout
+
+\begin_layout Standard
+Appendix Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegTotShare"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows estimates using the share of effective inventors of each product
+ market over the total.
+ This amounts to neglecting the fact that inventors flow only across sectors
+ that can employ their skills.
+ In this specification, I find a significant, albeit small, effect of product
+ market concentration on the share of inventors.
+ However, this result only arises when the sample is trimmed to remove outliers.
+ This is not surprising, considering that mismeasuring the labor market
+ for inventors should bias the estimates of inventor mobility towards zero,
+ since many of the sectors would not be routinely connected by inventor
+ flows.
+ Additionally, this result conforms with the findings in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegShInvHHI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, which show that including knowledge-market fixed effects does not alter
+ the coefficients significantly, suggesting that flows across knowledge
+ markets are indeed negligible.
+\end_layout
+
+\begin_layout Standard
+Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "app: Using-N-inv"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ establishes the robustness of all the findings in this section to the use
+ of raw inventor counts rather than effective inventors to compute both
+ inventor shares and knowledge markets.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways true
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Regressions of Change in 4-digit Knowledge Market Share over Change in HHI
+ Lower Bound, Long-Differences, 1997-2012
+\begin_inset CommandInset label
+LatexCommand label
+name "tab: RegShInvHHI"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Controlling for Change in Log Real Sales
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.9
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../tab/Dk4_sh_inv_hhi_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Controlling for Change in Log Real Sales per Company
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.9
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../tab/Dk4_sh_inv_hhi_pc_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+\size small
+Note: Regressions weighted by sales in 2012; robust standard errors in parenthes
+es; symbols denote significance levels 
+\begin_inset Formula $\left(+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001\right)$
+\end_inset
+
+; checkmarks indicate the inclusion of fixed effects.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Full Sample
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Trim Outliers
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Mahalanobis 5%
+\begin_inset Quotes erd
+\end_inset
+
+ refer to the samples described in the main text.
+ See notes to Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegShInvNoctrl"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+IV Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+IV Regressions of Change in 4-digit Knowledge Market Share over Change in
+ HHI Lower Bound, 2SLS Long-Difference, 1997-2012
+\begin_inset CommandInset label
+LatexCommand label
+name "tab: RegIV"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+2SLS Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.9
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../tab/IV_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+First Stage and Reduced Form
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../tab/IV_first_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+\size small
+Note: Regressions weighted by sales in 2012; robust standard errors in parenthes
+es; symbols denote significance levels 
+\begin_inset Formula $\left(+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001\right)$
+\end_inset
+
+; checkmarks indicate the inclusion of fixed effects.
+ This table presents the results of specifications (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: spec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), regressing changes in the share of effective inventors of sector 
+\begin_inset Formula $p$
+\end_inset
+
+ over changes in the lower bound of the Herfindal-Hirschman Index for product
+ market 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\underline{\text{HHI}}$
+\end_inset
+
+ is instrumented by the change in log-restrictions relevant to the NAICS
+ sector.
+ The lower panel present first-stage and reduced-form relations.
+ Samples are described in the main text.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+More concentration could be the result of increasing technological entry
+ barriers as incumbents hire more R&D inventors.
+ In this scenario, the causality would flow from increased inventor shares
+ to higher concentration.
+ Above, I tried to mitigate this concern using as outcome variable the average
+ share of inventors following the Economic Census years to which the HHI
+ refers.
+ However, reverse causality could still be present if the autocorrelation
+ of inventor shares is sufficiently high.
+ As a consequence, I have calculated 2SLS estimates that instrument the
+ change in the HHI lower bound with changes in product market restrictions,
+ as measured by the Mercatus dataset RegData 4.0.
+ Theoretically, an increase in restrictions should raise barriers to entry
+ in affected product markets, thus leading to higher concentration.
+ As discussed below, such proves to be the case empirically, validating
+ sector-specific restrictions as an instrument for concentration.
+ A violation of the exclusion restriction requires a causal connection between
+ product market regulations and the share of inventors hired by each sector,
+ independent of product market concentration.
+ For example, regulations affecting existing technologies might require
+ more inventors to meet product market restrictions.
+ However, this effect is unlikely to be sufficiently large and persistent
+ to be captured by my measure of inventor shares.
+ Further, the regulations counted in RegData are not exclusively product
+ restrictions, but also include reporting obligations and other legal burdens
+ unrelated to technological components.
+ In addition, while product restrictions might certainly induce a change
+ in the direction of innovation, there is no a priori reason to believe
+ that the scale of innovation activity should increase.
+ These considerations lead me to believe that the exclusion restriction
+ is not likely to be violated.
+\end_layout
+
+\begin_layout Standard
+The results of the 2SLS estimation are presented in the upper panel of Table
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegIV"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The specification is the same as in Column (2) of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegShInvHHI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, including both knowledge market and sale change fixed effects.
+ These estimates are statistically indistinguishable from the ones reported
+ in the baseline regression, and equally significant as highlighted by the
+ Anderson-Rubin p-value and the corresponding confidence intervals in square
+ brackets.
+ The latter is the most appropriate measure of significant since the first-stage
+ F clearly indicates that instruments are weak.
+ This is unsurprising since, as detailed above, both the HHI lower bound
+ and the regulation measures are estimated.
+ In particular, I had to impute regulations for a large part of the sample
+ using the cosine-similarity between product market restrictions.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Using only available sectors requires dropping two thirds of the observations.
+ See Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "app: Data-Construction-Details"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for details on data construction.
+\end_layout
+
+\end_inset
+
+ The results in the lower panel of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegIV"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ show that instruments are relevant.
+ The first-stage t-statistic for the regression of the change in the HHI
+ lower bound over log-regulations is 2.07, with a 0.041 p-value.
+ The reduced form regression of inventor shares over log restrictions is
+ equally highly significant, leading the SW underidentification test to
+ rejects the null hypothesis at a 5% confidence level.
+ 
+\end_layout
+
+\begin_layout Standard
+Taken together, the results presented in this section establish a causal
+ link between the increase in inventor concentration and the shifts in product
+ market concentration.
+\end_layout
+
+\begin_layout Subsubsection
+Sectors that Attracted More Researchers Saw Increasing Top Firms' Inventor
+ Shares and Falling Patent Forward Citations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Regressions of Change in Inventor Distribution Measures over Change in 4-digit
+ Knowledge Market Share, Long-Difference, 1997-2012
+\begin_inset CommandInset label
+LatexCommand label
+name "tab: RegStats"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../tab/stats_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+\size small
+Note: Regressions weighted by sales in 2012; robust standard errors in parenthes
+es; symbols denote significance levels 
+\begin_inset Formula $\left(+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001\right)$
+\end_inset
+
+; checkmarks indicate the inclusion of fixed effects.
+ Please refer to notes in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegShInvHHI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for further details.
+ Column (1) uses the ratio in the 90 percentile of effective inventors to
+ the median as the outcome variable.
+ Column (2) use the share of inventors accruing to the top 10% over the
+ share accruing to the bottom 50% of the distribution within each NAICS
+ sector.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Regressions of Changes in Forward Citation over 4-digit Knowledge Market
+ Share, Long-Differences, 1997-2012
+\begin_inset CommandInset label
+LatexCommand label
+name "tab: RegFwdCite"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../tab/fwd_cite_all_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+\size small
+Note: Unweighted regressions; robust standard errors in parentheses; symbols
+ denote significance levels 
+\begin_inset Formula $\left(+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001\right)$
+\end_inset
+
+; checkmarks indicate the inclusion of fixed effects.
+ This table present the results of specification (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: spec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), regressing the log-change in forward citations and the change in patent
+ generality in sector 
+\begin_inset Formula $p$
+\end_inset
+
+ over changes in the sector's share of inventors.
+ Column (1) and (2) present the results for forward citations corrected
+ for truncation as described in the text.
+ Column (3) presents results on the patent generality measures.
+ All columns exclude self-citations.
+\end_layout
+
+\end_inset
+
+While the findings presented so far establish a connection between inventor
+ and product market concentration, they do not establish that changes in
+ the distribution of researchers across sectors are inefficient.
+ It would not be unreasonable, for example, to think that more concentrated
+ sectors saw increased entry as a result of the higher rents captured by
+ incumbents.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegStats"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows that the opposite occurred.
+ Specifically, the share of effective inventors accruing to top inventor-hiring
+ firms increased in the sectors that attracted more inventors over the period
+ considered, relative to firms with fewer inventors in the sector—a finding
+ consistent across a variety of measures displayed in Columns (1) to (6).
+ These outcomes suggest that inventors have increasingly concentrated among
+ large incumbents, that is, sectors that increased their inventor share
+ also saw a 
+\emph on
+within-sector
+\emph default
+ increase in inventor concentration.
+\end_layout
+
+\begin_layout Standard
+Throughout this section, I present results using changes in inventor shares
+ to focus directly on the correlation between inventor transitions and their
+ within-sector distribution.
+ I verify that these findings are robust to using the change in the HHI
+ rather than the inventor share, as should be expected from the strong correlati
+on between these two variables reported above.
+ Results obtained using this independent variable are available upon request.
+\end_layout
+
+\begin_layout Standard
+My next finding suggests that inventor concentration is driven by a rise
+ in defensive innovation, that is R&D aimed at protecting the incumbents'
+ dominant position and raising barriers to entry.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegFwdCite"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows that inventors' concentration in specific sectors went hand in hand
+ with a fall in forward citations for patents, a standard measure of a patent's
+ contribution to further innovations 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hallNBERPatentCitation2001"
+literal "false"
+
+\end_inset
+
+.
+ The result in Columns (1) and (2) report two different measures of forward
+ citations that differ in how the series are corrected for truncation.
+ As discussed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Other data and aggregation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the measure in Column (2) uses the procedure delineated by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hallNBERPatentCitation2001"
+literal "false"
+
+\end_inset
+
+, computing the forward citation lag distribution conditioning on the technology
+ class of the cited patent.
+ Column (2) also conditions on the technology class of citing patents.
+ Column (3) presents the estimates relative to patent generality, a measure
+ of patent impact that increases with the scope of application.
+ The regressions in this table are unweighted since they rely only on patent
+ data, but results are robust to using the HHI as a regressor and weighting
+ by sales.
+ I find a highly significant negative relation between changes in inventor
+ shares and the fall in forward citations.
+ A 1 percentage point increase in the share of inventors leads to a 0.2%
+ reduction in forward citations.
+\end_layout
+
+\begin_layout Standard
+The fall in forward citations is a first indication of the presence of defensive
+ innovation 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "see, e.g.,"
+key "guellecPreemptivePatentingSecuring2012"
+literal "false"
+
+\end_inset
+
+.
+ In the next section, I show that these patents also appear to do relatively
+ little to boost productivity, as measured by growth in output per worker.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Regressions of Changes in Inventor Productivity over Changes in Inventors'
+ Share and HHI, Long-Difference, 1997-2012
+\begin_inset CommandInset label
+LatexCommand label
+name "tab: RegProd"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Change in Inventors' Share as Independent Variable
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.85
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../tab/Lprod_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Change in HHI as Independent Variable
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.85
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../tab/Lprod_hhi_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+\size small
+Note: Regressions weighted by sales in 2012; robust standard errors in parenthes
+es; symbols denote significance levels 
+\begin_inset Formula $\left(+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001\right)$
+\end_inset
+
+; checkmarks indicate the inclusion of fixed effects.
+ Inventor productivity is average growth in output per worker over the five
+ years starting in the Economic Census year over total effective inventors
+ in each sector.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Markets with Growing Inventor Shares Saw a Fall in Inventor Productivity
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegProd"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents the results of running (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: spec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) when the outcome is the average growth in output per worker per effective
+ inventor.
+ I use growth in annual output per worker provided by the Economic Census
+ and average this measure over the five-year window starting in the Economic
+ Census year, and I analogously build a measure of average effective inventors
+ over the same period.
+ Inventor productivity is then defined as average output per worker growth
+ divided by average number of effective inventors.
+ Both the outcome and the dependent variable are measured in percentage
+ points.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegProd"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ reveals a negative and significant correlation between the increase in
+ the number of effective inventors and inventor productivity, regardless
+ of the independent variable employed and the sample restriction adopted.
+\end_layout
+
+\begin_layout Standard
+Starting from the upper panel of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegProd"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the median change in the share of effective inventors over the period
+ was 
+\begin_inset Formula $.014\text{pp}$
+\end_inset
+
+, while the measure of effective inventors has a median of 2018.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Recall that effective inventors in each year are measured as the sum of
+ inventor fixed-effects in each year, and therefore do not represent the
+ simple count of inventors.
+\end_layout
+
+\end_inset
+
+ The coefficient for concentration in Column (4) implies a fall of 
+\begin_inset Formula $.15\text{pp}$
+\end_inset
+
+ (
+\begin_inset Formula $-.005\times.014\text{pp}\times2018$
+\end_inset
+
+) in average annual labor productivity growth.
+ This number decreases to 
+\begin_inset Formula $-.28\text{pp}$
+\end_inset
+
+ when considering only sectors with positive growth in labor productivity,
+ which accounted for the bulk of the increase in inventor shares.
+ An alternative back-of-the-envelope computation, using the change in product
+ market concentration to predict the change in inventor shares gives even
+ starker results.
+ Using the coefficient in Column (2) of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegShInvHHI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+(a) and considering a median change in the HHI of 
+\begin_inset Formula $0.002$
+\end_inset
+
+ yields an increase in the share of effective inventors in concentrating
+ sectors of 
+\begin_inset Formula $0.045\text{pp}$
+\end_inset
+
+.
+ This implies a fall in average labor productivity implied by misallocation
+ of 0.45pp.
+ While these numbers might appear large considering the entirety of the
+ economy, it is worth noting that my sample includes mainly manufacturing
+ and retail sectors, which experienced a sizable reduction of 
+\begin_inset Formula $2.73pp$
+\end_inset
+
+ in average annual productivity growth from 1997 to 2012, driven by a steep
+ decline in output per worker growth in manufacturing.
+ Therefore, the mechanism I propose would explain around 15 percent of the
+ observed decrease in output per worker growth in these sectors.
+\end_layout
+
+\begin_layout Standard
+The estimates in the lower panel of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegProd"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, which uses the HHI instead the change in inventor shares as independent
+ variable, imply even larger growth effects.
+ Using the estimates in Column (2), a median HHI change of 0.02 and a median
+ number of effective inventors of 1421 in sectors with growth in inventor
+ shares implies a 
+\begin_inset Formula $-0.78$
+\end_inset
+
+pp change in output per worker growth from misallocation, with a confidence
+ interval ranging from 
+\begin_inset Formula $-0.13$
+\end_inset
+
+pp to 
+\begin_inset Formula $-1.45$
+\end_inset
+
+pp.
+ The midpoint of these estimates would explain 
+\begin_inset Formula $28.6\%$
+\end_inset
+
+ of the observed fall in output per worker growth over the sample period
+ (
+\begin_inset Formula $-2.73\text{pp}$
+\end_inset
+
+), with bounds ranging from 
+\begin_inset Formula $4.8\%$
+\end_inset
+
+ to 
+\begin_inset Formula $53\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Markets with Growing Inventors' Share Saw Increased Patent Litigation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Regressions of Changes in Litigations over Changes in Inventor Shares ,
+ 2002-2012
+\begin_inset CommandInset label
+LatexCommand label
+name "tab: RegLitigations"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Scalebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+.9
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "/Users/andreamanera/Dropbox (MIT)/Research/ProductInnovation/docs/JMP/draft/tab/D_lit_inv_fe1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+\size small
+Note: Regressions weighted by number of patents; robust standard errors
+ in parentheses; symbols denote significance levels 
+\begin_inset Formula $\left(+\ p<0.1,^{*}\ p<0.05,^{**}\ p<.01,^{***}\ p<.001\right)$
+\end_inset
+
+; checkmarks indicate the inclusion of fixed effects.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I restrict my attention to the period 2002 to 2012, where data on patent
+ litigation cases are available.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+My main results are robust to this sample restriction (tables available
+ upon request).
+\end_layout
+
+\end_inset
+
+ I employ the specification in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: spec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), now differencing over the horizon 2002-2012, and using as dependent variable
+ the number of litigations per 1000 patents, computed as described in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Other data and aggregation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ I weight the regressions by the number of patents registered in each sector
+ in 2012, as sectors with few patents might otherwise drive the results.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+For example, I have 3 patents for NAICS sector 4539 for the Economic Census
+ year 2012 and 2 litigations per patent, compared to 0 litigations in the
+ 2002 census year.
+ This implies an increase of 2000 litigations per patent, compared to an
+ unweighted sample average of 22.6.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Column (2) in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab: RegLitigations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ implies that 1pp increase in the share of inventors employed by a sector
+ was associated with a highly significant increase of 3.6 litigation cases
+ per 1000 patents.
+ This compares to the average increase of 1.33 litigations per 1000 patents
+ observed over the period.
+ Alternatively, a one standard deviation increase in the share of inventors
+ (3pp) raises litigations per 1000 patents by 11.8, which corresponds to
+ 0.5 standard deviations.
+ The coefficients are virtually unchanged when size controls are included,
+ outliers are dropped as above, or increases in inventor shares are lagged
+ to mitigate concerns of reverse causality (results are available upon request).
+ 
+\end_layout
+
+\begin_layout Standard
+This last set of results further supports the hypothesis that defensive
+ innovation increased in concentrating sectors.
+ To protect their dominant position, firms engage in such R&D to thwart
+ innovation by potential competitors, which manifests through an increase
+ in patent enforcement cases and a reduction in inventors' productivity
+ in sectors with increased concentration.
+\end_layout
+
+\begin_layout Subsubsection
+Alternative Channels
+\end_layout
+
+\begin_layout Standard
+The above empirical analysis shows that inventors have accrued to sectors
+ with increased concentration, accruing primarily to incumbent firms, and
+ leading to an increase in litigation, a fall in inventors' productivity
+ and forward citations.
+ My interpretation of these empirical findings is that firms have increased
+ their efforts in defensive innovation, meant to secure patents that can
+ later be used to discourage further entry.
+ As noted in the literature section, several other papers have described
+ mechanisms that could lead to increased concentration of inventors at the
+ top of the firm distribution and decreased R&D productivity.
+ Two main competing explanations stand out.
+\end_layout
+
+\begin_layout Standard
+A first explanation concerns potential decreasing returns to innovation
+ in the spirit of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "bloomAreIdeasGetting2020"
+literal "false"
+
+\end_inset
+
+.
+ I acknowledge that R&D might in general have become more difficult, but
+ my results do not show a decrease in patents per inventor in sectors with
+ increased concentration.
+ On the contrary, given that my inventor measure captures patent per capita,
+ I effectively observe a relative increase in patenting activity in high-concent
+ration sector, excluding that 
+\begin_inset Quotes eld
+\end_inset
+
+ideas getting harder to find
+\begin_inset Quotes erd
+\end_inset
+
+ is the main channel driving my results.
+\end_layout
+
+\begin_layout Standard
+Another channel that could explain my results is an increase in incremental
+ and firm-specific research documented by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "akcigitSlowingBusinessDynamism2020,akcigitTenFactsDeclining2021"
+literal "false"
+
+\end_inset
+
+.
+ I verify that sectors with increased concentration did not see increased
+ self-citations or falls in patent generality, which are commonly used measures
+ of the radical nature and applicability of patents.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+See Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "app: SelfCites"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ While incremental innovation certainly contributes to aggregate R&D productivit
+y trends, it does not appear to be a driving force behind my findings, which
+ therefore document an independent channel contributing to lowered inventors'
+ productivity.
+\end_layout
+
+\end_body
+\end_document
